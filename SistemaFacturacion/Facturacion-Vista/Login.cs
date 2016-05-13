@@ -26,6 +26,7 @@ namespace Facturacion_Vista
             {
                 //hkjhjkhkj
                 //comentario 1
+                //hehco maso
                UsuarioDao UsuarioDao = new UsuarioDao();
                bool de = UsuarioDao.validaUsuario("eea");
                 MessageBox.Show("Cambio realizado", "CAmbio hecho por mi");
