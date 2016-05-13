@@ -27,6 +27,7 @@ namespace Facturacion_Vista
 
                 UsuarioDao UsuarioDao = new UsuarioDao();
                bool de = UsuarioDao.validaUsuario("eea");
+                MessageBox.Show("Cambio realizado", "CAmbio hecho por mi");
             }
             catch(Exception ex)
             {
