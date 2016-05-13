@@ -24,6 +24,7 @@ namespace Facturacion_Vista
         {
             try
             {
+                //prueba numero 3
                 //solo queda un comentario
                UsuarioDao UsuarioDao = new UsuarioDao();
                bool de = UsuarioDao.validaUsuario("eea");
