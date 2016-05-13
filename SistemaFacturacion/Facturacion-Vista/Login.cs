@@ -30,6 +30,7 @@ namespace Facturacion_Vista
                 //hehco maso
                 //otro cambio por ricardo
                 //otro cambio mas SJ
+                //Hecho maso SJ
                UsuarioDao UsuarioDao = new UsuarioDao();
                bool de = UsuarioDao.validaUsuario("eea");
                 MessageBox.Show("Cambio realizado", "CAmbio hecho por mi");
