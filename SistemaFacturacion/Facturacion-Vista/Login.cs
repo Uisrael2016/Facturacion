@@ -19,7 +19,7 @@ namespace Facturacion_Vista
         {
             InitializeComponent();
         }
-
+        //Mensaje adicional
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
