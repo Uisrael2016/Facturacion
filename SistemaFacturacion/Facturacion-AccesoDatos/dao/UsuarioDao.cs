@@ -16,7 +16,7 @@ namespace Facturacion_AccesoDatos.dao
         {
             using (ISession session = SessionFactory.abrirSession())
             {
-                return (from e in session.Query<Usuario>() where e.user.Equals(usuario) select e).Count() > 0;
+                return (from e in session.Query<Usuario>() where e.User.Equals(usuario) select e).Count() > 0;
             }
         }
     }

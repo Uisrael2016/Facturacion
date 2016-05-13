@@ -8,25 +8,42 @@ namespace Facturacion_Entidades
 {
     public class Usuario
     {
-        public virtual int idUsuario { get; set; }
+        public  Usuario() { }
 
-        public virtual int idTipoDocumento { get; set; }
-        public virtual string documento { get; set; }
-        public virtual string nombre { get; set; }
+        public virtual int IdUsuario { get; set; }
 
-        public virtual string mail { get; set; }
+        public virtual string Documento { get; set; }
 
-        public virtual bool cambiarClave { get; set; }
+        public virtual string Nombre { set; get; }
 
-        public virtual DateTime  fechaRegistro { get; set; }
+        public virtual string Mail { get; set; }
 
-        public virtual string  usuarioCreacion { get; set; }
+        public virtual bool CambiarClave { get; set; }
 
-        public virtual string user { get; set; }
-        public virtual string clave { get; set; }
-        public virtual char estado { get; set; }
-        public virtual string telefono { get; set; }
-            
+        public virtual DateTime FechaIngreso { get; set; }
+        
+        public virtual int UsuarioIngreso { get; set; }
+
+        public virtual string User { get; set; }
+
+        public virtual string Clave { get; set; }
+
+        public virtual char Estado { get; set; }
+
+        public virtual string Telefono { get; set; }
+
+        public  virtual List<UsuarioPerfil> UsuarioPerfilList { get; set; }
+
+        public virtual List<Factura> FacturaList { get; set; }
+
+        public virtual TipoDocumento IdTipoDucumento { get; set; }
+
+        public virtual List<Proforma>ProformaList { get; set; }
+
+        public virtual List<NotaPedido> NotaPedidoList { get; set; }
+           
+
+
     }
 }
 

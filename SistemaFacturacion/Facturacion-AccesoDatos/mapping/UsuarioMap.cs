@@ -12,18 +12,16 @@ namespace Facturacion_AccesoDatos.mapping
     {
         public UsuarioMap()
         {
-            Id(c => c.idUsuario);
-            Map(c => c.idTipoDocumento);
-            Map(c => c.documento);
-            Map(c => c.nombre);
-            Map(c => c.mail);
-            Map(c => c.cambiarClave);
-            Map(c => c.fechaRegistro);
-            Map(c => c.usuarioCreacion);
-            Map(c => c.user);
-            Map(c => c.clave);
-            Map(c => c.estado);
-            Map(c => c.telefono);
+            Id(c => c.IdUsuario).GeneratedBy.Identity().Column("id_usuario");
+            Map(c => c.Nombre).Column("nombre");
+            Map(c => c.Documento).Column("documento");
+            Map(c => c.Mail).Column("mail");
+            Map(c => c.CambiarClave).Column("cambiarclave");
+            Map(c => c.FechaIngreso).Column("fecha_ingreso");
+            Map(c => c.User).Column("user");
+            Map(c => c.Clave).Column("clave");
+            Map(c => c.Estado).Column("estado");
+            Map(c => c.Telefono).Column("telefono");
             Table("usuario");
         }
 
