@@ -24,8 +24,7 @@ namespace Facturacion_Vista
         {
             try
             {
-                //prueba numero 3
-                //solo queda un comentario
+                //cambios el dia de hoy 13 
                UsuarioDao UsuarioDao = new UsuarioDao();
                bool de = UsuarioDao.validaUsuario("eea");
                 MessageBox.Show("Cambio realizado", "CAmbio hecho por mi");
