@@ -45,3 +45,6 @@ E:\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.csproj.Gener
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe.config
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.exe
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.pdb
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe.config
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.exe
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.pdb
