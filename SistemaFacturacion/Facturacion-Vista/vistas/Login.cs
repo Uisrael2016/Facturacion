@@ -25,8 +25,11 @@ namespace Facturacion_Vista
             try
             {
                 //cambios el dia de hoy 13 
-               UsuarioDao UsuarioDao = new UsuarioDao();
-               bool de = UsuarioDao.validaUsuario("eea");
+                UsuarioDao UsuarioDao = new UsuarioDao();
+                Usuario user;
+                user = UsuarioDao.buscaUsuario(1);
+                Console.WriteLine(user.IdTipoDucumento.Documento);
+               //bool de = UsuarioDao.validaUsuario("eea");
                 MessageBox.Show("Cambio realizado", "CAmbio hecho por mi");
                 // esto es un mensaje andres 13 
                 // esto es mensaje

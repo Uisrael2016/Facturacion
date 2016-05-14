@@ -7,7 +7,7 @@ using NHibernate;
 using NHibernate.Linq;
 using Facturacion_Entidades;
 using Facturacion_AccesoDatos.conexion;
-
+using NHibernate.Criterion;
 namespace Facturacion_AccesoDatos.dao
 {
     public class UsuarioDao 
@@ -16,8 +16,19 @@ namespace Facturacion_AccesoDatos.dao
         {
             using (ISession session = SessionFactory.abrirSession())
             {
-                return (from e in session.Query<Usuario>() where e.User.Equals(usuario) select e).Count() > 0;
+                return (from e in session.Query<Usuario>() select e).Count() > 0;
             }
+        }
+        public Usuario buscaUsuario(int id)
+        {
+            using (ISession session = SessionFactory.abrirSession())
+            {
+                ICriteria c = session.CreateCriteria("Usuario");
+                c.Add(Expression.Eq("IdUsuario", id));
+                return c.UniqueResult<Usuario>();
+            }
+
+            
         }
     }
 }

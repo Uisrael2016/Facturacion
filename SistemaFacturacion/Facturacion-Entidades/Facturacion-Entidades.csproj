@@ -58,6 +58,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Factura.cs" />
     <Compile Include="NotaPedido.cs" />
+    <Compile Include="Perfil.cs" />
     <Compile Include="Proforma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoDocumento.cs" />

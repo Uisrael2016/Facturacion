@@ -8,9 +8,8 @@ namespace Facturacion_Entidades
 {
     public class Usuario
     {
-        public  Usuario() { }
 
-        public virtual int IdUsuario { get; set; }
+        public virtual int? IdUsuario { get; set; }
 
         public virtual string Documento { get; set; }
 
@@ -24,7 +23,7 @@ namespace Facturacion_Entidades
         
         public virtual int UsuarioIngreso { get; set; }
 
-        public virtual string User { get; set; }
+        public virtual string UserName { get; set; }
 
         public virtual string Clave { get; set; }
 
@@ -32,17 +31,25 @@ namespace Facturacion_Entidades
 
         public virtual string Telefono { get; set; }
 
-        public  virtual List<UsuarioPerfil> UsuarioPerfilList { get; set; }
+        public virtual IList<UsuarioPerfil> UsuarioPerfilList { get; set; }
 
-        public virtual List<Factura> FacturaList { get; set; }
+        public virtual IList<Factura> FacturaList { get; set; }
 
         public virtual TipoDocumento IdTipoDucumento { get; set; }
 
-        public virtual List<Proforma>ProformaList { get; set; }
+        public virtual IList<Proforma> ProformaList { get; set; }
 
-        public virtual List<NotaPedido> NotaPedidoList { get; set; }
-           
+        public virtual IList<NotaPedido> NotaPedidoList { get; set; }
 
+
+
+        public Usuario()
+        {
+            UsuarioPerfilList = new List<UsuarioPerfil>();
+            FacturaList = new List<Factura>();
+            ProformaList = new List<Proforma>();
+            NotaPedidoList = new List<NotaPedido>();
+        }
 
     }
 }

@@ -8,5 +8,12 @@ namespace Facturacion_Entidades
 {
     public class UsuarioPerfil
     {
+        public virtual int IdUsuarioPerfil { get; set; }
+
+        public virtual Perfil IdPerfil { get; set; }
+
+        public virtual Usuario IdUsuario { get; set; }
+
+
     }
 }
