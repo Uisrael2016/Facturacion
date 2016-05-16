@@ -25,10 +25,21 @@ namespace Facturacion_Vista
             try
             {
                 //cambios el dia de hoy 13 
-                UsuarioDao UsuarioDao = new UsuarioDao();
-                Usuario user;
-                user = UsuarioDao.buscaUsuario(1);
-                Console.WriteLine(user.IdTipoDucumento.Documento);
+                //UsuarioDao UsuarioDao = new UsuarioDao();
+                //Usuario user;
+                //user = UsuarioDao.buscaUsuario(1);
+                //UsuarioPerfilDao dao = new UsuarioPerfilDao();
+                //UsuarioPerfil pr;
+
+                //pr = dao.buscaPerfil(1);
+                PerfilDao dao = new PerfilDao();
+                Perfil pe;
+                pe = dao.buscaPerfil(1);
+                Console.WriteLine(pe.UsuarioPerfilList[0].IdUsuario.Nombre);
+                //FacturaDao fac = new FacturaDao();
+                //Factura factu;
+                //factu = fac.buscaFactura(1);
+                //Console.WriteLine(factu.IdNotaPedido);
                //bool de = UsuarioDao.validaUsuario("eea");
                 MessageBox.Show("Cambio realizado", "CAmbio hecho por mi");
                 // esto es un mensaje andres 13 

@@ -15,9 +15,9 @@ namespace Facturacion_AccesoDatos.mapping
         {
             Table("tipo_documento");
             Id(c => c.IdTipoDocumento).GeneratedBy.Identity().Column("id_tipo_documento");
-            Map(c => c.Documento).Column("documento");
-            HasMany<Usuario>(c => c.UsuarioList).Inverse().KeyColumn("id_usuario");
-            
+            Map(c => c.Documento).Column("documento").Unique();
+            HasMany<Usuario>(c => c.UsuarioList).Inverse().KeyColumn("id_usuario").Not.LazyLoad();
+            //HasMany<Cliente>(c => c.ClienteList).Inverse().KeyColumn("id_cliente").Not.LazyLoad();
         }
     }
 }
