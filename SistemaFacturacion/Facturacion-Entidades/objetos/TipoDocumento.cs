@@ -14,10 +14,11 @@ namespace Facturacion_Entidades
         public virtual string  Documento { get; set; }
 
         public virtual IList<Usuario> UsuarioList { get; set; }
-
+        public virtual IList<Cliente> CLienteList { get; set; }
 
         public TipoDocumento() {
             UsuarioList = new List<Usuario>();
+            CLienteList = new List<Cliente>();
         }
     }
 }

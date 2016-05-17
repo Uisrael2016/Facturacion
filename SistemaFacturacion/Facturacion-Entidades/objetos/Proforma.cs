@@ -10,6 +10,7 @@ namespace Facturacion_Entidades
     {
         public virtual int IdProforma { get; set; }
 
+        public virtual string CodigoProforma { get; set; }
         public virtual int Cantidad { get; set; }
 
         public virtual double Precio { get; set; }
@@ -20,7 +21,7 @@ namespace Facturacion_Entidades
 
         public virtual Usuario IdUsuario { get; set; }
 
+        public virtual Cliente IdCliente{get; set;}
         
-
     }
 }

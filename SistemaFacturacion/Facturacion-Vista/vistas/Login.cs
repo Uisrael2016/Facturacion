@@ -32,15 +32,18 @@ namespace Facturacion_Vista
                 //UsuarioPerfil pr;
 
                 //pr = dao.buscaPerfil(1);
-                PerfilDao dao = new PerfilDao();
-                Perfil pe;
-                pe = dao.buscaPerfil(1);
-                Console.WriteLine(pe.UsuarioPerfilList[0].IdUsuario.Nombre);
+                //PerfilDao dao = new PerfilDao();
+                //Perfil pe;
+                //pe = dao.buscaPerfil(1);
+                //Console.WriteLine(pe.UsuarioPerfilList[0].IdUsuario.Nombre);
+                ClienteDao dao = new ClienteDao();
+                Cliente c;
+                c = dao.buscaCliente(1);
                 //FacturaDao fac = new FacturaDao();
                 //Factura factu;
                 //factu = fac.buscaFactura(1);
                 //Console.WriteLine(factu.IdNotaPedido);
-               //bool de = UsuarioDao.validaUsuario("eea");
+                //bool de = UsuarioDao.validaUsuario("eea");
                 MessageBox.Show("Cambio realizado", "CAmbio hecho por mi");
                 // esto es un mensaje andres 13 
                 // esto es mensaje

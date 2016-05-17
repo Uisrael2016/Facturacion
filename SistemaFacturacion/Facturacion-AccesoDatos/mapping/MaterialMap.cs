@@ -17,7 +17,7 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.FechaEgreso).Column("fecha_egreso");
             References(c => c.IdTipoMaterial).Class<TipoMaterial>().Column("id_tipo_material").Not.LazyLoad();
             References(c => c.IdProveedor).Class<Proveedor>().Column("id_proveedor").Not.LazyLoad();
-            HasMany(c => c.DetalleProductoList).Inverse().KeyColumn("id_detalle_producto").Not.LazyLoad();
+            HasMany(c => c.DetalleProductoList).Inverse().KeyColumn("id_detalle_producto").Cascade.All();
         }
     }
 }

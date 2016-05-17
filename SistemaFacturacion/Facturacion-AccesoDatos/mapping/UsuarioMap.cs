@@ -18,12 +18,16 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.Documento).Column("documento").Unique();
             Map(c => c.Mail).Column("mail").Unique();
             Map(c => c.CambiarClave).Column("cambiarclave");
-            Map(c => c.FechaIngreso).Column("fecha_ingreso");
+            Map(c => c.FechaIngreso).Column("fecha_ingreso");   
             Map(c => c.UserName).Column("user_name");
             Map(c => c.Clave).Column("clave");
             Map(c => c.Estado).Column("estado");
             Map(c => c.Telefono).Column("telefono");
-            References(c => c.IdTipoDucumento).Class<TipoDocumento>().Column("id_tipo_documento").Not.LazyLoad();
+            References(c => c.IdTipoDucumento).Class<TipoDocumento>().Column("id_tipo_documento").Cascade.All();
+           // HasMany<NotaPedido>(c => c.NotaPedidoList).Inverse().KeyColumn("id_usuario").Not.LazyLoad();
+            HasMany<UsuarioPerfil>(c => c.UsuarioPerfilList).Inverse().KeyColumn("id_usuario_perfil").Not.LazyLoad();
+           // HasMany<Factura>(c => c.FacturaList).Inverse().KeyColumn("id_factura").Not.LazyLoad();
+            HasMany<Proforma>(c => c.ProformaList).Inverse().KeyColumn("id_proforma").Not.LazyLoad();
         }
 
     }

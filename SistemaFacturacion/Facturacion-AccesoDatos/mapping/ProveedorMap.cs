@@ -21,7 +21,7 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.FechaEgreso).Column("fecha_egreso");
             Map(c => c.UsuarioIngresa).Column("usuario_ingresa");
             Map(c => c.UsuarioEgresa).Column("usuario_egresa");
-            HasMany<Material>(c => c.MateriaList).Inverse().KeyColumn("id_material");       
+            HasMany<Material>(c => c.MateriaList).Inverse().KeyColumn("id_material").Not.LazyLoad();       
         }
     }
 }

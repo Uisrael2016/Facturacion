@@ -39,9 +39,6 @@ namespace Facturacion_Entidades
 
         public virtual IList<Proforma> ProformaList { get; set; }
 
-        
-
-
 
         public Usuario()
         {
