@@ -18,10 +18,12 @@ namespace Facturacion_Entidades
 
         public virtual IList<Proforma>ProformaList { get; set; }
 
+        public virtual IList<NotaPedido> NotaPedidoList { get; set;}
 
         public Producto()
         {
             ProformaList = new List<Proforma>();
+            NotaPedidoList = new List<NotaPedido>();
            
         }
 

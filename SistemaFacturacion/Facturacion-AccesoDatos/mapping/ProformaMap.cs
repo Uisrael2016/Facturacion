@@ -20,6 +20,7 @@ namespace Facturacion_AccesoDatos.mapping
             References(c => c.IdUsuario).Class<Usuario>().Column("id_usuario").Not.LazyLoad();
             References(c => c.IdProducto).Class<Producto>().Column("id_producto").Not.LazyLoad();
             References(c => c.IdCliente).Class<Cliente>().Column("id_cliente").Not.LazyLoad();
+
         }
     }
 }

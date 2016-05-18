@@ -55,14 +55,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="objetos\Ambiente.cs" />
     <Compile Include="objetos\Cliente.cs" />
+    <Compile Include="objetos\CodigoDocumento.cs" />
     <Compile Include="objetos\DetalleProducto.cs" />
+    <Compile Include="objetos\Empresa.cs" />
+    <Compile Include="objetos\Establecimiento.cs" />
     <Compile Include="objetos\Factura.cs" />
+    <Compile Include="objetos\FacturaImpuesto.cs" />
     <Compile Include="objetos\FormaPago.cs" />
     <Compile Include="objetos\Material.cs" />
+    <Compile Include="objetos\NotaPedido.cs" />
     <Compile Include="objetos\Perfil.cs" />
     <Compile Include="objetos\Producto.cs" />
     <Compile Include="objetos\Proforma.cs" />
+    <Compile Include="objetos\PuntoEmision.cs" />
+    <Compile Include="objetos\Secuecial.cs" />
+    <Compile Include="objetos\Tarifa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="objetos\Proveedor.cs" />
     <Compile Include="objetos\TipoDocumento.cs" />

@@ -39,12 +39,15 @@ namespace Facturacion_Entidades
 
         public virtual IList<Proforma> ProformaList { get; set; }
 
+        public virtual IList<NotaPedido> NotaPedidoList { get; set; }
+
 
         public Usuario()
         {
             UsuarioPerfilList = new List<UsuarioPerfil>();
             FacturaList = new List<Factura>();
             ProformaList = new List<Proforma>();
+            NotaPedidoList = new List<NotaPedido>();
         }
 
     }

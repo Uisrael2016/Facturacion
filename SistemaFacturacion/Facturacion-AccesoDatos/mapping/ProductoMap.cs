@@ -16,7 +16,7 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.DescProducto).Column("desc_prodcuto");
             Map(c => c.Tipo).Column("tipo");
             References(c => c.IdDetalleProducto).Class<DetalleProducto>().Column("id_detalle_producto").Not.LazyLoad();
-
+            HasMany<NotaPedido>(c => c.NotaPedidoList).Inverse().KeyColumn("id_nota_pedido").Cascade.All();
         }
     }
 }

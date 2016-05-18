@@ -40,7 +40,7 @@ namespace Facturacion_Vista
                 Cliente c;
                 c = dao.buscaCliente(1);
                 //FacturaDao fac = new FacturaDao();
-                //Factura factu;
+                //Factura factu;    
                 //factu = fac.buscaFactura(1);
                 //Console.WriteLine(factu.IdNotaPedido);
                 //bool de = UsuarioDao.validaUsuario("eea");
