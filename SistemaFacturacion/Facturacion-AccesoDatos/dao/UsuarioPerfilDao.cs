@@ -14,14 +14,21 @@ namespace Facturacion_AccesoDatos.dao
     {
         public UsuarioPerfil buscaPerfil(int id)
         {
-            
-            using (ISession session = SessionFactory.abrirSession())
+            try
             {
-                ICriteria c = session.CreateCriteria("UsuarioPerfil");
-                c.Add(Expression.Eq("IdUsuario.IdUsuario", id));
-                return c.UniqueResult<UsuarioPerfil>();
+                using (ISession session = SessionFactory.abrirSession())
+                {
+                    ICriteria c = session.CreateCriteria("UsuarioPerfil");
+                    c.Add(Expression.Eq("IdUsuario.IdUsuario", id));
+                    return c.UniqueResult<UsuarioPerfil>();
+                }
             }
-            
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+
         }
     }
 }

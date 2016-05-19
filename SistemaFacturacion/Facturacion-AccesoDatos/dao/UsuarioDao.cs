@@ -10,7 +10,7 @@ using Facturacion_AccesoDatos.conexion;
 using NHibernate.Criterion;
 namespace Facturacion_AccesoDatos.dao
 {
-    public class UsuarioDao 
+    public class UsuarioDao
     {
         public bool validaUsuario(string usuario)
         {
@@ -19,16 +19,25 @@ namespace Facturacion_AccesoDatos.dao
                 return (from e in session.Query<Usuario>() select e).Count() > 0;
             }
         }
-        public Usuario buscaUsuario(int id)
+        public Usuario buscaUsuario(string usuario, string password)
         {
-            using (ISession session = SessionFactory.abrirSession())
+            try
             {
-                ICriteria c = session.CreateCriteria("Usuario");
-                c.Add(Expression.Eq("IdUsuario", id));
-                return c.UniqueResult<Usuario>();
+                using (ISession session = SessionFactory.abrirSession())
+                {
+                    ICriteria c = session.CreateCriteria("Usuario");
+                    c.Add(Expression.Eq("UserName", usuario))
+                    .Add(Expression.Eq("Clave", password));
+                    return c.UniqueResult<Usuario>();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
 
-            
+
         }
     }
 }
