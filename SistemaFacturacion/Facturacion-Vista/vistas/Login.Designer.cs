@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.textUser = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new DevComponents.DotNetBar.ButtonX();
             this.btnIngreso = new DevComponents.DotNetBar.ButtonX();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textUser = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(472, 274);
-            this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.OfficeXP;
+            this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonBar1.TabIndex = 0;
             // 
             // 
@@ -82,52 +82,7 @@
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // textUser
-            // 
-            // 
-            // 
-            // 
-            this.textUser.Border.Class = "TextBoxBorder";
-            this.textUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textUser.Location = new System.Drawing.Point(241, 73);
-            this.textUser.Name = "textUser";
-            this.textUser.PreventEnterBeep = true;
-            this.textUser.Size = new System.Drawing.Size(151, 20);
-            this.textUser.TabIndex = 0;
-            // 
-            // textPassword
-            // 
-            // 
-            // 
-            // 
-            this.textPassword.Border.Class = "TextBoxBorder";
-            this.textPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textPassword.Location = new System.Drawing.Point(243, 121);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.PreventEnterBeep = true;
-            this.textPassword.Size = new System.Drawing.Size(151, 20);
-            this.textPassword.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(156, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Password";
+            this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
             // pictureBox1
             // 
@@ -162,12 +117,59 @@
             this.btnIngreso.Tooltip = "Ingresar al Sistema";
             this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(156, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(160, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Usuario";
+            // 
+            // textPassword
+            // 
+            // 
+            // 
+            // 
+            this.textPassword.Border.Class = "TextBoxBorder";
+            this.textPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textPassword.Location = new System.Drawing.Point(243, 121);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.PreventEnterBeep = true;
+            this.textPassword.Size = new System.Drawing.Size(151, 20);
+            this.textPassword.TabIndex = 1;
+            // 
+            // textUser
+            // 
+            // 
+            // 
+            // 
+            this.textUser.Border.Class = "TextBoxBorder";
+            this.textUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textUser.Location = new System.Drawing.Point(241, 73);
+            this.textUser.Name = "textUser";
+            this.textUser.PreventEnterBeep = true;
+            this.textUser.Size = new System.Drawing.Size(151, 20);
+            this.textUser.TabIndex = 0;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 274);
             this.Controls.Add(this.ribbonBar1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";

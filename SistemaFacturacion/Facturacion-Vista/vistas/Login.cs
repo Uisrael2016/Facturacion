@@ -32,7 +32,7 @@ namespace Facturacion_Vista
             Usuario usuario = dao.buscaUsuario(user, pass);
             if (usuario !=null)
             {
-                usuarioPerfilManager = daoPerfil.buscaPerfil(usuario.IdUsuario);
+                usuarioPerfilManager = daoPerfil.consultarPorId(usuario.IdUsuario);
                 Utilidades.Mensaje.mensajeInformacion("Informacion", "Bienvenido al sistema usuario "+" " + usuario.UserName);
                 Console.WriteLine(usuarioPerfilManager.IdUsuario.Nombre);
                 Principal pa = new Principal();
@@ -44,7 +44,11 @@ namespace Facturacion_Vista
             }
         }
 
-       
+        private void ribbonBar1_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
 

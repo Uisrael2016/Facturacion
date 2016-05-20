@@ -10,15 +10,8 @@ using Facturacion_AccesoDatos.conexion;
 using NHibernate.Criterion;
 namespace Facturacion_AccesoDatos.dao
 {
-    public class UsuarioDao
+    public class UsuarioDao : GenericaDao<Usuario>
     {
-        public bool validaUsuario(string usuario)
-        {
-            using (ISession session = SessionFactory.abrirSession())
-            {
-                return (from e in session.Query<Usuario>() select e).Count() > 0;
-            }
-        }
         public Usuario buscaUsuario(string usuario, string password)
         {
             try

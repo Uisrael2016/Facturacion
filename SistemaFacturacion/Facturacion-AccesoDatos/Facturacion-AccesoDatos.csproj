@@ -63,6 +63,8 @@
     <Compile Include="dao\PerfilDao.cs" />
     <Compile Include="dao\UsuarioDao.cs" />
     <Compile Include="dao\UsuarioPerfilDao.cs" />
+    <Compile Include="generica\GenericaDao.cs" />
+    <Compile Include="interfaces\InterfaceDao.cs" />
     <Compile Include="mapping\AmbienteMap.cs" />
     <Compile Include="mapping\ClienteMap.cs" />
     <Compile Include="mapping\CodigoDocumentoMap.cs" />

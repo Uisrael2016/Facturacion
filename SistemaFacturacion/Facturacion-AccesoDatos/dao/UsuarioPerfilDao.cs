@@ -10,25 +10,9 @@ using Facturacion_AccesoDatos.conexion;
 using NHibernate.Criterion;
 namespace Facturacion_AccesoDatos.dao
 {
-    public class UsuarioPerfilDao
+    public class UsuarioPerfilDao : GenericaDao<UsuarioPerfil>
     {
-        public UsuarioPerfil buscaPerfil(int id)
-        {
-            try
-            {
-                using (ISession session = SessionFactory.abrirSession())
-                {
-                    ICriteria c = session.CreateCriteria("UsuarioPerfil");
-                    c.Add(Expression.Eq("IdUsuario.IdUsuario", id));
-                    return c.UniqueResult<UsuarioPerfil>();
-                }
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
 
-
-        }
     }
+
 }

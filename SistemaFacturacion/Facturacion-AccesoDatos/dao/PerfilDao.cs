@@ -10,18 +10,8 @@ using Facturacion_AccesoDatos.conexion;
 using NHibernate.Criterion;
 namespace Facturacion_AccesoDatos.dao
 {
-    public class PerfilDao
+    public class PerfilDao : GenericaDao<Perfil>
     {
-        public Perfil buscaPerfil(int id)
-        {
-            using (ISession session = SessionFactory.abrirSession())
-            {
-                ICriteria c = session.CreateCriteria("Perfil");
-                c.Add(Expression.Eq("IdPerfil", id));
-                return c.UniqueResult<Perfil>();
-            }
-
-
-        }
+       
     }
 }

@@ -10,18 +10,8 @@ using Facturacion_AccesoDatos.conexion;
 using NHibernate.Criterion;
 namespace Facturacion_AccesoDatos.dao
 {
-   public class ClienteDao
+   public class ClienteDao : GenericaDao<Cliente>
     {
-        public Cliente buscaCliente(int id)
-        {
-            using (ISession session = SessionFactory.abrirSession())
-            {
-                ICriteria c = session.CreateCriteria("Cliente");
-                c.Add(Expression.Eq("IdCliente", id));
-                return c.UniqueResult<Cliente>();
-            }
-
-
-        }
+       
     }
 }
