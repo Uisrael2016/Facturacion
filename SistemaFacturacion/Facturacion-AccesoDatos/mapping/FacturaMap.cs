@@ -11,6 +11,7 @@ namespace Facturacion_AccesoDatos.mapping
     {
         public FacturaMap()
         {
+            Schema("public");
             Table("factura");
             Id(c => c.IdFactura).Column("id_factura").GeneratedBy.Identity();
             Map(c => c.Secuencial).Column("secuencial");

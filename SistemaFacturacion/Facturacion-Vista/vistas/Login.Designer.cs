@@ -33,14 +33,16 @@
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCancelar = new DevComponents.DotNetBar.ButtonX();
-            this.btnIngreso = new DevComponents.DotNetBar.ButtonX();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textUser = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ribbonBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -61,8 +63,6 @@
             this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
             this.ribbonBar1.Controls.Add(this.pictureBox1);
-            this.ribbonBar1.Controls.Add(this.btnCancelar);
-            this.ribbonBar1.Controls.Add(this.btnIngreso);
             this.ribbonBar1.Controls.Add(this.label2);
             this.ribbonBar1.Controls.Add(this.label1);
             this.ribbonBar1.Controls.Add(this.textPassword);
@@ -82,7 +82,6 @@
             // 
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar1.ItemClick += new System.EventHandler(this.ribbonBar1_ItemClick);
             // 
             // pictureBox1
             // 
@@ -92,30 +91,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(124, 123);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCancelar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancelar.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.btnCancelar.Location = new System.Drawing.Point(307, 171);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 38);
-            this.btnCancelar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancelar.TabIndex = 5;
-            // 
-            // btnIngreso
-            // 
-            this.btnIngreso.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnIngreso.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnIngreso.Image = global::Facturacion_Vista.Properties.Resources.home_ico;
-            this.btnIngreso.Location = new System.Drawing.Point(189, 171);
-            this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(84, 38);
-            this.btnIngreso.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnIngreso.TabIndex = 4;
-            this.btnIngreso.Tooltip = "Ingresar al Sistema";
-            this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // label2
             // 
@@ -146,6 +121,7 @@
             this.textPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textPassword.Location = new System.Drawing.Point(243, 121);
             this.textPassword.Name = "textPassword";
+            this.textPassword.PasswordChar = '*';
             this.textPassword.PreventEnterBeep = true;
             this.textPassword.Size = new System.Drawing.Size(151, 20);
             this.textPassword.TabIndex = 1;
@@ -163,11 +139,38 @@
             this.textUser.Size = new System.Drawing.Size(151, 20);
             this.textUser.TabIndex = 0;
             // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Image = global::Facturacion_Vista.Properties.Resources.home_ico;
+            this.btnIngresar.Location = new System.Drawing.Point(175, 158);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(90, 40);
+            this.btnIngresar.TabIndex = 1;
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
+            this.btnCancelar.Location = new System.Drawing.Point(300, 158);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(92, 40);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 274);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.ribbonBar1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -178,6 +181,7 @@
             this.ribbonBar1.ResumeLayout(false);
             this.ribbonBar1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,8 +194,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevComponents.DotNetBar.ButtonX btnCancelar;
-        private DevComponents.DotNetBar.ButtonX btnIngreso;
+        private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

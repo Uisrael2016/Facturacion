@@ -84,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Utilidades\Mensaje.cs" />
+    <Compile Include="Vistas\FrmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmEmpresa.Designer.cs">
+      <DependentUpon>FrmEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Facturacion_AccesoDatos.dao;
+using Facturacion_Vista.Vistas;
+using Facturacion_Entidades;
 namespace Facturacion_Vista
 {
     static class Program
@@ -16,8 +18,16 @@ namespace Facturacion_Vista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
-            Application.Run(new Login());
+            EmpresaDao dao = new EmpresaDao();
+            Empresa em= dao.validaEmpresa();
+            if (em != null)
+            {
+                Application.Run(new Login());
+            }
+            else {
+                Application.Run(new FrmEmpresa());
+            }
+            
         }
     }
 }
