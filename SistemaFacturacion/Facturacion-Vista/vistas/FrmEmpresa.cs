@@ -21,5 +21,10 @@ namespace Facturacion_Vista.Vistas
         {
 
         }
+
+        private void FrmEmpresa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
