@@ -82,3 +82,4 @@ C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevCom
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.Instrumentation.xml
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Principal.resources
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmEmpresa.resources
