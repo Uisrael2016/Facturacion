@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Facturacion_AccesoDatos.dao;
 using Facturacion_Vista.Vistas;
 using Facturacion_Entidades;
+using Facturacion_Vista.Utilidades;
 namespace Facturacion_Vista
 {
     static class Program
@@ -14,20 +15,24 @@ namespace Facturacion_Vista
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Acciones accion;
             EmpresaDao dao = new EmpresaDao();
-            Empresa em= dao.validaEmpresa();
+            Empresa em = dao.buscaEmpresa();
             if (em != null)
             {
                 Application.Run(new Login());
             }
-            else {
-                Application.Run(new FrmEmpresa());
+            else
+            {
+                accion = Acciones.insert;
+                Application.Run(new FrmEmpresa(accion));
             }
-            
+
         }
     }
 }

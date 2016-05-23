@@ -22,10 +22,8 @@ namespace Facturacion_Vista.Vistas
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
+            FrmEmpresa empresa = new FrmEmpresa(Utilidades.Acciones.update);
+            empresa.ShowDialog();
         }
 
         private void OpenFile(object sender, EventArgs e)
@@ -67,10 +65,6 @@ namespace Facturacion_Vista.Vistas
         {
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
 
         private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -108,6 +102,15 @@ namespace Facturacion_Vista.Vistas
         private void Principal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult dialog = Utilidades.Mensaje.mensajeConfirm("Informacion", "Esta seguro de cerrar la session");
+            if (dialog == DialogResult.No)
+            {
+                this.Close();
+            }
         }
     }
 }

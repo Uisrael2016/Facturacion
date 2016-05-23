@@ -83,6 +83,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utilidades\Acciones.cs" />
     <Compile Include="Utilidades\Mensaje.cs" />
     <Compile Include="Vistas\FrmEmpresa.cs">
       <SubType>Form</SubType>
@@ -155,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_ico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

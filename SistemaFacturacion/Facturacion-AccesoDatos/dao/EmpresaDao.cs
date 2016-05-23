@@ -13,13 +13,14 @@ namespace Facturacion_AccesoDatos.dao
 {
    public class EmpresaDao : GenericaDao<Empresa>
     {
-        public Empresa validaEmpresa()
+        public Empresa buscaEmpresa()
         {
             try
             {
                 using (ISession session = SessionFactory.abrirSession())
                 {
                     ICriteria criterio = session.CreateCriteria("Empresa");
+                    criterio.Add(Expression.Eq("Estado",'A'));
                     return criterio.UniqueResult<Empresa>();
                 }   
             }
