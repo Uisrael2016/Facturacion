@@ -13,7 +13,7 @@ using Facturacion_AccesoDatos.dao;
 using Facturacion_Vista.Vistas;
 namespace Facturacion_Vista
 {
-    public partial class Login : Form
+    public partial class Login : DevComponents.DotNetBar.Office2007RibbonForm
     {
         public static UsuarioPerfil usuarioPerfilManager { get; set; }
         public Login()
@@ -49,7 +49,7 @@ namespace Facturacion_Vista
                 usuarioPerfilManager = daoPerfil.consultarPorId(usuario.IdUsuario);
                 Utilidades.Mensaje.mensajeInformacion("Informacion", "Bienvenido al sistema usuario " + " " + usuario.UserName);
                 Console.WriteLine(usuarioPerfilManager.IdUsuario.Nombre);
-                Principal pa = new Principal();
+                MDIMenu pa = new MDIMenu();
                 pa.Show();
                 this.Hide();
             }
@@ -66,6 +66,11 @@ namespace Facturacion_Vista
             {
                 this.Close();
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

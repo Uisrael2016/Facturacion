@@ -13,7 +13,7 @@ using Facturacion_AccesoDatos.dao;
 using Facturacion_Entidades;
 namespace Facturacion_Vista.Vistas
 {
-    public partial class FrmEmpresa : Form
+    public partial class FrmEmpresa : DevComponents.DotNetBar.Office2007RibbonForm
     {
         string pathFile;
         private Acciones accion;
@@ -137,6 +137,11 @@ namespace Facturacion_Vista.Vistas
         private void cancelarBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmEmpresa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

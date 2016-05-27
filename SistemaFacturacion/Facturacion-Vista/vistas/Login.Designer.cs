@@ -47,7 +47,7 @@
             // 
             // styleManager1
             // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Silver;
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // ribbonBar1
@@ -69,9 +69,9 @@
             this.ribbonBar1.Controls.Add(this.textUser);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ribbonBar1.DragDropSupport = true;
-            this.ribbonBar1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonBar1.Location = new System.Drawing.Point(5, 1);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(472, 274);
+            this.ribbonBar1.Size = new System.Drawing.Size(462, 270);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonBar1.TabIndex = 0;
             // 
@@ -119,6 +119,7 @@
             // 
             this.textPassword.Border.Class = "TextBoxBorder";
             this.textPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textPassword.DisabledBackColor = System.Drawing.Color.White;
             this.textPassword.Location = new System.Drawing.Point(243, 121);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
@@ -133,6 +134,7 @@
             // 
             this.textUser.Border.Class = "TextBoxBorder";
             this.textUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textUser.DisabledBackColor = System.Drawing.Color.White;
             this.textUser.Location = new System.Drawing.Point(241, 73);
             this.textUser.Name = "textUser";
             this.textUser.PreventEnterBeep = true;
@@ -168,16 +170,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 274);
+            this.ClientSize = new System.Drawing.Size(472, 273);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.ribbonBar1);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Ingreso";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ribbonBar1.ResumeLayout(false);
             this.ribbonBar1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

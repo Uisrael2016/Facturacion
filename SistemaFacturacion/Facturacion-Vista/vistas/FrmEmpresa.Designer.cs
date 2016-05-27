@@ -76,7 +76,7 @@
             this.radioD.AutoSize = true;
             this.radioD.Location = new System.Drawing.Point(287, 187);
             this.radioD.Name = "radioD";
-            this.radioD.Size = new System.Drawing.Size(116, 21);
+            this.radioD.Size = new System.Drawing.Size(117, 23);
             this.radioD.TabIndex = 11;
             this.radioD.TabStop = true;
             this.radioD.Text = "Desahabilitado";
@@ -89,7 +89,7 @@
             this.radioH.AutoSize = true;
             this.radioH.Location = new System.Drawing.Point(164, 187);
             this.radioH.Name = "radioH";
-            this.radioH.Size = new System.Drawing.Size(88, 21);
+            this.radioH.Size = new System.Drawing.Size(89, 23);
             this.radioH.TabIndex = 10;
             this.radioH.TabStop = true;
             this.radioH.Text = "Habilitado";
@@ -103,7 +103,7 @@
             this.estdoLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estdoLbl.Location = new System.Drawing.Point(21, 190);
             this.estdoLbl.Name = "estdoLbl";
-            this.estdoLbl.Size = new System.Drawing.Size(49, 17);
+            this.estdoLbl.Size = new System.Drawing.Size(50, 19);
             this.estdoLbl.TabIndex = 9;
             this.estdoLbl.Text = "Estado";
             this.estdoLbl.Visible = false;
@@ -114,7 +114,7 @@
             this.pathLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 6.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pathLbl.Location = new System.Drawing.Point(70, 156);
             this.pathLbl.Name = "pathLbl";
-            this.pathLbl.Size = new System.Drawing.Size(0, 12);
+            this.pathLbl.Size = new System.Drawing.Size(0, 14);
             this.pathLbl.TabIndex = 8;
             // 
             // button1
@@ -154,7 +154,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 153);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 17);
+            this.label4.Size = new System.Drawing.Size(40, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Logo";
             // 
@@ -164,7 +164,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.Size = new System.Drawing.Size(110, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Dirección Matriz";
             // 
@@ -174,7 +174,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.Size = new System.Drawing.Size(86, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Razon Social";
             // 
@@ -184,7 +184,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(32, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ruc";
             // 
@@ -224,6 +224,7 @@
             this.Name = "FrmEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmpresa";
+            this.Load += new System.EventHandler(this.FrmEmpresa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

@@ -11,3 +11,12 @@ E:\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.LogPro
 E:\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
 E:\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
 E:\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Facturacion-Entidades.dll
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Facturacion-Entidades.pdb
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Core.dll
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.ApplicationCacher.dll
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.WebCache.dll
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.LogProviders.SimpleLogProvider.dll
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb
