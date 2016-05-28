@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Facturacion_Vista.Vistas
 {
-    public partial class FrmListarCliente : DevComponents.DotNetBar.Office2007Form
+    public partial class FrmCliente : DevComponents.DotNetBar.Office2007Form
     {
-        public FrmListarCliente()
+        public FrmCliente()
         {
             InitializeComponent();
         }
 
-        private void FrmListarCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonItem1_Click(object sender, EventArgs e)
+        private void FrmCliente_Load(object sender, EventArgs e)
         {
 
         }

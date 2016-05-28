@@ -112,5 +112,10 @@ namespace Facturacion_Vista.Vistas
                 this.Close();
             }
         }
+
+        private void toolStripStatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
