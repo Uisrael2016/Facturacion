@@ -84,3 +84,4 @@ C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Fluent
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Iesi.Collections.xml
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.exe
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.pdb
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarCliente.resources

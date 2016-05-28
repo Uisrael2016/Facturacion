@@ -18,6 +18,8 @@ namespace Facturacion_Vista
 
         static void Main()
         {
+            //MDIMenu menu = new MDIMenu();
+            //Application.Run(new MDIMenu());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Acciones accion;
