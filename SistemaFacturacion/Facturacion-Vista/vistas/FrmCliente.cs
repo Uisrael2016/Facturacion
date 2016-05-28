@@ -16,6 +16,7 @@ namespace Facturacion_Vista.Vistas
         {
             InitializeComponent();
         }
+        public bool nuevo;
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {

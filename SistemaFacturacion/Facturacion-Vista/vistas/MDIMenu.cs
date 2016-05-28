@@ -113,5 +113,11 @@ namespace Facturacion_Vista.Vistas
         {
 
         }
+        
+        private void btcliente_Click(object sender, EventArgs e)
+        {
+            FrmListarCliente listcliente = new FrmListarCliente();
+            listcliente.Show();
+        }
     }
 }
