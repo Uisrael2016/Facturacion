@@ -40,6 +40,7 @@
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.btcliente = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.bt_producto = new DevComponents.DotNetBar.ButtonItem();
@@ -53,9 +54,6 @@
             this.Administracion = new DevComponents.DotNetBar.RibbonTabItem();
             this.Catalogos = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
-            this.styleManager2 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.applicationButton1 = new DevComponents.DotNetBar.ApplicationButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
@@ -75,7 +73,9 @@
             this.itemContainer4 = new DevComponents.DotNetBar.ItemContainer();
             this.buttonItem12 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem13 = new DevComponents.DotNetBar.ButtonItem();
-            this.btcliente = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
+            this.styleManager2 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.statusStrip.SuspendLayout();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
@@ -87,7 +87,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(5, 421);
+            this.statusStrip.Location = new System.Drawing.Point(5, 419);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(622, 22);
             this.statusStrip.TabIndex = 2;
@@ -101,7 +101,7 @@
             // 
             // styleManager1
             // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Silver;
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // ribbonControl1
@@ -116,6 +116,7 @@
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.applicationButton1,
             this.Administracion,
             this.Catalogos,
             this.ribbonTabItem1});
@@ -124,7 +125,6 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.ribbonControl1.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.applicationButton1,
             this.buttonItem1,
             this.qatCustomizeItem1});
             this.ribbonControl1.Size = new System.Drawing.Size(622, 154);
@@ -154,10 +154,10 @@
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(622, 95);
+            this.ribbonPanel1.Size = new System.Drawing.Size(622, 98);
             // 
             // 
             // 
@@ -192,7 +192,7 @@
             this.btcliente});
             this.ribbonBar1.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(619, 92);
+            this.ribbonBar1.Size = new System.Drawing.Size(619, 95);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             this.ribbonBar1.Text = "Perfiles De Usuarios ";
@@ -216,6 +216,13 @@
             this.buttonItem15.Name = "buttonItem15";
             this.buttonItem15.SubItemsExpandWidth = 14;
             this.buttonItem15.Text = "Perfiles";
+            // 
+            // btcliente
+            // 
+            this.btcliente.Name = "btcliente";
+            this.btcliente.SubItemsExpandWidth = 14;
+            this.btcliente.Text = "Clientes";
+            this.btcliente.Click += new System.EventHandler(this.btcliente_Click);
             // 
             // ribbonPanel2
             // 
@@ -387,28 +394,15 @@
             this.ribbonTabItem1.Panel = this.ribbonPanel3;
             this.ribbonTabItem1.Text = "Transaccion";
             // 
-            // buttonItem1
-            // 
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "buttonItem1";
-            // 
-            // qatCustomizeItem1
-            // 
-            this.qatCustomizeItem1.Name = "qatCustomizeItem1";
-            // 
-            // styleManager2
-            // 
-            this.styleManager2.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Silver;
-            this.styleManager2.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
-            // 
             // applicationButton1
             // 
             this.applicationButton1.AutoExpandOnClick = true;
             this.applicationButton1.CanCustomize = false;
             this.applicationButton1.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image;
             this.applicationButton1.Image = ((System.Drawing.Image)(resources.GetObject("applicationButton1.Image")));
-            this.applicationButton1.ImagePaddingHorizontal = 2;
-            this.applicationButton1.ImagePaddingVertical = 2;
+            this.applicationButton1.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.applicationButton1.ImagePaddingHorizontal = 0;
+            this.applicationButton1.ImagePaddingVertical = 0;
             this.applicationButton1.Name = "applicationButton1";
             this.applicationButton1.ShowSubItems = false;
             this.applicationButton1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -612,18 +606,25 @@
             this.buttonItem13.SubItemsExpandWidth = 24;
             this.buttonItem13.Text = "E&xit";
             // 
-            // btcliente
+            // buttonItem1
             // 
-            this.btcliente.Name = "btcliente";
-            this.btcliente.SubItemsExpandWidth = 14;
-            this.btcliente.Text = "Clientes";
-            this.btcliente.Click += new System.EventHandler(this.btcliente_Click);
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "buttonItem1";
+            // 
+            // qatCustomizeItem1
+            // 
+            this.qatCustomizeItem1.Name = "qatCustomizeItem1";
+            // 
+            // styleManager2
+            // 
+            this.styleManager2.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
+            this.styleManager2.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // MDIMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 445);
+            this.ClientSize = new System.Drawing.Size(632, 443);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.statusStrip);
             this.IsMdiContainer = true;

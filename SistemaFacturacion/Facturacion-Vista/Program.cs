@@ -18,22 +18,22 @@ namespace Facturacion_Vista
 
         static void Main()
         {
-            MDIMenu menu = new MDIMenu();
-            Application.Run(new MDIMenu());
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Acciones accion;
-            //EmpresaDao dao = new EmpresaDao();
-            //Empresa em = dao.buscaEmpresa();
-            //if (em != null)
-            //{
-            //    Application.Run(new Login());
-            //}
-            //else
-            //{
-            //    accion = Acciones.insert;
-            //    Application.Run(new FrmEmpresa(accion));
-            //}
+            //MDIMenu menu = new MDIMenu();
+           // Application.Run(new Login());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Acciones accion;
+            EmpresaDao dao = new EmpresaDao();
+            Empresa em = dao.buscaEmpresa();
+            if (em != null)
+            {
+                Application.Run(new Login());
+            }
+            else
+            {
+                accion = Acciones.insert;
+                Application.Run(new FrmEmpresa(accion));
+            }
 
         }
     }

@@ -62,6 +62,7 @@
     <Compile Include="dao\EmpresaDao.cs" />
     <Compile Include="dao\FacturaDao.cs" />
     <Compile Include="dao\PerfilDao.cs" />
+    <Compile Include="dao\TipoDocumentoDao.cs" />
     <Compile Include="dao\UsuarioDao.cs" />
     <Compile Include="dao\UsuarioPerfilDao.cs" />
     <Compile Include="generica\GenericaDao.cs" />

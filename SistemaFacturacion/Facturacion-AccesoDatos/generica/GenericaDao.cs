@@ -58,7 +58,8 @@ namespace Facturacion_AccesoDatos
 
             }
         }
-
+        
+        
         public void modificar(T entidad)
         {
             using (ISession session = SessionFactory.abrirSession())

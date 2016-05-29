@@ -71,7 +71,7 @@
             this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(5, 1);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(462, 268);
+            this.ribbonBar1.Size = new System.Drawing.Size(462, 264);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2010;
             this.ribbonBar1.TabIndex = 0;
             // 
@@ -170,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 271);
+            this.ClientSize = new System.Drawing.Size(472, 267);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.ribbonBar1);
