@@ -51,13 +51,10 @@ C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Factur
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Login.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Properties.Resources.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.MDIMenu.resources
-C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Principal.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.csproj.GenerateResource.Cache
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.pdb
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
-C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
-C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.Layout.dll
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.Schedule.dll
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar2.dll

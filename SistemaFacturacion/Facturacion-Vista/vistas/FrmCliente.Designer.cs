@@ -30,12 +30,12 @@
         {
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.cbxTipoDocumento = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtTelefono = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtDireccion = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtEmail = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtApellido = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtNombre = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtDocumento = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
@@ -53,12 +53,12 @@
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanel1.Controls.Add(this.cbxTipoDocumento);
-            this.groupPanel1.Controls.Add(this.textBoxX6);
-            this.groupPanel1.Controls.Add(this.textBoxX5);
-            this.groupPanel1.Controls.Add(this.textBoxX4);
-            this.groupPanel1.Controls.Add(this.textBoxX3);
-            this.groupPanel1.Controls.Add(this.textBoxX2);
-            this.groupPanel1.Controls.Add(this.textBoxX1);
+            this.groupPanel1.Controls.Add(this.txtTelefono);
+            this.groupPanel1.Controls.Add(this.txtDireccion);
+            this.groupPanel1.Controls.Add(this.txtEmail);
+            this.groupPanel1.Controls.Add(this.txtApellido);
+            this.groupPanel1.Controls.Add(this.txtNombre);
+            this.groupPanel1.Controls.Add(this.txtDocumento);
             this.groupPanel1.Controls.Add(this.labelX7);
             this.groupPanel1.Controls.Add(this.labelX6);
             this.groupPanel1.Controls.Add(this.labelX5);
@@ -66,7 +66,6 @@
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
-            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(556, 466);
@@ -114,89 +113,89 @@
             this.cbxTipoDocumento.TabIndex = 14;
             this.cbxTipoDocumento.WatermarkText = "SELECCIONE";
             // 
-            // textBoxX6
+            // txtTelefono
             // 
             // 
             // 
             // 
-            this.textBoxX6.Border.Class = "TextBoxBorder";
-            this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX6.Location = new System.Drawing.Point(166, 380);
-            this.textBoxX6.Name = "textBoxX6";
-            this.textBoxX6.PreventEnterBeep = true;
-            this.textBoxX6.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX6.TabIndex = 13;
-            this.textBoxX6.WatermarkText = "593(__)(_______)";
+            this.txtTelefono.Border.Class = "TextBoxBorder";
+            this.txtTelefono.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTelefono.Location = new System.Drawing.Point(166, 380);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.PreventEnterBeep = true;
+            this.txtTelefono.Size = new System.Drawing.Size(247, 20);
+            this.txtTelefono.TabIndex = 13;
+            this.txtTelefono.WatermarkText = "593(__)(_______)";
             // 
-            // textBoxX5
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.Location = new System.Drawing.Point(166, 320);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX5.TabIndex = 12;
-            this.textBoxX5.WatermarkText = "Su direccion Domiciliario";
-            // 
-            // textBoxX4
+            // txtDireccion
             // 
             // 
             // 
             // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Location = new System.Drawing.Point(166, 252);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX4.TabIndex = 11;
-            this.textBoxX4.WatermarkText = "ejemplo@hotmail.com";
+            this.txtDireccion.Border.Class = "TextBoxBorder";
+            this.txtDireccion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDireccion.Location = new System.Drawing.Point(166, 320);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.PreventEnterBeep = true;
+            this.txtDireccion.Size = new System.Drawing.Size(247, 20);
+            this.txtDireccion.TabIndex = 12;
+            this.txtDireccion.WatermarkText = "Su direccion Domiciliario";
             // 
-            // textBoxX3
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(166, 194);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX3.TabIndex = 10;
-            this.textBoxX3.WatermarkText = "Apellidos Completos";
-            // 
-            // textBoxX2
+            // txtEmail
             // 
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(166, 144);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX2.TabIndex = 9;
-            this.textBoxX2.WatermarkText = "Sus dos Nombres";
+            this.txtEmail.Border.Class = "TextBoxBorder";
+            this.txtEmail.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtEmail.Location = new System.Drawing.Point(166, 252);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PreventEnterBeep = true;
+            this.txtEmail.Size = new System.Drawing.Size(247, 20);
+            this.txtEmail.TabIndex = 11;
+            this.txtEmail.WatermarkText = "ejemplo@hotmail.com";
             // 
-            // textBoxX1
-            // 
-            // 
+            // txtApellido
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(166, 85);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(247, 20);
-            this.textBoxX1.TabIndex = 8;
-            this.textBoxX1.WatermarkText = "Ingrese su Identificacion";
+            // 
+            // 
+            this.txtApellido.Border.Class = "TextBoxBorder";
+            this.txtApellido.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtApellido.Location = new System.Drawing.Point(166, 194);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.PreventEnterBeep = true;
+            this.txtApellido.Size = new System.Drawing.Size(247, 20);
+            this.txtApellido.TabIndex = 10;
+            this.txtApellido.WatermarkText = "Apellidos Completos";
+            // 
+            // txtNombre
+            // 
+            // 
+            // 
+            // 
+            this.txtNombre.Border.Class = "TextBoxBorder";
+            this.txtNombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtNombre.Location = new System.Drawing.Point(166, 144);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PreventEnterBeep = true;
+            this.txtNombre.Size = new System.Drawing.Size(247, 20);
+            this.txtNombre.TabIndex = 9;
+            this.txtNombre.WatermarkText = "Sus dos Nombres";
+            // 
+            // txtDocumento
+            // 
+            // 
+            // 
+            // 
+            this.txtDocumento.Border.Class = "TextBoxBorder";
+            this.txtDocumento.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDocumento.Location = new System.Drawing.Point(166, 85);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.PreventEnterBeep = true;
+            this.txtDocumento.Size = new System.Drawing.Size(247, 20);
+            this.txtDocumento.TabIndex = 8;
+            this.txtDocumento.WatermarkText = "Ingrese su Identificacion";
             // 
             // labelX7
             // 
@@ -325,12 +324,12 @@
         #endregion
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTelefono;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtDireccion;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtApellido;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtNombre;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtDocumento;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX5;

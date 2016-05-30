@@ -1330,6 +1330,16 @@
             <param name="oldDate">Old date</param>
             <param name="newDate">New date</param>
         </member>
+        <member name="M:DevComponents.DotNetBar.Schedule.CalendarView.OnViewDateChanged(DevComponents.DotNetBar.Schedule.eCalendarView,System.DateTime,System.DateTime,System.DateTime,System.DateTime)">
+            <summary>
+            Sends ViewDateChanged events
+            </summary>
+            <param name="calendarView">eCalendarView</param>
+            <param name="oldStartDate">Old start date</param>
+            <param name="newStartDate">New start date</param>
+            <param name="oldEndDate">Old end date</param>
+            <param name="newEndDate">New end date</param>
+        </member>
         <member name="M:DevComponents.DotNetBar.Schedule.CalendarView.OnWeekViewStartDateChanged(System.DateTime,System.DateTime)">
             <summary>
             Sends WeekViewStartDateChanged event
@@ -2291,11 +2301,6 @@
             Occurs when a view load/reload has occurred
             </summary>
         </member>
-        <member name="E:DevComponents.DotNetBar.Schedule.CalendarView.ViewDateChanging">
-            <summary>
-            Occurs when a View date is changing
-            </summary>
-        </member>
         <member name="E:DevComponents.DotNetBar.Schedule.CalendarView.BeforeAppointmentViewChange">
             <summary>
             Occurs before an AppointmentView is about to change
@@ -2654,11 +2659,6 @@
             Gets and sets the default appointment border width
             </summary>
         </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.AllDayDisplayMode">
-            <summary>
-            Gets or sets how DayView "AllDay" appointments are displayed
-            </summary>
-        </member>
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.EnableMarkup">
             <summary>
             Gets or sets whether Appointment text-markup support is enabled
@@ -2750,12 +2750,6 @@
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.EnableDragDrop">
             <summary>
             Gets and sets whether DragDrop across calendar views is enabled
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.EnableDragCopy">
-            <summary>
-            Gets or sets whether a new copy of an item will be
-            created when holding the Control-Key while dragging it.
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.YearViewAllowDateSelection">
@@ -2909,7 +2903,7 @@
         </member>
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.TimeLineViewEndDate">
             <summary>
-            Gets or sets the TimeLine end date
+            Gets the TimeLine end date
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.TimeLineViewScrollStartDate">
@@ -3047,11 +3041,6 @@
             Gets or sets the Calendar TimeLineView PageNavigator NextPageTooltip
             </summary>
         </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.TimeLineMinAppointmentWidth">
-            <summary>
-            Gets and sets the Calendar TimeLineView Minimum Appointment Width
-            </summary>
-        </member>
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.IsMultiCalendar">
             <summary>
             Gets the multiCalendar state or mode
@@ -3121,12 +3110,7 @@
         </member>
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.VScrollBar">
             <summary>
-            Gets the Calendar Multiuser Vertical scrollbar
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.WeekDayVScrollBar">
-            <summary>
-            Gets the WeekDay Vertical scrollbar
+            Gets and sets the Calendar Multiuser Vertical scrollbar
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Schedule.CalendarView.Style">
@@ -3272,16 +3256,6 @@
         <member name="T:DevComponents.DotNetBar.Schedule.eYearViewLinkStyle">
             <summary>
             Defines link mode for YearView dates containing appointments
-            </summary>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Schedule.eSlotDisplayState">
-            <summary>
-            Defines the "display state" (work, inactive, selected) of the slot
-            </summary>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Schedule.eAllDayDisplayMode">
-            <summary>
-            Defines how All "All Day" appointments are displayed
             </summary>
         </member>
         <member name="T:DevComponents.DotNetBar.Schedule.SelectedViewEventArgs">
@@ -3505,11 +3479,6 @@
             ViewDateChangedEventArgs
             </summary>
         </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangedEventArgs.View">
-            <summary>
-            Gets the View
-            </summary>
-        </member>
         <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangedEventArgs.eCalendarView">
             <summary>
             Gets the eCalendarView
@@ -3520,54 +3489,19 @@
             Gets th old, previous start time
             </summary>
         </member>
+        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangedEventArgs.NewStartTime">
+            <summary>
+            Gets th new start time
+            </summary>
+        </member>
         <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangedEventArgs.OldEndTime">
             <summary>
             Gets the old, previous end time
             </summary>
         </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangedEventArgs.NewStartTime">
-            <summary>
-            Gets or sets the new start time
-            </summary>
-        </member>
         <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangedEventArgs.NewEndTime">
             <summary>
-            Gets or sets the new end time
-            </summary>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Schedule.ViewDateChangingEventArgs">
-            <summary>
-            DateViewChangingEventArgs
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangingEventArgs.View">
-            <summary>
-            Gets the View
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangingEventArgs.eCalendarView">
-            <summary>
-            Gets the eCalendarView
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangingEventArgs.OldStartTime">
-            <summary>
-            Gets th old, previous start time
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangingEventArgs.OldEndTime">
-            <summary>
-            Gets the old, previous end time
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangingEventArgs.NewStartTime">
-            <summary>
-            Gets or sets the new start time
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.ViewDateChangingEventArgs.NewEndTime">
-            <summary>
-            Gets or sets the new end time
+            Gets the new end time
             </summary>
         </member>
         <member name="T:DevComponents.DotNetBar.Schedule.SelectedOwnerChangedEventArgs">
@@ -6360,13 +6294,6 @@
             Gets the calendar/date based working days collection. This collection allows you to specify working time for specific dates. Values specified here take precedence over working hours set through WorkDays collection.
             </summary>
         </member>
-        <member name="P:DevComponents.Schedule.Model.CalendarModel.PreciseDateTimeValues">
-            <summary>
-            Gets or sets whether Appointment StartTime and EndTime values retain seconds and milliseconds. When
-            set to false seconds and milliseconds are discarded. When set to true the DateTime set to appointment
-            StartTime and EndTime is used as is including seconds and milliseconds. Default value is false.
-            </summary>
-        </member>
         <member name="P:DevComponents.Schedule.Model.CalendarModel.IsUpdateSuspended">
             <summary>
             Gets whether internal control update is suspended due to the call to BeginUpdate method.
@@ -6966,7 +6893,7 @@
             <param name="sb"></param>
             <param name="repeat"></param>
         </member>
-        <member name="M:DevComponents.Schedule.Model.Serialization.IcsExporter.AddRRuleByDay(System.Text.StringBuilder,DevComponents.Schedule.Model.AppointmentRecurrence)">
+        <member name="M:DevComponents.Schedule.Model.Serialization.IcsExporter.AddRRuleByDay(System.Text.StringBuilder,DevComponents.Schedule.Model.eDailyRecurrenceRepeat)">
             <summary>
             AddRRuleByDay
             </summary>
@@ -7307,10 +7234,11 @@
             <param name="evData"></param>
             <returns></returns>
         </member>
-        <member name="M:DevComponents.Schedule.Model.Serialization.IcsImporter.IsSkippableByDay(System.DateTime,DevComponents.Schedule.Model.Serialization.IcsImporter.VEventData)">
+        <member name="M:DevComponents.Schedule.Model.Serialization.IcsImporter.IsSkippableByDay(DevComponents.Schedule.Model.Appointment,System.DateTime,DevComponents.Schedule.Model.Serialization.IcsImporter.VEventData)">
             <summary>
             Determines if the given date is a skippable ByDays date
             </summary>
+            <param name="app"></param>
             <param name="date"></param>
             <param name="evData"></param>
             <returns></returns>
@@ -9556,11 +9484,6 @@
             Gets or sets the Indicator color
             </summary>
         </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.TimeIndicator.IndicatorLevel">
-            <summary>
-            Gets or sets the IndicatorTime display level
-            </summary>
-        </member>
         <member name="P:DevComponents.DotNetBar.Schedule.TimeIndicator.IndicatorTime">
             <summary>
             Gets or sets the Indicator time
@@ -9612,11 +9535,6 @@
         <member name="T:DevComponents.DotNetBar.Schedule.eTimeIndicatorArea">
             <summary>
             Specifies the Indicator display area
-            </summary>
-        </member>
-        <member name="T:DevComponents.DotNetBar.Schedule.eTimeIndicatorLevel">
-            <summary>
-            Specifies the Indicator display level
             </summary>
         </member>
         <member name="M:DevComponents.DotNetBar.Schedule.TimeIndicatorCollection.AddRange(DevComponents.DotNetBar.Schedule.TimeIndicator[])">
@@ -10638,7 +10556,7 @@
             <param name="bounds"></param>
             <param name="states"></param>
         </member>
-        <member name="M:DevComponents.DotNetBar.Schedule.TimeLineView.DrawTimeIndicators(System.Drawing.Graphics,System.Int32,System.Int32,DevComponents.DotNetBar.Schedule.eTimeIndicatorLevel)">
+        <member name="M:DevComponents.DotNetBar.Schedule.TimeLineView.DrawTimeIndicators(System.Drawing.Graphics,System.Int32,System.Int32)">
             <summary>
             Draws view TimeIndicators
             </summary>
@@ -11009,11 +10927,6 @@
         <member name="P:DevComponents.DotNetBar.Schedule.TimeLineView.TimeLineColumnCount">
             <summary>
             Gets the number of Columns
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.TimeLineView.MinAppointmentWidth">
-            <summary>
-            Gets the MinAppointmentWidth
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Schedule.TimeLineView.ShowCondensed">
@@ -11473,22 +11386,6 @@
             <returns>True if a valid selection exists
             at the given point</returns>
         </member>
-        <member name="M:DevComponents.DotNetBar.Schedule.WeekDayView.GetDateBounds(System.DateTime)">
-            <summary>
-            Gets the bounding display rectangle for the given date/time.
-            </summary>
-            <param name="date">The date/time</param>
-            <returns>Bounding display rectangle</returns>
-        </member>
-        <member name="M:DevComponents.DotNetBar.Schedule.WeekDayView.GetDateBounds(System.DateTime,System.DateTime)">
-            <summary>
-            Gets the bounding display rectangle for the given
-            starting and ending date/time range.
-            </summary>
-            <param name="startDate">Start date</param>
-            <param name="endDate">End date</param>
-            <returns>Bounding display rectangle</returns>
-        </member>
         <member name="M:DevComponents.DotNetBar.Schedule.WeekDayView.ItemIsSelectedChanged(System.Object,System.EventArgs)">
             <summary>
             Handles selected item changes
@@ -11723,7 +11620,7 @@
             <param name="cRect"></param>
             <param name="selected"></param>
         </member>
-        <member name="M:DevComponents.DotNetBar.Schedule.WeekDayView.DrawTimeIndicators(System.Drawing.Graphics,System.Int32,System.Int32,DevComponents.DotNetBar.Schedule.eTimeIndicatorLevel)">
+        <member name="M:DevComponents.DotNetBar.Schedule.WeekDayView.DrawTimeIndicators(System.Drawing.Graphics,System.Int32,System.Int32)">
             <summary>
             Draw view TimeIndicators
             </summary>
@@ -12027,7 +11924,7 @@
             Gets the view column from the given date
             </summary>
             <param name="date"></param>
-            <returns>The DayColumns index, or -1 if invalid.</returns>
+            <returns></returns>
         </member>
         <member name="M:DevComponents.DotNetBar.Schedule.WeekDayView.EnsureSelectionVisible">
             <summary>
@@ -12115,11 +12012,6 @@
             Gets the view's number of DayColumns
             </summary>
         </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.WeekDayView.VScrollBar">
-            <summary>
-            Gets the WeekDay vertical scrollbar
-            </summary>
-        </member>
         <member name="P:DevComponents.DotNetBar.Schedule.WeekDayView.ViewRect">
             <summary>
             Gets the Sub-Day view rectangle
@@ -12148,6 +12040,11 @@
         <member name="P:DevComponents.DotNetBar.Schedule.WeekDayView.DayColumnWidth">
             <summary>
             Gets the DayColumnWidth
+            </summary>
+        </member>
+        <member name="P:DevComponents.DotNetBar.Schedule.WeekDayView.VsPanel">
+            <summary>
+            Gets the WeekDay vertical scroll panel
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Schedule.WeekDayView.MaximumAllDayPanelHeight">
@@ -12208,11 +12105,6 @@
         <member name="P:DevComponents.DotNetBar.Schedule.WeekDayView.SelectedBrush">
             <summary>
             Gets and sets the selected brush
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Schedule.WeekDayView.VsPanel">
-            <summary>
-            Gets the WeekDay vertical scroll panel
             </summary>
         </member>
         <member name="M:DevComponents.DotNetBar.Schedule.DayView.#ctor(DevComponents.DotNetBar.Schedule.CalendarView)">

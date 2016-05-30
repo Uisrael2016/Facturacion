@@ -68,7 +68,7 @@
             this.ribbonBar1.Controls.Add(this.textPassword);
             this.ribbonBar1.Controls.Add(this.textUser);
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonBar1.DragDropSupport = true;
+            //this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Location = new System.Drawing.Point(5, 1);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(462, 264);
@@ -119,7 +119,7 @@
             // 
             this.textPassword.Border.Class = "TextBoxBorder";
             this.textPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textPassword.DisabledBackColor = System.Drawing.Color.White;
+           // this.textPassword.DisabledBackColor = System.Drawing.Color.White;
             this.textPassword.Location = new System.Drawing.Point(243, 121);
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
@@ -134,7 +134,7 @@
             // 
             this.textUser.Border.Class = "TextBoxBorder";
             this.textUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textUser.DisabledBackColor = System.Drawing.Color.White;
+            //this.textUser.DisabledBackColor = System.Drawing.Color.White;
             this.textUser.Location = new System.Drawing.Point(241, 73);
             this.textUser.Name = "textUser";
             this.textUser.PreventEnterBeep = true;

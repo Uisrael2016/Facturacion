@@ -23,7 +23,8 @@ namespace Facturacion_Vista.Vistas
 
         private void FrmListarCliente_Load(object sender, EventArgs e)
         {
-
+            ClienteDao listaruser = new ClienteDao();
+            dtlista.DataSource = listaruser.consultar();
 
         }
         ClienteDao dao = new ClienteDao();

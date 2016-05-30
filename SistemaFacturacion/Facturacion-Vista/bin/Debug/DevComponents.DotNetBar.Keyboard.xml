@@ -522,11 +522,6 @@
             </summary>
             <param name="e">Provides event arguments.</param>
         </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.TouchKeyboard.HideKeyboard">
-            <summary>
-            Hides the keyboard.
-            </summary>
-        </member>
         <member name="M:DevComponents.DotNetBar.Keyboard.TouchKeyboard.Dispose(System.Boolean)">
             <summary> 
             Clean up any resources being used.
@@ -621,11 +616,6 @@
         <member name="P:DevComponents.DotNetBar.Keyboard.TouchKeyboard.FloatingLocation">
             <summary>
             Gets or sets the coordinates of the upper-left corner of the keyboard when shown floating, relative to the screen.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.TouchKeyboard.TouchEnabled">
-            <summary>
-            Indicates whether touch support is enabled when provided by hardware.
             </summary>
         </member>
         <member name="P:DevComponents.DotNetBar.Keyboard.TouchKeyboard.FloatingSize">
@@ -1073,13 +1063,6 @@
             Creates a new VirtualKeyboard control.
             </summary>
         </member>
-        <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.OnTouchEnabledChanged(System.Boolean,System.Boolean)">
-            <summary>
-            Called when TouchEnabled property has changed.
-            </summary>
-            <param name="oldValue">Old property value</param>
-            <param name="newValue">New property value</param>
-        </member>
         <member name="M:DevComponents.DotNetBar.Keyboard.KeyboardControl.HitTest(System.Drawing.Point)">
             <summary>
             Returns the Key at given location. Location expected is in control coordinates.
@@ -1141,16 +1124,6 @@
         <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.IsTopBarVisible">
             <summary>
             Gets or sets a value indicating if the top bar of the keyboard is visible.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.CaptionHeight">
-            <summary>
-            Indicates the height of the keyboard caption which hosts the close button.
-            </summary>
-        </member>
-        <member name="P:DevComponents.DotNetBar.Keyboard.KeyboardControl.TouchEnabled">
-            <summary>
-            Indicates whether touch support is enabled when provided by hardware.
             </summary>
         </member>
         <member name="E:DevComponents.DotNetBar.Keyboard.KeyboardControl.KeyboardClosing">

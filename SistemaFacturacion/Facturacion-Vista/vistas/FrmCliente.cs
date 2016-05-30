@@ -35,7 +35,24 @@ namespace Facturacion_Vista.Vistas
         private void buttonX1_Click(object sender, EventArgs e)
         {
             
-            
+                ClienteDao insertarcliente = new ClienteDao();
+                TipoDocumento tpodocumento = (TipoDocumento)cbxTipoDocumento.SelectedValue;
+            TipoDocumentoDao documento = new TipoDocumentoDao();
+                Cliente cliente = new Cliente();
+
+            //cliente.IdTipoDocumento = (tpodocumento);
+            //string todocumento;
+            //todocumento = Convert.ToString(cbxTipoDocumento.SelectedValue);
+            cliente.IdTipoDocumento = Convert.ToInt32(tpodocumento.IdTipoDocumento);
+                cliente.DocumentoCliente = txtDocumento.Text;
+                cliente.Nombres = txtNombre.Text;
+                cliente.Apellidos = txtApellido.Text;
+                cliente.Correo = txtEmail.Text;
+                cliente.Direccion = txtDireccion.Text;
+                cliente.Telefono = txtTelefono.Text;
+            insertarcliente.insertar(cliente);
+
+                 
         }
     }
 }

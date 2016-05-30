@@ -185,7 +185,7 @@
             this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar1.DragDropSupport = true;
+            //this.ribbonBar1.DragDropSupport = true;
             this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem14,
             this.buttonItem15,
@@ -261,7 +261,7 @@
             this.ribbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar2.ContainerControlProcessDialogKey = true;
             this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar2.DragDropSupport = true;
+           // this.ribbonBar2.DragDropSupport = true;
             this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.bt_producto,
             this.buttonItem17,
@@ -337,7 +337,7 @@
             this.ribbonBar3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar3.ContainerControlProcessDialogKey = true;
             this.ribbonBar3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar3.DragDropSupport = true;
+            //this.ribbonBar3.DragDropSupport = true;
             this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem16,
             this.buttonItem19,
