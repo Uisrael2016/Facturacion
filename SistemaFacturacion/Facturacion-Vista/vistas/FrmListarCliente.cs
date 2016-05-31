@@ -39,20 +39,25 @@ namespace Facturacion_Vista.Vistas
             frmcliente.ShowDialog();
             this.Lista();
         }
-        
+        //private ClienteDao clientedao;
         private void dtlista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
+                
+                int idregistro = 0;
                 FrmCliente frmcliente = new FrmCliente();
-                var t = this.listaruser.consultarPorId(int.Parse(this.dtlista.CurrentRow.Cells[0].Value.ToString()));
-                frmcliente.cbxTipoDocumento.Text = t.IdTipoDocumento.ToString();
-                frmcliente.txtDocumento.Text = t.DocumentoCliente;
-                frmcliente.txtNombre.Text = t.Nombres;
-                frmcliente.txtApellido.Text = t.Apellidos;
-                frmcliente.txtEmail.Text = t.Correo;
-                frmcliente.txtDireccion.Text = t.Direccion;
-                frmcliente.txtTelefono.Text = t.Telefono;
+               // var model = this.listaruser.consultarPorId(int.Parse(this.dtlista.CurrentRow.Cells[0].Value.ToString()));
+                idregistro = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
+                ClienteDao clientedao = new ClienteDao();
+                Cliente model = clientedao.consultarPorId(idregistro);
+                frmcliente.cbxTipoDocumento.SelectedItem = model.IdTipoDocumento.ToString();
+                frmcliente.txtDocumento.Text = model.DocumentoCliente;
+                frmcliente.txtNombre.Text = model.Nombres;
+                frmcliente.txtApellido.Text = model.Apellidos;
+                frmcliente.txtEmail.Text = model.Correo;
+                frmcliente.txtDireccion.Text = model.Direccion;
+                frmcliente.txtTelefono.Text = model.Telefono;
                 frmcliente.ShowDialog();
                 this.Lista();
             }
