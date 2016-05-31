@@ -116,8 +116,29 @@ namespace Facturacion_Vista.Vistas
         
         private void btcliente_Click(object sender, EventArgs e)
         {
+        //    FrmListarCliente listcliente = new FrmListarCliente();
+        //    listcliente.Show();
+        }
+
+        private void Permisos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribbonBar2_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribbonBar3_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonItem26_Click(object sender, EventArgs e)
+        {
             FrmListarCliente listcliente = new FrmListarCliente();
-            listcliente.Show();
+            listcliente.ShowDialog();
         }
     }
 }

@@ -66,6 +66,7 @@
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(556, 466);
@@ -324,12 +325,6 @@
         #endregion
 
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTelefono;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDireccion;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtApellido;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtNombre;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDocumento;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX5;
@@ -339,6 +334,12 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.ButtonX bt_guardar;
         private DevComponents.DotNetBar.ButtonX buttonX2;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbxTipoDocumento;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtTelefono;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtDireccion;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtApellido;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtNombre;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtDocumento;
+        public DevComponents.DotNetBar.Controls.ComboBoxEx cbxTipoDocumento;
     }
 }

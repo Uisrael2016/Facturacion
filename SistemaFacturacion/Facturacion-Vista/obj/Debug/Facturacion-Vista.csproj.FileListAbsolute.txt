@@ -124,3 +124,5 @@ C:\Users\ANDRES\Desktop\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-V
 C:\Users\ANDRES\Desktop\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.MDIMenu.resources
 C:\Users\ANDRES\Desktop\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Principal.resources
 C:\Users\ANDRES\Desktop\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.csproj.GenerateResource.Cache
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.Layout.Design.dll
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.Layout.dll

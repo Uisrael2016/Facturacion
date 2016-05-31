@@ -56,7 +56,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtlista.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlista.EnableHeadersVisualStyles = false;
@@ -73,6 +73,7 @@
             this.dtlista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtlista.Size = new System.Drawing.Size(768, 311);
             this.dtlista.TabIndex = 0;
+            this.dtlista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
             // 
             // bar1
             // 

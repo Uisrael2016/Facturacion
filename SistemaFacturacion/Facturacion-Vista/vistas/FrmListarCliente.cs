@@ -20,30 +20,17 @@ namespace Facturacion_Vista.Vistas
         {
             InitializeComponent();
         }
-
+        ClienteDao listaruser = new ClienteDao();
         private void FrmListarCliente_Load(object sender, EventArgs e)
         {
-            ClienteDao listaruser = new ClienteDao();
-            dtlista.DataSource = listaruser.consultar();
+            this.Lista();
 
         }
-        ClienteDao dao = new ClienteDao();
+        
         private void Lista()
         {
             
-            //try
-            //{
-            //    this.dtlista.AlternatingRowsDefaultCellStyle.BackColor = Color.Azure;
-            //    //is.dtlista.DataSource = this.dao.consultar(this.txtbuscar.Text);
-            //    this.dtlista.Columns[0].HeaderText = "Codigo";
-            //    this.dtlista.Columns[0].Width = 100;
-            //    this.dtlista.Columns[0].HeaderText = "Cliente";
-            //    this.dtlista.Columns[0].Width = 300;
-            //}
-
-            //catch (Exception)
-            //{
-            //}
+            dtlista.DataSource = listaruser.consultar();
         }
         private void buttonItem1_Click(object sender, EventArgs e)
         {
@@ -51,6 +38,28 @@ namespace Facturacion_Vista.Vistas
             frmcliente.nuevo = true;
             frmcliente.ShowDialog();
             this.Lista();
+        }
+        
+        private void dtlista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                FrmCliente frmcliente = new FrmCliente();
+                var t = this.listaruser.consultarPorId(int.Parse(this.dtlista.CurrentRow.Cells[0].Value.ToString()));
+                frmcliente.cbxTipoDocumento.Text = t.IdTipoDocumento.ToString();
+                frmcliente.txtDocumento.Text = t.DocumentoCliente;
+                frmcliente.txtNombre.Text = t.Nombres;
+                frmcliente.txtApellido.Text = t.Apellidos;
+                frmcliente.txtEmail.Text = t.Correo;
+                frmcliente.txtDireccion.Text = t.Direccion;
+                frmcliente.txtTelefono.Text = t.Telefono;
+                frmcliente.ShowDialog();
+                this.Lista();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
