@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.cbxTipoDocumento = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.txtTelefono = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -45,7 +46,9 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.bt_guardar = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.erroricono = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erroricono)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -66,7 +69,6 @@
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
-            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Location = new System.Drawing.Point(0, 0);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(556, 466);
@@ -305,6 +307,10 @@
             this.buttonX2.TabIndex = 2;
             this.buttonX2.Text = "Salir";
             // 
+            // erroricono
+            // 
+            this.erroricono.ContainerControl = this;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +324,7 @@
             this.Text = "FrmCliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.groupPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.erroricono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +348,6 @@
         public DevComponents.DotNetBar.Controls.TextBoxX txtNombre;
         public DevComponents.DotNetBar.Controls.TextBoxX txtDocumento;
         public DevComponents.DotNetBar.Controls.ComboBoxEx cbxTipoDocumento;
+        private System.Windows.Forms.ErrorProvider erroricono;
     }
 }

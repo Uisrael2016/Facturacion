@@ -27,10 +27,17 @@ namespace Facturacion_Vista.Vistas
 
         }
         
-        private void Lista()
+        public void Lista()
         {
-            
-            dtlista.DataSource = listaruser.consultar();
+            try
+            {
+                dtlista.DataSource = listaruser.consultar();
+            }
+            catch
+            {
+                MessageBox.Show("error al obtener conexion ");
+            }
+           
         }
         private void buttonItem1_Click(object sender, EventArgs e)
         {

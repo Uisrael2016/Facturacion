@@ -20,8 +20,20 @@ namespace Facturacion_Vista.Vistas
             InitializeComponent();
         }
         public bool nuevo;
+        private enum Tipo
+        {
+            insert,
+            update,
+            reload
+        }
 
+        private Tipo _tipo;
         private void FrmCliente_Load(object sender, EventArgs e)
+        {
+          cargar_combo();
+            
+        }
+        private void cargar_combo()
         {
             TipoDocumentoDao tpdocumento = new TipoDocumentoDao();
             var lista = tpdocumento.consultar();
@@ -30,24 +42,74 @@ namespace Facturacion_Vista.Vistas
             //xTipoDocumento.ad
             cbxTipoDocumento.DisplayMember = "Documento";
             cbxTipoDocumento.ValueMember = "IdTipoDocumento";
+           
+        }
+        private void dato ()
+        {
+            ClienteDao incliente = new ClienteDao();
+            Cliente clinete = new Cliente();
+            incliente.insertar(clinete);
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            
-                 ClienteDao insertarcliente = new ClienteDao();                
-                 Cliente cliente = new Cliente();
-                 cliente.IdTipoDocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
-                 cliente.DocumentoCliente = txtDocumento.Text;
-                 cliente.Nombres = txtNombre.Text;
-                 cliente.Apellidos = txtApellido.Text;
-                 cliente.Correo = txtEmail.Text;
-                 cliente.Direccion = txtDireccion.Text;
-                 cliente.Telefono = txtTelefono.Text;
-                 insertarcliente.insertar(cliente);
+            erroricono.Clear();
+            if (txtDocumento.Text == "")
+            {
+                erroricono.SetError(txtDocumento, "Campo Requerido");
+                return;
+            }
+
+            if ( txtNombre.Text == "")
+            {
+                erroricono.SetError(txtNombre, "Campo Requerido");
+                return;
+            }
+
+            if (txtApellido.Text == "")
+            {
+                erroricono.SetError(txtApellido, "Cmapo Requerido");
+                return;
+            }
+
+            if (txtEmail.Text == "")
+            {
+                erroricono.SetError(txtEmail, "Campo Requerido");
+                return;
+            }
+
+            try
+            {
+
+               
+
+                ClienteDao insertarcliente = new ClienteDao();
+                Cliente cliente = new Cliente();
+                cliente.IdTipoDocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
+                cliente.DocumentoCliente = txtDocumento.Text;
+                cliente.Nombres = txtNombre.Text;
+                cliente.Apellidos = txtApellido.Text;
+                cliente.Correo = txtEmail.Text;
+                cliente.Direccion = txtDireccion.Text;
+                cliente.Telefono = txtTelefono.Text;
+                if (_tipo == Tipo.insert)
+                {
+                    insertarcliente.insertar(cliente);
+                    MessageBox.Show("Registro Agregado Correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNombre.Focus();
+                
+                }
+                       
+            }
+            catch
+            {
+
+            }
             this.Hide();
 
                  
         }
+
+       
     }
 }
