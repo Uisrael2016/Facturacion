@@ -178,6 +178,81 @@
   <ItemGroup>
     <None Include="Resources\save_ico.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrador1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarioperfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doccontable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formapago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\material.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarifa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secuencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notapedido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proforma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facturacion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoSistema.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoSistema1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoSistema2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -2216,6 +2216,16 @@
             MinorTickColor
             </summary>
         </member>
+        <member name="P:DevComponents.Instrumentation.Primitives.BaseKnob.KnobIndicatorPointerBorderColor">
+            <summary>
+            KnobIndicatorPointerBorderColor
+            </summary>
+        </member>
+        <member name="P:DevComponents.Instrumentation.Primitives.BaseKnob.KnobIndicatorPointerBorderWidth">
+            <summary>
+            KnobIndicatorPointerBorderWidth
+            </summary>
+        </member>
         <member name="P:DevComponents.Instrumentation.Primitives.BaseKnob.KnobIndicatorPointerColor">
             <summary>
             KnobIndicatorPointerColor
@@ -2313,6 +2323,16 @@
         <member name="P:DevComponents.Instrumentation.KnobColorTable.MinorTickColor">
             <summary>
             Gets or sets the color of the Minor Tick marks
+            </summary>
+        </member>
+        <member name="P:DevComponents.Instrumentation.KnobColorTable.KnobIndicatorPointerBorderColor">
+            <summary>
+            Gets or sets the color of the KnobIndicatorPointer Border
+            </summary>
+        </member>
+        <member name="P:DevComponents.Instrumentation.KnobColorTable.KnobIndicatorPointerBorderWidth">
+            <summary>
+            Gets or sets the width of the KnobIndicatorPointer Border
             </summary>
         </member>
         <member name="P:DevComponents.Instrumentation.KnobColorTable.KnobIndicatorPointerColor">
