@@ -19,6 +19,8 @@ namespace Facturacion_Entidades
         public virtual string PathLogo { get; set; }
         public virtual char Estado { get; set; }
 
+        public virtual bool Contabilidad { get; set;}
+        public virtual Ambiente IdAmbiente { get; set; }
         public virtual IList<Factura> FacturaList { get; set; }
         public Empresa()
         {

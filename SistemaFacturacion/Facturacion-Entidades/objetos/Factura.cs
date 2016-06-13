@@ -39,7 +39,6 @@ namespace Facturacion_Entidades
 
         public virtual FormaPago IdFormaPago { get; set; }
 
-        public virtual Ambiente IdAmbiente { get; set; }
 
         public virtual FacturaImpuesto IdFacturaImpuesto { get; set; }
 

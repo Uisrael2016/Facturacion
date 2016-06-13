@@ -17,7 +17,7 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.Codigo).Column("codigo");
             Map(c => c.Descripcion).Column("descripcion");
             Map(c => c.Estado).Column("estado");
-            HasMany<Factura>(c => c.FacturaList).KeyColumn("id_factura").Inverse().Not.LazyLoad();
+            HasMany<Empresa>(c => c.EmpresaList).KeyColumn("id_empresa").Inverse().Not.LazyLoad();
         }
 
     }

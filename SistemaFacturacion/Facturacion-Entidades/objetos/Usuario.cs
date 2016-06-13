@@ -35,7 +35,7 @@ namespace Facturacion_Entidades
 
         public virtual IList<Factura> FacturaList { get; set; }
 
-        public virtual TipoDocumento IdTipoDucumento { get; set; }
+        public virtual TipoDocumento IdTipoDocumento { get; set; }
 
         public virtual IList<Proforma> ProformaList { get; set; }
 

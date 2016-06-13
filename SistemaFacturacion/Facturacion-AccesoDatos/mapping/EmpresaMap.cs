@@ -19,6 +19,8 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.DirecMatriz).Column("direc_matriz");
             Map(c => c.PathLogo).Column("path_logo");
             Map(c => c.Estado).Column("estado");
+            Map(c => c.Contabilidad).Column("contabilidad");
+            References(c => c.IdAmbiente).Class<Ambiente>().Column("id_ambiente").Not.LazyLoad();
             HasMany<Factura>(c => c.FacturaList).KeyColumn("id_factura").Inverse().Not.LazyLoad();
         }
     }

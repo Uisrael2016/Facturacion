@@ -21,10 +21,15 @@ namespace Facturacion_Vista.Vistas
         EmpresaDao empresaDao;
         Empresa empresaSeleccionada;
         int idEmpresa = 0;
+        private Ambiente _ambiente;
+        private bool contabilidad;
         public FrmEmpresa(Acciones valor)
         {
             InitializeComponent();
             this.accion = valor;
+            _ambiente = new Ambiente();
+            //cargaAmbiente();
+            cargaCombo();
             if (valor == Acciones.update)
             {
                 estdoLbl.Visible = true;
@@ -44,11 +49,21 @@ namespace Facturacion_Vista.Vistas
                 textRuc.Text = empresaSeleccionada.Ruc;
                 textRazonSocial.Text = empresaSeleccionada.RazonSocial;
                 textDirecMatriz.Text = empresaSeleccionada.DirecMatriz;
-                pathLbl.Text = empresaSeleccionada.PathLogo;
+                textPath.Text = empresaSeleccionada.PathLogo;
+                checkContabilidad.Checked = empresaSeleccionada.Contabilidad;
+                comboAmbiente.SelectedItem= empresaSeleccionada.IdAmbiente;
             }else
             {
                 empresaSeleccionada = new Empresa();
             }
+        }
+
+        private void cargaCombo()
+        {
+            AmbienteDao dao = new AmbienteDao();
+            comboAmbiente.DataSource = dao.listaAmbiente();
+            comboAmbiente.DisplayMember = "Descripcion";
+            comboAmbiente.ValueMember = "IdAmbiente";
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -62,7 +77,7 @@ namespace Facturacion_Vista.Vistas
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                 {
                     pathFile = dialog.FileName;
-                    pathLbl.Text = pathFile;
+                    textPath.Text = pathFile;
                 }
 
             }
@@ -93,18 +108,25 @@ namespace Facturacion_Vista.Vistas
 
                 }
             }
-            if (pathLbl.Text == "")
+            if (textPath.Text == "")
             {
-                errorProvider1.SetError(pathLbl, "Debe seleccionar un logo");
+                errorProvider1.SetError(textPath, "Debe seleccionar un logo");
                 return;
             }
             empresaDao = new EmpresaDao();
             try
             {
+                
                 empresaSeleccionada.Ruc = textRuc.Text.ToUpper();
                 empresaSeleccionada.RazonSocial = textRazonSocial.Text.ToUpper();
                 empresaSeleccionada.DirecMatriz = textDirecMatriz.Text.ToUpper();
-                empresaSeleccionada.PathLogo = pathLbl.Text;
+                empresaSeleccionada.PathLogo = textPath.Text;
+                empresaSeleccionada.IdAmbiente = _ambiente;
+                if (checkContabilidad.Checked == true)
+                    contabilidad = true;
+                else
+                    contabilidad = false;
+                empresaSeleccionada.Contabilidad = contabilidad;
                 if (accion == Acciones.insert)
                 {
                     empresaSeleccionada.Estado = 'A';
@@ -139,7 +161,17 @@ namespace Facturacion_Vista.Vistas
             this.Close();
         }
 
-        private void FrmEmpresa_Load(object sender, EventArgs e)
+        private void comboAmbiente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Ambiente ambt = (Ambiente)comboAmbiente.SelectedItem;
+            _ambiente.IdAmbiente = ambt.IdAmbiente;
+            _ambiente.Codigo = ambt.Codigo;
+            _ambiente.Descripcion = ambt.Descripcion;
+            _ambiente.Estado = ambt.Estado;
+
+        }
+
+        private void comboAmbiente_DataSourceChanged(object sender, EventArgs e)
         {
 
         }

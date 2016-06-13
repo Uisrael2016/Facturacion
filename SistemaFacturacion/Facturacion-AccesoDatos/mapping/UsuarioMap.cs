@@ -24,7 +24,7 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.Estado).Column("estado");
             Map(c => c.Telefono).Column("telefono");
             Map(c => c.UsuarioIngreso).Column("usuario_ingreso");
-            References(c => c.IdTipoDucumento).Class<TipoDocumento>().Column("id_tipo_documento").Cascade.All();
+            References(c => c.IdTipoDocumento).Class<TipoDocumento>().Column("id_tipo_documento").Not.LazyLoad();
             HasMany<NotaPedido>(c => c.NotaPedidoList).Inverse().KeyColumn("id_nota_pedido").Cascade.All();
             HasMany<UsuarioPerfil>(c => c.UsuarioPerfilList).Inverse().KeyColumn("id_usuario_perfil").Not.LazyLoad();
             HasMany<Proforma>(c => c.ProformaList).Inverse().KeyColumn("id_proforma").Not.LazyLoad();

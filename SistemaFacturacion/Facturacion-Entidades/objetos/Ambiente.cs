@@ -14,10 +14,35 @@ namespace Facturacion_Entidades
 
         public virtual char Estado { get; set; }
 
-        public virtual IList<Factura> FacturaList { get; set; }
+        public virtual IList<Empresa> EmpresaList{ get; set; }
         public Ambiente()
         {
-            FacturaList = new List<Factura>();
+            EmpresaList = new List<Empresa>();
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+            else
+            {
+                Ambiente a = (Ambiente)obj;
+                return (IdAmbiente == a.IdAmbiente);
+            }
+
+            
+        }
+        public override int GetHashCode()
+        {
+            return IdAmbiente;
+        }
+        public override string ToString()
+        {
+            return Descripcion;
+        }
+
     }
+
 }

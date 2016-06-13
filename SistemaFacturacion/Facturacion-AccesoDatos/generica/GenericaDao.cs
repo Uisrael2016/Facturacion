@@ -18,6 +18,7 @@ namespace Facturacion_AccesoDatos
                 {
                     try
                     {
+                        transaccion.Begin();
                         session.Save(entidad);
                         transaccion.Commit();
 
@@ -43,6 +44,7 @@ namespace Facturacion_AccesoDatos
                 {
                     try
                     {
+                        transaccion.Begin();
                         session.Delete(entidad);
                         transaccion.Commit();
                     }
@@ -68,6 +70,7 @@ namespace Facturacion_AccesoDatos
                 {
                     try
                     {
+                        transaccion.Begin();
                         session.Update(entidad);
                         transaccion.Commit();
 

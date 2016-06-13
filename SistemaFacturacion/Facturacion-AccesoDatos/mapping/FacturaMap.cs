@@ -30,7 +30,6 @@ namespace Facturacion_AccesoDatos.mapping
             References(c => c.IdCodfigoDocumento).Class<CodigoDocumento>().Column("id_codigo_documento").Not.LazyLoad();
             References(c => c.IdNotaPedido).Class<NotaPedido>().Column("id_nota_pedido").Not.LazyLoad();
             References(c => c.IdFormaPago).Class<FormaPago>().Column("id_forma_pago").Not.LazyLoad();
-            References(c => c.IdAmbiente).Class<Ambiente >().Column("id_ambiente").Not.LazyLoad();
             References(c => c.IdFacturaImpuesto).Class<FacturaImpuesto>().Column("id_impuesto").Not.LazyLoad();
             References(c => c.IdUsuarioPerfil).Class<UsuarioPerfil>().Column("id_usuario_perfil").Not.LazyLoad();
         }
