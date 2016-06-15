@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboAmbiente = new System.Windows.Forms.ComboBox();
             this.textPath = new System.Windows.Forms.TextBox();
+            this.estdoLbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textDirecMatriz = new System.Windows.Forms.TextBox();
             this.textRazonSocial = new System.Windows.Forms.TextBox();
@@ -45,10 +46,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.radioD = new System.Windows.Forms.RadioButton();
             this.radioH = new System.Windows.Forms.RadioButton();
-            this.estdoLbl = new System.Windows.Forms.Label();
             this.cancelarBtn = new System.Windows.Forms.Button();
             this.guardarBtn = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.comboAmbiente);
             this.groupBox1.Controls.Add(this.textPath);
+            this.groupBox1.Controls.Add(this.estdoLbl);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textDirecMatriz);
             this.groupBox1.Controls.Add(this.textRazonSocial);
@@ -71,7 +73,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(45, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(440, 281);
+            this.groupBox1.Size = new System.Drawing.Size(440, 325);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información Empresa";
@@ -81,7 +83,7 @@
             this.checkContabilidad.AutoSize = true;
             this.checkContabilidad.Location = new System.Drawing.Point(311, 243);
             this.checkContabilidad.Name = "checkContabilidad";
-            this.checkContabilidad.Size = new System.Drawing.Size(39, 23);
+            this.checkContabilidad.Size = new System.Drawing.Size(38, 21);
             this.checkContabilidad.TabIndex = 16;
             this.checkContabilidad.Text = "Si";
             this.checkContabilidad.UseVisualStyleBackColor = true;
@@ -91,7 +93,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(29, 243);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(191, 19);
+            this.label6.Size = new System.Drawing.Size(190, 17);
             this.label6.TabIndex = 15;
             this.label6.Text = "Obligado a llevar contabilidad";
             // 
@@ -100,16 +102,16 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(25, 199);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 19);
+            this.label5.Size = new System.Drawing.Size(67, 17);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Empresa";
+            this.label5.Text = "Ambiente";
             // 
             // comboAmbiente
             // 
             this.comboAmbiente.FormattingEnabled = true;
             this.comboAmbiente.Location = new System.Drawing.Point(218, 199);
             this.comboAmbiente.Name = "comboAmbiente";
-            this.comboAmbiente.Size = new System.Drawing.Size(180, 27);
+            this.comboAmbiente.Size = new System.Drawing.Size(180, 25);
             this.comboAmbiente.TabIndex = 13;
             this.comboAmbiente.Text = "SELECCIONE";
             this.comboAmbiente.SelectedIndexChanged += new System.EventHandler(this.comboAmbiente_SelectedIndexChanged);
@@ -117,10 +119,22 @@
             // 
             // textPath
             // 
+            this.textPath.Enabled = false;
             this.textPath.Location = new System.Drawing.Point(79, 149);
             this.textPath.Name = "textPath";
             this.textPath.Size = new System.Drawing.Size(211, 24);
             this.textPath.TabIndex = 12;
+            // 
+            // estdoLbl
+            // 
+            this.estdoLbl.AutoSize = true;
+            this.estdoLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estdoLbl.Location = new System.Drawing.Point(29, 289);
+            this.estdoLbl.Name = "estdoLbl";
+            this.estdoLbl.Size = new System.Drawing.Size(49, 17);
+            this.estdoLbl.TabIndex = 9;
+            this.estdoLbl.Text = "Estado";
+            this.estdoLbl.Visible = false;
             // 
             // button1
             // 
@@ -159,7 +173,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 153);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 19);
+            this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Logo";
             // 
@@ -169,7 +183,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 19);
+            this.label3.Size = new System.Drawing.Size(109, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Dirección Matriz";
             // 
@@ -179,7 +193,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 19);
+            this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Razon Social";
             // 
@@ -189,7 +203,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
+            this.label1.Size = new System.Drawing.Size(31, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ruc";
             // 
@@ -219,21 +233,10 @@
             this.radioH.Visible = false;
             this.radioH.CheckedChanged += new System.EventHandler(this.radioH_CheckedChanged);
             // 
-            // estdoLbl
-            // 
-            this.estdoLbl.AutoSize = true;
-            this.estdoLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estdoLbl.Location = new System.Drawing.Point(66, 296);
-            this.estdoLbl.Name = "estdoLbl";
-            this.estdoLbl.Size = new System.Drawing.Size(50, 19);
-            this.estdoLbl.TabIndex = 9;
-            this.estdoLbl.Text = "Estado";
-            this.estdoLbl.Visible = false;
-            // 
             // cancelarBtn
             // 
             this.cancelarBtn.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.cancelarBtn.Location = new System.Drawing.Point(287, 342);
+            this.cancelarBtn.Location = new System.Drawing.Point(287, 356);
             this.cancelarBtn.Name = "cancelarBtn";
             this.cancelarBtn.Size = new System.Drawing.Size(91, 37);
             this.cancelarBtn.TabIndex = 2;
@@ -243,7 +246,7 @@
             // guardarBtn
             // 
             this.guardarBtn.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.guardarBtn.Location = new System.Drawing.Point(159, 342);
+            this.guardarBtn.Location = new System.Drawing.Point(156, 356);
             this.guardarBtn.Name = "guardarBtn";
             this.guardarBtn.Size = new System.Drawing.Size(87, 37);
             this.guardarBtn.TabIndex = 1;
@@ -255,17 +258,21 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // styleManager1
+            // 
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Silver;
+            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
+            // 
             // FrmEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 399);
+            this.ClientSize = new System.Drawing.Size(519, 436);
             this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.radioD);
             this.Controls.Add(this.guardarBtn);
             this.Controls.Add(this.radioH);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.estdoLbl);
             this.Name = "FrmEmpresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEmpresa";
@@ -300,5 +307,6 @@
         private System.Windows.Forms.ComboBox comboAmbiente;
         private System.Windows.Forms.CheckBox checkContabilidad;
         private System.Windows.Forms.Label label6;
+        private DevComponents.DotNetBar.StyleManager styleManager1;
     }
 }

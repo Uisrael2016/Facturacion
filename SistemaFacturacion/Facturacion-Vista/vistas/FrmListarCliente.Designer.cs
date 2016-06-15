@@ -60,7 +60,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtlista.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlista.EnableHeadersVisualStyles = false;
-            this.dtlista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dtlista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dtlista.Location = new System.Drawing.Point(12, 12);
             this.dtlista.Name = "dtlista";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -117,7 +117,6 @@
             this.ClientSize = new System.Drawing.Size(789, 379);
             this.Controls.Add(this.bar1);
             this.Controls.Add(this.dtlista);
-            this.DoubleBuffered = true;
             this.Name = "FrmListarCliente";
             this.Text = "FrmListarCliente";
             this.Load += new System.EventHandler(this.FrmListarCliente_Load);

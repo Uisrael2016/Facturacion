@@ -12,9 +12,8 @@ namespace Facturacion_Entidades
 
         public virtual string Documento { get; set; }
 
-        public virtual string Nombres { get; set; }
+        public virtual string RazonSocial { get; set; }
 
-        public virtual string Apellidos { get; set; }
         public virtual string Email { get; set; }
 
         public virtual char Estado { get; set; }
@@ -29,6 +28,7 @@ namespace Facturacion_Entidades
 
         public virtual IList<Material> MateriaList { get; set; }
 
+        public virtual TipoDocumento IdTipoDocumento { get; set; }
         public Proveedor()
         {
             MateriaList = new List<Material>();

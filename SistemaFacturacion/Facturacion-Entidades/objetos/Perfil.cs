@@ -12,6 +12,8 @@ namespace Facturacion_Entidades
 
         public virtual string Descripcion { get; set; }
 
+        public virtual string Codigo { get; set; }
+
         public virtual char Estado { get; set; }
 
         public virtual IList<UsuarioPerfil> UsuarioPerfilList { get; set; }

@@ -13,7 +13,7 @@ using Facturacion_AccesoDatos.dao;
 using Facturacion_Entidades;
 namespace Facturacion_Vista.Vistas
 {
-    public partial class FrmEmpresa : DevComponents.DotNetBar.Office2007RibbonForm
+    public partial class  FrmEmpresa : DevComponents.DotNetBar.Office2007RibbonForm
     {
         string pathFile;
         private Acciones accion;
@@ -28,7 +28,6 @@ namespace Facturacion_Vista.Vistas
             InitializeComponent();
             this.accion = valor;
             _ambiente = new Ambiente();
-            //cargaAmbiente();
             cargaCombo();
             if (valor == Acciones.update)
             {

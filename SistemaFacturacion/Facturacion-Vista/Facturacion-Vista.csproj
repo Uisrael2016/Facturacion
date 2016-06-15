@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Utilidades\Acciones.cs" />
+    <Compile Include="Utilidades\General.cs" />
     <Compile Include="Utilidades\Mensaje.cs" />
     <Compile Include="Vistas\FrmCliente.cs">
       <SubType>Form</SubType>
@@ -102,6 +103,18 @@
     </Compile>
     <Compile Include="Vistas\FrmListarCliente.Designer.cs">
       <DependentUpon>FrmListarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmListarMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmListarMaterial.Designer.cs">
+      <DependentUpon>FrmListarMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmMaterial.Designer.cs">
+      <DependentUpon>FrmMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
@@ -125,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmListarCliente.resx">
       <DependentUpon>FrmListarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmListarMaterial.resx">
+      <DependentUpon>FrmListarMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmMaterial.resx">
+      <DependentUpon>FrmMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -252,6 +271,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondoSistema2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_ico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -17,6 +17,7 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.Nombres).Column("nombres");
             Map(c => c.Apellidos).Column("apellidos");
             Map(c => c.Correo).Column("correo");
+            Map(c => c.Direccion).Column("direccion");
             Map(c => c.Telefono).Column("telefono");
             Map(c => c.FechaIngreso).Column("fecha_ingreso");
             Map(c => c.FechaEgreso).Column("fecha_egreso");

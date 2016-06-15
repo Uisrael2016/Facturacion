@@ -12,7 +12,23 @@ namespace Facturacion_AccesoDatos.dao
 {
     public class UsuarioPerfilDao : GenericaDao<UsuarioPerfil>
     {
-
+        public UsuarioPerfil buscaUsuario(int idUsuario)
+        {
+            try
+            {
+                using (ISession session = SessionFactory.abrirSession())
+                {
+                    ICriteria c = session.CreateCriteria("UsuarioPerfil");
+                    c.Add(Expression.Eq("IdUsuario.IdUsuario",idUsuario));
+                    return c.UniqueResult<UsuarioPerfil>();
+                }
+            }
+            catch (Exception ex) 
+            {
+                return null;
+            }
+            
+        }
     }
 
 }

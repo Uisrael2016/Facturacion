@@ -14,6 +14,7 @@ namespace Facturacion_AccesoDatos.mapping
             Table("perfil");
             Id(c => c.IdPerfil).GeneratedBy.Identity().Column("id_perfil");
             Map(c => c.Descripcion).Column("descripcion");
+            Map(c => c.Codigo).Column("codigo");
             Map(c => c.Estado).Column("estado");
             HasMany<UsuarioPerfil>(c => c.UsuarioPerfilList).Inverse().KeyColumn("id_usuario_perfil").Not.LazyLoad();
         }

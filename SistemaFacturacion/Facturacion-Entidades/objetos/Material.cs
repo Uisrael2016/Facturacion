@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Facturacion_Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,7 @@ namespace Facturacion_Entidades
 
         public virtual string Descripcion { get; set; }
 
-        public virtual DateTime FechaIngreso { get; set; }
-
-        public virtual DateTime FechaEgreso { get; set; }
+        public virtual double Stock { get; set; }
 
         public virtual TipoMaterial IdTipoMaterial { get; set; }
 
@@ -22,9 +21,16 @@ namespace Facturacion_Entidades
 
         public virtual IList<DetalleProducto> DetalleProductoList { get; set; }
 
+        public virtual IList<Ingreso>IngresoList { get; set; }
+
+        public virtual IList<Salida> SalidaList { get; set; }
+
+
         public Material()
         {
             DetalleProductoList = new List<DetalleProducto>();
+            IngresoList = new List<Ingreso>();
+            SalidaList = new List<Salida>();
         }
     }
 }

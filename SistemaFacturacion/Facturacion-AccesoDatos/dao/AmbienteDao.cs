@@ -14,7 +14,6 @@ namespace Facturacion_AccesoDatos.dao
     {
      public List<Ambiente> listaAmbiente()
         {
-            List<Ambiente> listAmbiente=null;
             try
             {
                 using (ISession session=SessionFactory.abrirSession())

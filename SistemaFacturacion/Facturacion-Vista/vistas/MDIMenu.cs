@@ -29,6 +29,11 @@ namespace Facturacion_Vista.Vistas
             FrmEmpresa empresa = new FrmEmpresa(Utilidades.Acciones.update);
             empresa.ShowDialog();
         }
-        
+
+        private void itemMaterial_Click(object sender, EventArgs e)
+        {
+            FrmListarMaterial frm = new FrmListarMaterial();
+            frm.ShowDialog();
+        }
     }
 }
