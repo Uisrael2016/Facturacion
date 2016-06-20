@@ -93,6 +93,7 @@ namespace Facturacion_Vista.Vistas
 
         private void setMaterial()
         {
+            materialSeleccionado = new Material();
             materialSeleccionado.Descripcion = textDescripcion.Text;
             materialSeleccionado.Stock = Convert.ToDouble(textCantidad.Text);
             materialSeleccionado.IdProveedor = _proveedor;
@@ -110,7 +111,7 @@ namespace Facturacion_Vista.Vistas
                         materialDao = new MaterialDao();
                     if (_accion == Acciones.insert)
                     {
-                        materialSeleccionado = new Material();
+                        
                         IngresoDao inDao = new IngresoDao();
                         ingreso = new Ingreso();
                         materialDao.insertar(materialSeleccionado);

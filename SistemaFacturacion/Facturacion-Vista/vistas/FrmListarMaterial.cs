@@ -19,7 +19,7 @@ namespace Facturacion_Vista.Vistas
 
         private void buttonNuevo_Click(object sender, EventArgs e)
         {
-            FrmMaterial frm = new FrmMaterial();
+            FrmMaterial frm = new FrmMaterial(0);
             frm.ShowDialog();
         }
     }
