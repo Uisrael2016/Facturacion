@@ -33,5 +33,21 @@ namespace Facturacion_Entidades
         {
             MateriaList = new List<Material>();
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }else
+            {
+                Proveedor p = (Proveedor)obj;
+                return (IdProveedor == p.IdProveedor);
+            }
+        }
+        public override int GetHashCode()
+        {
+            return IdProveedor;
+        }
     }
 }

@@ -37,14 +37,14 @@
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonNuevo = new DevComponents.DotNetBar.ButtonItem();
             this.buttonBuscar = new DevComponents.DotNetBar.ButtonItem();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dataMaterial = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.idMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.material = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMaterial)).BeginInit();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -83,12 +83,12 @@
             this.buttonBuscar.Text = "Buscar Material";
             this.buttonBuscar.Tooltip = "Buscar Material";
             // 
-            // dataGridViewX1
+            // dataMaterial
             // 
-            this.dataGridViewX1.AllowUserToAddRows = false;
-            this.dataGridViewX1.AllowUserToDeleteRows = false;
-            this.dataGridViewX1.AllowUserToResizeColumns = false;
-            this.dataGridViewX1.AllowUserToResizeRows = false;
+            this.dataMaterial.AllowUserToAddRows = false;
+            this.dataMaterial.AllowUserToDeleteRows = false;
+            this.dataMaterial.AllowUserToResizeColumns = false;
+            this.dataMaterial.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,9 +96,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataMaterial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idMaterial,
             this.material,
             this.stock,
@@ -111,11 +111,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX1.EnableHeadersVisualStyles = false;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridViewX1.Name = "dataGridViewX1";
+            this.dataMaterial.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataMaterial.EnableHeadersVisualStyles = false;
+            this.dataMaterial.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataMaterial.Location = new System.Drawing.Point(12, 12);
+            this.dataMaterial.Name = "dataMaterial";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,10 +123,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX1.RowHeadersVisible = false;
-            this.dataGridViewX1.Size = new System.Drawing.Size(620, 306);
-            this.dataGridViewX1.TabIndex = 0;
+            this.dataMaterial.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataMaterial.RowHeadersVisible = false;
+            this.dataMaterial.Size = new System.Drawing.Size(620, 306);
+            this.dataMaterial.TabIndex = 0;
+            this.dataMaterial.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMaterial_CellDoubleClick);
             // 
             // idMaterial
             // 
@@ -162,14 +163,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 386);
-            this.Controls.Add(this.dataGridViewX1);
+            this.Controls.Add(this.dataMaterial);
             this.Controls.Add(this.bar1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmListarMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Materiales";
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMaterial)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,7 +181,7 @@
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem buttonNuevo;
         private DevComponents.DotNetBar.ButtonItem buttonBuscar;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dataMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn material;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;

@@ -16,5 +16,22 @@ namespace Facturacion_Entidades
         {
             MaterialList = new List<Material>();
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+            else
+            {
+                TipoMaterial p = (TipoMaterial)obj;
+                return (IdTipoMaterial == p.IdTipoMaterial);
+            }
+        }
+        public override int GetHashCode()
+        {
+            return IdTipoMaterial;
+        }
     }
 }

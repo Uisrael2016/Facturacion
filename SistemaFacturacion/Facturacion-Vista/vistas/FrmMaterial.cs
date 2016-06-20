@@ -18,11 +18,12 @@ namespace Facturacion_Vista.Vistas
         private int idMaterial = 0;
         private Material materialSeleccionado;
         private Ingreso ingreso;
-        private Salida salida;
         private Proveedor _proveedor;
         private TipoMaterial _tipoMaterial;
         private Acciones _accion;
         private MaterialDao materialDao;
+        double cantidad;
+        double valorIngreso;
         public FrmMaterial(int id)
         {
             InitializeComponent();
@@ -36,6 +37,11 @@ namespace Facturacion_Vista.Vistas
             {
                 _accion = Acciones.update;
                 materialSeleccionado = materialDao.consultarPorId(id);
+                cantidad = materialSeleccionado.Stock;
+                textDescripcion.Text = materialSeleccionado.Descripcion;
+                textCantidad.Text = Convert.ToString(cantidad);
+                comboProveedor.SelectedItem = materialSeleccionado.IdProveedor;
+                comboTipoMaterial.SelectedItem = materialSeleccionado.IdTipoMaterial;
 
             }
             else
@@ -93,9 +99,13 @@ namespace Facturacion_Vista.Vistas
 
         private void setMaterial()
         {
-            materialSeleccionado = new Material();
+            if (_accion == Acciones.insert)
+            {
+                materialSeleccionado = new Material();
+            }
             materialSeleccionado.Descripcion = textDescripcion.Text;
-            materialSeleccionado.Stock = Convert.ToDouble(textCantidad.Text);
+            valorIngreso= Convert.ToDouble(textCantidad.Text);
+            materialSeleccionado.Stock = valorIngreso;
             materialSeleccionado.IdProveedor = _proveedor;
             materialSeleccionado.IdTipoMaterial = _tipoMaterial;
 
@@ -107,26 +117,45 @@ namespace Facturacion_Vista.Vistas
                 try
                 {
                     setMaterial();
+                    IngresoDao inDao = new IngresoDao();
                     if (materialDao == null)
                         materialDao = new MaterialDao();
                     if (_accion == Acciones.insert)
                     {
-                        
-                        IngresoDao inDao = new IngresoDao();
-                        ingreso = new Ingreso();
                         materialDao.insertar(materialSeleccionado);
+                        ingreso = new Ingreso();
+                        ingreso.IdMaterial = materialSeleccionado;
+                        ingreso.CantidadIngreso = valorIngreso;
+                        ingreso.FechaIngreso = new DateTime();
+                        ingreso.UsuarioIngreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
+                        inDao.insertar(ingreso);
                         Mensaje.mensajeInformacion("Información","Material Registrado Correctamente");
                         this.Hide();
                     }
                     else
                     {
-                        salida = new Salida();
-
+                        cantidad += materialSeleccionado.Stock;
+                        materialSeleccionado.Stock = cantidad;
+                        materialDao.modificar(materialSeleccionado);
+                        ingreso = new Ingreso();
+                        ingreso.IdMaterial = materialSeleccionado;
+                        ingreso.CantidadIngreso = valorIngreso;
+                        ingreso.FechaIngreso = new DateTime();
+                        ingreso.UsuarioIngreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
+                        inDao.insertar(ingreso);
+                        Mensaje.mensajeInformacion("Información", "Material Actualizado Correctamente");
+                        this.Hide();
                     }
                 }
                 catch (Exception ex)
                 {
-
+                    if (_accion==Acciones.insert)
+                    {
+                        Mensaje.mensajeError("Error", "Error al insertar" + ex.Message);
+                    }else
+                    {
+                        Mensaje.mensajeError("Error", "Error al actualizar" + ex.Message);
+                    }
                 }
 
             }
