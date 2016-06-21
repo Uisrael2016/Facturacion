@@ -35,5 +35,11 @@ namespace Facturacion_Vista.Vistas
             FrmListarMaterial frm = new FrmListarMaterial();
             frm.ShowDialog();
         }
+
+        private void itemProveedor_Click(object sender, EventArgs e)
+        {
+            FrmListarProveedores frm = new FrmListarProveedores();
+            frm.ShowDialog();
+        }
     }
 }

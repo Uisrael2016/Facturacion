@@ -104,7 +104,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(5, 415);
+            this.statusStrip.Location = new System.Drawing.Point(5, 413);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(622, 22);
             this.statusStrip.TabIndex = 2;
@@ -128,10 +128,10 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -192,6 +192,7 @@
             // 
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
             // 
             // riiboncatalagos
             // 
@@ -371,7 +372,6 @@
             // 
             this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel6.TabIndex = 6;
-            this.ribbonPanel6.Visible = false;
             // 
             // ribbonBar5
             // 
@@ -419,6 +419,7 @@
             this.itemProveedor.Name = "itemProveedor";
             this.itemProveedor.SubItemsExpandWidth = 14;
             this.itemProveedor.Text = "Proveedor";
+            this.itemProveedor.Click += new System.EventHandler(this.itemProveedor_Click);
             // 
             // ribbonPanel5
             // 
@@ -642,7 +643,6 @@
             // 
             // menuCatalogos
             // 
-            this.menuCatalogos.Checked = true;
             this.menuCatalogos.Name = "menuCatalogos";
             this.menuCatalogos.Panel = this.ribbonPanel2;
             this.menuCatalogos.Text = "Catalogos";
@@ -655,6 +655,7 @@
             // 
             // menuRegistro
             // 
+            this.menuRegistro.Checked = true;
             this.menuRegistro.Name = "menuRegistro";
             this.menuRegistro.Panel = this.ribbonPanel6;
             this.menuRegistro.Text = "Registro";
@@ -892,14 +893,14 @@
             this.label1.Image = global::Facturacion_Vista.Properties.Resources.fondoSistema1;
             this.label1.Location = new System.Drawing.Point(5, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 260);
+            this.label1.Size = new System.Drawing.Size(622, 258);
             this.label1.TabIndex = 6;
             // 
             // MDIMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 439);
+            this.ClientSize = new System.Drawing.Size(632, 437);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.statusStrip);
