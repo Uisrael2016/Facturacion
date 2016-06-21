@@ -95,7 +95,7 @@ namespace Facturacion_Vista.Vistas
         private void guardarBtn_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
-            foreach (var groupBox in this.Controls.OfType<GroupBox>())
+            foreach (var groupBox in this.Controls.OfType<DevComponents.DotNetBar.Controls.GroupPanel>())
             {
                 foreach (var textbox in groupBox.Controls.OfType<TextBox>().OrderBy(t => t.TabIndex))
                 {

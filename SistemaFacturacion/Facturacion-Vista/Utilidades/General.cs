@@ -65,9 +65,9 @@ namespace Facturacion_Vista.Utilidades
         public static bool validaFormGroup(Control.ControlCollection control, ErrorProvider error)
         {
             bool flag = false;
-            foreach (var groupBox in control.OfType<GroupBox>())
+            foreach (var groupBox in control.OfType<DevComponents.DotNetBar.Controls.GroupPanel>())
             {
-                if (groupBox.Name == "groupMantenimiento")
+                if (groupBox.Name == "group")
                 {
                     foreach (var textBox in groupBox.Controls.OfType<TextBox>().OrderBy(t => t.TabIndex))
                     {
