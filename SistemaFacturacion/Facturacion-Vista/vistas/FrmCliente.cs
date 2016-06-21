@@ -20,7 +20,7 @@ namespace Facturacion_Vista.Vistas
         private Acciones _accion;
         private ClienteDao clientedao;
         private Cliente clienteSeleccionado;
-        
+        private General general;
         public FrmCliente(int id)
         {
             InitializeComponent();
@@ -45,11 +45,12 @@ namespace Facturacion_Vista.Vistas
                 _accion = Acciones.insert;
             }
 
-        }        
+        }  
+              
         private void FrmCliente_Load(object sender, EventArgs e)
         {
           cargar_combo();
-            
+                                 
         }
         private void cargar_combo()
         {
@@ -68,7 +69,8 @@ namespace Facturacion_Vista.Vistas
                 clienteSeleccionado = new Cliente();
             }
             clienteSeleccionado.IdTipoDocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
-            clienteSeleccionado.DocumentoCliente = txtDocumento.Text;
+            validar_cedula();
+            clienteSeleccionado.DocumentoCliente = txtDocumento.Text;                                 
             clienteSeleccionado.Nombres = txtNombre.Text.ToUpper();
             clienteSeleccionado.Apellidos = txtApellido.Text.ToUpper();
             clienteSeleccionado.Correo = txtEmail.Text;
@@ -78,7 +80,20 @@ namespace Facturacion_Vista.Vistas
             clienteSeleccionado.UsuarioIngreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
         }
 
-        
+        private void validar_cedula()
+        {
+            if (cbxTipoDocumento.Text == "CEDULA")
+            {
+               
+                                
+            }
+            else
+            {
+                erroricono.SetError(txtDocumento,"Cedula Incorrecta");
+
+            }
+
+        }
         private void btguardar_Click(object sender, EventArgs e)
         {
             if(General.validaFormGroup(this.Controls,erroricono))
@@ -89,8 +104,10 @@ namespace Facturacion_Vista.Vistas
                     setCliente();                                
                      if (_accion == Acciones.insert)
                      {
-                        clientedao.insertar(clienteSeleccionado);
+                        clientedao.insertar(clienteSeleccionado);                        
                         Mensaje.mensajeConfirm("Informmacion", "Cliente grabado con exito");
+                        this.Hide();
+                        
                      }
                      else 
                      {

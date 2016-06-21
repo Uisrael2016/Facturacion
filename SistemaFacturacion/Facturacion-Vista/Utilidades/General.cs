@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Facturacion_Vista.Utilidades;
 namespace Facturacion_Vista.Utilidades
 {
     public class General
     {
+        
         public static void validaDecimal(KeyPressEventArgs e, TextBox texto)
         {
             if (e.KeyChar == 8)
@@ -61,7 +63,7 @@ namespace Facturacion_Vista.Utilidades
             return flag;
 
         }
-
+       
         public static bool validaFormGroup(Control.ControlCollection control, ErrorProvider error)
         {
             bool flag = false;
@@ -84,6 +86,8 @@ namespace Facturacion_Vista.Utilidades
                         }
 
                     }
+                    
+
                 }
 
             }

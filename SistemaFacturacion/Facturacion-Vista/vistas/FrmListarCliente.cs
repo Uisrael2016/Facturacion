@@ -26,7 +26,7 @@ namespace Facturacion_Vista.Vistas
        
         private void FrmListarCliente_Load(object sender, EventArgs e)
         {
-            
+            this.listarCliente();
 
         }
         
