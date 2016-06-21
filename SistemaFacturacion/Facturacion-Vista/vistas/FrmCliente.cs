@@ -61,22 +61,21 @@ namespace Facturacion_Vista.Vistas
         }
         private void setCliente()
         {
-            DateTime fechahoy = DateTime.Now;
-            string fecha = fechahoy.ToString("d");
+            //DateTime fechahoy = DateTime.Now;
+            //string fecha = fechahoy.ToString("d");
             if (_accion == Acciones.insert)
             {
                 clienteSeleccionado = new Cliente();
             }
-            clienteSeleccionado = new Cliente();
             clienteSeleccionado.IdTipoDocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
             clienteSeleccionado.DocumentoCliente = txtDocumento.Text;
-            clienteSeleccionado.Nombres = txtNombre.Text;
-            clienteSeleccionado.Apellidos = txtApellido.Text;
+            clienteSeleccionado.Nombres = txtNombre.Text.ToUpper();
+            clienteSeleccionado.Apellidos = txtApellido.Text.ToUpper();
             clienteSeleccionado.Correo = txtEmail.Text;
-            clienteSeleccionado.Direccion = txtDireccion.Text;
+            clienteSeleccionado.Direccion = txtDireccion.Text.ToUpper();
             clienteSeleccionado.Telefono = txtTelefono.Text;
-            clienteSeleccionado.FechaIngreso = Convert.ToDateTime(fecha);
-
+            clienteSeleccionado.FechaIngreso = DateTime.Now;
+            clienteSeleccionado.UsuarioIngreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
         }
 
         
@@ -91,17 +90,14 @@ namespace Facturacion_Vista.Vistas
                      if (_accion == Acciones.insert)
                      {
                         clientedao.insertar(clienteSeleccionado);
-                        clienteSeleccionado.UsuarioIngreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
                         Mensaje.mensajeConfirm("Informmacion", "Cliente grabado con exito");
                      }
                      else 
                      {
-                        DateTime fechahoy = DateTime.Now;
-                        string fecha = fechahoy.ToString("dd/MM/yyyy");
                         clienteSeleccionado.IdCliente = idcliente;
+                        clienteSeleccionado.UsuarioEgreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
+                        clienteSeleccionado.FechaEgreso = DateTime.Now;
                         clientedao.modificar(clienteSeleccionado);
-                        clienteSeleccionado.UsuarioEgreso= Login.usuarioPerfilManager.IdUsuario.IdUsuario;
-                        clienteSeleccionado.FechaEgreso = Convert.ToDateTime(fecha);
                         Mensaje.mensajeInformacion("Informmacion", "Cliente actualizado con exito");
                         this.Hide();
                      }    
