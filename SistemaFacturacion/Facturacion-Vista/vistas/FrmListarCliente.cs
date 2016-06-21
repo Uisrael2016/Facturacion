@@ -16,62 +16,48 @@ namespace Facturacion_Vista.Vistas
 {
     public partial class FrmListarCliente : DevComponents.DotNetBar.Office2007Form
     {
+        private ClienteDao clienteDao = new ClienteDao();
+        private List<Cliente> listaCliente;
         public FrmListarCliente()
         {
             InitializeComponent();
+            listarCliente();
         }
-        ClienteDao listaruser = new ClienteDao();
+       
         private void FrmListarCliente_Load(object sender, EventArgs e)
         {
-            this.Lista();
+            
 
         }
         
-        public void Lista()
+        public void listarCliente()
         {
-            try
+            clienteDao = new ClienteDao();
+            listaCliente = (List<Cliente>)clienteDao.consultar();
+            if(listaCliente!=null)
             {
-                dtlista.DataSource = listaruser.consultar();
-            }
-            catch
-            {
-                MessageBox.Show("error al obtener conexion ");
+                dtlista.Rows.Clear();
+                foreach(Cliente cli in listaCliente)
+                {
+                    dtlista.Rows.Add(cli.IdCliente, cli.Nombres
+                        , cli.Apellidos, cli.Correo, cli.Direccion);
+                }
             }
            
         }
         private void buttonItem1_Click(object sender, EventArgs e)
         {
-            FrmCliente frmcliente = new FrmCliente();
-            frmcliente.nuevo = true;
+            FrmCliente frmcliente = new FrmCliente(0);
             frmcliente.ShowDialog();
-            this.Lista();
+            
         }
         //private ClienteDao clientedao;
         private void dtlista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                
-                int idregistro = 0;
-                FrmCliente frmcliente = new FrmCliente();
-               // var model = this.listaruser.consultarPorId(int.Parse(this.dtlista.CurrentRow.Cells[0].Value.ToString()));
-                idregistro = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
-                ClienteDao clientedao = new ClienteDao();
-                Cliente model = clientedao.consultarPorId(idregistro);
-                frmcliente.cbxTipoDocumento.SelectedItem = model.IdTipoDocumento.ToString();
-                frmcliente.txtDocumento.Text = model.DocumentoCliente;
-                frmcliente.txtNombre.Text = model.Nombres;
-                frmcliente.txtApellido.Text = model.Apellidos;
-                frmcliente.txtEmail.Text = model.Correo;
-                frmcliente.txtDireccion.Text = model.Direccion;
-                frmcliente.txtTelefono.Text = model.Telefono;
-                frmcliente.ShowDialog();
-                this.Lista();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
+            FrmCliente frm = new FrmCliente(id);
+            frm.ShowDialog();
+            listarCliente();
         }
     }
 }

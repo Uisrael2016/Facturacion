@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.cbxTipoDocumento = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.txtTelefono = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDireccion = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -44,64 +44,65 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.bt_guardar = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.erroricono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupPanel1.SuspendLayout();
+            this.btguardar = new DevComponents.DotNetBar.ButtonX();
+            this.group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.erroricono)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupPanel1
+            // group
             // 
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.cbxTipoDocumento);
-            this.groupPanel1.Controls.Add(this.txtTelefono);
-            this.groupPanel1.Controls.Add(this.txtDireccion);
-            this.groupPanel1.Controls.Add(this.txtEmail);
-            this.groupPanel1.Controls.Add(this.txtApellido);
-            this.groupPanel1.Controls.Add(this.txtNombre);
-            this.groupPanel1.Controls.Add(this.txtDocumento);
-            this.groupPanel1.Controls.Add(this.labelX7);
-            this.groupPanel1.Controls.Add(this.labelX6);
-            this.groupPanel1.Controls.Add(this.labelX5);
-            this.groupPanel1.Controls.Add(this.labelX4);
-            this.groupPanel1.Controls.Add(this.labelX3);
-            this.groupPanel1.Controls.Add(this.labelX2);
-            this.groupPanel1.Controls.Add(this.labelX1);
-            this.groupPanel1.Location = new System.Drawing.Point(0, 0);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(556, 466);
-            // 
-            // 
-            // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            this.group.CanvasColor = System.Drawing.SystemColors.Control;
+            this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.group.Controls.Add(this.cbxTipoDocumento);
+            this.group.Controls.Add(this.txtTelefono);
+            this.group.Controls.Add(this.txtDireccion);
+            this.group.Controls.Add(this.txtEmail);
+            this.group.Controls.Add(this.txtApellido);
+            this.group.Controls.Add(this.txtNombre);
+            this.group.Controls.Add(this.txtDocumento);
+            this.group.Controls.Add(this.labelX7);
+            this.group.Controls.Add(this.labelX6);
+            this.group.Controls.Add(this.labelX5);
+            this.group.Controls.Add(this.labelX4);
+            this.group.Controls.Add(this.labelX3);
+            this.group.Controls.Add(this.labelX2);
+            this.group.Controls.Add(this.labelX1);
+            this.group.DisabledBackColor = System.Drawing.Color.Empty;
+            this.group.Location = new System.Drawing.Point(0, 0);
+            this.group.Name = "group";
+            this.group.Size = new System.Drawing.Size(556, 466);
             // 
             // 
             // 
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.group.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.group.Style.BackColorGradientAngle = 90;
+            this.group.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.group.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.group.Style.BorderBottomWidth = 1;
+            this.group.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.group.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.group.Style.BorderLeftWidth = 1;
+            this.group.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.group.Style.BorderRightWidth = 1;
+            this.group.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.group.Style.BorderTopWidth = 1;
+            this.group.Style.CornerDiameter = 4;
+            this.group.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.group.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.group.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.group.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
             // 
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 0;
-            this.groupPanel1.Text = "Datos Del Cliente";
+            this.group.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.group.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.group.TabIndex = 0;
+            this.group.Text = "Datos Del Cliente";
             // 
             // cbxTipoDocumento
             // 
@@ -115,6 +116,7 @@
             this.cbxTipoDocumento.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxTipoDocumento.TabIndex = 14;
             this.cbxTipoDocumento.WatermarkText = "SELECCIONE";
+            this.cbxTipoDocumento.SelectedIndexChanged += new System.EventHandler(this.cbxTipoDocumento_SelectedIndexChanged);
             // 
             // txtTelefono
             // 
@@ -202,6 +204,7 @@
             // 
             // labelX7
             // 
+            this.labelX7.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -214,6 +217,7 @@
             // 
             // labelX6
             // 
+            this.labelX6.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -226,6 +230,7 @@
             // 
             // labelX5
             // 
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -238,6 +243,7 @@
             // 
             // labelX4
             // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -250,6 +256,7 @@
             // 
             // labelX3
             // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -262,6 +269,7 @@
             // 
             // labelX2
             // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -274,6 +282,7 @@
             // 
             // labelX1
             // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
             // 
             // 
             // 
@@ -284,46 +293,49 @@
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "Tipo de Documento";
             // 
-            // bt_guardar
-            // 
-            this.bt_guardar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_guardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_guardar.Location = new System.Drawing.Point(40, 487);
-            this.bt_guardar.Name = "bt_guardar";
-            this.bt_guardar.Size = new System.Drawing.Size(139, 49);
-            this.bt_guardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_guardar.TabIndex = 1;
-            this.bt_guardar.Text = "Grabar";
-            this.bt_guardar.Click += new System.EventHandler(this.buttonX1_Click);
-            // 
             // buttonX2
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.BackColor = System.Drawing.Color.Transparent;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
             this.buttonX2.Location = new System.Drawing.Point(354, 487);
             this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(139, 49);
+            this.buttonX2.Size = new System.Drawing.Size(95, 49);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 2;
-            this.buttonX2.Text = "Salir";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // erroricono
             // 
             this.erroricono.ContainerControl = this;
             // 
+            // btguardar
+            // 
+            this.btguardar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btguardar.BackColor = System.Drawing.Color.Transparent;
+            this.btguardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btguardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
+            this.btguardar.Location = new System.Drawing.Point(112, 487);
+            this.btguardar.Name = "btguardar";
+            this.btguardar.Size = new System.Drawing.Size(85, 49);
+            this.btguardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btguardar.TabIndex = 4;
+            this.btguardar.Click += new System.EventHandler(this.btguardar_Click);
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 578);
+            this.ClientSize = new System.Drawing.Size(556, 578);
+            this.Controls.Add(this.btguardar);
             this.Controls.Add(this.buttonX2);
-            this.Controls.Add(this.bt_guardar);
-            this.Controls.Add(this.groupPanel1);
+            this.Controls.Add(this.group);
             this.DoubleBuffered = true;
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
-            this.groupPanel1.ResumeLayout(false);
+            this.group.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erroricono)).EndInit();
             this.ResumeLayout(false);
 
@@ -331,7 +343,7 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
+        private DevComponents.DotNetBar.Controls.GroupPanel group;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX5;
@@ -339,7 +351,6 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.ButtonX bt_guardar;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         public DevComponents.DotNetBar.Controls.TextBoxX txtTelefono;
         public DevComponents.DotNetBar.Controls.TextBoxX txtDireccion;
@@ -349,5 +360,6 @@
         public DevComponents.DotNetBar.Controls.TextBoxX txtDocumento;
         public DevComponents.DotNetBar.Controls.ComboBoxEx cbxTipoDocumento;
         private System.Windows.Forms.ErrorProvider erroricono;
+        private DevComponents.DotNetBar.ButtonX btguardar;
     }
 }

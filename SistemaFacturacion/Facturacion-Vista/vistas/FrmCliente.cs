@@ -9,25 +9,43 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Facturacion_Entidades;
 using Facturacion_AccesoDatos.dao;
-
+using Facturacion_Vista.Utilidades;
 
 namespace Facturacion_Vista.Vistas
 {
     public partial class FrmCliente : DevComponents.DotNetBar.Office2007Form
     {
-        public FrmCliente()
+        private int idcliente = 0;
+        private TipoDocumento _tipodocumento;
+        private Acciones _accion;
+        private ClienteDao clientedao;
+        private Cliente clienteSeleccionado;
+        
+        public FrmCliente(int id)
         {
             InitializeComponent();
-        }
-        public bool nuevo;
-        private enum Tipo
-        {
-            insert,
-            update,
-            reload
-        }
+            this.idcliente = id;
+            _tipodocumento = new TipoDocumento();
+            cargar_combo();
+            clientedao = new ClienteDao();
+            if(id>0)
+            {
+                _accion = Acciones.update;
+                clienteSeleccionado = clientedao.consultarPorId(id);
+                cbxTipoDocumento.SelectedItem = clienteSeleccionado.IdTipoDocumento;
+                txtDocumento.Text = clienteSeleccionado.DocumentoCliente;
+                txtNombre.Text = clienteSeleccionado.Nombres;
+                txtApellido.Text = clienteSeleccionado.Apellidos;
+                txtEmail.Text = clienteSeleccionado.Correo;
+                txtDireccion.Text = clienteSeleccionado.Direccion;
+                txtTelefono.Text = clienteSeleccionado.Telefono;                
+            }
+            else
+            {
+                _accion = Acciones.insert;
+            }
 
-        private Tipo _tipo;
+        }        
         private void FrmCliente_Load(object sender, EventArgs e)
         {
           cargar_combo();
@@ -35,81 +53,84 @@ namespace Facturacion_Vista.Vistas
         }
         private void cargar_combo()
         {
-            TipoDocumentoDao tpdocumento = new TipoDocumentoDao();
-            var lista = tpdocumento.consultar();
-
-            cbxTipoDocumento.DataSource = lista;
-            //xTipoDocumento.ad
+            TipoDocumentoDao _tipodocumento = new TipoDocumentoDao();
+            cbxTipoDocumento.DataSource = _tipodocumento.consultar();
             cbxTipoDocumento.DisplayMember = "Documento";
             cbxTipoDocumento.ValueMember = "IdTipoDocumento";
            
         }
-        private void dato ()
+        private void setCliente()
         {
-            ClienteDao incliente = new ClienteDao();
-            Cliente clinete = new Cliente();
-            incliente.insertar(clinete);
+            DateTime fechahoy = DateTime.Now;
+            string fecha = fechahoy.ToString("d");
+            if (_accion == Acciones.insert)
+            {
+                clienteSeleccionado = new Cliente();
+            }
+            clienteSeleccionado = new Cliente();
+            clienteSeleccionado.IdTipoDocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
+            clienteSeleccionado.DocumentoCliente = txtDocumento.Text;
+            clienteSeleccionado.Nombres = txtNombre.Text;
+            clienteSeleccionado.Apellidos = txtApellido.Text;
+            clienteSeleccionado.Correo = txtEmail.Text;
+            clienteSeleccionado.Direccion = txtDireccion.Text;
+            clienteSeleccionado.Telefono = txtTelefono.Text;
+            clienteSeleccionado.FechaIngreso = Convert.ToDateTime(fecha);
+
         }
 
-        private void buttonX1_Click(object sender, EventArgs e)
+        
+        private void btguardar_Click(object sender, EventArgs e)
         {
-            erroricono.Clear();
-            if (txtDocumento.Text == "")
+            if(General.validaFormGroup(this.Controls,erroricono))
             {
-                erroricono.SetError(txtDocumento, "Campo Requerido");
-                return;
-            }
-
-            if ( txtNombre.Text == "")
-            {
-                erroricono.SetError(txtNombre, "Campo Requerido");
-                return;
-            }
-
-            if (txtApellido.Text == "")
-            {
-                erroricono.SetError(txtApellido, "Cmapo Requerido");
-                return;
-            }
-
-            if (txtEmail.Text == "")
-            {
-                erroricono.SetError(txtEmail, "Campo Requerido");
-                return;
-            }
-
-            try
-            {
-
-               
-
-                ClienteDao insertarcliente = new ClienteDao();
-                Cliente cliente = new Cliente();
-                cliente.IdTipoDocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
-                cliente.DocumentoCliente = txtDocumento.Text;
-                cliente.Nombres = txtNombre.Text;
-                cliente.Apellidos = txtApellido.Text;
-                cliente.Correo = txtEmail.Text;
-                cliente.Direccion = txtDireccion.Text;
-                cliente.Telefono = txtTelefono.Text;
-                if (_tipo == Tipo.insert)
-                {
-                    insertarcliente.insertar(cliente);
-                    MessageBox.Show("Registro Agregado Correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNombre.Focus();
                 
+                try
+                {
+                    setCliente();                                
+                     if (_accion == Acciones.insert)
+                     {
+                        clientedao.insertar(clienteSeleccionado);
+                        clienteSeleccionado.UsuarioIngreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
+                        Mensaje.mensajeConfirm("Informmacion", "Cliente grabado con exito");
+                     }
+                     else 
+                     {
+                        DateTime fechahoy = DateTime.Now;
+                        string fecha = fechahoy.ToString("dd/MM/yyyy");
+                        clienteSeleccionado.IdCliente = idcliente;
+                        clientedao.modificar(clienteSeleccionado);
+                        clienteSeleccionado.UsuarioEgreso= Login.usuarioPerfilManager.IdUsuario.IdUsuario;
+                        clienteSeleccionado.FechaEgreso = Convert.ToDateTime(fecha);
+                        Mensaje.mensajeInformacion("Informmacion", "Cliente actualizado con exito");
+                        this.Hide();
+                     }    
                 }
-                       
+                catch (Exception ex)
+                {
+                    if (_accion == Acciones.insert)
+                    {
+                        Mensaje.mensajeError("Error", "Error al insertar" + ex.Message);
+                    }
+                    else
+                    {
+                        Mensaje.mensajeError("Error", "Error al actualizar" + ex.Message);
+                    }
+                }
             }
-            catch
-            {
-
-            }
-            this.Hide();
-
-                 
+          
         }
 
-       
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void cbxTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TipoDocumento tpdocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
+            _tipodocumento.IdTipoDocumento = tpdocumento.IdTipoDocumento;
+            _tipodocumento.Documento = tpdocumento.Documento;
+        }
     }
 }

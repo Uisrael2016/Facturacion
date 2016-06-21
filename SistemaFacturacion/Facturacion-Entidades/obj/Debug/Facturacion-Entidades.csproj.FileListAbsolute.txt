@@ -19,3 +19,4 @@ C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Gi
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.LogProviders.SimpleLogProvider.dll
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
