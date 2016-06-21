@@ -128,11 +128,11 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
+            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -372,6 +372,7 @@
             // 
             this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel6.TabIndex = 6;
+            this.ribbonPanel6.Visible = false;
             // 
             // ribbonBar5
             // 
@@ -516,7 +517,6 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Visible = false;
             // 
             // ribbonBar1
             // 
@@ -631,6 +631,7 @@
             // 
             // menuAdministracion
             // 
+            this.menuAdministracion.Checked = true;
             this.menuAdministracion.Name = "menuAdministracion";
             this.menuAdministracion.Panel = this.ribbonPanel1;
             this.menuAdministracion.Text = "Administracion";
@@ -655,7 +656,6 @@
             // 
             // menuRegistro
             // 
-            this.menuRegistro.Checked = true;
             this.menuRegistro.Name = "menuRegistro";
             this.menuRegistro.Panel = this.ribbonPanel6;
             this.menuRegistro.Text = "Registro";
