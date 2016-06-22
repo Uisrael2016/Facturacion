@@ -34,14 +34,14 @@
             this.buttonGuardar = new DevComponents.DotNetBar.ButtonX();
             this.buttonCancelar = new DevComponents.DotNetBar.ButtonX();
             this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.comboTipoMaterial = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboProveedor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.textCantidad = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textDescripcion = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.comboProveedor = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.comboTipoMaterial = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -80,12 +80,12 @@
             // 
             this.group.CanvasColor = System.Drawing.SystemColors.Control;
             this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.group.Controls.Add(this.textCantidad);
             this.group.Controls.Add(this.textDescripcion);
             this.group.Controls.Add(this.labelX3);
             this.group.Controls.Add(this.comboProveedor);
             this.group.Controls.Add(this.labelX1);
             this.group.Controls.Add(this.labelX4);
-            this.group.Controls.Add(this.textCantidad);
             this.group.Controls.Add(this.comboTipoMaterial);
             this.group.Controls.Add(this.labelX2);
             this.group.DisabledBackColor = System.Drawing.Color.Empty;
@@ -123,60 +123,6 @@
             this.group.TabIndex = 11;
             this.group.Text = "Ingreso Informacion";
             // 
-            // comboTipoMaterial
-            // 
-            this.comboTipoMaterial.DisplayMember = "Text";
-            this.comboTipoMaterial.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboTipoMaterial.FormattingEnabled = true;
-            this.comboTipoMaterial.ItemHeight = 14;
-            this.comboTipoMaterial.Location = new System.Drawing.Point(151, 144);
-            this.comboTipoMaterial.Name = "comboTipoMaterial";
-            this.comboTipoMaterial.Size = new System.Drawing.Size(163, 20);
-            this.comboTipoMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboTipoMaterial.TabIndex = 4;
-            this.comboTipoMaterial.Text = "SELECCIONE";
-            this.comboTipoMaterial.SelectedIndexChanged += new System.EventHandler(this.comboTipoMaterial_SelectedIndexChanged);
-            // 
-            // comboProveedor
-            // 
-            this.comboProveedor.DisplayMember = "Text";
-            this.comboProveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboProveedor.FormattingEnabled = true;
-            this.comboProveedor.ItemHeight = 14;
-            this.comboProveedor.Location = new System.Drawing.Point(151, 103);
-            this.comboProveedor.Name = "comboProveedor";
-            this.comboProveedor.Size = new System.Drawing.Size(163, 20);
-            this.comboProveedor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboProveedor.TabIndex = 3;
-            this.comboProveedor.Text = "SELECCIONE";
-            this.comboProveedor.SelectedIndexChanged += new System.EventHandler(this.comboProveedor_SelectedIndexChanged);
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(32, 141);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
-            this.labelX2.TabIndex = 3;
-            this.labelX2.Text = "Tipo Material";
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(32, 101);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Proveedor";
-            // 
             // textCantidad
             // 
             // 
@@ -184,11 +130,12 @@
             // 
             this.textCantidad.Border.Class = "TextBoxBorder";
             this.textCantidad.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textCantidad.Location = new System.Drawing.Point(151, 59);
+            this.textCantidad.Location = new System.Drawing.Point(151, 58);
             this.textCantidad.Name = "textCantidad";
             this.textCantidad.PreventEnterBeep = true;
             this.textCantidad.Size = new System.Drawing.Size(163, 20);
-            this.textCantidad.TabIndex = 2;
+            this.textCantidad.TabIndex = 9;
+            this.textCantidad.WatermarkText = "Cantidad a ingresar ejm: 12";
             this.textCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textCantidad_KeyPress);
             // 
             // textDescripcion
@@ -198,11 +145,12 @@
             // 
             this.textDescripcion.Border.Class = "TextBoxBorder";
             this.textDescripcion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textDescripcion.Location = new System.Drawing.Point(151, 16);
+            this.textDescripcion.Location = new System.Drawing.Point(151, 15);
             this.textDescripcion.Name = "textDescripcion";
             this.textDescripcion.PreventEnterBeep = true;
             this.textDescripcion.Size = new System.Drawing.Size(163, 20);
-            this.textDescripcion.TabIndex = 1;
+            this.textDescripcion.TabIndex = 8;
+            this.textDescripcion.WatermarkText = "Nombre Material";
             // 
             // labelX3
             // 
@@ -218,6 +166,33 @@
             this.labelX3.TabIndex = 4;
             this.labelX3.Text = "Descripcion";
             // 
+            // comboProveedor
+            // 
+            this.comboProveedor.DisplayMember = "Text";
+            this.comboProveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboProveedor.FormattingEnabled = true;
+            this.comboProveedor.ItemHeight = 14;
+            this.comboProveedor.Location = new System.Drawing.Point(151, 103);
+            this.comboProveedor.Name = "comboProveedor";
+            this.comboProveedor.Size = new System.Drawing.Size(163, 20);
+            this.comboProveedor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboProveedor.TabIndex = 3;
+            this.comboProveedor.Text = "SELECCIONE";
+            this.comboProveedor.SelectedIndexChanged += new System.EventHandler(this.comboProveedor_SelectedIndexChanged);
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(32, 101);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "Proveedor";
+            // 
             // labelX4
             // 
             this.labelX4.BackColor = System.Drawing.Color.Transparent;
@@ -230,6 +205,33 @@
             this.labelX4.Size = new System.Drawing.Size(75, 23);
             this.labelX4.TabIndex = 7;
             this.labelX4.Text = "Cantidad";
+            // 
+            // comboTipoMaterial
+            // 
+            this.comboTipoMaterial.DisplayMember = "Text";
+            this.comboTipoMaterial.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboTipoMaterial.FormattingEnabled = true;
+            this.comboTipoMaterial.ItemHeight = 14;
+            this.comboTipoMaterial.Location = new System.Drawing.Point(151, 144);
+            this.comboTipoMaterial.Name = "comboTipoMaterial";
+            this.comboTipoMaterial.Size = new System.Drawing.Size(163, 20);
+            this.comboTipoMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboTipoMaterial.TabIndex = 4;
+            this.comboTipoMaterial.Text = "SELECCIONE";
+            this.comboTipoMaterial.SelectedIndexChanged += new System.EventHandler(this.comboTipoMaterial_SelectedIndexChanged);
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(32, 141);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.TabIndex = 3;
+            this.labelX2.Text = "Tipo Material";
             // 
             // errorProvider
             // 
@@ -259,14 +261,14 @@
         private DevComponents.DotNetBar.ButtonX buttonGuardar;
         private DevComponents.DotNetBar.ButtonX buttonCancelar;
         private DevComponents.DotNetBar.Controls.GroupPanel group;
-        private DevComponents.DotNetBar.Controls.TextBoxX textDescripcion;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboProveedor;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textCantidad;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboTipoMaterial;
         private DevComponents.DotNetBar.LabelX labelX2;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private DevComponents.DotNetBar.Controls.TextBoxX textDescripcion;
+        private DevComponents.DotNetBar.Controls.TextBoxX textCantidad;
     }
 }

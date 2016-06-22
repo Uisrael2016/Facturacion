@@ -34,11 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textUser = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.textUser = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,33 +78,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             // 
-            // textPassword
-            // 
-            // 
-            // 
-            // 
-            this.textPassword.Border.Class = "TextBoxBorder";
-            this.textPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textPassword.Location = new System.Drawing.Point(260, 112);
-            this.textPassword.Name = "textPassword";
-            this.textPassword.PasswordChar = '*';
-            this.textPassword.PreventEnterBeep = true;
-            this.textPassword.Size = new System.Drawing.Size(151, 20);
-            this.textPassword.TabIndex = 1;
-            // 
-            // textUser
-            // 
-            // 
-            // 
-            // 
-            this.textUser.Border.Class = "TextBoxBorder";
-            this.textUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textUser.Location = new System.Drawing.Point(260, 75);
-            this.textUser.Name = "textUser";
-            this.textUser.PreventEnterBeep = true;
-            this.textUser.Size = new System.Drawing.Size(151, 20);
-            this.textUser.TabIndex = 0;
-            // 
             // btnIngresar
             // 
             this.btnIngresar.Image = global::Facturacion_Vista.Properties.Resources.home_ico;
@@ -130,14 +103,43 @@
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
+            // textUser
+            // 
+            // 
+            // 
+            // 
+            this.textUser.Border.Class = "TextBoxBorder";
+            this.textUser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textUser.Location = new System.Drawing.Point(260, 75);
+            this.textUser.Name = "textUser";
+            this.textUser.PreventEnterBeep = true;
+            this.textUser.Size = new System.Drawing.Size(151, 20);
+            this.textUser.TabIndex = 5;
+            this.textUser.WatermarkText = "Usuario";
+            // 
+            // textPassword
+            // 
+            // 
+            // 
+            // 
+            this.textPassword.Border.Class = "TextBoxBorder";
+            this.textPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textPassword.Location = new System.Drawing.Point(260, 116);
+            this.textPassword.Name = "textPassword";
+            this.textPassword.PasswordChar = '*';
+            this.textPassword.PreventEnterBeep = true;
+            this.textPassword.Size = new System.Drawing.Size(151, 20);
+            this.textPassword.TabIndex = 6;
+            this.textPassword.WatermarkText = "Contraseña";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 267);
             this.Controls.Add(this.textPassword);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textUser);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelar);
@@ -156,14 +158,14 @@
 
         #endregion
         private DevComponents.DotNetBar.StyleManager styleManager1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textUser;
-        private DevComponents.DotNetBar.Controls.TextBoxX textPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private DevComponents.DotNetBar.Controls.TextBoxX textPassword;
+        private DevComponents.DotNetBar.Controls.TextBoxX textUser;
     }
 }
 

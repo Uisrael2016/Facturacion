@@ -51,7 +51,6 @@ namespace Facturacion_Vista.Vistas
             frmcliente.ShowDialog();
             
         }
-        //private ClienteDao clientedao;
         private void dtlista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);

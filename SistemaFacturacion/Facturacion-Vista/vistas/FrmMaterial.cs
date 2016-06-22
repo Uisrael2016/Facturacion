@@ -55,10 +55,6 @@ namespace Facturacion_Vista.Vistas
             this.Hide();
         }
 
-        private void textCantidad_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            General.validaDecimal(e, textCantidad);
-        }
 
         private void cargarProveedor()
         {
@@ -159,6 +155,11 @@ namespace Facturacion_Vista.Vistas
                 }
 
             }
+        }
+
+        private void textCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            General.validaDecimal(e, textCantidad);
         }
     }
 

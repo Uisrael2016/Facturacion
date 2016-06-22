@@ -128,3 +128,5 @@ C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevCom
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\DevComponents.DotNetBar.Layout.dll
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarMaterial.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmMaterial.resources
+C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarProveedores.resources
+C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmProveedores.resources

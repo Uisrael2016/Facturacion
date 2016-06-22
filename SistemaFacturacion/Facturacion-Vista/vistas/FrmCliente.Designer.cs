@@ -131,6 +131,7 @@
             this.txtTelefono.Size = new System.Drawing.Size(247, 20);
             this.txtTelefono.TabIndex = 13;
             this.txtTelefono.WatermarkText = "593(__)(_______)";
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtDireccion
             // 
@@ -201,6 +202,8 @@
             this.txtDocumento.Size = new System.Drawing.Size(247, 20);
             this.txtDocumento.TabIndex = 8;
             this.txtDocumento.WatermarkText = "Ingrese su Identificacion";
+            this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
+            this.txtDocumento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDocumento_Validating);
             // 
             // labelX7
             // 
@@ -331,7 +334,6 @@
             this.Controls.Add(this.btguardar);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.group);
-            this.DoubleBuffered = true;
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);
