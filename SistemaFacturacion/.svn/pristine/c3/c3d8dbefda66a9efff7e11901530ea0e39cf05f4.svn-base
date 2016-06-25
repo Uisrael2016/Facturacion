@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1FE948F-4D68-4081-8586-2EB1CF202719}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facturacion_AccesoDatos</RootNamespace>
+    <AssemblyName>Facturacion-AccesoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Mono.Security.3.2.3.0\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.3.0.7\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conexion\SessionFactory.cs" />
+    <Compile Include="dao\AmbienteDao.cs" />
+    <Compile Include="dao\ClienteDao.cs" />
+    <Compile Include="dao\EmpresaDao.cs" />
+    <Compile Include="dao\FacturaDao.cs" />
+    <Compile Include="dao\IngresoDao.cs" />
+    <Compile Include="dao\MaterialDao.cs" />
+    <Compile Include="dao\PerfilDao.cs" />
+    <Compile Include="dao\ProveedorDao.cs" />
+    <Compile Include="dao\SalidaDao.cs" />
+    <Compile Include="dao\TipoDocumentoDao.cs" />
+    <Compile Include="dao\TipoMaterialDao.cs" />
+    <Compile Include="dao\UsuarioDao.cs" />
+    <Compile Include="dao\UsuarioPerfilDao.cs" />
+    <Compile Include="generica\GenericaDao.cs" />
+    <Compile Include="interfaces\InterfaceDao.cs" />
+    <Compile Include="mapping\AmbienteMap.cs" />
+    <Compile Include="mapping\ClienteMap.cs" />
+    <Compile Include="mapping\CodigoDocumentoMap.cs" />
+    <Compile Include="mapping\DetalleProductoMap.cs" />
+    <Compile Include="mapping\EmpresaMap.cs" />
+    <Compile Include="mapping\EstablecimientoMap.cs" />
+    <Compile Include="mapping\FacturaImpuestoMap.cs" />
+    <Compile Include="mapping\FacturaMap.cs" />
+    <Compile Include="mapping\FormaPagoMap.cs" />
+    <Compile Include="mapping\IngresoMap.cs" />
+    <Compile Include="mapping\MaterialMap.cs" />
+    <Compile Include="mapping\NotaPedidoMap.cs" />
+    <Compile Include="mapping\PerfilMap.cs" />
+    <Compile Include="mapping\ProductoMap.cs" />
+    <Compile Include="mapping\ProformaMap.cs" />
+    <Compile Include="mapping\ProveedorMap.cs" />
+    <Compile Include="mapping\PuntoEmisionMap.cs" />
+    <Compile Include="mapping\SalidaMap.cs" />
+    <Compile Include="mapping\SecuencialMap.cs" />
+    <Compile Include="mapping\TarifaMap.cs" />
+    <Compile Include="mapping\TipoDocumentoMap.cs" />
+    <Compile Include="mapping\TipoMaterialMap.cs" />
+    <Compile Include="mapping\UsuarioMap.cs" />
+    <Compile Include="mapping\UsuarioPerfilMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Facturacion-Entidades\Facturacion-Entidades.csproj">
+      <Project>{87aa1838-96ce-46ec-b910-49a9d42647be}</Project>
+      <Name>Facturacion-Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
