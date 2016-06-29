@@ -16,6 +16,7 @@ namespace Facturacion_AccesoDatos.mapping
             Id(c => c.IdProveedor).GeneratedBy.Identity().Column("id_proveedor");
             Map(c => c.Documento).Column("documento");
             Map(c => c.RazonSocial).Column("razon_social");
+            Map(c => c.RepresentanteLegal).Column("repre_legal");
             Map(c => c.Telefono).Column("telefono");
             Map(c => c.Email).Column("email");
             Map(c => c.Direccion).Column("direccion");

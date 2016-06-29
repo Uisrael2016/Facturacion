@@ -14,6 +14,8 @@ namespace Facturacion_Entidades
 
         public virtual string RazonSocial { get; set; }
 
+        public virtual string RepresentanteLegal { get; set; }
+
         public virtual string Telefono { get; set; }
 
         public virtual string Email { get; set; }
