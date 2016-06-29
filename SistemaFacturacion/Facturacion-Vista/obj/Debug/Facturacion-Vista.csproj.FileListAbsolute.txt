@@ -133,3 +133,6 @@ C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Factur
 C:\workSpaceVisualStudio\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe.config
 C:\workSpaceVisualStudio\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.exe
 C:\workSpaceVisualStudio\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.pdb
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe.config
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.exe
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.pdb
