@@ -39,6 +39,10 @@
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.representantelegal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtbuscarprov = new DevComponents.DotNetBar.TextBoxItem();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtlista)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +53,8 @@
             this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonNuevo,
-            this.buttonBuscar});
+            this.buttonBuscar,
+            this.txtbuscarprov});
             this.bar1.Location = new System.Drawing.Point(12, 374);
             this.bar1.Name = "bar1";
             this.bar1.Size = new System.Drawing.Size(705, 39);
@@ -91,13 +96,16 @@
             this.idProveedor,
             this.Documento,
             this.RazonSocial,
-            this.representantelegal});
+            this.representantelegal,
+            this.telefono,
+            this.email,
+            this.direccion});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtlista.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlista.EnableHeadersVisualStyles = false;
@@ -113,7 +121,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtlista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtlista.Size = new System.Drawing.Size(744, 368);
+            this.dtlista.Size = new System.Drawing.Size(750, 368);
             this.dtlista.TabIndex = 3;
             this.dtlista.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellContentDoubleClick);
             // 
@@ -135,12 +143,38 @@
             this.RazonSocial.HeaderText = "Razon Social";
             this.RazonSocial.Name = "RazonSocial";
             this.RazonSocial.ReadOnly = true;
+            this.RazonSocial.Width = 150;
             // 
             // representantelegal
             // 
-            this.representantelegal.HeaderText = "representantelegal";
+            this.representantelegal.HeaderText = "Representante";
             this.representantelegal.Name = "representantelegal";
             this.representantelegal.ReadOnly = true;
+            this.representantelegal.Width = 150;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Correo";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // txtbuscarprov
+            // 
+            this.txtbuscarprov.Name = "txtbuscarprov";
+            this.txtbuscarprov.TextBoxWidth = 200;
+            this.txtbuscarprov.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // FrmListarProveedores
             // 
@@ -168,5 +202,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn representantelegal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private DevComponents.DotNetBar.TextBoxItem txtbuscarprov;
     }
 }
