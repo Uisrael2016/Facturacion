@@ -165,6 +165,7 @@
             this.ClientSize = new System.Drawing.Size(645, 386);
             this.Controls.Add(this.dataMaterial);
             this.Controls.Add(this.bar1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmListarMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

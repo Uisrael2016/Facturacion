@@ -31,26 +31,27 @@ namespace Facturacion_Vista.Vistas
             cargaCombo();
             if (valor == Acciones.update)
             {
-                estdoLbl.Visible = true;
-                radioH.Visible = true;
-                radioD.Visible = true;
+
+                checkEstado.Visible = true;
                 empresaDao = new EmpresaDao();
                 empresaSeleccionada = empresaDao.buscaEmpresa();
-                if (empresaSeleccionada.Estado == 'A')
-                {
-                    radioH.Select();
-                }
-                else
-                {
-                    radioD.Select();
-                }
-                idEmpresa = empresaSeleccionada.IdEmpresa;
-                textRuc.Text = empresaSeleccionada.Ruc;
-                textRazonSocial.Text = empresaSeleccionada.RazonSocial;
-                textDirecMatriz.Text = empresaSeleccionada.DirecMatriz;
-                textPath.Text = empresaSeleccionada.PathLogo;
-                checkContabilidad.Checked = empresaSeleccionada.Contabilidad;
-                comboAmbiente.SelectedItem= empresaSeleccionada.IdAmbiente;
+                    if (empresaSeleccionada.Estado == 'A')
+                    {
+                        checkEstado.Checked = true;
+                    }
+                    else
+                    {
+                        checkEstado.Checked = false;
+                    }
+                    idEmpresa = empresaSeleccionada.IdEmpresa;
+                    textRuc.Text = empresaSeleccionada.Ruc;
+                    textRazonSocial.Text = empresaSeleccionada.RazonSocial;
+                    textDirecMatriz.Text = empresaSeleccionada.DirecMatriz;
+                    textPath.Text = empresaSeleccionada.PathLogo;
+                    checkContabilidad.Checked = empresaSeleccionada.Contabilidad;
+                    comboAmbiente.SelectedItem = empresaSeleccionada.IdAmbiente;
+                
+                
             }else
             {
                 empresaSeleccionada = new Empresa();
@@ -80,16 +81,6 @@ namespace Facturacion_Vista.Vistas
                 }
 
             }
-        }
-
-        private void radioH_CheckedChanged(object sender, EventArgs e)
-        {
-            estado = 'A';
-        }
-
-        private void radioD_CheckedChanged(object sender, EventArgs e)
-        {
-            estado = 'D';
         }
 
         private void guardarBtn_Click(object sender, EventArgs e)
@@ -137,6 +128,12 @@ namespace Facturacion_Vista.Vistas
                 }
                 else
                 {
+                    if (checkEstado.Checked==true)
+                    
+                        estado = 'A';
+                    else
+                        estado = 'I';
+
                     empresaSeleccionada.IdEmpresa = idEmpresa;
                     empresaSeleccionada.Estado = estado;
                     empresaDao.modificar(empresaSeleccionada);
@@ -170,9 +167,10 @@ namespace Facturacion_Vista.Vistas
 
         }
 
-        private void comboAmbiente_DataSourceChanged(object sender, EventArgs e)
+        private void textRuc_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            Utilidades.General.validaNumero(e, textRuc);
+            Utilidades.General.lengthNumber(e, textRuc, 13);
         }
     }
 }

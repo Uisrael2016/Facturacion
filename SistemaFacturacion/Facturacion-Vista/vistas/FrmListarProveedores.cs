@@ -24,7 +24,7 @@ namespace Facturacion_Vista.Vistas
 
         private void buttonNuevo_Click(object sender, EventArgs e)
         {
-            FrmProveedores frmproveedores = new FrmProveedores();
+            FrmProveedores frmproveedores = new FrmProveedores(0);
             frmproveedores.ShowDialog();
         }
 

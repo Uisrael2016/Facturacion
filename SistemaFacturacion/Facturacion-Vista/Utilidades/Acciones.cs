@@ -10,6 +10,8 @@ namespace Facturacion_Vista.Utilidades
     {
         insert,
         update,
-        reload
+        reload,
+        inject,
+        view
     }
 }

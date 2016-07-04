@@ -19,7 +19,7 @@ namespace Facturacion_Vista.Vistas
         private TipoDocumento _tipodocumento;
         private Acciones _accion;
         private ClienteDao clientedao;
-        private Cliente clienteSeleccionado;
+        public Cliente clienteSeleccionado { get; set; }
         public FrmCliente(int id)
         {
             InitializeComponent();
@@ -128,40 +128,18 @@ namespace Facturacion_Vista.Vistas
             TipoDocumento tpdocumento = (TipoDocumento)cbxTipoDocumento.SelectedItem;
             _tipodocumento.IdTipoDocumento = tpdocumento.IdTipoDocumento;
             _tipodocumento.Documento = tpdocumento.Documento;
+            txtDocumento.Text = string.Empty;
             
-        }
-
-
-        private void txtDocumento_Validating(object sender, CancelEventArgs e)
-        {
-            if(txtDocumento.Text.Length==10)
-            {
-                if (!General.validaCedula(txtDocumento.Text))
-                {
-                    Mensaje.mensajeError("Cedula Invalida", "Cedula Incorrecta, verifique el numero de cedula por favor");
-                    txtDocumento.Text = string.Empty;
-                    txtDocumento.Focus();
-                    return;
-                }
-            }
-            else
-            {
-                Mensaje.mensajeError("Cedula Invalida", "Numero de digitos de cedula invalido");
-                txtDocumento.Focus();
-                return;
-            }
-            
-
         }
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (_tipodocumento.IdTipoDocumento==1)
             {
-                General.lengthCedula(e, txtDocumento);
+                General.lengthNumber(e, txtDocumento,10);
             }else if (_tipodocumento.IdTipoDocumento==2)
             {
-                General.lengthRuc(e, txtDocumento);
+                General.lengthNumber(e, txtDocumento,13);
             }
                 
         }
@@ -169,6 +147,37 @@ namespace Facturacion_Vista.Vistas
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             General.validaNumero(e,txtTelefono);
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            if (_tipodocumento.IdTipoDocumento==1)
+            {
+                cbxTipoDocumento.Enabled = false;
+                if (txtDocumento.Text.Length == 10)
+                {
+                    if (!General.validaCedula(txtDocumento.Text))
+                    {
+                        Mensaje.mensajeError("Cedula Invalida", "Cedula Incorrecta, verifique el numero de cedula por favor");
+                        txtDocumento.Focus();
+                        txtDocumento.Text = string.Empty;
+                        return;
+                    }
+                }
+                else
+                {
+                    Mensaje.mensajeError("Cedula Invalida", "Numero de digitos de cedula invalido");
+                    txtDocumento.Focus();
+                    return;
+                }
+
+            }
+
+        }
+
+        private void txtDocumento_Enter(object sender, EventArgs e)
+        {
+            cbxTipoDocumento.Enabled = true;
         }
     }
 }

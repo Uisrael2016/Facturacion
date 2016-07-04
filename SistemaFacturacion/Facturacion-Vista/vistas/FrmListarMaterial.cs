@@ -16,6 +16,7 @@ namespace Facturacion_Vista.Vistas
     {
         private MaterialDao materialDao;
         private List<Material> listaMaterial;
+        
         public FrmListarMaterial()
         {
             InitializeComponent();
@@ -49,5 +50,6 @@ namespace Facturacion_Vista.Vistas
             frm.ShowDialog();
             listarMaterial();
         }
+
     }
 }

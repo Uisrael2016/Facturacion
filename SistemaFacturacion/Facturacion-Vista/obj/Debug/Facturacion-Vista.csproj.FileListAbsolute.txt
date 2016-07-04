@@ -136,3 +136,4 @@ C:\workSpaceVisualStudio\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\De
 C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe.config
 C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.exe
 C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.pdb
+C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.transaccion.FrmProforma.resources
