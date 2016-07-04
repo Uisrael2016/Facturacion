@@ -25,6 +25,7 @@ namespace Facturacion_Vista.Vistas
 
         public FrmProveedores(int id)
         {
+
             InitializeComponent();
             this.idProveedor = id;
             _tipodocumento = new TipoDocumento();
@@ -46,6 +47,7 @@ namespace Facturacion_Vista.Vistas
             {
                 _accion = Acciones.insert;
             }
+            cargar_combo();
         }
         private void setProveedor()
         {
@@ -60,12 +62,44 @@ namespace Facturacion_Vista.Vistas
             proveedorSeleccionado.RazonSocial = txtRazonSocial.Text.ToUpper();
             proveedorSeleccionado.RepresentanteLegal = txtreprlegal.Text.ToUpper();
             proveedorSeleccionado.Email = txtEmail.Text;
-            proveedorSeleccionado.Direccion = txtDireccion.Text; 
-
+            proveedorSeleccionado.Direccion = txtDireccion.Text;
+            proveedorSeleccionado.Estado = estado;
+            proveedorSeleccionado.Direccion = txtDireccion.Text;
+            proveedorSeleccionado.Telefono = txtTelefono.Text;
         }
         private void btguardar_Click(object sender, EventArgs e)
         {
 
+            if (General.validaFormGroup(this.Controls, erroricono))
+            {
+                try
+                {
+                    setProveedor();
+                    if (_accion == Acciones.insert)
+                    {
+                        proveedorDao.insertar(proveedorSeleccionado);
+                        Mensaje.mensajeInformacion("Informacion", "Cliente Grabado con Exito");
+                        this.Hide();
+                    }
+                    else
+                    {
+                        proveedorSeleccionado.Estado = estado;
+                        proveedorSeleccionado.IdProveedor = idProveedor;
+                        proveedorSeleccionado.UsuarioEgresa = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
+                        proveedorSeleccionado.FechaEgreso = DateTime.Now;
+                        proveedorDao.modificar(proveedorSeleccionado);
+                        Mensaje.mensajeInformacion("Informacion ", "Cliente Actualizado con exito");
+                        this.Hide();
+                    }
+                }
+                catch
+                {
+                }
+            }
+            else
+            {
+
+            }
         }
         private void cargar_combo()
         {
@@ -97,12 +131,17 @@ namespace Facturacion_Vista.Vistas
         {
             if (_tipodocumento.IdTipoDocumento == 1)
             {
-                General.lengthNumber(e, txtDocumento,10);
+                General.lengthCedula(e, txtDocumento);
 
             } else if (_tipodocumento.IdTipoDocumento==2)
             {
-                General.lengthNumber(e, txtDocumento,13);
+                General.lengthRuc(e, txtDocumento);
             }
+
+        }
+
+        private void groupMantenimiento_Click(object sender, EventArgs e)
+        {
 
         }
     }
