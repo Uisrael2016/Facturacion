@@ -166,7 +166,7 @@ namespace Facturacion_Vista.Utilidades
             }
 
         }
-
+        // Validacion de mail
         public static bool validaEmail(string email)
         {
             String expresion;
