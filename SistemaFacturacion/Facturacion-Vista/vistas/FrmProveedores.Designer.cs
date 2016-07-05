@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.txtreprlegal = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.groupMantenimiento = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.radioD = new System.Windows.Forms.RadioButton();
             this.radioH = new System.Windows.Forms.RadioButton();
             this.estdoLbl = new System.Windows.Forms.Label();
@@ -49,94 +46,66 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btguardar = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.erroricono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.group.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.erroricono)).BeginInit();
+            this.txtreprlegal = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.groupMantenimiento.SuspendLayout();
             this.SuspendLayout();
             // 
-            // group
+            // groupMantenimiento
             // 
-            this.group.CanvasColor = System.Drawing.SystemColors.Control;
-            this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.group.Controls.Add(this.txtreprlegal);
-            this.group.Controls.Add(this.labelX4);
-            this.group.Controls.Add(this.radioD);
-            this.group.Controls.Add(this.radioH);
-            this.group.Controls.Add(this.estdoLbl);
-            this.group.Controls.Add(this.cbxTipoDocumento);
-            this.group.Controls.Add(this.txtTelefono);
-            this.group.Controls.Add(this.txtDireccion);
-            this.group.Controls.Add(this.txtEmail);
-            this.group.Controls.Add(this.txtRazonSocial);
-            this.group.Controls.Add(this.txtDocumento);
-            this.group.Controls.Add(this.labelX7);
-            this.group.Controls.Add(this.labelX6);
-            this.group.Controls.Add(this.labelX5);
-            this.group.Controls.Add(this.labelX3);
-            this.group.Controls.Add(this.labelX2);
-            this.group.Controls.Add(this.labelX1);
-            this.group.DisabledBackColor = System.Drawing.Color.Empty;
-            this.group.Location = new System.Drawing.Point(12, 12);
-            this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(556, 526);
-            // 
-            // 
-            // 
-            this.group.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.group.Style.BackColorGradientAngle = 90;
-            this.group.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.group.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.group.Style.BorderBottomWidth = 1;
-            this.group.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.group.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.group.Style.BorderLeftWidth = 1;
-            this.group.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.group.Style.BorderRightWidth = 1;
-            this.group.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.group.Style.BorderTopWidth = 1;
-            this.group.Style.CornerDiameter = 4;
-            this.group.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.group.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.group.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.group.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            this.groupMantenimiento.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupMantenimiento.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupMantenimiento.Controls.Add(this.txtreprlegal);
+            this.groupMantenimiento.Controls.Add(this.labelX4);
+            this.groupMantenimiento.Controls.Add(this.radioD);
+            this.groupMantenimiento.Controls.Add(this.radioH);
+            this.groupMantenimiento.Controls.Add(this.estdoLbl);
+            this.groupMantenimiento.Controls.Add(this.cbxTipoDocumento);
+            this.groupMantenimiento.Controls.Add(this.txtTelefono);
+            this.groupMantenimiento.Controls.Add(this.txtDireccion);
+            this.groupMantenimiento.Controls.Add(this.txtEmail);
+            this.groupMantenimiento.Controls.Add(this.txtRazonSocial);
+            this.groupMantenimiento.Controls.Add(this.txtDocumento);
+            this.groupMantenimiento.Controls.Add(this.labelX7);
+            this.groupMantenimiento.Controls.Add(this.labelX6);
+            this.groupMantenimiento.Controls.Add(this.labelX5);
+            this.groupMantenimiento.Controls.Add(this.labelX3);
+            this.groupMantenimiento.Controls.Add(this.labelX2);
+            this.groupMantenimiento.Controls.Add(this.labelX1);
+            this.groupMantenimiento.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupMantenimiento.Location = new System.Drawing.Point(12, 12);
+            this.groupMantenimiento.Name = "groupMantenimiento";
+            this.groupMantenimiento.Size = new System.Drawing.Size(556, 526);
             // 
             // 
             // 
-            this.group.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupMantenimiento.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupMantenimiento.Style.BackColorGradientAngle = 90;
+            this.groupMantenimiento.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupMantenimiento.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupMantenimiento.Style.BorderBottomWidth = 1;
+            this.groupMantenimiento.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupMantenimiento.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupMantenimiento.Style.BorderLeftWidth = 1;
+            this.groupMantenimiento.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupMantenimiento.Style.BorderRightWidth = 1;
+            this.groupMantenimiento.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupMantenimiento.Style.BorderTopWidth = 1;
+            this.groupMantenimiento.Style.CornerDiameter = 4;
+            this.groupMantenimiento.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupMantenimiento.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupMantenimiento.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupMantenimiento.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
             // 
-            this.group.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.group.TabIndex = 1;
-            this.group.Text = "Datos Proveedor";
-            this.group.Click += new System.EventHandler(this.groupMantenimiento_Click);
-            // 
-            // txtreprlegal
+            this.groupMantenimiento.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            // 
-            this.txtreprlegal.Border.Class = "TextBoxBorder";
-            this.txtreprlegal.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtreprlegal.Location = new System.Drawing.Point(166, 197);
-            this.txtreprlegal.Name = "txtreprlegal";
-            this.txtreprlegal.PreventEnterBeep = true;
-            this.txtreprlegal.Size = new System.Drawing.Size(247, 20);
-            this.txtreprlegal.TabIndex = 19;
-            this.txtreprlegal.WatermarkText = "Representante Legal";
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(37, 188);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(110, 29);
-            this.labelX4.TabIndex = 18;
-            this.labelX4.Text = "Representante Legal";
+            this.groupMantenimiento.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupMantenimiento.TabIndex = 1;
+            this.groupMantenimiento.Text = "Datos Proveedor";
             // 
             // radioD
             // 
@@ -149,6 +118,7 @@
             this.radioD.TabStop = true;
             this.radioD.Text = "Desahabilitado";
             this.radioD.UseVisualStyleBackColor = false;
+            this.radioD.Visible = false;
             this.radioD.CheckedChanged += new System.EventHandler(this.radioD_CheckedChanged);
             // 
             // radioH
@@ -162,6 +132,7 @@
             this.radioH.TabStop = true;
             this.radioH.Text = "Habilitado";
             this.radioH.UseVisualStyleBackColor = false;
+            this.radioH.Visible = false;
             this.radioH.CheckedChanged += new System.EventHandler(this.radioH_CheckedChanged);
             // 
             // estdoLbl
@@ -174,6 +145,7 @@
             this.estdoLbl.Size = new System.Drawing.Size(50, 19);
             this.estdoLbl.TabIndex = 15;
             this.estdoLbl.Text = "Estado";
+            this.estdoLbl.Visible = false;
             // 
             // cbxTipoDocumento
             // 
@@ -346,7 +318,7 @@
             this.btguardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
             this.btguardar.Location = new System.Drawing.Point(90, 555);
             this.btguardar.Name = "btguardar";
-            this.btguardar.Size = new System.Drawing.Size(85, 41);
+            this.btguardar.Size = new System.Drawing.Size(85, 49);
             this.btguardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btguardar.TabIndex = 6;
             this.btguardar.Click += new System.EventHandler(this.btguardar_Click);
@@ -359,35 +331,57 @@
             this.buttonX2.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
             this.buttonX2.Location = new System.Drawing.Point(332, 555);
             this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(95, 41);
+            this.buttonX2.Size = new System.Drawing.Size(95, 49);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 5;
             // 
-            // erroricono
+            // txtreprlegal
             // 
-            this.erroricono.ContainerControl = this;
+            // 
+            // 
+            // 
+            this.txtreprlegal.Border.Class = "TextBoxBorder";
+            this.txtreprlegal.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtreprlegal.Location = new System.Drawing.Point(166, 197);
+            this.txtreprlegal.Name = "txtreprlegal";
+            this.txtreprlegal.PreventEnterBeep = true;
+            this.txtreprlegal.Size = new System.Drawing.Size(247, 20);
+            this.txtreprlegal.TabIndex = 19;
+            this.txtreprlegal.WatermarkText = "Representante Legal";
+            // 
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(37, 188);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(110, 29);
+            this.labelX4.TabIndex = 18;
+            this.labelX4.Text = "Representante Legal";
             // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 608);
+            this.ClientSize = new System.Drawing.Size(585, 626);
             this.Controls.Add(this.btguardar);
             this.Controls.Add(this.buttonX2);
-            this.Controls.Add(this.group);
+            this.Controls.Add(this.groupMantenimiento);
             this.DoubleBuffered = true;
             this.Name = "FrmProveedores";
             this.Text = "FrmProveedores";
-            this.group.ResumeLayout(false);
-            this.group.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.erroricono)).EndInit();
+            this.groupMantenimiento.ResumeLayout(false);
+            this.groupMantenimiento.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.GroupPanel group;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupMantenimiento;
         public DevComponents.DotNetBar.Controls.ComboBoxEx cbxTipoDocumento;
         public DevComponents.DotNetBar.Controls.TextBoxX txtTelefono;
         public DevComponents.DotNetBar.Controls.TextBoxX txtDireccion;
@@ -407,6 +401,5 @@
         private System.Windows.Forms.Label estdoLbl;
         public DevComponents.DotNetBar.Controls.TextBoxX txtreprlegal;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private System.Windows.Forms.ErrorProvider erroricono;
     }
 }

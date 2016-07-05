@@ -50,6 +50,10 @@ namespace Facturacion_Entidades
             NotaPedidoList = new List<NotaPedido>();
         }
 
+        public static explicit operator List<object>(Usuario v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

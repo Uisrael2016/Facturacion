@@ -188,7 +188,6 @@
             this.txtNombre.Size = new System.Drawing.Size(247, 20);
             this.txtNombre.TabIndex = 9;
             this.txtNombre.WatermarkText = "Sus dos Nombres";
-            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             // 
             // txtDocumento
             // 
@@ -203,8 +202,8 @@
             this.txtDocumento.Size = new System.Drawing.Size(247, 20);
             this.txtDocumento.TabIndex = 8;
             this.txtDocumento.WatermarkText = "Ingrese su Identificacion";
-            this.txtDocumento.Enter += new System.EventHandler(this.txtDocumento_Enter);
             this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
+            this.txtDocumento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDocumento_Validating);
             // 
             // labelX7
             // 
@@ -303,9 +302,9 @@
             this.buttonX2.BackColor = System.Drawing.Color.Transparent;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.buttonX2.Location = new System.Drawing.Point(301, 487);
+            this.buttonX2.Location = new System.Drawing.Point(354, 487);
             this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(81, 28);
+            this.buttonX2.Size = new System.Drawing.Size(95, 49);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 2;
             this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
@@ -322,7 +321,7 @@
             this.btguardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
             this.btguardar.Location = new System.Drawing.Point(112, 487);
             this.btguardar.Name = "btguardar";
-            this.btguardar.Size = new System.Drawing.Size(78, 28);
+            this.btguardar.Size = new System.Drawing.Size(85, 49);
             this.btguardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btguardar.TabIndex = 4;
             this.btguardar.Click += new System.EventHandler(this.btguardar_Click);
@@ -335,7 +334,6 @@
             this.Controls.Add(this.btguardar);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.group);
-            this.DoubleBuffered = true;
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
             this.Load += new System.EventHandler(this.FrmCliente_Load);

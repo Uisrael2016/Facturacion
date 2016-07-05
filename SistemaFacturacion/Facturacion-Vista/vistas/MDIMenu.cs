@@ -7,7 +7,7 @@ using System.Linq;using System.Text;
 
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Facturacion_Vista.Vistas.transaccion;
+
 namespace Facturacion_Vista.Vistas
 {
     public partial class MDIMenu : DevComponents.DotNetBar.Office2007RibbonForm
@@ -21,7 +21,7 @@ namespace Facturacion_Vista.Vistas
 
         private void buttonItem26_Click(object sender, EventArgs e)
         {
-            FrmListarCliente listcliente = new FrmListarCliente(Utilidades.Acciones.view);
+            FrmListarCliente listcliente = new FrmListarCliente();
             listcliente.ShowDialog();
         }
         private void itemEmpresa_Click(object sender, EventArgs e)
@@ -42,9 +42,9 @@ namespace Facturacion_Vista.Vistas
             frm.ShowDialog();
         }
 
-        private void itemProforma_Click(object sender, EventArgs e)
+        private void itemUsuarios_Click(object sender, EventArgs e)
         {
-            FrmProforma frm = new FrmProforma();
+            FrmListarUsuario frm = new FrmListarUsuario();
             frm.ShowDialog();
         }
     }

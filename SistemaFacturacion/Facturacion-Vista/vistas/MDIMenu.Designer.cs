@@ -104,7 +104,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(5, 411);
+            this.statusStrip.Location = new System.Drawing.Point(5, 413);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(622, 22);
             this.statusStrip.TabIndex = 2;
@@ -128,11 +128,11 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -192,7 +192,6 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Visible = false;
             // 
             // ribbonBar1
             // 
@@ -233,6 +232,7 @@
             this.itemUsuarios.SubItemsExpandWidth = 14;
             this.itemUsuarios.Text = "Usuarios";
             this.itemUsuarios.Tooltip = "USUARIOS";
+            this.itemUsuarios.Click += new System.EventHandler(this.itemUsuarios_Click);
             // 
             // itemPerfiles
             // 
@@ -511,6 +511,7 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
             // 
             // ribbonBar3
             // 
@@ -565,7 +566,6 @@
             this.itemProforma.Name = "itemProforma";
             this.itemProforma.SubItemsExpandWidth = 14;
             this.itemProforma.Text = "Proforma";
-            this.itemProforma.Click += new System.EventHandler(this.itemProforma_Click);
             // 
             // ribbonPanel4
             // 
@@ -632,6 +632,7 @@
             // 
             // menuAdministracion
             // 
+            this.menuAdministracion.Checked = true;
             this.menuAdministracion.Name = "menuAdministracion";
             this.menuAdministracion.Panel = this.ribbonPanel1;
             this.menuAdministracion.Text = "Administracion";
@@ -662,7 +663,6 @@
             // 
             // menuComprobantes
             // 
-            this.menuComprobantes.Checked = true;
             this.menuComprobantes.Name = "menuComprobantes";
             this.menuComprobantes.Panel = this.ribbonPanel3;
             this.menuComprobantes.Text = "Comprobantes";
@@ -894,14 +894,14 @@
             this.label1.Image = global::Facturacion_Vista.Properties.Resources.fondoSistema1;
             this.label1.Location = new System.Drawing.Point(5, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 256);
+            this.label1.Size = new System.Drawing.Size(622, 258);
             this.label1.TabIndex = 6;
             // 
             // MDIMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 435);
+            this.ClientSize = new System.Drawing.Size(632, 437);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.statusStrip);

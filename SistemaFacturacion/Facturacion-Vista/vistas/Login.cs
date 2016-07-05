@@ -39,7 +39,6 @@ namespace Facturacion_Vista
                 {
                     usuarioPerfilManager = daoPerfil.buscaUsuario(usuario.IdUsuario);
                     Utilidades.Mensaje.mensajeInformacion("Informacion", "Bienvenido al sistema usuario " + " " + usuario.UserName);
-                    Console.WriteLine(usuarioPerfilManager.IdUsuario.Nombre);
                     MDIMenu pa = new MDIMenu();
                     pa.Show();
                     this.Hide();

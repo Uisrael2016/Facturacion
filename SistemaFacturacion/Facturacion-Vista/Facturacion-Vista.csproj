@@ -116,6 +116,12 @@
     <Compile Include="Vistas\FrmListarProveedores.Designer.cs">
       <DependentUpon>FrmListarProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FrmListarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmListarUsuario.Designer.cs">
+      <DependentUpon>FrmListarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FrmMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="Vistas\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
@@ -141,12 +153,6 @@
     </Compile>
     <Compile Include="Vistas\MDIMenu.Designer.cs">
       <DependentUpon>MDIMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\transaccion\FrmProforma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\transaccion\FrmProforma.Designer.cs">
-      <DependentUpon>FrmProforma.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vistas\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
@@ -163,11 +169,17 @@
     <EmbeddedResource Include="Vistas\FrmListarProveedores.resx">
       <DependentUpon>FrmListarProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmListarUsuario.resx">
+      <DependentUpon>FrmListarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmMaterial.resx">
       <DependentUpon>FrmMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -184,9 +196,6 @@
     </Compile>
     <EmbeddedResource Include="Vistas\MDIMenu.resx">
       <DependentUpon>MDIMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\transaccion\FrmProforma.resx">
-      <DependentUpon>FrmProforma.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -307,9 +316,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search_ico.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

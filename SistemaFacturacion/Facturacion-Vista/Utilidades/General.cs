@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Facturacion_Vista.Utilidades;
 namespace Facturacion_Vista.Utilidades
@@ -42,7 +43,7 @@ namespace Facturacion_Vista.Utilidades
 
         }
 
-        public static void lengthNumber(KeyPressEventArgs e, TextBox texto, int valor)
+        public static void lengthCedula(KeyPressEventArgs e, TextBox texto)
         {
             bool IsDec = false;
             if (e.KeyChar == 8)
@@ -58,7 +59,27 @@ namespace Facturacion_Vista.Utilidades
             else
                 e.Handled = true;
 
-            if (texto.Text.Length >= valor)
+            if (texto.Text.Length >= 10)
+                e.Handled = true;
+
+        }
+        public static void lengthRuc(KeyPressEventArgs e, TextBox texto)
+        {
+            bool IsDec = false;
+            if (e.KeyChar == 8)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+                e.Handled = false;
+            else if (e.KeyChar == 46)
+                e.Handled = (IsDec) ? true : false;
+            else
+                e.Handled = true;
+
+            if (texto.Text.Length >= 13)
                 e.Handled = true;
 
         }
@@ -146,6 +167,27 @@ namespace Facturacion_Vista.Utilidades
 
         }
 
+        public static bool validaEmail(string email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public static bool validaCedula(string ced)
         {
             bool flag = false;
@@ -181,6 +223,5 @@ namespace Facturacion_Vista.Utilidades
 
             return flag;
         }
-
     }
 }
