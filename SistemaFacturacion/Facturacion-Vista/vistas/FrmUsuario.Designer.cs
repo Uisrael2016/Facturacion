@@ -86,7 +86,7 @@
             this.group.DisabledBackColor = System.Drawing.Color.Empty;
             this.group.Location = new System.Drawing.Point(21, 12);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(751, 427);
+            this.group.Size = new System.Drawing.Size(653, 403);
             // 
             // 
             // 
@@ -122,7 +122,7 @@
             // 
             this.rdDesactivo.AutoSize = true;
             this.rdDesactivo.BackColor = System.Drawing.Color.Transparent;
-            this.rdDesactivo.Location = new System.Drawing.Point(667, 81);
+            this.rdDesactivo.Location = new System.Drawing.Point(515, 52);
             this.rdDesactivo.Name = "rdDesactivo";
             this.rdDesactivo.Size = new System.Drawing.Size(73, 17);
             this.rdDesactivo.TabIndex = 39;
@@ -135,7 +135,7 @@
             // 
             this.rdActivo.AutoSize = true;
             this.rdActivo.BackColor = System.Drawing.Color.Transparent;
-            this.rdActivo.Location = new System.Drawing.Point(530, 81);
+            this.rdActivo.Location = new System.Drawing.Point(515, 18);
             this.rdActivo.Name = "rdActivo";
             this.rdActivo.Size = new System.Drawing.Size(55, 17);
             this.rdActivo.TabIndex = 38;
@@ -148,11 +148,12 @@
             // 
             this.fechaIngreso.AutoSize = true;
             this.fechaIngreso.BackColor = System.Drawing.Color.Transparent;
-            this.fechaIngreso.Location = new System.Drawing.Point(527, 32);
+            this.fechaIngreso.Location = new System.Drawing.Point(512, 156);
             this.fechaIngreso.Name = "fechaIngreso";
             this.fechaIngreso.Size = new System.Drawing.Size(43, 13);
             this.fechaIngreso.TabIndex = 37;
             this.fechaIngreso.Text = "Fecha .";
+            this.fechaIngreso.Visible = false;
             // 
             // txtuser
             // 
@@ -161,7 +162,7 @@
             // 
             this.txtuser.Border.Class = "TextBoxBorder";
             this.txtuser.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtuser.Location = new System.Drawing.Point(133, 318);
+            this.txtuser.Location = new System.Drawing.Point(130, 281);
             this.txtuser.Name = "txtuser";
             this.txtuser.PreventEnterBeep = true;
             this.txtuser.Size = new System.Drawing.Size(247, 20);
@@ -172,7 +173,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(28, 320);
+            this.label13.Location = new System.Drawing.Point(28, 281);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(96, 13);
             this.label13.TabIndex = 35;
@@ -181,7 +182,7 @@
             // ckCambiarClave
             // 
             this.ckCambiarClave.AutoSize = true;
-            this.ckCambiarClave.Location = new System.Drawing.Point(585, 142);
+            this.ckCambiarClave.Location = new System.Drawing.Point(515, 105);
             this.ckCambiarClave.Name = "ckCambiarClave";
             this.ckCambiarClave.Size = new System.Drawing.Size(15, 14);
             this.ckCambiarClave.TabIndex = 32;
@@ -207,7 +208,7 @@
             // 
             this.txtTelefono.Border.Class = "TextBoxBorder";
             this.txtTelefono.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTelefono.Location = new System.Drawing.Point(135, 195);
+            this.txtTelefono.Location = new System.Drawing.Point(133, 177);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PreventEnterBeep = true;
             this.txtTelefono.Size = new System.Drawing.Size(247, 20);
@@ -222,7 +223,7 @@
             // 
             this.txtClave.Border.Class = "TextBoxBorder";
             this.txtClave.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtClave.Location = new System.Drawing.Point(135, 373);
+            this.txtClave.Location = new System.Drawing.Point(130, 331);
             this.txtClave.Name = "txtClave";
             this.txtClave.PreventEnterBeep = true;
             this.txtClave.Size = new System.Drawing.Size(247, 20);
@@ -236,7 +237,7 @@
             // 
             this.txtEmail.Border.Class = "TextBoxBorder";
             this.txtEmail.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtEmail.Location = new System.Drawing.Point(135, 255);
+            this.txtEmail.Location = new System.Drawing.Point(133, 227);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PreventEnterBeep = true;
             this.txtEmail.Size = new System.Drawing.Size(247, 20);
@@ -251,7 +252,7 @@
             // 
             this.txtNombres.Border.Class = "TextBoxBorder";
             this.txtNombres.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtNombres.Location = new System.Drawing.Point(135, 135);
+            this.txtNombres.Location = new System.Drawing.Point(133, 128);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.PreventEnterBeep = true;
             this.txtNombres.Size = new System.Drawing.Size(247, 20);
@@ -264,7 +265,7 @@
             // 
             this.txtDocumento.Border.Class = "TextBoxBorder";
             this.txtDocumento.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDocumento.Location = new System.Drawing.Point(135, 76);
+            this.txtDocumento.Location = new System.Drawing.Point(135, 71);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.PreventEnterBeep = true;
             this.txtDocumento.Size = new System.Drawing.Size(247, 20);
@@ -277,7 +278,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(412, 142);
+            this.label10.Location = new System.Drawing.Point(412, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 13);
             this.label10.TabIndex = 9;
@@ -287,7 +288,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(412, 83);
+            this.label9.Location = new System.Drawing.Point(412, 32);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 8;
@@ -297,17 +298,18 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(412, 32);
+            this.label8.Location = new System.Drawing.Point(412, 156);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Fecha de ingreso";
+            this.label8.Visible = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(30, 378);
+            this.label6.Location = new System.Drawing.Point(28, 338);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(34, 13);
             this.label6.TabIndex = 5;
@@ -317,7 +319,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(30, 262);
+            this.label5.Location = new System.Drawing.Point(30, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 4;
@@ -327,7 +329,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(30, 202);
+            this.label4.Location = new System.Drawing.Point(28, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 3;
@@ -337,7 +339,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(27, 137);
+            this.label3.Location = new System.Drawing.Point(30, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 2;
@@ -369,7 +371,7 @@
             this.btGuardar.BackColor = System.Drawing.Color.Transparent;
             this.btGuardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btGuardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.btGuardar.Location = new System.Drawing.Point(137, 456);
+            this.btGuardar.Location = new System.Drawing.Point(135, 437);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(85, 49);
             this.btGuardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -382,7 +384,7 @@
             this.buttonX2.BackColor = System.Drawing.Color.Transparent;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.buttonX2.Location = new System.Drawing.Point(379, 456);
+            this.buttonX2.Location = new System.Drawing.Point(364, 437);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(95, 49);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -397,7 +399,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 527);
+            this.ClientSize = new System.Drawing.Size(700, 491);
             this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.group);

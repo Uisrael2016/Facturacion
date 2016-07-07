@@ -50,7 +50,6 @@ namespace Facturacion_Vista.Vistas
         private char estado_base;
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
-            cbTipoDocumento.Focus();
             fechaIngreso.Text = DateTime.Now.ToString("dd-MM-yyyy");
             if (estado_base == 'A')
             {
@@ -60,14 +59,14 @@ namespace Facturacion_Vista.Vistas
             {
                 rdDesactivo.Checked = true;
             }
+            cbTipoDocumento.Focus();
             cargar_combo();            
         }
 
         private void cargar_combo()
         {
             TipoDocumentoDao usuario = new TipoDocumentoDao();
-            var lista = usuario.consultar();
-            cbTipoDocumento.DataSource = lista;
+            cbTipoDocumento.DataSource = usuario.consultar();
             cbTipoDocumento.DisplayMember = "Documento";
             cbTipoDocumento.ValueMember = "IdTipoDocumento";
         }
@@ -105,26 +104,34 @@ namespace Facturacion_Vista.Vistas
         {
           if(General.validaFormGroup(this.Controls,erroricono))
            {
-             try
-              {
-                    setUsuario();
-                    if(_accion == Acciones.insert)
+                try
+                {
+                    if (txtDocumento.Text.Length==0 || txtNombres.Text.Length==0 || txtTelefono.Text.Length==0 || txtEmail.Text.Length==0 || txtuser.Text.Length==0 || txtClave.Text.Length==0 )
                     {
-                        usuariodao.insertar(usuarioSeleccionado);
-                        Mensaje.mensajeConfirm("Información", "Usuario ingresado correctamente");
-                        this.Hide();
+                        MessageBox.Show("Por favor no deje campos vacios.");
+                        return;
                     }
                     else
                     {
-                        usuarioSeleccionado.IdUsuario = idusuario;
-                        usuariodao.modificar(usuarioSeleccionado);
-                        Mensaje.mensajeInformacion("Información", "Usuario actualizado correctamente");
-                        this.Hide();
+                        setUsuario();
+                        if (_accion == Acciones.insert)
+                        {
+                            usuariodao.insertar(usuarioSeleccionado);
+                            Mensaje.mensajeInformacion("Información", "Usuario ingresado correctamente");
+                            this.Hide();
+                        }
+                        else
+                        {
+                            usuarioSeleccionado.IdUsuario = idusuario;
+                            usuariodao.modificar(usuarioSeleccionado);
+                            Mensaje.mensajeInformacion("Información", "Usuario actualizado correctamente");
+                            this.Hide();
+                        }
                     }
-              }
-                catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
-                    if(_accion==Acciones.insert)
+                    if (_accion == Acciones.insert)
                     {
                         Mensaje.mensajeError("Error", "Error al ingresar el usuario" + ex.Message);
                     }
@@ -162,19 +169,20 @@ namespace Facturacion_Vista.Vistas
             }
             else
             {
-                Mensaje.mensajeError("Cedula Invalida", "Faltan digitos en la cedula, por favor veriquelo");
+                Mensaje.mensajeError("Cedula Invalida", "Por favor verique la cedula ingresada.");
                 txtDocumento.Focus();
                 return;
             }
         }
 
+
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(_tipodocumento.IdTipoDocumento==1)
+            if (_tipodocumento.IdTipoDocumento == 1)
             {
                 General.lengthCedula(e, txtDocumento);
             }
-            else if (_tipodocumento.IdTipoDocumento==2)
+            else if (_tipodocumento.IdTipoDocumento == 2)
             {
                 General.lengthRuc(e, txtDocumento);
             }
@@ -187,7 +195,6 @@ namespace Facturacion_Vista.Vistas
 
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
-            //para validar email
             if(!General.validaEmail(txtEmail.Text))
             {
                 Mensaje.mensajeError("Email invalido", "Por favor revise el email ingresado, Ex: ejemplo@gmail.com");

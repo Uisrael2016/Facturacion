@@ -40,7 +40,7 @@ namespace Facturacion_Vista.Vistas
                 foreach (Usuario usu in listaUsuario)
                 {
                     dtLista.Rows.Add(usu.IdUsuario, usu.Documento,
-                        usu.Nombre, usu.Mail, usu.Telefono, usu.UserName);
+                        usu.Nombre, usu.Mail, usu.Telefono, usu.UserName, usu.Estado);
                 }
             }
         }
