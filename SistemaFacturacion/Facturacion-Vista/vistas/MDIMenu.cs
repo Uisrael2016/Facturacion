@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;using System.Text;
-
+using Facturacion_Vista.Vistas.transaccion;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,6 +45,12 @@ namespace Facturacion_Vista.Vistas
         private void itemUsuarios_Click(object sender, EventArgs e)
         {
             FrmListarUsuario frm = new FrmListarUsuario();
+            frm.ShowDialog();
+        }
+
+        private void itemProforma_Click(object sender, EventArgs e)
+        {
+            FrmProforma frm = new FrmProforma();
             frm.ShowDialog();
         }
     }
