@@ -83,6 +83,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vistas\Listas\FrmListarDocumentoFact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarDocumentoFact.Designer.cs">
+      <DependentUpon>FrmListarDocumentoFact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmTipoDocumentoFact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmTipoDocumentoFact.Designer.cs">
+      <DependentUpon>FrmTipoDocumentoFact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmSecuencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmSecuencial.Designer.cs">
+      <DependentUpon>FrmSecuencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarSecuencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarSecuencial.Designer.cs">
+      <DependentUpon>FrmListarSecuencial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\transacciones\FrmProforma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,58 +116,58 @@
     <Compile Include="Utilidades\Acciones.cs" />
     <Compile Include="Utilidades\General.cs" />
     <Compile Include="Utilidades\Mensaje.cs" />
-    <Compile Include="Vistas\FrmCliente.cs">
+    <Compile Include="Vistas\Agregar\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmCliente.Designer.cs">
+    <Compile Include="Vistas\Agregar\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmEmpresa.cs">
+    <Compile Include="Vistas\Agregar\FrmEmpresa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmEmpresa.Designer.cs">
+    <Compile Include="Vistas\Agregar\FrmEmpresa.Designer.cs">
       <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmListarCliente.cs">
+    <Compile Include="Vistas\Listas\FrmListarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmListarCliente.Designer.cs">
+    <Compile Include="Vistas\Listas\FrmListarCliente.Designer.cs">
       <DependentUpon>FrmListarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmListarMaterial.cs">
+    <Compile Include="Vistas\Listas\FrmListarMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmListarMaterial.Designer.cs">
+    <Compile Include="Vistas\Listas\FrmListarMaterial.Designer.cs">
       <DependentUpon>FrmListarMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmListarProveedores.cs">
+    <Compile Include="Vistas\Listas\FrmListarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmListarProveedores.Designer.cs">
+    <Compile Include="Vistas\Listas\FrmListarProveedores.Designer.cs">
       <DependentUpon>FrmListarProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmListarUsuario.cs">
+    <Compile Include="Vistas\Listas\FrmListarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmListarUsuario.Designer.cs">
+    <Compile Include="Vistas\Listas\FrmListarUsuario.Designer.cs">
       <DependentUpon>FrmListarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmMaterial.cs">
+    <Compile Include="Vistas\Agregar\FrmMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmMaterial.Designer.cs">
+    <Compile Include="Vistas\Agregar\FrmMaterial.Designer.cs">
       <DependentUpon>FrmMaterial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmProveedores.cs">
+    <Compile Include="Vistas\Agregar\FrmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmProveedores.Designer.cs">
+    <Compile Include="Vistas\Agregar\FrmProveedores.Designer.cs">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\FrmUsuario.cs">
+    <Compile Include="Vistas\Agregar\FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\FrmUsuario.Designer.cs">
+    <Compile Include="Vistas\Agregar\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Login.cs">
@@ -160,34 +184,46 @@
     <Compile Include="Vistas\MDIMenu.Designer.cs">
       <DependentUpon>MDIMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Agregar\FrmSecuencial.resx">
+      <DependentUpon>FrmSecuencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarDocumentoFact.resx">
+      <DependentUpon>FrmListarDocumentoFact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Agregar\FrmTipoDocumentoFact.resx">
+      <DependentUpon>FrmTipoDocumentoFact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarSecuencial.resx">
+      <DependentUpon>FrmListarSecuencial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\transacciones\FrmProforma.resx">
       <DependentUpon>FrmProforma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmCliente.resx">
+    <EmbeddedResource Include="Vistas\Agregar\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmEmpresa.resx">
+    <EmbeddedResource Include="Vistas\Agregar\FrmEmpresa.resx">
       <DependentUpon>FrmEmpresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmListarCliente.resx">
+    <EmbeddedResource Include="Vistas\Listas\FrmListarCliente.resx">
       <DependentUpon>FrmListarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmListarMaterial.resx">
+    <EmbeddedResource Include="Vistas\Listas\FrmListarMaterial.resx">
       <DependentUpon>FrmListarMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmListarProveedores.resx">
+    <EmbeddedResource Include="Vistas\Listas\FrmListarProveedores.resx">
       <DependentUpon>FrmListarProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmListarUsuario.resx">
+    <EmbeddedResource Include="Vistas\Listas\FrmListarUsuario.resx">
       <DependentUpon>FrmListarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmMaterial.resx">
+    <EmbeddedResource Include="Vistas\Agregar\FrmMaterial.resx">
       <DependentUpon>FrmMaterial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmProveedores.resx">
+    <EmbeddedResource Include="Vistas\Agregar\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\FrmUsuario.resx">
+    <EmbeddedResource Include="Vistas\Agregar\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
