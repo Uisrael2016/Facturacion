@@ -34,6 +34,7 @@
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonNuevo = new DevComponents.DotNetBar.ButtonItem();
             this.buttonBuscar = new DevComponents.DotNetBar.ButtonItem();
+            this.txtbuscarprov = new DevComponents.DotNetBar.TextBoxItem();
             this.dtlista = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +43,10 @@
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtbuscarprov = new DevComponents.DotNetBar.TextBoxItem();
+            this.comboBoxItem1 = new DevComponents.DotNetBar.ComboBoxItem();
+            this.cbxitemTodos = new DevComponents.Editors.ComboItem();
+            this.cbxActivos = new DevComponents.Editors.ComboItem();
+            this.cbxDesactivos = new DevComponents.Editors.ComboItem();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtlista)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +58,11 @@
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonNuevo,
             this.buttonBuscar,
-            this.txtbuscarprov});
+            this.txtbuscarprov,
+            this.comboBoxItem1});
             this.bar1.Location = new System.Drawing.Point(12, 374);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(705, 39);
+            this.bar1.Size = new System.Drawing.Size(693, 39);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.bar1.TabIndex = 2;
@@ -78,6 +83,12 @@
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Text = "Buscar Material";
             this.buttonBuscar.Tooltip = "Buscar Material";
+            // 
+            // txtbuscarprov
+            // 
+            this.txtbuscarprov.Name = "txtbuscarprov";
+            this.txtbuscarprov.TextBoxWidth = 200;
+            this.txtbuscarprov.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // dtlista
             // 
@@ -105,7 +116,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtlista.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlista.EnableHeadersVisualStyles = false;
@@ -121,7 +132,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtlista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtlista.Size = new System.Drawing.Size(750, 368);
+            this.dtlista.RowHeadersVisible = false;
+            this.dtlista.Size = new System.Drawing.Size(705, 368);
             this.dtlista.TabIndex = 3;
             this.dtlista.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellContentDoubleClick);
             // 
@@ -170,17 +182,34 @@
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
             // 
-            // txtbuscarprov
+            // comboBoxItem1
             // 
-            this.txtbuscarprov.Name = "txtbuscarprov";
-            this.txtbuscarprov.TextBoxWidth = 200;
-            this.txtbuscarprov.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            this.comboBoxItem1.ComboWidth = 150;
+            this.comboBoxItem1.DropDownHeight = 106;
+            this.comboBoxItem1.ItemHeight = 17;
+            this.comboBoxItem1.Items.AddRange(new object[] {
+            this.cbxitemTodos,
+            this.cbxActivos,
+            this.cbxDesactivos});
+            this.comboBoxItem1.Name = "comboBoxItem1";
+            // 
+            // cbxitemTodos
+            // 
+            this.cbxitemTodos.Text = "Todos";
+            // 
+            // cbxActivos
+            // 
+            this.cbxActivos.Text = "Activos";
+            // 
+            // cbxDesactivos
+            // 
+            this.cbxDesactivos.Text = "Desactivados";
             // 
             // FrmListarProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 414);
+            this.ClientSize = new System.Drawing.Size(708, 414);
             this.Controls.Add(this.dtlista);
             this.Controls.Add(this.bar1);
             this.DoubleBuffered = true;
@@ -198,6 +227,11 @@
         private DevComponents.DotNetBar.ButtonItem buttonNuevo;
         private DevComponents.DotNetBar.ButtonItem buttonBuscar;
         private DevComponents.DotNetBar.Controls.DataGridViewX dtlista;
+        private DevComponents.DotNetBar.TextBoxItem txtbuscarprov;
+        private DevComponents.DotNetBar.ComboBoxItem comboBoxItem1;
+        private DevComponents.Editors.ComboItem cbxitemTodos;
+        private DevComponents.Editors.ComboItem cbxActivos;
+        private DevComponents.Editors.ComboItem cbxDesactivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
@@ -205,6 +239,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
-        private DevComponents.DotNetBar.TextBoxItem txtbuscarprov;
     }
 }

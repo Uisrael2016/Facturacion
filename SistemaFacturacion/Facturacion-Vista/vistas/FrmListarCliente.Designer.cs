@@ -39,7 +39,7 @@
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnBuscar = new DevComponents.DotNetBar.ButtonItem();
             this.txtbuscar = new DevComponents.DotNetBar.TextBoxItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtlista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -76,6 +76,7 @@
             this.dtlista.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlista.EnableHeadersVisualStyles = false;
             this.dtlista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dtlista.HighlightSelectedColumnHeaders = false;
             this.dtlista.Location = new System.Drawing.Point(12, 12);
             this.dtlista.Name = "dtlista";
             this.dtlista.ReadOnly = true;
@@ -91,6 +92,7 @@
             this.dtlista.Size = new System.Drawing.Size(754, 311);
             this.dtlista.TabIndex = 0;
             this.dtlista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
+            this.dtlista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtlista_KeyPress);
             // 
             // IdCliente
             // 
@@ -101,31 +103,31 @@
             // 
             // Nombres
             // 
-            this.Nombres.HeaderText = "Nombres";
+            this.Nombres.HeaderText = "Documento";
             this.Nombres.Name = "Nombres";
             this.Nombres.ReadOnly = true;
-            this.Nombres.Width = 175;
+            this.Nombres.Width = 150;
             // 
             // Apellido
             // 
-            this.Apellido.HeaderText = "Apellidos";
+            this.Apellido.HeaderText = "Nombres   Apellidos";
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
-            this.Apellido.Width = 175;
+            this.Apellido.Width = 250;
             // 
             // Correo
             // 
             this.Correo.HeaderText = "Email";
             this.Correo.Name = "Correo";
             this.Correo.ReadOnly = true;
-            this.Correo.Width = 200;
+            this.Correo.Width = 190;
             // 
             // Direccion
             // 
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.Name = "Direccion";
             this.Direccion.ReadOnly = true;
-            this.Direccion.Width = 200;
+            this.Direccion.Width = 160;
             // 
             // bar1
             // 
@@ -134,7 +136,7 @@
             this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem1,
-            this.buttonItem2,
+            this.btnBuscar,
             this.txtbuscar});
             this.bar1.Location = new System.Drawing.Point(0, 340);
             this.bar1.Name = "bar1";
@@ -144,7 +146,6 @@
             this.bar1.TabIndex = 1;
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
-            this.bar1.ItemClick += new System.EventHandler(this.bar1_ItemClick);
             // 
             // buttonItem1
             // 
@@ -153,12 +154,12 @@
             this.buttonItem1.Text = "Nuevo";
             this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
-            // buttonItem2
+            // btnBuscar
             // 
-            this.buttonItem2.Image = global::Facturacion_Vista.Properties.Resources.search_ico;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.Text = "Buscar";
-            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
+            this.btnBuscar.Image = global::Facturacion_Vista.Properties.Resources.search_ico;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtbuscar
             // 
@@ -188,7 +189,7 @@
         private DevComponents.DotNetBar.Controls.DataGridViewX dtlista;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
-        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.ButtonItem btnBuscar;
         private DevComponents.DotNetBar.TextBoxItem txtbuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
