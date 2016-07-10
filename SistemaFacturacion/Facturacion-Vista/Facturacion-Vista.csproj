@@ -83,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="transacciones\FrmProforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transacciones\FrmProforma.designer.cs">
+      <DependentUpon>FrmProforma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades\Acciones.cs" />
     <Compile Include="Utilidades\General.cs" />
     <Compile Include="Utilidades\Mensaje.cs" />
@@ -154,6 +160,9 @@
     <Compile Include="Vistas\MDIMenu.Designer.cs">
       <DependentUpon>MDIMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="transacciones\FrmProforma.resx">
+      <DependentUpon>FrmProforma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +326,7 @@
   <ItemGroup>
     <None Include="Resources\search_ico.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
