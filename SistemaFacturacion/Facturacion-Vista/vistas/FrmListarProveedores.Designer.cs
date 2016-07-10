@@ -35,6 +35,10 @@
             this.buttonNuevo = new DevComponents.DotNetBar.ButtonItem();
             this.buttonBuscar = new DevComponents.DotNetBar.ButtonItem();
             this.txtbuscarprov = new DevComponents.DotNetBar.TextBoxItem();
+            this.comboBoxItem1 = new DevComponents.DotNetBar.ComboBoxItem();
+            this.cbxitemTodos = new DevComponents.Editors.ComboItem();
+            this.cbxActivos = new DevComponents.Editors.ComboItem();
+            this.cbxDesactivos = new DevComponents.Editors.ComboItem();
             this.dtlista = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +47,6 @@
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBoxItem1 = new DevComponents.DotNetBar.ComboBoxItem();
-            this.cbxitemTodos = new DevComponents.Editors.ComboItem();
-            this.cbxActivos = new DevComponents.Editors.ComboItem();
-            this.cbxDesactivos = new DevComponents.Editors.ComboItem();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtlista)).BeginInit();
             this.SuspendLayout();
@@ -83,12 +83,36 @@
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Text = "Buscar Material";
             this.buttonBuscar.Tooltip = "Buscar Material";
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // txtbuscarprov
             // 
             this.txtbuscarprov.Name = "txtbuscarprov";
             this.txtbuscarprov.TextBoxWidth = 200;
             this.txtbuscarprov.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // comboBoxItem1
+            // 
+            this.comboBoxItem1.ComboWidth = 150;
+            this.comboBoxItem1.DropDownHeight = 106;
+            this.comboBoxItem1.ItemHeight = 17;
+            this.comboBoxItem1.Items.AddRange(new object[] {
+            this.cbxitemTodos,
+            this.cbxActivos,
+            this.cbxDesactivos});
+            this.comboBoxItem1.Name = "comboBoxItem1";
+            // 
+            // cbxitemTodos
+            // 
+            this.cbxitemTodos.Text = "Todos";
+            // 
+            // cbxActivos
+            // 
+            this.cbxActivos.Text = "Activos";
+            // 
+            // cbxDesactivos
+            // 
+            this.cbxDesactivos.Text = "Desactivados";
             // 
             // dtlista
             // 
@@ -181,29 +205,6 @@
             this.direccion.HeaderText = "Dirección";
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
-            // 
-            // comboBoxItem1
-            // 
-            this.comboBoxItem1.ComboWidth = 150;
-            this.comboBoxItem1.DropDownHeight = 106;
-            this.comboBoxItem1.ItemHeight = 17;
-            this.comboBoxItem1.Items.AddRange(new object[] {
-            this.cbxitemTodos,
-            this.cbxActivos,
-            this.cbxDesactivos});
-            this.comboBoxItem1.Name = "comboBoxItem1";
-            // 
-            // cbxitemTodos
-            // 
-            this.cbxitemTodos.Text = "Todos";
-            // 
-            // cbxActivos
-            // 
-            this.cbxActivos.Text = "Activos";
-            // 
-            // cbxDesactivos
-            // 
-            this.cbxDesactivos.Text = "Desactivados";
             // 
             // FrmListarProveedores
             // 

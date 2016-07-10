@@ -43,7 +43,7 @@ namespace Facturacion_Vista.Utilidades
 
         }
 
-        public static void lengthCedula(KeyPressEventArgs e, TextBox texto)
+        public static void lengthNumber(KeyPressEventArgs e, TextBox texto,int valor)
         {
             bool IsDec = false;
             if (e.KeyChar == 8)
@@ -59,30 +59,11 @@ namespace Facturacion_Vista.Utilidades
             else
                 e.Handled = true;
 
-            if (texto.Text.Length >= 10)
+            if (texto.Text.Length >= valor)
                 e.Handled = true;
 
         }
-        public static void lengthRuc(KeyPressEventArgs e, TextBox texto)
-        {
-            bool IsDec = false;
-            if (e.KeyChar == 8)
-            {
-                e.Handled = false;
-                return;
-            }
-
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
-                e.Handled = false;
-            else if (e.KeyChar == 46)
-                e.Handled = (IsDec) ? true : false;
-            else
-                e.Handled = true;
-
-            if (texto.Text.Length >= 13)
-                e.Handled = true;
-
-        }
+        
         public static void validaNumero(KeyPressEventArgs e, TextBox texto)
         {
             bool IsDec = false;

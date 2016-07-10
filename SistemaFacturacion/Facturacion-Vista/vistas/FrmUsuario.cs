@@ -180,11 +180,11 @@ namespace Facturacion_Vista.Vistas
         {
             if (_tipodocumento.IdTipoDocumento == 1)
             {
-                General.lengthCedula(e, txtDocumento);
+                General.lengthNumber(e, txtDocumento,10);
             }
             else if (_tipodocumento.IdTipoDocumento == 2)
             {
-                General.lengthRuc(e, txtDocumento);
+                General.lengthNumber(e, txtDocumento,13);
             }
         }
 

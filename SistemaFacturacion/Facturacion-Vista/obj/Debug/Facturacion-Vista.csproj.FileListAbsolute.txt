@@ -182,3 +182,5 @@ C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion
 C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.pdb
 C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe.config
 C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.pdb
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarUsuario.resources
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmUsuario.resources

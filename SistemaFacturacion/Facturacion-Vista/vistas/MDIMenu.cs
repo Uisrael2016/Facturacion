@@ -21,7 +21,7 @@ namespace Facturacion_Vista.Vistas
 
         private void buttonItem26_Click(object sender, EventArgs e)
         {
-            FrmListarCliente listcliente = new FrmListarCliente();
+            FrmListarCliente listcliente = new FrmListarCliente(0);
             listcliente.ShowDialog();
         }
         private void itemEmpresa_Click(object sender, EventArgs e)

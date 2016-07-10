@@ -20,12 +20,14 @@ namespace Facturacion_Vista.Vistas
         public FrmListarProveedores()
         {
             InitializeComponent();
+            this.listarProveedor();
         }
-
+       
         private void buttonNuevo_Click(object sender, EventArgs e)
         {
             FrmProveedores frmproveedores = new FrmProveedores(0);
             frmproveedores.ShowDialog();
+            this.listarProveedor();
         }
 
         private void listarProveedor ()
@@ -37,14 +39,27 @@ namespace Facturacion_Vista.Vistas
                 dtlista.Rows.Clear();
                 foreach(Proveedor pro in listaProveedor)
                 {
-                    dtlista.Rows.Add(pro.IdProveedor, pro.Documento, pro.RazonSocial, pro.Direccion, pro.Telefono);
+                    if ((txtbuscarprov.Text == "")
+                        || (pro.Documento.Contains(txtbuscarprov.Text.ToUpper()))
+                        ||pro.RazonSocial.Contains(txtbuscarprov.Text.ToUpper())
+                        ||pro.RepresentanteLegal.Contains(txtbuscarprov.Text.ToUpper()))
+                    {
+                        dtlista.Rows.Add(pro.IdProveedor, pro.Documento, 
+                            pro.RazonSocial,pro.RepresentanteLegal,
+                            pro.Telefono,pro.Email, pro.Direccion);
 
+                    }
                 }
             }
         }
         private void dtlista_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            this.listarProveedor();
         }
     }
 }
