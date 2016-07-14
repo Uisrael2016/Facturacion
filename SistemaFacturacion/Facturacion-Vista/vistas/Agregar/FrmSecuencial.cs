@@ -57,7 +57,7 @@ namespace Facturacion_Vista.Vistas.Listas
                     if (_accion == Acciones.insert)
                     {
                         secuencialDao.insertar(secuencialSeleccionado);
-                        Mensaje.mensajeConfirm("Informmacion", "Cliente grabado con exito");
+                        Mensaje.mensajeInformacion("Informmacion", "Cliente grabado con exito");
                         this.Hide();
                     }
                     else
