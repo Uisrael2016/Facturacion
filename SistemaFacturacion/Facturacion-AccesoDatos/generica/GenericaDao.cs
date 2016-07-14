@@ -92,6 +92,7 @@ namespace Facturacion_AccesoDatos
             using (ISession session = SessionFactory.abrirSession())
             {
                 return (from e in session.Query<T>() select e).ToList();
+                
             }
         }
 

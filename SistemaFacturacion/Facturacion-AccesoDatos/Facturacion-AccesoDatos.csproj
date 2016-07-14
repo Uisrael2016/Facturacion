@@ -67,6 +67,7 @@
     <Compile Include="dao\PerfilDao.cs" />
     <Compile Include="dao\ProveedorDao.cs" />
     <Compile Include="dao\SalidaDao.cs" />
+    <Compile Include="dao\SecuencialDao.cs" />
     <Compile Include="dao\TipoDocumentoDao.cs" />
     <Compile Include="dao\TipoMaterialDao.cs" />
     <Compile Include="dao\UsuarioDao.cs" />

@@ -113,7 +113,7 @@
     <Compile Include="Vistas\transacciones\FrmProforma.designer.cs">
       <DependentUpon>FrmProforma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilidades\Acciones.cs" />
+    <Compile Include="Vistas\Agregar\Acciones.cs" />
     <Compile Include="Utilidades\General.cs" />
     <Compile Include="Utilidades\Mensaje.cs" />
     <Compile Include="Vistas\Agregar\FrmCliente.cs">

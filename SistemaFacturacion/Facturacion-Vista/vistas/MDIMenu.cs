@@ -7,6 +7,7 @@ using System.Linq;using System.Text;
 using Facturacion_Vista.Vistas.transaccion;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Facturacion_Vista.Vistas.Listas;
 
 namespace Facturacion_Vista.Vistas
 {
@@ -51,6 +52,12 @@ namespace Facturacion_Vista.Vistas
         private void itemProforma_Click(object sender, EventArgs e)
         {
             FrmProforma frm = new FrmProforma();
+            frm.ShowDialog();
+        }
+
+        private void itemSecuencial_Click(object sender, EventArgs e)
+        {
+            FrmListarSecuencial frm = new FrmListarSecuencial(0);
             frm.ShowDialog();
         }
     }

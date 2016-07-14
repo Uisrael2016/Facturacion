@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Facturacion_Entidades
 {
-    public class Secuecial
+    public class Secuencial
     {
         public virtual string Codigo { get; set; }
         public virtual string Descripcion { get; set; }

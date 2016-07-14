@@ -187,3 +187,5 @@ C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Factur
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarDocumentoFact.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmTipoDocumentoFact.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.transaccion.FrmProforma.resources
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmSecuencial.resources
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListarSecuencial.resources

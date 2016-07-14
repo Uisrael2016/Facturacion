@@ -7,13 +7,15 @@ using Facturacion_Entidades;
 using FluentNHibernate.Mapping;
 namespace Facturacion_AccesoDatos.mapping
 {
-    class SecuencialMap : ClassMap<Secuecial>
+    class SecuencialMap : ClassMap<Secuencial>
     {
         public SecuencialMap()
         {
-            Id(c => c.Codigo).Column("codigo").GeneratedBy.Assigned();
+            Table("secuencial");
+            Schema("public");
+            Id(c => c.Codigo).Column("codigo");
             Map(c => c.Descripcion).Column("descripcion");
-            Map(c => c.Valor).Column("valor").Generated.Insert();
+            Map(c => c.Valor).Column("valor");
         }
     }
 }
