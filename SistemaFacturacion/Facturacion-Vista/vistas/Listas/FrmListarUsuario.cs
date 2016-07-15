@@ -20,9 +20,12 @@ namespace Facturacion_Vista.Vistas
     {
         private UsuarioDao usuarioDAO = new UsuarioDao();
         private List<Usuario> listaUsuario;
-        public FrmListarUsuario()
+        public Usuario usuarioSeleccionado { get; set; }
+        Acciones _accion;
+        public FrmListarUsuario(Acciones a)
         {
             InitializeComponent();
+            this._accion = a;
             ListarUsuario();
         }
 
@@ -39,8 +42,14 @@ namespace Facturacion_Vista.Vistas
                 dtLista.Rows.Clear();
                 foreach (Usuario usu in listaUsuario)
                 {
-                    dtLista.Rows.Add(usu.IdUsuario, usu.Documento,
-                        usu.Nombre, usu.Mail, usu.Telefono, usu.UserName, usu.Estado);
+                    if((txtbuscar.Text=="")
+                        || (usu.Nombre.Contains(txtbuscar.Text.ToUpper()))
+                        || (usu.Mail.Contains(txtbuscar.Text))
+                        || (usu.Documento.Contains(txtbuscar.Text)))
+                    {
+                        dtLista.Rows.Add(usu.IdUsuario, usu.Documento,
+                       usu.Nombre, usu.Mail, usu.Telefono, usu.UserName, usu.Estado);
+                    }
                 }
             }
         }
@@ -57,16 +66,24 @@ namespace Facturacion_Vista.Vistas
         {
             FrmUsuario frmusuario = new FrmUsuario(0);
             frmusuario.ShowDialog();
+            ListarUsuario();
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            Usuario usuario;
-            usuarioDAO = new UsuarioDao();
-            int id = Convert.ToInt32(txtbuscar.Text);
-            usuario = usuarioDAO.consultarPorId(id);
-            dtLista.DataSource = usuario;
+            ListarUsuario();
+        }
+
+        private void dtLista_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==13 && _accion==Acciones.inject)
+            {
+                int id = Convert.ToInt32(dtLista.CurrentRow.Cells[0].Value);
+                UsuarioDao dao = new UsuarioDao();
+                usuarioSeleccionado = dao.consultarPorId(id);
+                this.Hide();
             }
         }
     }
+  }
 

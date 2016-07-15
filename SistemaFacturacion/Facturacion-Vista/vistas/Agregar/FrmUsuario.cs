@@ -19,7 +19,7 @@ namespace Facturacion_Vista.Vistas
         private TipoDocumento _tipodocumento;
         private Acciones _accion;
         private UsuarioDao usuariodao;
-        private Usuario usuarioSeleccionado;
+        private Usuario usuarioSeleccionado { get; set; }
         public FrmUsuario(int id)
         {
             InitializeComponent();
@@ -59,14 +59,13 @@ namespace Facturacion_Vista.Vistas
             {
                 rdDesactivo.Checked = true;
             }
-            cbTipoDocumento.Focus();
             cargar_combo();            
         }
 
         private void cargar_combo()
         {
-            TipoDocumentoDao usuario = new TipoDocumentoDao();
-            cbTipoDocumento.DataSource = usuario.consultar();
+            TipoDocumentoDao _tipodocumento = new TipoDocumentoDao();
+            cbTipoDocumento.DataSource = _tipodocumento.consultar();
             cbTipoDocumento.DisplayMember = "Documento";
             cbTipoDocumento.ValueMember = "IdTipoDocumento";
         }
@@ -106,13 +105,6 @@ namespace Facturacion_Vista.Vistas
            {
                 try
                 {
-                    if (txtDocumento.Text.Length==0 || txtNombres.Text.Length==0 || txtTelefono.Text.Length==0 || txtEmail.Text.Length==0 || txtuser.Text.Length==0 || txtClave.Text.Length==0 )
-                    {
-                        MessageBox.Show("Por favor no deje campos vacios.");
-                        return;
-                    }
-                    else
-                    {
                         setUsuario();
                         if (_accion == Acciones.insert)
                         {
@@ -127,8 +119,7 @@ namespace Facturacion_Vista.Vistas
                             Mensaje.mensajeInformacion("Información", "Usuario actualizado correctamente");
                             this.Hide();
                         }
-                    }
-                }
+               }
                 catch (Exception ex)
                 {
                     if (_accion == Acciones.insert)
@@ -153,28 +144,8 @@ namespace Facturacion_Vista.Vistas
             TipoDocumento tipodoc = (TipoDocumento)cbTipoDocumento.SelectedItem;
             _tipodocumento.IdTipoDocumento = tipodoc.IdTipoDocumento;
             _tipodocumento.Documento = tipodoc.Documento;
+            txtDocumento.Text = string.Empty;
         }
-
-        private void txtDocumento_Validating(object sender, CancelEventArgs e)
-        {
-            if(txtDocumento.Text.Length==10)
-            {
-                if(!General.validaCedula(txtDocumento.Text))
-                {
-                    Mensaje.mensajeError("Cedula Invalida", "Cedula ingresada no valida, por favor verifiquela");
-                    txtDocumento.Text = string.Empty;
-                    txtDocumento.Focus();
-                    return;
-                }
-            }
-            else
-            {
-                Mensaje.mensajeError("Cedula Invalida", "Por favor verique la cedula ingresada.");
-                txtDocumento.Focus();
-                return;
-            }
-        }
-
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -202,6 +173,36 @@ namespace Facturacion_Vista.Vistas
                 txtEmail.Focus();
                 return;
             }
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            if (_tipodocumento.IdTipoDocumento == 1)
+            {
+                cbTipoDocumento.Enabled = false;
+                if (txtDocumento.Text.Length == 10)
+                {
+                    if (!General.validaCedula(txtDocumento.Text))
+                    {
+                        Mensaje.mensajeError("Cedula Invalida", "Cedula Incorrecta, verifique el numero de cedula por favor");
+                        txtDocumento.Focus();
+                        txtDocumento.Text = string.Empty;
+                        return;
+                    }
+                }
+                else
+                {
+                    Mensaje.mensajeError("Cedula Invalida", "Numero de digitos de cedula invalido");
+                    txtDocumento.Focus();
+                    return;
+                }
+
+            }
+        }
+
+        private void txtDocumento_Enter(object sender, EventArgs e)
+        {
+            cbTipoDocumento.Enabled = true;
         }
     }
 }

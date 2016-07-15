@@ -8,6 +8,7 @@ using Facturacion_Vista.Vistas.transaccion;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Facturacion_Vista.Vistas.Listas;
+using Facturacion_Vista.Vistas.Agregar;
 
 namespace Facturacion_Vista.Vistas
 {
@@ -45,7 +46,7 @@ namespace Facturacion_Vista.Vistas
 
         private void itemUsuarios_Click(object sender, EventArgs e)
         {
-            FrmListarUsuario frm = new FrmListarUsuario();
+            FrmListarUsuario frm = new FrmListarUsuario(0);
             frm.ShowDialog();
         }
 
@@ -58,6 +59,12 @@ namespace Facturacion_Vista.Vistas
         private void itemSecuencial_Click(object sender, EventArgs e)
         {
             FrmListarSecuencial frm = new FrmListarSecuencial(0);
+            frm.ShowDialog();
+        }
+
+        private void itemUsuarioPerfil_Click(object sender, EventArgs e)
+        {
+            FrmUsuarioPerfil frm = new FrmUsuarioPerfil();
             frm.ShowDialog();
         }
     }

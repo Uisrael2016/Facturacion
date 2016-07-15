@@ -187,6 +187,7 @@
             this.ckCambiarClave.Size = new System.Drawing.Size(15, 14);
             this.ckCambiarClave.TabIndex = 32;
             this.ckCambiarClave.UseVisualStyleBackColor = true;
+            this.ckCambiarClave.Visible = false;
             // 
             // cbTipoDocumento
             // 
@@ -257,6 +258,7 @@
             this.txtNombres.PreventEnterBeep = true;
             this.txtNombres.Size = new System.Drawing.Size(247, 20);
             this.txtNombres.TabIndex = 24;
+            this.txtNombres.Enter += new System.EventHandler(this.txtNombre_Enter);
             // 
             // txtDocumento
             // 
@@ -271,8 +273,8 @@
             this.txtDocumento.Size = new System.Drawing.Size(247, 20);
             this.txtDocumento.TabIndex = 23;
             this.txtDocumento.WatermarkText = "Ingrese su identificación";
+            this.txtDocumento.Enter += new System.EventHandler(this.txtDocumento_Enter);
             this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
-            this.txtDocumento.Validating += new System.ComponentModel.CancelEventHandler(this.txtDocumento_Validating);
             // 
             // label10
             // 
@@ -283,6 +285,7 @@
             this.label10.Size = new System.Drawing.Size(75, 13);
             this.label10.TabIndex = 9;
             this.label10.Text = "Cambiar Clave";
+            this.label10.Visible = false;
             // 
             // label9
             // 

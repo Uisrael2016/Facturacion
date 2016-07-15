@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtLista = new System.Windows.Forms.DataGridView();
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.bar1 = new DevComponents.DotNetBar.Bar();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.txtbuscar = new DevComponents.DotNetBar.TextBoxItem();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +37,11 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
+            this.bar1 = new DevComponents.DotNetBar.Bar();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.btBuscar = new DevComponents.DotNetBar.ButtonItem();
+            this.txtbuscar = new DevComponents.DotNetBar.TextBoxItem();
             ((System.ComponentModel.ISupportInitialize)(this.dtLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
@@ -70,49 +70,7 @@
             this.dtLista.Size = new System.Drawing.Size(686, 335);
             this.dtLista.TabIndex = 0;
             this.dtLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
-            // 
-            // styleManager1
-            // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Silver;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
-            // 
-            // bar1
-            // 
-            this.bar1.AntiAlias = true;
-            this.bar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem1,
-            this.buttonItem2,
-            this.txtbuscar});
-            this.bar1.Location = new System.Drawing.Point(0, 353);
-            this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(710, 39);
-            this.bar1.Stretch = true;
-            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bar1.TabIndex = 5;
-            this.bar1.TabStop = false;
-            this.bar1.Text = "bar1";
-            // 
-            // buttonItem1
-            // 
-            this.buttonItem1.Image = global::Facturacion_Vista.Properties.Resources.new_ico;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "Nuevo";
-            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.Image = global::Facturacion_Vista.Properties.Resources.search_ico;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.Text = "Buscar";
-            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.TextBoxWidth = 200;
-            this.txtbuscar.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            this.dtLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtLista_KeyPress);
             // 
             // ID
             // 
@@ -159,6 +117,49 @@
             this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // styleManager1
+            // 
+            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Silver;
+            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
+            // 
+            // bar1
+            // 
+            this.bar1.AntiAlias = true;
+            this.bar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1,
+            this.btBuscar,
+            this.txtbuscar});
+            this.bar1.Location = new System.Drawing.Point(0, 353);
+            this.bar1.Name = "bar1";
+            this.bar1.Size = new System.Drawing.Size(710, 39);
+            this.bar1.Stretch = true;
+            this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bar1.TabIndex = 5;
+            this.bar1.TabStop = false;
+            this.bar1.Text = "bar1";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Image = global::Facturacion_Vista.Properties.Resources.new_ico;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "Nuevo";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
+            // 
+            // btBuscar
+            // 
+            this.btBuscar.Image = global::Facturacion_Vista.Properties.Resources.search_ico;
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.Click += new System.EventHandler(this.buttonItem2_Click);
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.TextBoxWidth = 200;
+            this.txtbuscar.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
             // FrmListarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,7 +183,7 @@
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
-        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.ButtonItem btBuscar;
         private DevComponents.DotNetBar.TextBoxItem txtbuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;

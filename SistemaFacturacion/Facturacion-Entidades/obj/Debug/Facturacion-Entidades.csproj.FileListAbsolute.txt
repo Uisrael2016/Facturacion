@@ -28,3 +28,12 @@ C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion
 C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.LogProviders.SimpleLogProvider.dll
 C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
 C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Facturacion-Entidades.dll
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Facturacion-Entidades.pdb
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Core.dll
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.ApplicationCacher.dll
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.WebCache.dll
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.LogProviders.SimpleLogProvider.dll
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
+C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb
