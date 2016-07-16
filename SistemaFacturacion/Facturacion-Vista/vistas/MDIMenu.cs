@@ -67,5 +67,12 @@ namespace Facturacion_Vista.Vistas
             FrmUsuarioPerfil frm = new FrmUsuarioPerfil();
             frm.ShowDialog();
         }
+
+        private void itemDocContables_Click(object sender, EventArgs e)
+        {
+            FrmListarCodigo_Documento frm = new FrmListarCodigo_Documento(0);
+            frm.ShowDialog();
+
+        }
     }
 }

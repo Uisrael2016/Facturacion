@@ -89,7 +89,7 @@ namespace Facturacion_Vista.Vistas
                      if (_accion == Acciones.insert)
                      {
                         clientedao.insertar(clienteSeleccionado);                        
-                        Mensaje.mensajeConfirm("Informmacion", "Cliente grabado con exito");
+                        Mensaje.mensajeInformacion("Informmacion", "Cliente grabado con exito");
                         this.Hide();
                         
                      }
@@ -151,6 +151,7 @@ namespace Facturacion_Vista.Vistas
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
+            
             if (_tipodocumento.IdTipoDocumento==1)
             {
                 cbxTipoDocumento.Enabled = false;

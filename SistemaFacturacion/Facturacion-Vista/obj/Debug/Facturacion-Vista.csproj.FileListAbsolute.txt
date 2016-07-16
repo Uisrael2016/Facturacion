@@ -184,8 +184,6 @@ C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion
 C:\Users\JARA\Source\Repos\Facturacion_2016_Julio\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.pdb
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarUsuario.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmUsuario.resources
-C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarDocumentoFact.resources
-C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmTipoDocumentoFact.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.transaccion.FrmProforma.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmSecuencial.resources
 C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListarSecuencial.resources
@@ -238,3 +236,6 @@ C:\WorkspaceC#\SistemaFacturacion\Facturacion-Vista\bin\Debug\NHibernate.xml
 C:\WorkspaceC#\SistemaFacturacion\Facturacion-Vista\bin\Debug\FluentNHibernate.pdb
 C:\WorkspaceC#\SistemaFacturacion\Facturacion-Vista\bin\Debug\FluentNHibernate.xml
 C:\WorkspaceC#\SistemaFacturacion\Facturacion-Vista\bin\Debug\Iesi.Collections.xml
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Agregar.FrmCodigo_Documento.resources
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Agregar.FrmUsuarioPerfil.resources
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListarCodigo_Documento.resources

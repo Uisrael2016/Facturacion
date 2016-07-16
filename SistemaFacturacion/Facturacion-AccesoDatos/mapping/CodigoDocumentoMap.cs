@@ -11,7 +11,10 @@ namespace Facturacion_AccesoDatos.mapping
     {
         public CodigoDocumentoMap()
         {
-            Id(c => c.IdCodigoDocumento).Column("id_codigo_documento").GeneratedBy.Identity();
+            Schema("public");
+            Table("codigo_documento");
+            
+            Id(c => c.IdCodigoDocumento).Column("id_codigo_documento");
             Map(c => c.Codigo).Column("codigo");
             Map(c => c.Documento).Column("documento");
             HasMany<Factura>(c => c.FacturaList).KeyColumn("id_factura").Inverse().Not.LazyLoad();

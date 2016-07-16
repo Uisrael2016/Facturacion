@@ -79,7 +79,7 @@ namespace Facturacion_Vista.Vistas
                     if (_accion == Acciones.insert)
                     {
                         proveedorDao.insertar(proveedorSeleccionado);
-                        Mensaje.mensajeInformacion("Informacion", "Cliente Grabado con Exito");
+                        Mensaje.mensajeInformacion("Informacion", "Prveedor Grabado con Exito");
                         this.Hide();
                     }
                     else
@@ -89,7 +89,7 @@ namespace Facturacion_Vista.Vistas
                         proveedorSeleccionado.UsuarioEgresa = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
                         proveedorSeleccionado.FechaEgreso = DateTime.Now;
                         proveedorDao.modificar(proveedorSeleccionado);
-                        Mensaje.mensajeInformacion("Informacion ", "Cliente Actualizado con exito");
+                        Mensaje.mensajeInformacion("Informacion ", "Proveedor Actualizado con exito");
                         this.Hide();
                     }
                 }

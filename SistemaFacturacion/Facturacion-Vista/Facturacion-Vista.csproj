@@ -83,23 +83,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vistas\Agregar\FrmCodigo_Documento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmCodigo_Documento.Designer.cs">
+      <DependentUpon>FrmCodigo_Documento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Agregar\FrmUsuarioPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Agregar\FrmUsuarioPerfil.designer.cs">
       <DependentUpon>FrmUsuarioPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Listas\FrmListarDocumentoFact.cs">
+    <Compile Include="Vistas\Listas\FrmListarCodigo_Documento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Listas\FrmListarDocumentoFact.Designer.cs">
-      <DependentUpon>FrmListarDocumentoFact.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Agregar\FrmTipoDocumentoFact.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Agregar\FrmTipoDocumentoFact.Designer.cs">
-      <DependentUpon>FrmTipoDocumentoFact.cs</DependentUpon>
+    <Compile Include="Vistas\Listas\FrmListarCodigo_Documento.Designer.cs">
+      <DependentUpon>FrmListarCodigo_Documento.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Agregar\FrmSecuencial.cs">
       <SubType>Form</SubType>
@@ -119,7 +119,7 @@
     <Compile Include="Vistas\transacciones\FrmProforma.designer.cs">
       <DependentUpon>FrmProforma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Agregar\Acciones.cs" />
+    <Compile Include="Utilidades\Acciones.cs" />
     <Compile Include="Utilidades\General.cs" />
     <Compile Include="Utilidades\Mensaje.cs" />
     <Compile Include="Vistas\Agregar\FrmCliente.cs">
@@ -190,17 +190,17 @@
     <Compile Include="Vistas\MDIMenu.Designer.cs">
       <DependentUpon>MDIMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Agregar\FrmCodigo_Documento.resx">
+      <DependentUpon>FrmCodigo_Documento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmSecuencial.resx">
       <DependentUpon>FrmSecuencial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmUsuarioPerfil.resx">
       <DependentUpon>FrmUsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Listas\FrmListarDocumentoFact.resx">
-      <DependentUpon>FrmListarDocumentoFact.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Agregar\FrmTipoDocumentoFact.resx">
-      <DependentUpon>FrmTipoDocumentoFact.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarCodigo_Documento.resx">
+      <DependentUpon>FrmListarCodigo_Documento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\FrmListarSecuencial.resx">
       <DependentUpon>FrmListarSecuencial.cs</DependentUpon>
