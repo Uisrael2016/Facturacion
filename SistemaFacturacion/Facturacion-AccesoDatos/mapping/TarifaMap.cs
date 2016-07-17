@@ -11,6 +11,8 @@ namespace Facturacion_AccesoDatos.mapping
     {
        public TarifaMap()
         {
+            Schema("public");
+            Table("tarifa");
             Id(c => c.IdTarifa).Column("id_tarifa").GeneratedBy.Identity();
             Map(c => c.ValTarifa).Column("val_tarifa");
             Map(c => c.Estado).Column("estado");

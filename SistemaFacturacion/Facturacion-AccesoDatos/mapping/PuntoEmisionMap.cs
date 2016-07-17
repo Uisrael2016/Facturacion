@@ -11,6 +11,8 @@ namespace Facturacion_AccesoDatos.mapping
     {
         public PuntoEmisionMap()
         {
+            Schema("public");
+            Table("punto_emision");
             Id(c => c.IdPuntoEmision).Column("id_punto_emision").GeneratedBy.Identity();
             Map(c => c.Codigo).Column("codigo");
             Map(c => c.Estado).Column("estado");

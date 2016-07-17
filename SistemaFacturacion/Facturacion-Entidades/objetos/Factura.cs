@@ -15,7 +15,7 @@ namespace Facturacion_Entidades
         public virtual string Autorizacion { get; set; }
 
         public virtual string ClaveAcceso { get; set; }
-       
+
         public virtual DateTime FechaEmision { get; set; }
 
         public virtual double TotalSinImpuesto { get; set; }
@@ -28,10 +28,10 @@ namespace Facturacion_Entidades
 
         public virtual char EstadoProceso { get; set; }
 
-        public virtual  char CodigoError { get; set; }
+        public virtual char CodigoError { get; set; }
 
         public virtual string MensajeError { get; set; }
-        
+
         public virtual Empresa IdEmpresa { get; set; }
 
         public virtual CodigoDocumento IdCodfigoDocumento { get; set; }
@@ -40,9 +40,13 @@ namespace Facturacion_Entidades
         public virtual FormaPago IdFormaPago { get; set; }
 
 
-        public virtual FacturaImpuesto IdFacturaImpuesto { get; set; }
+        public virtual IList<FacturaImpuesto> FacturaImpuestoList { get; set; }
 
         public virtual UsuarioPerfil IdUsuarioPerfil { get; set; }
 
+        public Factura()
+        {
+            FacturaImpuestoList = new List<FacturaImpuesto>();
+        }
     }
 }

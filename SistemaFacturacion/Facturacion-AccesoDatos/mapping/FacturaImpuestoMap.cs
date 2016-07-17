@@ -11,11 +11,15 @@ namespace Facturacion_AccesoDatos.mapping
     {
         public FacturaImpuestoMap()
         {
+            Schema("public");
+            Table("factura_impuesto");
             Id(c => c.IdImpuesto).Column("id_impuesto").GeneratedBy.Identity();
             Map(c => c.BaseImponible).Column("base_imponible");
             Map(c => c.Valor).Column("valor");
             References(c => c.IdTarifa).Class<Tarifa>().Column("id_tarifa").Not.LazyLoad();
-            HasMany<Factura>(c => c.FacturaList).KeyColumn("id_factura").Inverse().Not.LazyLoad();
+            References(c => c.Factura).Class<Factura>().Column("id_factura").Not.LazyLoad();
+            //HasMany<Factura>(c => c.FacturaList).KeyColumn("id_factura").Inverse().Not.LazyLoad();
+
         }
     }
 }

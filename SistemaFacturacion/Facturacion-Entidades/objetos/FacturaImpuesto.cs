@@ -14,10 +14,6 @@ namespace Facturacion_Entidades
 
         public virtual Tarifa IdTarifa { get; set; }
 
-        public virtual IList<Factura> FacturaList { get; set; }
-        public FacturaImpuesto()
-        {
-            FacturaList = new List<Factura>();
-        }
+        public virtual Factura Factura { get; set; }
     }
 }

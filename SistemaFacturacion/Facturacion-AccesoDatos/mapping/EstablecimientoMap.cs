@@ -11,6 +11,8 @@ namespace Facturacion_AccesoDatos.mapping
     {
         public EstablecimientoMap()
         {
+            Schema("public");
+            Table("establecimiento");
             Id(c => c.IdEstablecimiento).Column("id_establecimiento").GeneratedBy.Identity();
             Map(c => c.Nombre).Column("nombre");
             Map(c => c.Direccion).Column("direccion");
