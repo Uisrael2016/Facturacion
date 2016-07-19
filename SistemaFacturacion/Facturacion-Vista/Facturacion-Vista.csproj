@@ -89,6 +89,12 @@
     <Compile Include="Vistas\Agregar\FrmCodigo_Documento.Designer.cs">
       <DependentUpon>FrmCodigo_Documento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Agregar\FrmTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmTarifa.Designer.cs">
+      <DependentUpon>FrmTarifa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Agregar\FrmUsuarioPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     </Compile>
     <Compile Include="Vistas\Listas\FrmListarSecuencial.Designer.cs">
       <DependentUpon>FrmListarSecuencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListaTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListaTarifa.Designer.cs">
+      <DependentUpon>FrmListaTarifa.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\transacciones\FrmProforma.cs">
       <SubType>Form</SubType>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="Vistas\Agregar\FrmSecuencial.resx">
       <DependentUpon>FrmSecuencial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Agregar\FrmTarifa.resx">
+      <DependentUpon>FrmTarifa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmUsuarioPerfil.resx">
       <DependentUpon>FrmUsuarioPerfil.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\FrmListarSecuencial.resx">
       <DependentUpon>FrmListarSecuencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListaTarifa.resx">
+      <DependentUpon>FrmListaTarifa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\transacciones\FrmProforma.resx">
       <DependentUpon>FrmProforma.cs</DependentUpon>

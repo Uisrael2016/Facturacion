@@ -104,7 +104,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(5, 400);
+            this.statusStrip.Location = new System.Drawing.Point(5, 398);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(622, 22);
             this.statusStrip.TabIndex = 2;
@@ -271,6 +271,7 @@
             this.itemTarifa.SubItemsExpandWidth = 14;
             this.itemTarifa.Text = "Tarifa";
             this.itemTarifa.Tooltip = "IMPUESTO";
+            this.itemTarifa.Click += new System.EventHandler(this.itemTarifa_Click);
             // 
             // ribbonPanel4
             // 
@@ -898,14 +899,14 @@
             this.label1.Image = global::Facturacion_Vista.Properties.Resources.fondoSistema1;
             this.label1.Location = new System.Drawing.Point(5, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 245);
+            this.label1.Size = new System.Drawing.Size(622, 243);
             this.label1.TabIndex = 6;
             // 
             // MDIMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 424);
+            this.ClientSize = new System.Drawing.Size(632, 422);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.statusStrip);

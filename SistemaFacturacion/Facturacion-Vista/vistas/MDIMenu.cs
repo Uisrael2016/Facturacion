@@ -74,5 +74,11 @@ namespace Facturacion_Vista.Vistas
             frm.ShowDialog();
 
         }
+
+        private void itemTarifa_Click(object sender, EventArgs e)
+        {
+            FrmListaTarifa frm = new FrmListaTarifa();
+            frm.ShowDialog();
+        }
     }
 }

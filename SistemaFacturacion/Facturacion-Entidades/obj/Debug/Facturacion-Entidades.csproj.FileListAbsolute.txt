@@ -37,3 +37,12 @@ C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Pl
 C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
 C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
 C:\WorkspaceC#\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Facturacion-Entidades.dll
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Facturacion-Entidades.pdb
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Core.dll
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.ApplicationCacher.dll
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.WebCache.dll
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.LogProviders.SimpleLogProvider.dll
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
+C:\Workpace\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb

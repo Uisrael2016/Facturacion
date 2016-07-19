@@ -54,7 +54,10 @@ namespace Facturacion_Vista.Vistas
         }
         private void dtlista_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
+            FrmProveedores frm = new FrmProveedores(id);
+            frm.ShowDialog();
+            listarProveedor();
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)

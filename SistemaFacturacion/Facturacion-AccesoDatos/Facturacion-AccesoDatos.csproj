@@ -70,6 +70,7 @@
     <Compile Include="dao\PuntoEmisionDAO.cs" />
     <Compile Include="dao\SalidaDao.cs" />
     <Compile Include="dao\SecuencialDao.cs" />
+    <Compile Include="dao\TarifaDao.cs" />
     <Compile Include="dao\TipoDocumentoDao.cs" />
     <Compile Include="dao\TipoMaterialDao.cs" />
     <Compile Include="dao\UsuarioDao.cs" />
