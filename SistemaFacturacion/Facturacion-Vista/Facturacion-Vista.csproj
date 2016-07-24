@@ -89,6 +89,18 @@
     <Compile Include="Vistas\Agregar\FrmCodigo_Documento.Designer.cs">
       <DependentUpon>FrmCodigo_Documento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Agregar\FrmDetalleProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmDetalleProducto.designer.cs">
+      <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmProducto.designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Agregar\FrmTarifa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,10 +137,10 @@
     <Compile Include="Vistas\Listas\FrmListaTarifa.Designer.cs">
       <DependentUpon>FrmListaTarifa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\transacciones\FrmProforma.cs">
+    <Compile Include="Vistas\Transacciones\FrmProforma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\transacciones\FrmProforma.designer.cs">
+    <Compile Include="Vistas\Transacciones\FrmProforma.designer.cs">
       <DependentUpon>FrmProforma.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\Acciones.cs" />
@@ -205,6 +217,12 @@
     <EmbeddedResource Include="Vistas\Agregar\FrmCodigo_Documento.resx">
       <DependentUpon>FrmCodigo_Documento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Agregar\FrmDetalleProducto.resx">
+      <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Agregar\FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmSecuencial.resx">
       <DependentUpon>FrmSecuencial.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,7 +241,7 @@
     <EmbeddedResource Include="Vistas\Listas\FrmListaTarifa.resx">
       <DependentUpon>FrmListaTarifa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\transacciones\FrmProforma.resx">
+    <EmbeddedResource Include="Vistas\Transacciones\FrmProforma.resx">
       <DependentUpon>FrmProforma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmCliente.resx">

@@ -29,7 +29,7 @@ namespace Facturacion_Vista.Vistas.transaccion
                 Cliente cliente = frm.clienteSeleccionado;
                 setGroup(cliente);
             }
-            
+
         }
         private void setGroup(Cliente c)
         {
@@ -40,14 +40,17 @@ namespace Facturacion_Vista.Vistas.transaccion
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
-        {
+            {
             FrmListarCliente frml = new FrmListarCliente(Utilidades.Acciones.inject);
             frml.ShowDialog();
-            if (frml.clienteSeleccionado != null)
+
+            Cliente cliente = frml.clienteSeleccionado;
+            if (cliente != null)
             {
-                Cliente cliente = frml.clienteSeleccionado;
                 setGroup(cliente);
             }
+
+
         }
     }
 }

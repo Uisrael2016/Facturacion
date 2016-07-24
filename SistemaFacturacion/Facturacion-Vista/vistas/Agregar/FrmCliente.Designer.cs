@@ -203,7 +203,6 @@
             this.txtDocumento.Size = new System.Drawing.Size(247, 20);
             this.txtDocumento.TabIndex = 8;
             this.txtDocumento.WatermarkText = "Ingrese su Identificacion";
-            this.txtDocumento.Enter += new System.EventHandler(this.txtDocumento_Enter);
             this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
             // 
             // labelX7
@@ -338,7 +337,6 @@
             this.DoubleBuffered = true;
             this.Name = "FrmCliente";
             this.Text = "FrmCliente";
-            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.group.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.erroricono)).EndInit();
             this.ResumeLayout(false);

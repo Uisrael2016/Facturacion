@@ -92,7 +92,6 @@
             this.dtlista.Size = new System.Drawing.Size(754, 311);
             this.dtlista.TabIndex = 0;
             this.dtlista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
-            this.dtlista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtlista_KeyPress);
             // 
             // IdCliente
             // 
@@ -177,7 +176,6 @@
             this.DoubleBuffered = true;
             this.Name = "FrmListarCliente";
             this.Text = "Clientes";
-            this.Load += new System.EventHandler(this.FrmListarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtlista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.ResumeLayout(false);

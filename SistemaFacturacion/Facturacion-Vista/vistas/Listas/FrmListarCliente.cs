@@ -27,12 +27,6 @@ namespace Facturacion_Vista.Vistas
             listarCliente();
         }
        
-        private void FrmListarCliente_Load(object sender, EventArgs e)
-        {
-            this.listarCliente();
-
-        }
-        
         public void listarCliente()
         {
             clienteDao = new ClienteDao();
@@ -62,10 +56,20 @@ namespace Facturacion_Vista.Vistas
         }
         private void dtlista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
-            FrmCliente frm = new FrmCliente(id);
-            frm.ShowDialog();
-            listarCliente();
+            if (_accion != Acciones.inject)
+            {
+                int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
+                FrmCliente frm = new FrmCliente(id);
+                frm.ShowDialog();
+                listarCliente();
+            }
+            else {
+                int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
+                ClienteDao dao = new ClienteDao();
+                clienteSeleccionado = dao.consultarPorId(id);
+                this.Hide();
+            }
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -73,15 +77,5 @@ namespace Facturacion_Vista.Vistas
             listarCliente();
         }
 
-        private void dtlista_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == 13 && _accion==Acciones.inject)
-            {
-                int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
-                ClienteDao dao = new ClienteDao();
-                clienteSeleccionado = dao.consultarPorId(id);
-                this.Hide();
-            }
-        }
     }
 }

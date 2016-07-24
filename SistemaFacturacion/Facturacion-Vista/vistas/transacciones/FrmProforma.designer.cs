@@ -318,7 +318,7 @@
             this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewX1.EnableHeadersVisualStyles = false;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(13, 241);
+            this.dataGridViewX1.Location = new System.Drawing.Point(13, 264);
             this.dataGridViewX1.Name = "dataGridViewX1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -335,7 +335,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 510);
+            this.ClientSize = new System.Drawing.Size(662, 526);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.lblNumProf);

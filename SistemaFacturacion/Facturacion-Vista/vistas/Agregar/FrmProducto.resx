@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="styleManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACxMAAAsTAQCanBgAAAKoSURBVFhHxZbNbtNAEMfNhR4C
-        ie1sbCfkWPEAXHiKVnwIekVckCBWlQ+o8tFYzScQxBNw4NAzl/AC5USfoZIfgBut+sHORsusiSI72Th2
-        g9zDT9nMeD1/78zujsI5v1GkxiSRGpNEakwSqTFJZgOjPdkmbXBzbTiNyG/iwMOsA4oAxwraIkEcqhRq
-        k6AAsk8v0cnjgIJ/zgRIAi1DKgAdDJEGCgODe6uA48gsEyCWVRokDPzyYySN47tREQLuVf6TgCn+2lgJ
-        CnCtPba1lgBDYosDiriIL2AfuNnF4F0ArclcowNgHvyzS58Ph8UT4GDwHuWaTZ+rJVbUPkJBtaGolmHH
-        6FD5nHBOowtoIV0KpH9lZWzY1HfhuzWkrl6BsVqBTTK8yud6uIvEc7L5cqILMAfA1VfwOPUCVGvkpYDn
-        mvjbAZ4fUp4qQSZtw1Oztzg3hOgCjD6cayXY0EvshzEXRPzXbXaULbENFHDh960gmgBR7VqDnWgjsKwR
-        PSP1oJ80cIU+0bPcATPJHjsRteL3hxBjBXqzFThaWIE+rgDaM6/ZbayDc79vBTFqAIOqNn1y5w1ksPi8
-        3HtbD7/W+kx55hHc11/SsvkhOG8F0QV41d2njAz+5LUa7oIajI0udTEd49xb+iBlg5KusnF+gNsx+pkQ
-        Q8AUAw8d/R3dIVVWJHVW0OtQNFp0N11j35RtrqhVdlh4H1lEfAHixUKEOAFJg7l4CYFIQwHTotbYV2Ur
-        lohrCPDjr3YMJoKK4DFErClgHr8ITEe6zL5Y3dAjekHAtRqSAFMRGPzw1jPsslpwLFImfXb+MsLrMXZL
-        JgVFWHhUkyb8yjbhctnBhC1g8DoWDYJoFNApUrE23pc7WKQSH2lTt+BMgg3JTSE1JonUmCRSY5JIjcnB
-        lb9KPnDqukgkIAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
 </root>
