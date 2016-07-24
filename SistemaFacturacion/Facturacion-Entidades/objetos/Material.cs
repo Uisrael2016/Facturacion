@@ -13,6 +13,7 @@ namespace Facturacion_Entidades
 
         public virtual string Descripcion { get; set; }
 
+
         public virtual double Stock { get; set; }
 
         public virtual TipoMaterial IdTipoMaterial { get; set; }

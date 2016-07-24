@@ -23,7 +23,8 @@ namespace Facturacion_Vista.Vistas.Agregar
             cargaCombo();
         }
 
-        private void cargaCombo() {
+        private void cargaCombo()
+        {
             _materialDao = new MaterialDao();
             comboMaterial.DataSource = _materialDao.consultar();
             comboMaterial.DisplayMember = "Descripcion";
@@ -40,5 +41,14 @@ namespace Facturacion_Vista.Vistas.Agregar
             _material.IdMaterial = mat.IdMaterial;
             _material.Descripcion = mat.Descripcion;
         }
+
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            colorDialog.ShowDialog();
+            richTextBox1.BackColor = colorDialog.Color;
+            Console.WriteLine(colorDialog.Color.ToString());
+
+
+        }
     }
-    }
+}

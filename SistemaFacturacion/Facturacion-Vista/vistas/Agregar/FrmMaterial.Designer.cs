@@ -43,6 +43,8 @@
             this.comboTipoMaterial = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.textCodigo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             this.buttonGuardar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonGuardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonGuardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.buttonGuardar.Location = new System.Drawing.Point(97, 261);
+            this.buttonGuardar.Location = new System.Drawing.Point(97, 278);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(87, 38);
             this.buttonGuardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -69,7 +71,7 @@
             this.buttonCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonCancelar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonCancelar.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.buttonCancelar.Location = new System.Drawing.Point(271, 261);
+            this.buttonCancelar.Location = new System.Drawing.Point(271, 279);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(85, 38);
             this.buttonCancelar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -80,6 +82,8 @@
             // 
             this.group.CanvasColor = System.Drawing.SystemColors.Control;
             this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.group.Controls.Add(this.textCodigo);
+            this.group.Controls.Add(this.labelX5);
             this.group.Controls.Add(this.textCantidad);
             this.group.Controls.Add(this.textDescripcion);
             this.group.Controls.Add(this.labelX3);
@@ -91,7 +95,7 @@
             this.group.DisabledBackColor = System.Drawing.Color.Empty;
             this.group.Location = new System.Drawing.Point(48, 23);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(356, 210);
+            this.group.Size = new System.Drawing.Size(356, 234);
             // 
             // 
             // 
@@ -172,7 +176,7 @@
             this.comboProveedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboProveedor.FormattingEnabled = true;
             this.comboProveedor.ItemHeight = 14;
-            this.comboProveedor.Location = new System.Drawing.Point(151, 103);
+            this.comboProveedor.Location = new System.Drawing.Point(151, 133);
             this.comboProveedor.Name = "comboProveedor";
             this.comboProveedor.Size = new System.Drawing.Size(163, 20);
             this.comboProveedor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -187,7 +191,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(32, 101);
+            this.labelX1.Location = new System.Drawing.Point(32, 131);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 0;
@@ -212,7 +216,7 @@
             this.comboTipoMaterial.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboTipoMaterial.FormattingEnabled = true;
             this.comboTipoMaterial.ItemHeight = 14;
-            this.comboTipoMaterial.Location = new System.Drawing.Point(151, 144);
+            this.comboTipoMaterial.Location = new System.Drawing.Point(151, 174);
             this.comboTipoMaterial.Name = "comboTipoMaterial";
             this.comboTipoMaterial.Size = new System.Drawing.Size(163, 20);
             this.comboTipoMaterial.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -227,7 +231,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(32, 141);
+            this.labelX2.Location = new System.Drawing.Point(32, 171);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 3;
@@ -237,14 +241,42 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // labelX5
+            // 
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(32, 91);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(75, 23);
+            this.labelX5.TabIndex = 10;
+            this.labelX5.Text = "Codigo";
+            // 
+            // textCodigo
+            // 
+            // 
+            // 
+            // 
+            this.textCodigo.Border.Class = "TextBoxBorder";
+            this.textCodigo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textCodigo.Location = new System.Drawing.Point(150, 94);
+            this.textCodigo.Name = "textCodigo";
+            this.textCodigo.PreventEnterBeep = true;
+            this.textCodigo.Size = new System.Drawing.Size(163, 20);
+            this.textCodigo.TabIndex = 11;
+            this.textCodigo.WatermarkText = "Codigo ejm: TEL";
+            // 
             // FrmMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 332);
+            this.ClientSize = new System.Drawing.Size(457, 353);
             this.Controls.Add(this.group);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonGuardar);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMaterial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -270,5 +302,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private DevComponents.DotNetBar.Controls.TextBoxX textDescripcion;
         private DevComponents.DotNetBar.Controls.TextBoxX textCantidad;
+        private DevComponents.DotNetBar.Controls.TextBoxX textCodigo;
+        private DevComponents.DotNetBar.LabelX labelX5;
     }
 }

@@ -15,7 +15,7 @@ namespace Facturacion_AccesoDatos.mapping
             Table("forma_pago");
             Id(c => c.IdFormaPago).Column("id_forma_pago").GeneratedBy.Identity();
             Map(c => c.Descripcion).Column("descripcion");
-            HasMany<Factura>(c => c.FacturaList).KeyColumn("id_factura").Inverse().Not.LazyLoad();
+            HasMany<Cabecera>(c => c.CabeceraList).KeyColumn("id_cabecera").Inverse().Not.LazyLoad();
         }
 
     }

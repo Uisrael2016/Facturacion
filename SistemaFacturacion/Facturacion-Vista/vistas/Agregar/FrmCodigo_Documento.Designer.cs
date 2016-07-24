@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.textSecuencial = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.txtdocumento = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtcodigo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -45,6 +47,8 @@
             // 
             this.group.CanvasColor = System.Drawing.SystemColors.Control;
             this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.group.Controls.Add(this.textSecuencial);
+            this.group.Controls.Add(this.labelX3);
             this.group.Controls.Add(this.txtdocumento);
             this.group.Controls.Add(this.txtcodigo);
             this.group.Controls.Add(this.labelX2);
@@ -52,7 +56,7 @@
             this.group.DisabledBackColor = System.Drawing.Color.Empty;
             this.group.Location = new System.Drawing.Point(12, 12);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(371, 143);
+            this.group.Size = new System.Drawing.Size(371, 157);
             // 
             // 
             // 
@@ -84,6 +88,33 @@
             this.group.TabIndex = 10;
             this.group.Text = "groupPanel1";
             // 
+            // textSecuencial
+            // 
+            // 
+            // 
+            // 
+            this.textSecuencial.Border.Class = "TextBoxBorder";
+            this.textSecuencial.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textSecuencial.Location = new System.Drawing.Point(150, 93);
+            this.textSecuencial.Name = "textSecuencial";
+            this.textSecuencial.PreventEnterBeep = true;
+            this.textSecuencial.Size = new System.Drawing.Size(170, 20);
+            this.textSecuencial.TabIndex = 5;
+            this.textSecuencial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textSecuencial_KeyPress);
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(34, 91);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(75, 23);
+            this.labelX3.TabIndex = 4;
+            this.labelX3.Text = "Secuencial";
+            // 
             // txtdocumento
             // 
             // 
@@ -91,7 +122,7 @@
             // 
             this.txtdocumento.Border.Class = "TextBoxBorder";
             this.txtdocumento.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdocumento.Location = new System.Drawing.Point(151, 75);
+            this.txtdocumento.Location = new System.Drawing.Point(151, 59);
             this.txtdocumento.Name = "txtdocumento";
             this.txtdocumento.PreventEnterBeep = true;
             this.txtdocumento.Size = new System.Drawing.Size(170, 20);
@@ -117,7 +148,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(34, 75);
+            this.labelX2.Location = new System.Drawing.Point(34, 57);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 1;
@@ -143,9 +174,9 @@
             this.btguardar.BackColor = System.Drawing.Color.Transparent;
             this.btguardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btguardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.btguardar.Location = new System.Drawing.Point(60, 175);
+            this.btguardar.Location = new System.Drawing.Point(75, 181);
             this.btguardar.Name = "btguardar";
-            this.btguardar.Size = new System.Drawing.Size(78, 25);
+            this.btguardar.Size = new System.Drawing.Size(84, 33);
             this.btguardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btguardar.TabIndex = 12;
             this.btguardar.Click += new System.EventHandler(this.btguardar_Click);
@@ -156,9 +187,9 @@
             this.btcancelar.BackColor = System.Drawing.Color.Transparent;
             this.btcancelar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btcancelar.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.btcancelar.Location = new System.Drawing.Point(249, 175);
+            this.btcancelar.Location = new System.Drawing.Point(224, 181);
             this.btcancelar.Name = "btcancelar";
-            this.btcancelar.Size = new System.Drawing.Size(81, 25);
+            this.btcancelar.Size = new System.Drawing.Size(88, 30);
             this.btcancelar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btcancelar.TabIndex = 11;
             this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
@@ -194,5 +225,7 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.ErrorProvider erroricono;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.Controls.TextBoxX textSecuencial;
     }
 }

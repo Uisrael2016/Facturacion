@@ -14,16 +14,19 @@ namespace Facturacion_Entidades
 
         public virtual char Tipo { get; set; }
 
-        public virtual DetalleProducto IdDetalleProducto { get; set; }
+        public virtual string Imagen { get; set; }
 
-        public virtual IList<Proforma>ProformaList { get; set; }
+        public virtual double Precio { get; set; }
 
-        public virtual IList<NotaPedido> NotaPedidoList { get; set;}
+        public virtual double Descuento { get; set; }
+        public virtual  IList<DetalleProducto> DetalleProductoList { get; set; }
+
+        public virtual IList<Detalle>DetalleList { get; set; }
 
         public Producto()
         {
-            ProformaList = new List<Proforma>();
-            NotaPedidoList = new List<NotaPedido>();
+            DetalleList = new List<Detalle>();
+            DetalleProductoList = new List<DetalleProducto>();
            
         }
 

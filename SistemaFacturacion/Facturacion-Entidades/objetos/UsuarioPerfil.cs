@@ -16,10 +16,10 @@ namespace Facturacion_Entidades
 
         public virtual PuntoEmision IdPuntoEmision { get; set; }
 
-        public virtual IList<Factura> FacturaList { get; set; }
+        public virtual IList<Cabecera> CabeceraList { get; set; }
         public UsuarioPerfil ()
         {
-            FacturaList = new List<Factura>();
+            CabeceraList = new List<Cabecera>();
         }
     }
 }

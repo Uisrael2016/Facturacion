@@ -12,12 +12,13 @@ namespace Facturacion_Entidades
         public virtual string Codigo { get; set; }
 
         public virtual string Documento { get; set; }
+        public virtual int Secuencial { get; set; }
 
-        public virtual IList<Factura> FacturaList { get; set; }
+        public virtual IList<Cabecera> CabeceraList { get; set; }
 
         public CodigoDocumento()
         {
-            FacturaList = new List<Factura>();
+            CabeceraList = new List<Cabecera>();
         }
     }
 }

@@ -53,13 +53,13 @@ namespace Facturacion_Vista.Vistas.transacciones
         }
         private void btBuscar_Click(object sender, EventArgs e)
         {
-            FrmListarProducto frml = new FrmListarProducto(Utilidades.Acciones.inject);
-            frml.ShowDialog();
-            if (frml.productoSeleccionado != null)
-            {
-                Producto producto = frml.productoSeleccionado;
-                setGrouppro(producto);
-            }
+            //FrmListarProducto frml = new FrmListarProducto(Utilidades.Acciones.inject);
+            //frml.ShowDialog();
+            //if (frml.productoSeleccionado != null)
+            //{
+            //    Producto producto = frml.productoSeleccionado;
+            //    setGrouppro(producto);
+            //}
         }
     }
 }

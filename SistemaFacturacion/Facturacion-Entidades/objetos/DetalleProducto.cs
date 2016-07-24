@@ -14,13 +14,11 @@ namespace Facturacion_Entidades
 
         public virtual double Cantidad { get; set; }
 
+        public virtual string Color { get; set; }
+
         public virtual Material IdMaterial { get; set; }
 
-        public virtual IList<Producto>ProductoList { get; set; }
+        public virtual Producto IdProducto { get; set; }
 
-        public DetalleProducto()
-        {
-            ProductoList = new List<Producto>();
-        }
     }
 }

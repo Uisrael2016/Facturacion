@@ -21,10 +21,10 @@ namespace Facturacion_Entidades
 
         public virtual bool Contabilidad { get; set;}
         public virtual Ambiente IdAmbiente { get; set; }
-        public virtual IList<Factura> FacturaList { get; set; }
+        public virtual IList<Cabecera> CabeceraList { get; set; }
         public Empresa()
         {
-            FacturaList = new List<Factura>();
+            CabeceraList = new List<Cabecera>();
         }
     }
 }

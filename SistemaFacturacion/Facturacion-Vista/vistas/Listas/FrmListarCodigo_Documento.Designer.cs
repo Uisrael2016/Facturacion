@@ -39,6 +39,7 @@
             this.IdCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secuencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtlista)).BeginInit();
             this.SuspendLayout();
@@ -97,7 +98,8 @@
             this.dtlista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCodigo,
             this.Codigo,
-            this.Documento});
+            this.Documento,
+            this.secuencia});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,7 +110,7 @@
             this.dtlista.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtlista.EnableHeadersVisualStyles = false;
             this.dtlista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dtlista.Location = new System.Drawing.Point(12, 2);
+            this.dtlista.Location = new System.Drawing.Point(24, 8);
             this.dtlista.Name = "dtlista";
             this.dtlista.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -120,7 +122,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtlista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtlista.RowHeadersVisible = false;
-            this.dtlista.Size = new System.Drawing.Size(403, 256);
+            this.dtlista.Size = new System.Drawing.Size(374, 256);
             this.dtlista.TabIndex = 6;
             this.dtlista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
             // 
@@ -136,7 +138,7 @@
             this.Codigo.HeaderText = "Codigo";
             this.Codigo.Name = "Codigo";
             this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 200;
+            this.Codigo.Width = 70;
             // 
             // Documento
             // 
@@ -144,6 +146,12 @@
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
             this.Documento.Width = 200;
+            // 
+            // secuencia
+            // 
+            this.secuencia.HeaderText = "Secuencia";
+            this.secuencia.Name = "secuencia";
+            this.secuencia.ReadOnly = true;
             // 
             // FrmListarCodigo_Documento
             // 
@@ -168,5 +176,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Documento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn secuencia;
     }
 }

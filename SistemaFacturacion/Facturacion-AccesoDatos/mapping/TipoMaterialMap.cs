@@ -15,6 +15,7 @@ namespace Facturacion_AccesoDatos.mapping
             Table("tipo_material");
             Id(c => c.IdTipoMaterial).GeneratedBy.Identity().Column("id_tipo_material");
             Map(c => c.Tipo).Column("tipo");
+            Map(c => c.Codigo).Column("codigo");
             HasMany<Material>(c => c.MaterialList).Inverse().KeyColumn("id_material").Not.LazyLoad();
         }
     }

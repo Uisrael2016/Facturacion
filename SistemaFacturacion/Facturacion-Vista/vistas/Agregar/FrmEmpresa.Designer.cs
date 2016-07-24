@@ -33,13 +33,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboAmbiente = new System.Windows.Forms.ComboBox();
-            this.textPath = new System.Windows.Forms.TextBox();
             this.estdoLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.textDirecMatriz = new System.Windows.Forms.TextBox();
             this.textRazonSocial = new System.Windows.Forms.TextBox();
             this.textRuc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,14 +47,17 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.button1 = new DevComponents.DotNetBar.ButtonX();
+            this.pictureLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // checkContabilidad
             // 
             this.checkContabilidad.AutoSize = true;
-            this.checkContabilidad.Location = new System.Drawing.Point(222, 214);
+            this.checkContabilidad.Location = new System.Drawing.Point(222, 168);
             this.checkContabilidad.Name = "checkContabilidad";
             this.checkContabilidad.Size = new System.Drawing.Size(35, 17);
             this.checkContabilidad.TabIndex = 16;
@@ -67,7 +67,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 214);
+            this.label6.Location = new System.Drawing.Point(33, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 13);
             this.label6.TabIndex = 15;
@@ -76,7 +76,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 170);
+            this.label5.Location = new System.Drawing.Point(29, 124);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 14;
@@ -85,42 +85,23 @@
             // comboAmbiente
             // 
             this.comboAmbiente.FormattingEnabled = true;
-            this.comboAmbiente.Location = new System.Drawing.Point(222, 170);
+            this.comboAmbiente.Location = new System.Drawing.Point(222, 121);
             this.comboAmbiente.Name = "comboAmbiente";
             this.comboAmbiente.Size = new System.Drawing.Size(180, 21);
             this.comboAmbiente.TabIndex = 13;
             this.comboAmbiente.Text = "SELECCIONE";
             this.comboAmbiente.SelectedIndexChanged += new System.EventHandler(this.comboAmbiente_SelectedIndexChanged);
-            this.comboAmbiente.DataSourceChanged += new System.EventHandler(this.comboAmbiente_DataSourceChanged);
-            // 
-            // textPath
-            // 
-            this.textPath.Enabled = false;
-            this.textPath.Location = new System.Drawing.Point(83, 120);
-            this.textPath.Name = "textPath";
-            this.textPath.Size = new System.Drawing.Size(211, 20);
-            this.textPath.TabIndex = 12;
             // 
             // estdoLbl
             // 
             this.estdoLbl.AutoSize = true;
             this.estdoLbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estdoLbl.Location = new System.Drawing.Point(33, 260);
+            this.estdoLbl.Location = new System.Drawing.Point(33, 214);
             this.estdoLbl.Name = "estdoLbl";
             this.estdoLbl.Size = new System.Drawing.Size(50, 19);
             this.estdoLbl.TabIndex = 9;
             this.estdoLbl.Text = "Estado";
             this.estdoLbl.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(300, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 26);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "+ Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textDirecMatriz
             // 
@@ -142,16 +123,6 @@
             this.textRuc.Name = "textRuc";
             this.textRuc.Size = new System.Drawing.Size(180, 20);
             this.textRuc.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Logo";
             // 
             // label3
             // 
@@ -186,7 +157,7 @@
             // radioD
             // 
             this.radioD.AutoSize = true;
-            this.radioD.Location = new System.Drawing.Point(305, 262);
+            this.radioD.Location = new System.Drawing.Point(305, 216);
             this.radioD.Name = "radioD";
             this.radioD.Size = new System.Drawing.Size(95, 17);
             this.radioD.TabIndex = 11;
@@ -199,7 +170,7 @@
             // radioH
             // 
             this.radioH.AutoSize = true;
-            this.radioH.Location = new System.Drawing.Point(168, 260);
+            this.radioH.Location = new System.Drawing.Point(168, 214);
             this.radioH.Name = "radioH";
             this.radioH.Size = new System.Drawing.Size(72, 17);
             this.radioH.TabIndex = 10;
@@ -212,7 +183,7 @@
             // cancelarBtn
             // 
             this.cancelarBtn.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.cancelarBtn.Location = new System.Drawing.Point(287, 356);
+            this.cancelarBtn.Location = new System.Drawing.Point(433, 308);
             this.cancelarBtn.Name = "cancelarBtn";
             this.cancelarBtn.Size = new System.Drawing.Size(91, 37);
             this.cancelarBtn.TabIndex = 2;
@@ -222,7 +193,7 @@
             // guardarBtn
             // 
             this.guardarBtn.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.guardarBtn.Location = new System.Drawing.Point(160, 356);
+            this.guardarBtn.Location = new System.Drawing.Point(263, 308);
             this.guardarBtn.Name = "guardarBtn";
             this.guardarBtn.Size = new System.Drawing.Size(87, 37);
             this.guardarBtn.TabIndex = 1;
@@ -243,6 +214,8 @@
             // 
             this.group.CanvasColor = System.Drawing.SystemColors.Control;
             this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.group.Controls.Add(this.button1);
+            this.group.Controls.Add(this.pictureLogo);
             this.group.Controls.Add(this.checkContabilidad);
             this.group.Controls.Add(this.label1);
             this.group.Controls.Add(this.radioD);
@@ -252,17 +225,14 @@
             this.group.Controls.Add(this.label5);
             this.group.Controls.Add(this.label3);
             this.group.Controls.Add(this.comboAmbiente);
-            this.group.Controls.Add(this.label4);
-            this.group.Controls.Add(this.textPath);
             this.group.Controls.Add(this.textRuc);
             this.group.Controls.Add(this.estdoLbl);
             this.group.Controls.Add(this.textRazonSocial);
-            this.group.Controls.Add(this.button1);
             this.group.Controls.Add(this.textDirecMatriz);
             this.group.DisabledBackColor = System.Drawing.Color.Empty;
             this.group.Location = new System.Drawing.Point(53, 13);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(437, 324);
+            this.group.Size = new System.Drawing.Size(659, 277);
             // 
             // 
             // 
@@ -294,11 +264,31 @@
             this.group.TabIndex = 12;
             this.group.Text = "Informacion Empresa";
             // 
+            // button1
+            // 
+            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.button1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.button1.Image = global::Facturacion_Vista.Properties.Resources.image_add;
+            this.button1.Location = new System.Drawing.Point(431, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 44);
+            this.button1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.button1.TabIndex = 18;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureLogo
+            // 
+            this.pictureLogo.Location = new System.Drawing.Point(431, 17);
+            this.pictureLogo.Name = "pictureLogo";
+            this.pictureLogo.Size = new System.Drawing.Size(198, 174);
+            this.pictureLogo.TabIndex = 17;
+            this.pictureLogo.TabStop = false;
+            // 
             // FrmEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 434);
+            this.ClientSize = new System.Drawing.Size(754, 355);
             this.Controls.Add(this.group);
             this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.guardarBtn);
@@ -308,6 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.group.ResumeLayout(false);
             this.group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,11 +307,9 @@
         private System.Windows.Forms.TextBox textDirecMatriz;
         private System.Windows.Forms.TextBox textRazonSocial;
         private System.Windows.Forms.TextBox textRuc;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
        // private System.Windows.Forms.Label pathLbl;
         private System.Windows.Forms.RadioButton radioD;
         private System.Windows.Forms.RadioButton radioH;
@@ -328,12 +317,13 @@
         private System.Windows.Forms.Button guardarBtn;
         private System.Windows.Forms.Button cancelarBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.TextBox textPath;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboAmbiente;
         private System.Windows.Forms.CheckBox checkContabilidad;
         private System.Windows.Forms.Label label6;
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Controls.GroupPanel group;
+        private System.Windows.Forms.PictureBox pictureLogo;
+        private DevComponents.DotNetBar.ButtonX button1;
     }
 }

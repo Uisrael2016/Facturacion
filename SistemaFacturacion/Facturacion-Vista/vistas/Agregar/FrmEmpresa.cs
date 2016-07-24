@@ -48,7 +48,11 @@ namespace Facturacion_Vista.Vistas
                 textRuc.Text = empresaSeleccionada.Ruc;
                 textRazonSocial.Text = empresaSeleccionada.RazonSocial;
                 textDirecMatriz.Text = empresaSeleccionada.DirecMatriz;
-                textPath.Text = empresaSeleccionada.PathLogo;
+                pathFile = empresaSeleccionada.PathLogo;
+                if (pathFile != null && pathFile.Trim() != "") {
+                    pictureLogo.Load(pathFile);
+                }
+                
                 checkContabilidad.Checked = empresaSeleccionada.Contabilidad;
                 comboAmbiente.SelectedItem= empresaSeleccionada.IdAmbiente;
             }else
@@ -76,7 +80,6 @@ namespace Facturacion_Vista.Vistas
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                 {
                     pathFile = dialog.FileName;
-                    textPath.Text = pathFile;
                 }
 
             }
@@ -107,9 +110,9 @@ namespace Facturacion_Vista.Vistas
 
                 }
             }
-            if (textPath.Text == "")
+            if (pathFile == null)
             {
-                errorProvider1.SetError(textPath, "Debe seleccionar un logo");
+                Mensaje.mensajeAlerta("Atencion","Debe seleccionar un logo");
                 return;
             }
             empresaDao = new EmpresaDao();
@@ -119,7 +122,7 @@ namespace Facturacion_Vista.Vistas
                 empresaSeleccionada.Ruc = textRuc.Text.ToUpper();
                 empresaSeleccionada.RazonSocial = textRazonSocial.Text.ToUpper();
                 empresaSeleccionada.DirecMatriz = textDirecMatriz.Text.ToUpper();
-                empresaSeleccionada.PathLogo = textPath.Text;
+                empresaSeleccionada.PathLogo = pathFile;
                 empresaSeleccionada.IdAmbiente = _ambiente;
                 if (checkContabilidad.Checked == true)
                     contabilidad = true;
@@ -170,8 +173,34 @@ namespace Facturacion_Vista.Vistas
 
         }
 
-        private void comboAmbiente_DataSourceChanged(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OpenFileDialog buscaImagen = new OpenFileDialog();
+                buscaImagen.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                buscaImagen.Filter = "Image files (*.jpg, *.jpeg,*.png) | *.jpg; *.jpeg; *.png";
+                buscaImagen.FileName = "";
+                buscaImagen.Title = "Imagen de Producto";
+                if (buscaImagen.ShowDialog(this) == DialogResult.OK)
+                {
+                    pathFile = buscaImagen.FileName;
+                    if (pathFile.Equals("") == false)
+                    {
+                        pictureLogo.Load(pathFile);
+
+                    }
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Mensaje.mensajeError("Error", "No se pudo cargar" + ex.ToString());
+            }
+
 
         }
     }

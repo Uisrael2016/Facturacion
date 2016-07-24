@@ -43,6 +43,5 @@ C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Gi
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.ApplicationCacher.dll
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.CacheProviders.WebCache.dll
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\GithubSharp.Plugins.LogProviders.SimpleLogProvider.dll
-C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb

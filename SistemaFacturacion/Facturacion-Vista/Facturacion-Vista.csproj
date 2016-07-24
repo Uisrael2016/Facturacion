@@ -119,17 +119,11 @@
     <Compile Include="Vistas\Listas\FrmListarCodigo_Documento.Designer.cs">
       <DependentUpon>FrmListarCodigo_Documento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Agregar\FrmSecuencial.cs">
+    <Compile Include="Vistas\Listas\FrmListarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Agregar\FrmSecuencial.Designer.cs">
-      <DependentUpon>FrmSecuencial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Listas\FrmListarSecuencial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Listas\FrmListarSecuencial.Designer.cs">
-      <DependentUpon>FrmListarSecuencial.cs</DependentUpon>
+    <Compile Include="Vistas\Listas\FrmListarProducto.Designer.cs">
+      <DependentUpon>FrmListarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Listas\FrmListaTarifa.cs">
       <SubType>Form</SubType>
@@ -142,12 +136,6 @@
     </Compile>
     <Compile Include="Vistas\Transacciones\FrmNotaPedido.Designer.cs">
       <DependentUpon>FrmNotaPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Transacciones\FrmProforma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Transacciones\FrmProforma.designer.cs">
-      <DependentUpon>FrmProforma.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\Acciones.cs" />
     <Compile Include="Utilidades\General.cs" />
@@ -229,9 +217,6 @@
     <EmbeddedResource Include="Vistas\Agregar\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Agregar\FrmSecuencial.resx">
-      <DependentUpon>FrmSecuencial.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmTarifa.resx">
       <DependentUpon>FrmTarifa.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,17 +226,14 @@
     <EmbeddedResource Include="Vistas\Listas\FrmListarCodigo_Documento.resx">
       <DependentUpon>FrmListarCodigo_Documento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Listas\FrmListarSecuencial.resx">
-      <DependentUpon>FrmListarSecuencial.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarProducto.resx">
+      <DependentUpon>FrmListarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\FrmListaTarifa.resx">
       <DependentUpon>FrmListaTarifa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Transacciones\FrmNotaPedido.resx">
       <DependentUpon>FrmNotaPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Transacciones\FrmProforma.resx">
-      <DependentUpon>FrmProforma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
@@ -416,7 +398,21 @@
   <ItemGroup>
     <None Include="Resources\search_ico.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

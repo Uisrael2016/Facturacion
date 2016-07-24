@@ -14,6 +14,7 @@ namespace Facturacion_Entidades
         public virtual string Documento { get; set; }
 
         public virtual string Codigo { get; set; }
+             
         public virtual IList<Usuario> UsuarioList { get; set; }
         public virtual IList<Cliente> CLienteList { get; set; }
 

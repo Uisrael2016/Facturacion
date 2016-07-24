@@ -270,13 +270,14 @@ C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Fluent
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Iesi.Collections.xml
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.csprojResolveAssemblyReference.cache
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Agregar.FrmCodigo_Documento.resources
-C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmSecuencial.resources
+C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Agregar.FrmDetalleProducto.resources
+C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Agregar.FrmProducto.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Agregar.FrmTarifa.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Agregar.FrmUsuarioPerfil.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListarCodigo_Documento.resources
-C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListarSecuencial.resources
+C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListarProducto.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListaTarifa.resources
-C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.transaccion.FrmProforma.resources
+C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.transacciones.FrmNotaPedido.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmCliente.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmEmpresa.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.FrmListarCliente.resources

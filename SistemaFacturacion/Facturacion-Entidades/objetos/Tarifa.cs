@@ -13,11 +13,11 @@ namespace Facturacion_Entidades
            
         public virtual char Estado { get; set; }
 
-        public virtual IList<FacturaImpuesto> FacturaImpuestoList { get; set; }
+        public virtual IList<Impuesto> ImpuestoList { get; set; }
 
         public Tarifa()
         {
-            FacturaImpuestoList = new List<FacturaImpuesto>();
+            ImpuestoList = new List<Impuesto>();
         }
     }
 }

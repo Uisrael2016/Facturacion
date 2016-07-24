@@ -13,7 +13,7 @@ namespace Facturacion_AccesoDatos.dao
 {
     public class CodigoDocumentoDao:GenericaDao<CodigoDocumento>
     {
-        public Secuencial buscaCodigoDocumento(string codigo)
+        public CodigoDocumento buscaCodigoDocumento(string codigo)
         {
 
             try
@@ -23,7 +23,7 @@ namespace Facturacion_AccesoDatos.dao
                     ICriteria c = session.CreateCriteria("CodigoDocumento");
                     c.Add(Expression.Eq("Codigo", codigo));
 
-                    return c.UniqueResult<Secuencial>();
+                    return c.UniqueResult<CodigoDocumento>();
                 }
 
             }

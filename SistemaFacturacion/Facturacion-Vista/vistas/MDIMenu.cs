@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;using System.Text;
-using Facturacion_Vista.Vistas.transaccion;
+using Facturacion_Vista.Vistas.transacciones;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Facturacion_Vista.Vistas.Listas;
@@ -50,18 +50,6 @@ namespace Facturacion_Vista.Vistas
             frm.ShowDialog();
         }
 
-        private void itemProforma_Click(object sender, EventArgs e)
-        {
-            FrmProforma frm = new FrmProforma();
-            frm.ShowDialog();
-        }
-
-        private void itemSecuencial_Click(object sender, EventArgs e)
-        {
-            FrmListarSecuencial frm = new FrmListarSecuencial(0);
-            frm.ShowDialog();
-        }
-
         private void itemUsuarioPerfil_Click(object sender, EventArgs e)
         {
             FrmUsuarioPerfil frm = new FrmUsuarioPerfil();
@@ -78,6 +66,12 @@ namespace Facturacion_Vista.Vistas
         private void itemTarifa_Click(object sender, EventArgs e)
         {
             FrmListaTarifa frm = new FrmListaTarifa();
+            frm.ShowDialog();
+        }
+
+        private void itemProducto_Click(object sender, EventArgs e)
+        {
+            FrmListarProducto frm = new FrmListarProducto();
             frm.ShowDialog();
         }
     }

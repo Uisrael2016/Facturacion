@@ -30,6 +30,7 @@ namespace Facturacion_Vista.Vistas.Agregar
                 codigoDocumentoSeleccionado = codigoDocumentoDao.consultarPorId(id);
                 txtcodigo.Text = codigoDocumentoSeleccionado.Codigo;
                 txtdocumento.Text = codigoDocumentoSeleccionado.Documento;
+                textSecuencial.Text = Convert.ToString(codigoDocumentoSeleccionado.Secuencial);
             }
             else
             {
@@ -80,12 +81,17 @@ namespace Facturacion_Vista.Vistas.Agregar
             }
             codigoDocumentoSeleccionado.Codigo = txtcodigo.Text.ToUpper();
             codigoDocumentoSeleccionado.Documento = txtdocumento.Text.ToUpper();
-
+            codigoDocumentoSeleccionado.Secuencial = Convert.ToInt32(textSecuencial.Text);
         }
 
         private void btcancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void textSecuencial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.General.validaNumero(e, textSecuencial);
         }
     }
 }

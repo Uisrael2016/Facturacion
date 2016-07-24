@@ -16,7 +16,7 @@ namespace Facturacion_AccesoDatos.mapping
             Id(c => c.IdTarifa).Column("id_tarifa").GeneratedBy.Identity();
             Map(c => c.ValTarifa).Column("val_tarifa");
             Map(c => c.Estado).Column("estado");
-            HasMany<FacturaImpuesto>(c => c.FacturaImpuestoList).KeyColumn("id_impuesto").Inverse().Not.LazyLoad();
+            HasMany<Impuesto>(c => c.ImpuestoList).KeyColumn("id_impuesto").Inverse().Not.LazyLoad();
         }
     }
 }

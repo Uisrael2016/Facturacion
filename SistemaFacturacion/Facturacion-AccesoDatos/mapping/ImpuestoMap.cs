@@ -5,22 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using Facturacion_Entidades;
 using FluentNHibernate.Mapping;
+
 namespace Facturacion_AccesoDatos.mapping
 {
-    public class FacturaImpuestoMap :ClassMap<FacturaImpuesto>
+    public class ImpuestoMap : ClassMap<Impuesto>
     {
-        public FacturaImpuestoMap()
+        public ImpuestoMap()
         {
             Schema("public");
-            Table("factura_impuesto");
+            Table("impuesto");
             Id(c => c.IdImpuesto).Column("id_impuesto").GeneratedBy.Identity();
             Map(c => c.BaseImponible).Column("base_imponible");
             Map(c => c.Valor).Column("valor");
+            Map(c =>c.Codigo).Column("codigo");
+            Map(c =>c.CodigoPorcentaje).Column("codigo_porcentaje");
             References(c => c.IdTarifa).Class<Tarifa>().Column("id_tarifa").Not.LazyLoad();
-            References(c => c.Factura).Class<Factura>().Column("id_factura").Not.LazyLoad();
-            //HasMany<Factura>(c => c.FacturaList).KeyColumn("id_factura").Inverse().Not.LazyLoad();
+            References(c => c.IdCabecera).Class<Cabecera>().Column("id_cabecera").Not.LazyLoad();
 
         }
+
     }
 }
-

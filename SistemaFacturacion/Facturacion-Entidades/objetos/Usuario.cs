@@ -20,7 +20,7 @@ namespace Facturacion_Entidades
         public virtual bool CambiarClave { get; set; }
 
         public virtual DateTime FechaIngreso { get; set; }
-        
+
         public virtual int UsuarioIngreso { get; set; }
 
         public virtual string UserName { get; set; }
@@ -33,27 +33,16 @@ namespace Facturacion_Entidades
 
         public virtual IList<UsuarioPerfil> UsuarioPerfilList { get; set; }
 
-        public virtual IList<Factura> FacturaList { get; set; }
+        public virtual IList<Cabecera> CabeceraList { get; set; }
 
         public virtual TipoDocumento IdTipoDocumento { get; set; }
 
-        public virtual IList<Proforma> ProformaList { get; set; }
 
-        public virtual IList<NotaPedido> NotaPedidoList { get; set; }
-
-
-        public Usuario()
-        {
+        public Usuario() {
             UsuarioPerfilList = new List<UsuarioPerfil>();
-            FacturaList = new List<Factura>();
-            ProformaList = new List<Proforma>();
-            NotaPedidoList = new List<NotaPedido>();
+            CabeceraList = new List<Cabecera>();
         }
 
-        public static explicit operator List<object>(Usuario v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

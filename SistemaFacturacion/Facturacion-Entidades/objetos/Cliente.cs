@@ -32,11 +32,11 @@ namespace Facturacion_Entidades
 
         public virtual TipoDocumento IdTipoDocumento { get; set; }
 
-        public virtual IList<Proforma> ProformaList { get; set; }
+        public virtual IList<Cabecera> CabeceraList { get; set; }
         
         public Cliente()
         {
-            ProformaList = new List<Proforma>();
+            CabeceraList = new List<Cabecera>();
             
         }
         

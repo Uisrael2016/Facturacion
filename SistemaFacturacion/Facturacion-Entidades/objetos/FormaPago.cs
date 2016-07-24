@@ -12,11 +12,11 @@ namespace Facturacion_Entidades
 
         public virtual string Descripcion { get; set; }
 
-        public virtual IList<Factura>FacturaList { get; set; }
+        public virtual IList<Cabecera>CabeceraList { get; set; }
 
         public FormaPago()
         {
-            FacturaList = new List<Factura>();
+            CabeceraList = new List<Cabecera>();
         }
     }
 

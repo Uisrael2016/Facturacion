@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Facturacion_Entidades
     {
         public virtual int IdTipoMaterial { get; set; }
         public virtual string Tipo { get; set; }
+        public virtual string Codigo { get; set; }
         public virtual IList<Material>MaterialList { get; set; }
 
         public TipoMaterial()

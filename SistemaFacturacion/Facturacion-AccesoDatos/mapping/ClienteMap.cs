@@ -23,7 +23,7 @@ namespace Facturacion_AccesoDatos.mapping
             Map(c => c.FechaEgreso).Column("fecha_egreso");
             Map(c => c.UsuarioIngreso).Column("usuario_ingreso");
             Map(c => c.UsuarioEgreso).Column("usuario_egreso");
-            HasMany<Proforma>(c => c.ProformaList).Inverse().KeyColumn("id_proforma").Not.LazyLoad();
+            HasMany<Cabecera>(c => c.CabeceraList).Inverse().KeyColumn("id_cabecera").Not.LazyLoad();
             References(c => c.IdTipoDocumento).Class<TipoDocumento>().Column("id_tipo_documento").Not.LazyLoad();
         }
     }

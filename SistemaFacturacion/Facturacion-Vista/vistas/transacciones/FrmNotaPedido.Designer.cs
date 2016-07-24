@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNotaPedido));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupDatosCli = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnBuscar = new DevComponents.DotNetBar.ButtonX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
@@ -47,8 +48,16 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.lbnumero = new DevComponents.DotNetBar.LabelX();
             this.bar1 = new DevComponents.DotNetBar.Bar();
-            this.txtDetalle = new DevComponents.DotNetBar.TextBoxItem();
+            this.btBuscar = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
+            this.txtDetalle = new DevComponents.DotNetBar.TextBoxItem();
+            this.lbstock = new DevComponents.DotNetBar.LabelItem();
+            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
+            this.txtPrecio = new DevComponents.DotNetBar.TextBoxItem();
+            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
+            this.txtcantidad = new DevComponents.DotNetBar.TextBoxItem();
+            this.btagregar = new DevComponents.DotNetBar.ButtonItem();
+            this.btresta = new DevComponents.DotNetBar.ButtonItem();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lbsubtotal = new System.Windows.Forms.Label();
@@ -60,15 +69,6 @@
             this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btguardar = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.btBuscar = new DevComponents.DotNetBar.ButtonItem();
-            this.btagregar = new DevComponents.DotNetBar.ButtonItem();
-            this.btresta = new DevComponents.DotNetBar.ButtonItem();
-            this.btnBuscar = new DevComponents.DotNetBar.ButtonX();
-            this.lbstock = new DevComponents.DotNetBar.LabelItem();
-            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
-            this.txtPrecio = new DevComponents.DotNetBar.TextBoxItem();
-            this.txtcantidad = new DevComponents.DotNetBar.TextBoxItem();
-            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
             this.richTextBoxEx1 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.groupDatosCli.SuspendLayout();
@@ -125,6 +125,18 @@
             this.groupDatosCli.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupDatosCli.TabIndex = 0;
             this.groupDatosCli.Text = "Datos Cliente";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnBuscar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.Location = new System.Drawing.Point(312, 35);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(49, 31);
+            this.btnBuscar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnBuscar.TabIndex = 24;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // labelX7
             // 
@@ -283,18 +295,17 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(559, 12);
+            this.labelX1.Location = new System.Drawing.Point(557, 12);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(137, 23);
+            this.labelX1.Size = new System.Drawing.Size(194, 23);
             this.labelX1.TabIndex = 2;
-            this.labelX1.Text = "NOTA DE PEDIDO";
             // 
             // lbnumero
             // 
             // 
             // 
             // 
-            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbnumero.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lbnumero.Location = new System.Drawing.Point(572, 32);
             this.lbnumero.Name = "lbnumero";
             this.lbnumero.Size = new System.Drawing.Size(160, 23);
@@ -324,48 +335,93 @@
             this.bar1.TabStop = false;
             this.bar1.Text = "bar1";
             // 
-            // txtDetalle
+            // btBuscar
             // 
-            this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.TextBoxWidth = 250;
-            this.txtDetalle.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Text = "btbuscarprod";
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // labelItem2
             // 
             this.labelItem2.Name = "labelItem2";
             this.labelItem2.Text = "Detalle Producto";
             // 
+            // txtDetalle
+            // 
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.TextBoxWidth = 250;
+            this.txtDetalle.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // lbstock
+            // 
+            this.lbstock.Name = "lbstock";
+            // 
+            // labelItem3
+            // 
+            this.labelItem3.Name = "labelItem3";
+            this.labelItem3.Text = "Precio";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            this.txtPrecio.WatermarkText = "Precio";
+            // 
+            // labelItem4
+            // 
+            this.labelItem4.Name = "labelItem4";
+            this.labelItem4.Text = "Cantidad";
+            // 
+            // txtcantidad
+            // 
+            this.txtcantidad.Name = "txtcantidad";
+            this.txtcantidad.WatermarkColor = System.Drawing.SystemColors.GrayText;
+            // 
+            // btagregar
+            // 
+            this.btagregar.Image = global::Facturacion_Vista.Properties.Resources.add;
+            this.btagregar.Name = "btagregar";
+            this.btagregar.Text = "buttonItem2";
+            this.btagregar.Click += new System.EventHandler(this.btagregar_Click);
+            // 
+            // btresta
+            // 
+            this.btresta.Image = ((System.Drawing.Image)(resources.GetObject("btresta.Image")));
+            this.btresta.Name = "btresta";
+            this.btresta.Text = "buttonItem2";
+            // 
             // dataGridViewX1
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewX1.EnableHeadersVisualStyles = false;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(3, 250);
             this.dataGridViewX1.Name = "dataGridViewX1";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewX1.Size = new System.Drawing.Size(777, 294);
             this.dataGridViewX1.TabIndex = 6;
             // 
@@ -480,63 +536,6 @@
             this.buttonX2.Size = new System.Drawing.Size(84, 34);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 15;
-            // 
-            // btBuscar
-            // 
-            this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Text = "btbuscarprod";
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
-            // 
-            // btagregar
-            // 
-            this.btagregar.Image = global::Facturacion_Vista.Properties.Resources.add;
-            this.btagregar.Name = "btagregar";
-            this.btagregar.Text = "buttonItem2";
-            this.btagregar.Click += new System.EventHandler(this.btagregar_Click);
-            // 
-            // btresta
-            // 
-            this.btresta.Image = ((System.Drawing.Image)(resources.GetObject("btresta.Image")));
-            this.btresta.Name = "btresta";
-            this.btresta.Text = "buttonItem2";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnBuscar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(312, 35);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(49, 31);
-            this.btnBuscar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnBuscar.TabIndex = 24;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // lbstock
-            // 
-            this.lbstock.Name = "lbstock";
-            // 
-            // labelItem3
-            // 
-            this.labelItem3.Name = "labelItem3";
-            this.labelItem3.Text = "Precio";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            this.txtPrecio.WatermarkText = "Precio";
-            // 
-            // txtcantidad
-            // 
-            this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            // 
-            // labelItem4
-            // 
-            this.labelItem4.Name = "labelItem4";
-            this.labelItem4.Text = "Cantidad";
             // 
             // richTextBoxEx1
             // 

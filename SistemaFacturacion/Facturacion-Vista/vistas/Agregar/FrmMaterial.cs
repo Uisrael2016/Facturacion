@@ -99,7 +99,7 @@ namespace Facturacion_Vista.Vistas
             {
                 materialSeleccionado = new Material();
             }
-            materialSeleccionado.Descripcion = textDescripcion.Text;
+            materialSeleccionado.Descripcion = textDescripcion.Text.ToUpper();
             valorIngreso= Convert.ToDouble(textCantidad.Text);
             materialSeleccionado.Stock = valorIngreso;
             materialSeleccionado.IdProveedor = _proveedor;

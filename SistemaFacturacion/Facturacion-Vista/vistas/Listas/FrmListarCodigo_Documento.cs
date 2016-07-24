@@ -42,7 +42,7 @@ namespace Facturacion_Vista.Vistas.Listas
                         || (cdoc.Codigo.Contains(txtbuscar.Text.ToUpper()))
                         || (cdoc.Documento.Contains(txtbuscar.Text.ToUpper())))
                     {
-                        dtlista.Rows.Add(cdoc.IdCodigoDocumento, cdoc.Codigo, cdoc.Documento);
+                        dtlista.Rows.Add(cdoc.IdCodigoDocumento, cdoc.Codigo, cdoc.Documento,cdoc.Secuencial);
                     }
                 }
             }
