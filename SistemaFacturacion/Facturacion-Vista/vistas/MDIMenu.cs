@@ -74,5 +74,11 @@ namespace Facturacion_Vista.Vistas
             FrmListarProducto frm = new FrmListarProducto();
             frm.ShowDialog();
         }
+
+        private void itemNotaPedido_Click(object sender, EventArgs e)
+        {
+            FrmNotaPedido frm = new FrmNotaPedido();
+            frm.ShowDialog();
+        }
     }
 }

@@ -104,7 +104,7 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(5, 388);
+            this.statusStrip.Location = new System.Drawing.Point(5, 386);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(622, 22);
             this.statusStrip.TabIndex = 2;
@@ -128,11 +128,11 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -192,6 +192,7 @@
             // 
             this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel5.TabIndex = 5;
+            this.ribbonPanel5.Visible = false;
             // 
             // ribbonBar2
             // 
@@ -369,7 +370,6 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
             // 
             // ribbonBar3
             // 
@@ -419,6 +419,7 @@
             this.itemNotaPedido.SubItemsExpandWidth = 14;
             this.itemNotaPedido.Text = "Notas de Pedido";
             this.itemNotaPedido.Tooltip = "NOTA DE PEDIDO";
+            this.itemNotaPedido.Click += new System.EventHandler(this.itemNotaPedido_Click);
             // 
             // itemProforma
             // 
@@ -506,10 +507,10 @@
             this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel6.Controls.Add(this.ribbonBar5);
             this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel6.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPanel6.Location = new System.Drawing.Point(0, 56);
             this.ribbonPanel6.Name = "ribbonPanel6";
             this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel6.Size = new System.Drawing.Size(622, 151);
+            this.ribbonPanel6.Size = new System.Drawing.Size(622, 95);
             // 
             // 
             // 
@@ -544,7 +545,7 @@
             this.itemProveedor});
             this.ribbonBar5.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar5.Name = "ribbonBar5";
-            this.ribbonBar5.Size = new System.Drawing.Size(619, 148);
+            this.ribbonBar5.Size = new System.Drawing.Size(619, 92);
             this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar5.TabIndex = 0;
             this.ribbonBar5.Text = "Registro";
@@ -657,7 +658,6 @@
             // 
             // menuConfiguracion
             // 
-            this.menuConfiguracion.Checked = true;
             this.menuConfiguracion.Name = "menuConfiguracion";
             this.menuConfiguracion.Panel = this.ribbonPanel5;
             this.menuConfiguracion.Text = "Configuracion";
@@ -670,6 +670,7 @@
             // 
             // menuComprobantes
             // 
+            this.menuComprobantes.Checked = true;
             this.menuComprobantes.Name = "menuComprobantes";
             this.menuComprobantes.Panel = this.ribbonPanel3;
             this.menuComprobantes.Text = "Comprobantes";
@@ -901,14 +902,14 @@
             this.label1.Image = global::Facturacion_Vista.Properties.Resources.fondoSistema1;
             this.label1.Location = new System.Drawing.Point(5, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 233);
+            this.label1.Size = new System.Drawing.Size(622, 231);
             this.label1.TabIndex = 6;
             // 
             // MDIMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 412);
+            this.ClientSize = new System.Drawing.Size(632, 410);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.statusStrip);

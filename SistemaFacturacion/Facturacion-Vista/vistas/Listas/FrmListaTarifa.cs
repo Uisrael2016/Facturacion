@@ -21,6 +21,7 @@ namespace Facturacion_Vista.Vistas.Listas
         public FrmListaTarifa()
         {
             InitializeComponent();
+            this.ListarTarifa();
            
         }
 

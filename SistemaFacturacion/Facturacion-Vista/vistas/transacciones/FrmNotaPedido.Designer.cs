@@ -45,7 +45,7 @@
             this.textRuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textCliente = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.labeltipodedocumento = new DevComponents.DotNetBar.LabelX();
             this.lbnumero = new DevComponents.DotNetBar.LabelX();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.btBuscar = new DevComponents.DotNetBar.ButtonItem();
@@ -92,7 +92,7 @@
             this.groupDatosCli.Controls.Add(this.textRuc);
             this.groupDatosCli.Controls.Add(this.textCliente);
             this.groupDatosCli.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupDatosCli.Location = new System.Drawing.Point(30, 12);
+            this.groupDatosCli.Location = new System.Drawing.Point(30, 3);
             this.groupDatosCli.Name = "groupDatosCli";
             this.groupDatosCli.Size = new System.Drawing.Size(482, 175);
             // 
@@ -282,23 +282,23 @@
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.Color.Red;
-            this.labelX2.Location = new System.Drawing.Point(536, 34);
+            this.labelX2.Location = new System.Drawing.Point(536, 25);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(29, 23);
             this.labelX2.TabIndex = 3;
             this.labelX2.Text = "Nª";
             // 
-            // labelX1
+            // labeltipodedocumento
             // 
             // 
             // 
             // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(557, 12);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(194, 23);
-            this.labelX1.TabIndex = 2;
+            this.labeltipodedocumento.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labeltipodedocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltipodedocumento.Location = new System.Drawing.Point(557, 3);
+            this.labeltipodedocumento.Name = "labeltipodedocumento";
+            this.labeltipodedocumento.Size = new System.Drawing.Size(194, 23);
+            this.labeltipodedocumento.TabIndex = 2;
             // 
             // lbnumero
             // 
@@ -306,7 +306,7 @@
             // 
             // 
             this.lbnumero.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbnumero.Location = new System.Drawing.Point(572, 32);
+            this.lbnumero.Location = new System.Drawing.Point(572, 23);
             this.lbnumero.Name = "lbnumero";
             this.lbnumero.Size = new System.Drawing.Size(160, 23);
             this.lbnumero.TabIndex = 4;
@@ -326,7 +326,7 @@
             this.txtcantidad,
             this.btagregar,
             this.btresta});
-            this.bar1.Location = new System.Drawing.Point(3, 203);
+            this.bar1.Location = new System.Drawing.Point(3, 194);
             this.bar1.Name = "bar1";
             this.bar1.Size = new System.Drawing.Size(777, 41);
             this.bar1.Stretch = true;
@@ -422,7 +422,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewX1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewX1.Size = new System.Drawing.Size(777, 294);
+            this.dataGridViewX1.Size = new System.Drawing.Size(777, 203);
             this.dataGridViewX1.TabIndex = 6;
             // 
             // textBoxX1
@@ -432,7 +432,7 @@
             // 
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(708, 559);
+            this.textBoxX1.Location = new System.Drawing.Point(694, 462);
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
             this.textBoxX1.Size = new System.Drawing.Size(77, 20);
@@ -441,7 +441,7 @@
             // lbsubtotal
             // 
             this.lbsubtotal.AutoSize = true;
-            this.lbsubtotal.Location = new System.Drawing.Point(635, 561);
+            this.lbsubtotal.Location = new System.Drawing.Point(621, 464);
             this.lbsubtotal.Name = "lbsubtotal";
             this.lbsubtotal.Size = new System.Drawing.Size(46, 13);
             this.lbsubtotal.TabIndex = 8;
@@ -450,7 +450,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(635, 591);
+            this.label2.Location = new System.Drawing.Point(621, 494);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 10;
@@ -463,7 +463,7 @@
             // 
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(708, 589);
+            this.textBoxX2.Location = new System.Drawing.Point(694, 492);
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
             this.textBoxX2.Size = new System.Drawing.Size(77, 20);
@@ -472,7 +472,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(635, 622);
+            this.label3.Location = new System.Drawing.Point(621, 525);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 13);
             this.label3.TabIndex = 12;
@@ -485,7 +485,7 @@
             // 
             this.textBoxX3.Border.Class = "TextBoxBorder";
             this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(708, 615);
+            this.textBoxX3.Location = new System.Drawing.Point(694, 518);
             this.textBoxX3.Name = "textBoxX3";
             this.textBoxX3.PreventEnterBeep = true;
             this.textBoxX3.Size = new System.Drawing.Size(77, 20);
@@ -494,7 +494,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(635, 643);
+            this.label4.Location = new System.Drawing.Point(621, 546);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 14;
@@ -507,7 +507,7 @@
             // 
             this.textBoxX4.Border.Class = "TextBoxBorder";
             this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Location = new System.Drawing.Point(708, 641);
+            this.textBoxX4.Location = new System.Drawing.Point(694, 544);
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
             this.textBoxX4.Size = new System.Drawing.Size(77, 20);
@@ -519,7 +519,7 @@
             this.btguardar.BackColor = System.Drawing.Color.Transparent;
             this.btguardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btguardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.btguardar.Location = new System.Drawing.Point(157, 575);
+            this.btguardar.Location = new System.Drawing.Point(143, 478);
             this.btguardar.Name = "btguardar";
             this.btguardar.Size = new System.Drawing.Size(85, 34);
             this.btguardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -531,7 +531,7 @@
             this.buttonX2.BackColor = System.Drawing.Color.Transparent;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.buttonX2.Location = new System.Drawing.Point(399, 575);
+            this.buttonX2.Location = new System.Drawing.Point(385, 478);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(84, 34);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -544,7 +544,7 @@
             // 
             this.richTextBoxEx1.BackgroundStyle.Class = "RichTextBoxBorder";
             this.richTextBoxEx1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.richTextBoxEx1.Location = new System.Drawing.Point(536, 87);
+            this.richTextBoxEx1.Location = new System.Drawing.Point(536, 78);
             this.richTextBoxEx1.Name = "richTextBoxEx1";
             this.richTextBoxEx1.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang12298{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft " +
     "Sans Serif;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs17\\par\r\n}\r\n";
@@ -557,7 +557,7 @@
             // 
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(536, 65);
+            this.labelX8.Location = new System.Drawing.Point(536, 56);
             this.labelX8.Name = "labelX8";
             this.labelX8.Size = new System.Drawing.Size(145, 23);
             this.labelX8.TabIndex = 18;
@@ -567,7 +567,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 676);
+            this.ClientSize = new System.Drawing.Size(793, 565);
             this.Controls.Add(this.labelX8);
             this.Controls.Add(this.richTextBoxEx1);
             this.Controls.Add(this.btguardar);
@@ -584,7 +584,7 @@
             this.Controls.Add(this.bar1);
             this.Controls.Add(this.lbnumero);
             this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.labelX1);
+            this.Controls.Add(this.labeltipodedocumento);
             this.Controls.Add(this.groupDatosCli);
             this.DoubleBuffered = true;
             this.Name = "FrmNotaPedido";
@@ -612,7 +612,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textRuc;
         private DevComponents.DotNetBar.Controls.TextBoxX textCliente;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.LabelX labeltipodedocumento;
         private DevComponents.DotNetBar.LabelX lbnumero;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem btBuscar;

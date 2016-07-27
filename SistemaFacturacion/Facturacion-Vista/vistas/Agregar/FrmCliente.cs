@@ -175,6 +175,5 @@ namespace Facturacion_Vista.Vistas
             }
 
         }
-
     }
 }

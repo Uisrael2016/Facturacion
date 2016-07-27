@@ -215,6 +215,7 @@
             this.Controls.Add(this.bar1);
             this.DoubleBuffered = true;
             this.Name = "FrmListarProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmListarProveedores";
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtlista)).EndInit();
