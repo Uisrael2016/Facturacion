@@ -61,6 +61,7 @@
     <Compile Include="dao\AmbienteDao.cs" />
     <Compile Include="dao\ClienteDao.cs" />
     <Compile Include="dao\CodigoDocumentoDao.cs" />
+    <Compile Include="dao\DetalleProductoDao.cs" />
     <Compile Include="dao\EmpresaDao.cs" />
     <Compile Include="dao\EstablecimientoDAO.cs" />
     <Compile Include="dao\IngresoDao.cs" />
