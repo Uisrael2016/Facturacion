@@ -65,6 +65,7 @@
     <Compile Include="dao\IngresoDao.cs" />
     <Compile Include="dao\MaterialDao.cs" />
     <Compile Include="dao\PerfilDao.cs" />
+    <Compile Include="dao\ProductoDao.cs" />
     <Compile Include="dao\ProveedorDao.cs" />
     <Compile Include="dao\PuntoEmisionDAO.cs" />
     <Compile Include="dao\SalidaDao.cs" />

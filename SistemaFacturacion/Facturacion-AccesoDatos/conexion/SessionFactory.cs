@@ -25,7 +25,7 @@ namespace Facturacion_AccesoDatos.conexion
                            .Database(PostgreSQLConfiguration.PostgreSQL82.Raw("hbm2ddl.keywords", "none")
                            .ConnectionString(c => c
                            .Host("localhost")
-                           .Port(5433)//le cambie el puerto
+                           .Port(5432)//le cambie el puerto
                            .Database("facturacion")
                            .Username("postgres")
                            .Password("postgres")))

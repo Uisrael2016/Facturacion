@@ -71,7 +71,7 @@ namespace Facturacion_Vista.Vistas
 
         private void itemProducto_Click(object sender, EventArgs e)
         {
-            FrmListarProducto frm = new FrmListarProducto();
+            FrmListarProducto frm = new FrmListarProducto(0);
             frm.ShowDialog();
         }
 

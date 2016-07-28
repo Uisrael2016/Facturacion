@@ -8,15 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Facturacion_Vista.Utilidades;
+using Facturacion_AccesoDatos.dao;
+using Facturacion_Entidades;
 
 namespace Facturacion_Vista.Vistas.Agregar
 {
     public partial class FrmProducto : DevComponents.DotNetBar.Office2007Form
     {
         private string pathFile;
-        public FrmProducto()
+        private int idProducto = 0;
+        private Acciones _accion;
+        private ProductoDao productoDao;
+        private Producto productoSeleccionado { get; set; }
+        private string valor;
+        public FrmProducto(int id)
         {
             InitializeComponent();
+            this.idProducto = id;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -60,6 +68,57 @@ namespace Facturacion_Vista.Vistas.Agregar
 
 
         }
-
+        public void setproducto()
+        {
+            
+            productoSeleccionado.DescProducto = textDescPro.Text.ToUpper();
+            if (comboTipoPro.SelectedItem == comboItem1)
+            {
+                valor =Convert.ToString('N');
+            }
+            else
+            {
+                if (comboTipoPro.SelectedItem == comboItem2)
+                    valor = Convert.ToString('M');
+            }
+            productoSeleccionado.Tipo = Convert.ToChar( valor);
+            productoSeleccionado.Imagen = pathFile;
+            productoSeleccionado.Precio = Convert.ToDouble(textPrecio.Text);
+            productoSeleccionado.Descuento = Convert.ToDouble(textDescuento.Text);
+        }
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            //if(General.validaFormGroup(this.Controls,errorProvider1))
+            //{
+                try
+                {
+                    setproducto();
+                    if(_accion==Acciones.insert)
+                    {
+                        productoDao.insertar(productoSeleccionado);
+                        Mensaje.mensajeInformacion("Informmacion", "Cliente grabado con exito");
+                        this.Hide();
+                    }
+                    else
+                    {
+                        productoSeleccionado.IdProducto = idProducto;
+                        productoDao.modificar(productoSeleccionado);
+                        Mensaje.mensajeInformacion("Informmacion", "Cliente actualizado con exito");
+                        this.Hide();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    if (_accion == Acciones.insert)
+                    {
+                        Mensaje.mensajeError("Error", "Error al insertar" + ex.Message);
+                    }
+                    else
+                    {
+                        Mensaje.mensajeError("Error", "Error al actualizar" + ex.Message);
+                    }
+                }
+            
+        }
     }
 }

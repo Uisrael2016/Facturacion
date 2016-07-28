@@ -13,11 +13,12 @@ namespace Facturacion_AccesoDatos.mapping
         public SriMap() {
             Schema("public");
             Table("sri");
-            Id(c => c.IdAutorizacion).Column("id_autorizacion").GeneratedBy.Identity();
+            Id(c => c.IdSri).Column("id_sri").GeneratedBy.Identity();
             Map(c => c.Autorizacion).Column("autorizacion");
             Map(c => c.ClaveAcceso).Column("clave_acceso");
             Map(c => c.Estado).Column("estado");
-            Map(c => c.CodigoError).Column("cod_error");
+            Map(c => c.FechaAutorizacion).Column("fecha_autorizacion");
+            Map(c => c.CodigoError).Column("codigo_error");
             Map(c => c.MensajeError).Column("msm_error");
             References(c => c.IdCabecera).Class<Cabecera>().Column("id_cabecera").Not.LazyLoad();
         }

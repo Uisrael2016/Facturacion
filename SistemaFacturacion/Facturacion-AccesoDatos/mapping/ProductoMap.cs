@@ -12,8 +12,9 @@ namespace Facturacion_AccesoDatos.mapping
         public ProductoMap()
         {
             Table("producto");
+            Schema("public");
             Id(c =>c.IdProducto).GeneratedBy.Identity().Column("id_producto");
-            Map(c => c.DescProducto).Column("desc_prodcuto");
+            Map(c => c.DescProducto).Column("desc_producto");
             Map(c => c.Tipo).Column("tipo");
             Map(c => c.Imagen).Column("imagen");
             Map(c => c.Precio).Column("precio");

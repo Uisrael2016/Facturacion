@@ -10,12 +10,16 @@ using System.Windows.Forms;
 using Facturacion_Vista.Utilidades;
 using Facturacion_Entidades;
 using Facturacion_AccesoDatos.dao;
+using Facturacion_Vista.Vistas.Agregar;
 namespace Facturacion_Vista.Vistas.Agregar
 {
     public partial class FrmDetalleProducto : DevComponents.DotNetBar.Office2007Form
     {
         private MaterialDao _materialDao;
         private Material _material;
+        private Acciones _accion;
+        private Producto producto;
+        private DetalleProducto detproductoSeleccionado { get; set; }
         public FrmDetalleProducto()
         {
             InitializeComponent();
@@ -49,6 +53,21 @@ namespace Facturacion_Vista.Vistas.Agregar
             Console.WriteLine(colorDialog.Color.ToString());
 
 
+        }
+        
+        private  void setDetalleProduc()
+        {
+            if (_accion == Acciones.insert)
+            {
+                detproductoSeleccionado = new DetalleProducto();
+            }
+            detproductoSeleccionado.IdMaterial = (Material)comboMaterial.SelectedItem;
+           
+                
+        }
+        private void btGuardar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

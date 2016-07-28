@@ -8,14 +8,14 @@ namespace Facturacion_Entidades
 {
     public class Sri
     {
-        public virtual int IdAutorizacion { get; set; }
+        public virtual int IdSri { get; set; }
 
         public virtual string Autorizacion { get; set; }
 
         public virtual string ClaveAcceso { get; set; }
 
         public virtual char Estado { get; set; }
-
+        //public virtual DateTime FechaAutorizacion { get}
         public virtual char CodigoError { get; set; }
 
         public virtual string MensajeError { get; set; }
