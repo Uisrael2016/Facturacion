@@ -31,6 +31,7 @@ namespace Facturacion_Vista.Vistas.Listas
         {
             FrmProducto frm = new FrmProducto(0);
             frm.ShowDialog();
+            listarProducto();
         }
         private void listarProducto()
         {

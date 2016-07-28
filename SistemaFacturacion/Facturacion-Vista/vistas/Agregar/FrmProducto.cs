@@ -19,12 +19,19 @@ namespace Facturacion_Vista.Vistas.Agregar
         private int idProducto = 0;
         private Acciones _accion;
         private ProductoDao productoDao;
-        private Producto productoSeleccionado { get; set; }
+        private DetalleProductoDao detalleDao;
+        private SalidaDao salidaDao;
+        public Producto productoSeleccionado { get; set; }
         private string valor;
+        private DetalleProducto nuevoDetalle;
+        private Material material;
+        private Salida nuevaSalida;
+        private List<DetalleProducto> listaDetalle;
         public FrmProducto(int id)
         {
             InitializeComponent();
             this.idProducto = id;
+            listaDetalle = new List<DetalleProducto>();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -32,11 +39,6 @@ namespace Facturacion_Vista.Vistas.Agregar
             this.Dispose();
         }
 
-        private void btnDetalle_Click(object sender, EventArgs e)
-        {
-            FrmDetalleProducto frm = new FrmDetalleProducto();
-            frm.ShowDialog();
-        }
 
         private void btnImagen_Click(object sender, EventArgs e)
         {
@@ -50,12 +52,12 @@ namespace Facturacion_Vista.Vistas.Agregar
                 if (buscaImagen.ShowDialog(this) == DialogResult.OK)
                 {
                     pathFile = buscaImagen.FileName;
-                    if (pathFile.Equals("")==false)
+                    if (pathFile.Equals("") == false)
                     {
                         pictureProducto.Load(pathFile);
 
                     }
-                    
+
 
                 }
 
@@ -70,55 +72,94 @@ namespace Facturacion_Vista.Vistas.Agregar
         }
         public void setproducto()
         {
-            
+
             productoSeleccionado.DescProducto = textDescPro.Text.ToUpper();
             if (comboTipoPro.SelectedItem == comboItem1)
             {
-                valor =Convert.ToString('N');
+                valor = Convert.ToString('N');
             }
             else
             {
                 if (comboTipoPro.SelectedItem == comboItem2)
                     valor = Convert.ToString('M');
             }
-            productoSeleccionado.Tipo = Convert.ToChar( valor);
+            productoSeleccionado.Tipo = Convert.ToChar(valor);
             productoSeleccionado.Imagen = pathFile;
             productoSeleccionado.Precio = Convert.ToDouble(textPrecio.Text);
             productoSeleccionado.Descuento = Convert.ToDouble(textDescuento.Text);
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //if(General.validaFormGroup(this.Controls,errorProvider1))
-            //{
-                try
+
+        }
+
+        private void btnDetalle_Click_1(object sender, EventArgs e)
+        {
+            FrmDetalleProducto frm = new FrmDetalleProducto(Acciones.inject);
+            frm.ShowDialog();
+            if (frm.detproductoSeleccionado != null)
+            {
+                nuevoDetalle = new DetalleProducto();
+                nuevoDetalle = frm.detproductoSeleccionado;
+                nuevaSalida = frm.salida;
+                material = frm._material;
+                textDescripcion.Text = nuevoDetalle.DescDetalle;
+                textCantidadDetalle.Text = Convert.ToString(nuevoDetalle.Cantidad);
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            if (nuevoDetalle != null)
+            {
+                listaDetalle.Add(nuevoDetalle);
+                reset();
+                listarDetalle();
+            }
+            else {
+                Mensaje.mensajeAlerta("Información","Escojer un detalle de producto");
+            }
+        }
+        private void listarDetalle()
+        {
+            if (listaDetalle != null)
+            {
+                dtListaDetalle.Rows.Clear();
+                
+                double suma=0;
+                int cont = 1;
+                foreach (DetalleProducto det in listaDetalle)
                 {
-                    setproducto();
-                    if(_accion==Acciones.insert)
-                    {
-                        productoDao.insertar(productoSeleccionado);
-                        Mensaje.mensajeInformacion("Informmacion", "Cliente grabado con exito");
-                        this.Hide();
-                    }
-                    else
-                    {
-                        productoSeleccionado.IdProducto = idProducto;
-                        productoDao.modificar(productoSeleccionado);
-                        Mensaje.mensajeInformacion("Informmacion", "Cliente actualizado con exito");
-                        this.Hide();
-                    }
+                    suma += det.Cantidad;
+                    dtListaDetalle.Rows.Add(cont, det.IdMaterial.Descripcion, det.DescDetalle, det.Cantidad, det.Color);
+                    Console.WriteLine(suma.ToString());
+                    cont++;
                 }
-                catch(Exception ex)
-                {
-                    if (_accion == Acciones.insert)
-                    {
-                        Mensaje.mensajeError("Error", "Error al insertar" + ex.Message);
-                    }
-                    else
-                    {
-                        Mensaje.mensajeError("Error", "Error al actualizar" + ex.Message);
-                    }
-                }
-            
+            }
+        }
+
+        private void reset()
+        {
+            textDescripcion.Text = string.Empty;
+            textCantidadDetalle.Text = string.Empty;
+            nuevoDetalle = null;
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(dtListaDetalle.Rows.Count) > 0)
+            {
+                int id = Convert.ToInt32(dtListaDetalle.CurrentRow.Cells[0].Value);
+                this.dtListaDetalle.Rows.Remove(this.dtListaDetalle.Rows[this.dtListaDetalle.CurrentRow.Index]);
+                listaDetalle.RemoveAt(id-1);
+                listarDetalle();
+            }
+
+            else
+            {
+                Mensaje.mensajeError("Error", "Debes seleccionar una fila para eliminar");
+            }
         }
     }
 }

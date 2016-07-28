@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDetalleProducto));
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textColor = new System.Windows.Forms.RichTextBox();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.textCantidad = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.comboMaterial = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textDes = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textDescripcion = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.btGuardar = new DevComponents.DotNetBar.ButtonX();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -91,12 +94,12 @@
             // 
             this.group.CanvasColor = System.Drawing.SystemColors.Control;
             this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.group.Controls.Add(this.richTextBox1);
+            this.group.Controls.Add(this.textColor);
             this.group.Controls.Add(this.buttonX3);
             this.group.Controls.Add(this.labelX4);
             this.group.Controls.Add(this.textCantidad);
             this.group.Controls.Add(this.comboMaterial);
-            this.group.Controls.Add(this.textDes);
+            this.group.Controls.Add(this.textDescripcion);
             this.group.Controls.Add(this.labelX1);
             this.group.Controls.Add(this.labelX3);
             this.group.Controls.Add(this.labelX2);
@@ -135,13 +138,13 @@
             this.group.TabIndex = 3;
             this.group.Text = "Informacion";
             // 
-            // richTextBox1
+            // textColor
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(119, 159);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(76, 33);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.textColor.Location = new System.Drawing.Point(119, 159);
+            this.textColor.Name = "textColor";
+            this.textColor.Size = new System.Drawing.Size(76, 33);
+            this.textColor.TabIndex = 6;
+            this.textColor.Text = "";
             // 
             // buttonX3
             // 
@@ -198,18 +201,18 @@
             this.comboMaterial.TabIndex = 4;
             this.comboMaterial.SelectedIndexChanged += new System.EventHandler(this.comboMaterial_SelectedIndexChanged);
             // 
-            // textDes
+            // textDescripcion
             // 
             // 
             // 
             // 
-            this.textDes.Border.Class = "TextBoxBorder";
-            this.textDes.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textDes.Location = new System.Drawing.Point(119, 36);
-            this.textDes.Name = "textDes";
-            this.textDes.PreventEnterBeep = true;
-            this.textDes.Size = new System.Drawing.Size(146, 20);
-            this.textDes.TabIndex = 3;
+            this.textDescripcion.Border.Class = "TextBoxBorder";
+            this.textDescripcion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textDescripcion.Location = new System.Drawing.Point(119, 36);
+            this.textDescripcion.Name = "textDescripcion";
+            this.textDescripcion.PreventEnterBeep = true;
+            this.textDescripcion.Size = new System.Drawing.Size(146, 20);
+            this.textDescripcion.TabIndex = 3;
             // 
             // buttonX2
             // 
@@ -234,6 +237,10 @@
             this.btGuardar.TabIndex = 4;
             this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // FrmDetalleProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,6 +253,7 @@
             this.Name = "FrmDetalleProducto";
             this.Text = "Detalle Producto";
             this.group.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,12 +266,13 @@
         private DevComponents.DotNetBar.Controls.GroupPanel group;
         private DevComponents.DotNetBar.Controls.TextBoxX textCantidad;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboMaterial;
-        private DevComponents.DotNetBar.Controls.TextBoxX textDes;
+        private DevComponents.DotNetBar.Controls.TextBoxX textDescripcion;
         private DevComponents.DotNetBar.ButtonX btGuardar;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.LabelX labelX4;
         private System.Windows.Forms.ColorDialog colorDialog;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox textColor;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

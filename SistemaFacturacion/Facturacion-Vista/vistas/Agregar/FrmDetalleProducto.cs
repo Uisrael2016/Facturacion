@@ -16,15 +16,19 @@ namespace Facturacion_Vista.Vistas.Agregar
     public partial class FrmDetalleProducto : DevComponents.DotNetBar.Office2007Form
     {
         private MaterialDao _materialDao;
-        private Material _material;
         private Acciones _accion;
-        private Producto producto;
-        private DetalleProducto detproductoSeleccionado { get; set; }
-        public FrmDetalleProducto()
+        private double valor;
+        private double resul;
+        public DetalleProducto detproductoSeleccionado { get; set; }
+        public Salida salida { get; set; }
+        public Material _material { get; set; }
+        private string color;
+        public FrmDetalleProducto(Acciones accion)
         {
             InitializeComponent();
             _material = new Material();
             cargaCombo();
+            this._accion = accion;
         }
 
         private void cargaCombo()
@@ -44,30 +48,57 @@ namespace Facturacion_Vista.Vistas.Agregar
             Material mat = (Material)comboMaterial.SelectedItem;
             _material.IdMaterial = mat.IdMaterial;
             _material.Descripcion = mat.Descripcion;
+            _material.Stock = mat.Stock;
+            _material.IdTipoMaterial = mat.IdTipoMaterial;
+            _material.IdProveedor = mat.IdProveedor;
         }
 
         private void buttonX3_Click(object sender, EventArgs e)
         {
             colorDialog.ShowDialog();
-            richTextBox1.BackColor = colorDialog.Color;
+            textColor.BackColor = colorDialog.Color;
+            color = colorDialog.Color.ToString();
             Console.WriteLine(colorDialog.Color.ToString());
+        }
 
+        private void setDetalleProduc()
+        {
+            detproductoSeleccionado = new DetalleProducto();
+            detproductoSeleccionado.Cantidad = valor;
+            detproductoSeleccionado.Color = textColor.BackColor.ToString();
+            detproductoSeleccionado.DescDetalle = textDescripcion.Text;
+            detproductoSeleccionado.IdMaterial = (Material)comboMaterial.SelectedItem;
 
         }
-        
-        private  void setDetalleProduc()
+        private void setSalida()
         {
-            if (_accion == Acciones.insert)
-            {
-                detproductoSeleccionado = new DetalleProducto();
-            }
-            detproductoSeleccionado.IdMaterial = (Material)comboMaterial.SelectedItem;
-           
-                
+            salida = new Salida();
+            salida.CantidadEgreso = valor;
+            salida.IdMaterial = _material;
+            salida.FechaEgreso = DateTime.Now;
+            salida.UsuarioEgreso = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
+
         }
         private void btGuardar_Click(object sender, EventArgs e)
         {
-            
+            if (General.validaFormGroup(this.Controls, errorProvider))
+            {
+                valor = Convert.ToDouble(textCantidad.Text);
+                if (valor > _material.Stock)
+                {
+                    Mensaje.mensajeAlerta("Información", "Cantidad exede stock de material");
+                    return;
+                }
+                else
+                {
+                    resul = _material.Stock - valor;
+                    setDetalleProduc();
+                    setSalida();
+                    this.Hide();
+                }
+
+
+            }
         }
     }
 }
