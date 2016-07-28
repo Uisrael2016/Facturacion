@@ -200,6 +200,7 @@
             this.cbTipoDocumento.Size = new System.Drawing.Size(247, 20);
             this.cbTipoDocumento.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbTipoDocumento.TabIndex = 29;
+            this.cbTipoDocumento.WatermarkText = "Seleccione";
             this.cbTipoDocumento.SelectedIndexChanged += new System.EventHandler(this.cbTipoDocumento_SelectedIndexChanged);
             // 
             // txtTelefono

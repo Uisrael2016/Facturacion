@@ -124,11 +124,11 @@ namespace Facturacion_Vista.Vistas
                 {
                     if (_accion == Acciones.insert)
                     {
-                        Mensaje.mensajeError("Error", "Error al ingresar el usuario" + ex.Message);
+                        Mensaje.mensajeError("Error", "Error al ingresar el usuario " + ex.Message);
                     }
                     else
                     {
-                        Mensaje.mensajeError("Error", "Error al actualizar el usuario" + ex.Message);
+                        Mensaje.mensajeError("Error", "Error al actualizar el usuario " + ex.Message);
                     }
                 }
             }
@@ -141,10 +141,14 @@ namespace Facturacion_Vista.Vistas
 
         private void cbTipoDocumento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TipoDocumento tipodoc = (TipoDocumento)cbTipoDocumento.SelectedItem;
-            _tipodocumento.IdTipoDocumento = tipodoc.IdTipoDocumento;
-            _tipodocumento.Documento = tipodoc.Documento;
-            txtDocumento.Text = string.Empty;
+            TipoDocumento tpdocumento = (TipoDocumento)cbTipoDocumento.SelectedItem;
+            _tipodocumento.IdTipoDocumento = tpdocumento.IdTipoDocumento;
+            _tipodocumento.Documento = tpdocumento.Documento;
+            _tipodocumento.Codigo = tpdocumento.Codigo;
+            if (_accion == Acciones.insert)
+            {
+                txtDocumento.Text = string.Empty;
+            }
         }
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)

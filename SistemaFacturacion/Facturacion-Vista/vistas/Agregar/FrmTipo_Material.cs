@@ -49,7 +49,7 @@ namespace Facturacion_Vista.Vistas.Agregar
             {
                 tipomaterialSeleccionado = new TipoMaterial();
             }
-            tipomaterialSeleccionado.Tipo = textBoxX1.Text;
+            tipomaterialSeleccionado.Tipo = textBoxX1.Text.ToUpper();
         }
 
         private void btAgregar_Click(object sender, EventArgs e)

@@ -80,5 +80,29 @@ namespace Facturacion_Vista.Vistas
             FrmNotaPedido frm = new FrmNotaPedido();
             frm.ShowDialog();
         }
+
+        private void itemPerfiles_Click(object sender, EventArgs e)
+        {
+            FrmListarPerfl frm = new FrmListarPerfl(0);
+            frm.ShowDialog();
+        }
+
+        private void buttonItem14_Click(object sender, EventArgs e)
+        {
+            FrmListarTipoMaterial frm = new FrmListarTipoMaterial(0);
+            frm.ShowDialog();
+        }
+
+        private void buttonItem15_Click(object sender, EventArgs e)
+        {
+            FrmListarEstablecimiento frm = new FrmListarEstablecimiento(0);
+            frm.ShowDialog();
+        }
+
+        private void buttonItem16_Click(object sender, EventArgs e)
+        {
+            FrmListarPuntoEmision frm = new FrmListarPuntoEmision(0);
+            frm.ShowDialog();
+        }
     }
 }

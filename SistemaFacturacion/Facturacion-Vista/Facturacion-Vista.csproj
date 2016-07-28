@@ -95,17 +95,35 @@
     <Compile Include="Vistas\Agregar\FrmDetalleProducto.designer.cs">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Agregar\FrmEstablecimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmEstablecimiento.designer.cs">
+      <DependentUpon>FrmEstablecimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Agregar\FrmProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Agregar\FrmProducto.designer.cs">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Agregar\FrmPuntoEmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmPuntoEmision.designer.cs">
+      <DependentUpon>FrmPuntoEmision.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Agregar\FrmTarifa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Agregar\FrmTarifa.Designer.cs">
       <DependentUpon>FrmTarifa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmTipo_Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Agregar\FrmTipo_Material.Designer.cs">
+      <DependentUpon>FrmTipo_Material.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Agregar\FrmUsuarioPerfil.cs">
       <SubType>Form</SubType>
@@ -119,11 +137,35 @@
     <Compile Include="Vistas\Listas\FrmListarCodigo_Documento.Designer.cs">
       <DependentUpon>FrmListarCodigo_Documento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Listas\FrmListarEstablecimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarEstablecimiento.designer.cs">
+      <DependentUpon>FrmListarEstablecimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarPerfl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarPerfl.designer.cs">
+      <DependentUpon>FrmListarPerfl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Listas\FrmListarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Listas\FrmListarProducto.Designer.cs">
       <DependentUpon>FrmListarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarPuntoEmision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarPuntoEmision.designer.cs">
+      <DependentUpon>FrmListarPuntoEmision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarTipoMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarTipoMaterial.designer.cs">
+      <DependentUpon>FrmListarTipoMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Listas\FrmListaTarifa.cs">
       <SubType>Form</SubType>
@@ -214,11 +256,20 @@
     <EmbeddedResource Include="Vistas\Agregar\FrmDetalleProducto.resx">
       <DependentUpon>FrmDetalleProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Agregar\FrmEstablecimiento.resx">
+      <DependentUpon>FrmEstablecimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmProducto.resx">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Agregar\FrmPuntoEmision.resx">
+      <DependentUpon>FrmPuntoEmision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmTarifa.resx">
       <DependentUpon>FrmTarifa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Agregar\FrmTipo_Material.resx">
+      <DependentUpon>FrmTipo_Material.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Agregar\FrmUsuarioPerfil.resx">
       <DependentUpon>FrmUsuarioPerfil.cs</DependentUpon>
@@ -226,8 +277,20 @@
     <EmbeddedResource Include="Vistas\Listas\FrmListarCodigo_Documento.resx">
       <DependentUpon>FrmListarCodigo_Documento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarEstablecimiento.resx">
+      <DependentUpon>FrmListarEstablecimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarPerfl.resx">
+      <DependentUpon>FrmListarPerfl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\FrmListarProducto.resx">
       <DependentUpon>FrmListarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarPuntoEmision.resx">
+      <DependentUpon>FrmListarPuntoEmision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarTipoMaterial.resx">
+      <DependentUpon>FrmListarTipoMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\FrmListaTarifa.resx">
       <DependentUpon>FrmListaTarifa.cs</DependentUpon>
@@ -412,6 +475,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\office-building-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-clickPuntoVenta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

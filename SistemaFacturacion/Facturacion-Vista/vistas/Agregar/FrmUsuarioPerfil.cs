@@ -19,6 +19,7 @@ namespace Facturacion_Vista.Vistas.Agregar
         private Perfil _perfil;
         private Usuario _usuario;
         private Acciones _accion;
+        private int IDUsuario;
         private UsuarioPerfil usuarioPerfilselccionado { get; set; }
         private UsuarioPerfilDao usuarioPerfilDAO;
         public FrmUsuarioPerfil()
@@ -31,8 +32,12 @@ namespace Facturacion_Vista.Vistas.Agregar
 
         private void FrmUsuarioPerfil_Load(object sender, EventArgs e)
         {
+            usuarioPerfilDAO = new UsuarioPerfilDao();
+            cbPuntoemision.Focus();
             cargar_combo_Perfil();
-            cargar_combo_Usuario();
+            ///*combo para cargar usuarios
+            // * reemplazado por busqueda*/
+            //cargar_combo_Usuario();
             cargar_combo_puntoEmision();
         }
         private void cargar_combo_puntoEmision()
@@ -49,13 +54,13 @@ namespace Facturacion_Vista.Vistas.Agregar
             cbPerfil.DisplayMember = "Descripcion";
             cbPerfil.ValueMember = "IdPerfil";
         }
-        private void cargar_combo_Usuario()
-        {
-            UsuarioDao _usuario = new UsuarioDao();
-            cbPerfil.DataSource = _usuario.consultar();
-            cbPerfil.DisplayMember = "Nombre";
-            cbPerfil.ValueMember = "idUsuario";
-        }
+        //private void cargar_combo_Usuario()
+        //{
+        //    UsuarioDao _usuario = new UsuarioDao();
+        //    cbUsuario.DataSource = _usuario.consultar();
+        //    cbUsuario.DisplayMember = "Nombre";
+        //    cbUsuario.ValueMember = "idUsuario";
+        //}
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -75,12 +80,12 @@ namespace Facturacion_Vista.Vistas.Agregar
             _perfil.Descripcion = perfil.Descripcion;
         }
 
-        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Usuario usuario = (Usuario)cbUsuario.SelectedItem;
-            _usuario.IdUsuario = usuario.IdUsuario;
-            _usuario.Nombre = usuario.Nombre;
-        }
+        //private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    Usuario usuario = (Usuario)cbUsuario.SelectedItem;
+        //    _usuario.IdUsuario = usuario.IdUsuario;
+        //    _usuario.Nombre = usuario.Nombre;
+        //}
 
         private void setPerfilusuario()
         {
@@ -90,7 +95,9 @@ namespace Facturacion_Vista.Vistas.Agregar
             }
             usuarioPerfilselccionado.IdPerfil = (Perfil)cbPerfil.SelectedItem;
             usuarioPerfilselccionado.IdPuntoEmision = (PuntoEmision)cbPuntoemision.SelectedItem;
-            usuarioPerfilselccionado.IdUsuario = (Usuario)cbUsuario.SelectedItem;
+         //ESTA PARTE DATE VIENDO
+         // usuarioPerfilselccionado.IdUsuario = (Usuario)IDUsuario;
+         //
         }
         private void btGuardar_Click(object sender, EventArgs e)
         {
@@ -113,6 +120,23 @@ namespace Facturacion_Vista.Vistas.Agregar
                         Mensaje.mensajeError("Error", "Error al ingresar el Perfil de Usuario" + ex.Message);
                     }
                 }
+            }
+        }
+
+        private void setGroup (Usuario u)
+        {
+            txtUsuario.Text = u.Nombre;
+            IDUsuario = u.IdUsuario;
+            textBoxX1.Text = Convert.ToString(u.IdUsuario);
+        }
+        private void btBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            FrmListarUsuario frmU = new FrmListarUsuario(Acciones.inject);
+            frmU.ShowDialog();
+            if(frmU.usuarioSeleccionado!=null)
+            {
+                Usuario usuario = frmU.usuarioSeleccionado;
+                setGroup(usuario);
             }
         }
     }
