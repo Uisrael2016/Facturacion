@@ -29,10 +29,6 @@ namespace Facturacion_Vista.Vistas.Listas
             ListarPuntoEmision();
         }
 
-        private void FrmListarPuntoEmision_Load(object sender, EventArgs e)
-        {
-           
-        }
         public void ListarPuntoEmision()
         {
             puntoemisionDAO = new PuntoEmisionDAO();

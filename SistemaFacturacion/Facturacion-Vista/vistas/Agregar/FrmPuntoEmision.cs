@@ -8,11 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Facturacion_Entidades;
-using Facturacion_AccesoDatos.conexion;
 using Facturacion_AccesoDatos.dao;
-using Facturacion_Vista.Vistas;
 using Facturacion_Vista.Utilidades;
-using System.Collections;
+
 
 namespace Facturacion_Vista.Vistas.Agregar
 {
