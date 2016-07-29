@@ -56,10 +56,20 @@ namespace Facturacion_Vista.Vistas
 
         private void dtlista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = Convert.ToInt32(dtLista.CurrentRow.Cells[0].Value);
-            FrmUsuario frm = new FrmUsuario(id);
-            frm.ShowDialog();
-            ListarUsuario();
+            if (_accion != Acciones.inject)
+            {
+                int id = Convert.ToInt32(dtLista.CurrentRow.Cells[0].Value);
+                FrmUsuario frm = new FrmUsuario(id);
+                frm.ShowDialog();
+                ListarUsuario();
+            }
+            else
+            {
+                int id = Convert.ToInt32(dtLista.CurrentRow.Cells[0].Value);
+                UsuarioDao dao = new UsuarioDao();
+                usuarioSeleccionado = dao.consultarPorId(id);
+                this.Hide();
+            }
         }
 
         private void buttonItem1_Click(object sender, EventArgs e)
@@ -72,17 +82,6 @@ namespace Facturacion_Vista.Vistas
         private void buttonItem2_Click(object sender, EventArgs e)
         {
             ListarUsuario();
-        }
-
-        private void dtLista_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar==13 && _accion==Acciones.inject)
-            {
-                int id = Convert.ToInt32(dtLista.CurrentRow.Cells[0].Value);
-                UsuarioDao dao = new UsuarioDao();
-                usuarioSeleccionado = dao.consultarPorId(id);
-                this.Hide();
-            }
         }
     }
   }

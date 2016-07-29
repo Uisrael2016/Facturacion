@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dtLista = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +36,6 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.btBuscar = new DevComponents.DotNetBar.ButtonItem();
@@ -70,13 +68,14 @@
             this.dtLista.Size = new System.Drawing.Size(686, 335);
             this.dtLista.TabIndex = 0;
             this.dtLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
-            this.dtLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtLista_KeyPress);
             // 
             // ID
             // 
-            this.ID.HeaderText = "ID";
+            this.ID.HeaderText = "Id";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ID.Visible = false;
             // 
             // Documento
@@ -84,43 +83,48 @@
             this.Documento.HeaderText = "Documento";
             this.Documento.Name = "Documento";
             this.Documento.ReadOnly = true;
+            this.Documento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Documento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Nombres
             // 
             this.Nombres.HeaderText = "Nombres";
             this.Nombres.Name = "Nombres";
             this.Nombres.ReadOnly = true;
+            this.Nombres.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombres.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Email
             // 
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
+            this.Email.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Telefono
             // 
             this.Telefono.HeaderText = "Telefono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
+            this.Telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // UserName
             // 
             this.UserName.HeaderText = "Username";
             this.UserName.Name = "UserName";
             this.UserName.ReadOnly = true;
+            this.UserName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.UserName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Estado
             // 
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // styleManager1
-            // 
-            this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Silver;
-            this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154))))));
             // 
             // bar1
             // 
@@ -169,6 +173,7 @@
             this.Controls.Add(this.dtLista);
             this.DoubleBuffered = true;
             this.Name = "FrmListarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.FrmListarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtLista)).EndInit();
@@ -180,7 +185,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtLista;
-        private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem btBuscar;
