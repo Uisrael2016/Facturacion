@@ -17,66 +17,51 @@ namespace Facturacion_Vista.Vistas.transacciones
 {
     public partial class FrmNotaPedido : DevComponents.DotNetBar.Office2007Form
     {
-        private DetalleProducto nuevo;
-        private List<DetalleProducto> listaDetpro;
+        private Producto nuevo;
+        //private List<DetalleProducto> listaDetpro;
+        private List<Producto> listaProducto;
         double cantidadpro  ;
         double totalprecio ;
         double subtotalproducto ;
         public FrmNotaPedido(int id)
         {            
             InitializeComponent();
-            listaDetpro = new List<DetalleProducto>();
+            listaProducto = new List<Producto>();
+            nuevo = new Producto();
             
         }        
         
         private void btagregar_Click(object sender, EventArgs e)
         {
-            int bandera = 0;
 
-            for (int fila = 0; fila < dtdocumento.Rows.Count; fila++)
+            if (nuevo != null)
             {
-                if (dtdocumento.Rows[fila].Cells["desc_producto"].Value.ToString() == this.txtDetalle.Text)
-                {
-                    bandera = 1;
-                }
-            }
-
-            if (bandera == 1)
-            {
-                Mensaje.mensajeError("Error", "Error este producto ya fue ingresado");
+                listaProducto.Add(nuevo);
+               // listaProducto.Add(nuevaSalida);
+                reset();
+                listarProducto();
             }
             else
             {
-                if (nuevo != null)
-                {
-                    listaDetpro.Add(nuevo);
-                    listarProducto();
-                    //reset();
-
-                }
-                else
-                {
-                    Mensaje.mensajeAlerta("Información", "Escojer un detalle de producto");
-                }
+                Mensaje.mensajeAlerta("Información", "Escojer un detalle de producto");
             }
-           
         }
         private void listarProducto()
         {
 
             
-            if (listaDetpro != null)
+            if (listaProducto != null)
             {
                 dtdocumento.Rows.Clear();
                 int cont = 1;
-                foreach (DetalleProducto det in listaDetpro)
+                foreach (Producto det in listaProducto)
                 {
                     
-                    cantidadpro = Convert.ToDouble(txtcantidad.Text);
-                    totalprecio = cantidadpro * det.IdProducto.Precio;
+                    //cantidadpro = Convert.ToDouble(txtcantidad.Text);
+                    totalprecio = cantidadpro * det.Precio;
                     txtsubtotal.Text = Convert.ToString(subtotalproducto);
                     subtotalproducto += totalprecio;
-                    dtdocumento.Rows.Add(cont,det.IdProducto.DescProducto,cantidadpro,det.IdProducto.Precio.ToString("0.00## $"),this.totalprecio.ToString("0.00## $"));
+                    dtdocumento.Rows.Add(cont, det.DescProducto, cantidadpro, det.Precio.ToString("0.00## $"),this.totalprecio.ToString("0.00## $"));
                     cont++;                  
                     txtsubtotal.Text = Convert.ToString(subtotalproducto.ToString("0.00## $"));
                     
@@ -109,11 +94,11 @@ namespace Facturacion_Vista.Vistas.transacciones
                 setGroup(cliente);
             }
         }
-        private void setGrouppro(DetalleProducto det)
+        private void setGrouppro(Producto pro)
         {
-            txtDetalle.Text = det.IdProducto.DescProducto;
-            txtPrecio.Text = Convert.ToString(det.IdProducto.Precio);
-           
+            txtDetalle.Text = pro.DescProducto;
+            txtdescuento.Text = Convert.ToString( pro.Descuento);
+            txtPrecio.Text = Convert.ToString( pro.Precio);           
         }
              
        
@@ -125,7 +110,7 @@ namespace Facturacion_Vista.Vistas.transacciones
             {
                 int id = Convert.ToInt32(dtdocumento.CurrentRow.Cells[0].Value);
                 this.dtdocumento.Rows.Remove(this.dtdocumento.Rows[this.dtdocumento.CurrentRow.Index]);
-                listaDetpro.RemoveAt(id - 1);
+                listaProducto.RemoveAt(id - 1);
 
             }
 
@@ -137,6 +122,14 @@ namespace Facturacion_Vista.Vistas.transacciones
         
         private void btBuscar_Click_1(object sender, EventArgs e)
         {
+            FrmListarProducto frml = new FrmListarProducto(Acciones.inject);
+            frml.ShowDialog();
+            if (frml.productoSeleccionado != null)
+            {
+                Producto producto = frml.productoSeleccionado;
+                setGrouppro (producto);
+            }
+
         }
 
         private void dtdocumento_RowDefaultCellStyleChanged(object sender, DataGridViewRowEventArgs e)
