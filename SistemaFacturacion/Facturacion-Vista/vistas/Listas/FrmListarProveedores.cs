@@ -43,7 +43,11 @@ namespace Facturacion_Vista.Vistas
                         || (pro.Documento.Contains(txtbuscarprov.Text.ToUpper()))
                         ||pro.RazonSocial.Contains(txtbuscarprov.Text.ToUpper())
                         ||pro.RepresentanteLegal.Contains(txtbuscarprov.Text.ToUpper()))
-                    {
+                            // if((comboBoxItem1.SelectedItem ==cbxActivos)
+                            //||(pro.Estado.Equals('A')))
+                            //if((comboBoxItem1.SelectedItem ==cbxDesactivos)
+                            //||(pro.Estado.Equals('D'))) 
+                            {
                         dtlista.Rows.Add(pro.IdProveedor, pro.Documento, 
                             pro.RazonSocial,pro.RepresentanteLegal,
                             pro.Telefono,pro.Email, pro.Direccion);

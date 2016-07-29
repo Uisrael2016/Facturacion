@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.txtvalor = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.radioD = new System.Windows.Forms.RadioButton();
             this.radioH = new System.Windows.Forms.RadioButton();
             this.estdoLbl = new System.Windows.Forms.Label();
+            this.txtvalor = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.erroricono = new System.Windows.Forms.ErrorProvider(this.components);
             this.btguardar = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
@@ -86,34 +86,6 @@
             this.group.TabIndex = 8;
             this.group.Text = "groupPanel1";
             // 
-            // txtvalor
-            // 
-            // 
-            // 
-            // 
-            this.txtvalor.Border.Class = "TextBoxBorder";
-            this.txtvalor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtvalor.Location = new System.Drawing.Point(151, 18);
-            this.txtvalor.Name = "txtvalor";
-            this.txtvalor.PreventEnterBeep = true;
-            this.txtvalor.Size = new System.Drawing.Size(170, 20);
-            this.txtvalor.TabIndex = 2;
-            this.txtvalor.WatermarkText = "Ingrese el valor de la Tarifa";
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(34, 16);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Valor ";
-            // 
             // radioD
             // 
             this.radioD.AutoSize = true;
@@ -150,6 +122,34 @@
             this.estdoLbl.Size = new System.Drawing.Size(50, 19);
             this.estdoLbl.TabIndex = 18;
             this.estdoLbl.Text = "Estado";
+            // 
+            // txtvalor
+            // 
+            // 
+            // 
+            // 
+            this.txtvalor.Border.Class = "TextBoxBorder";
+            this.txtvalor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtvalor.Location = new System.Drawing.Point(151, 18);
+            this.txtvalor.Name = "txtvalor";
+            this.txtvalor.PreventEnterBeep = true;
+            this.txtvalor.Size = new System.Drawing.Size(170, 20);
+            this.txtvalor.TabIndex = 2;
+            this.txtvalor.WatermarkText = "Ingrese el valor de la Tarifa";
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(34, 16);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "Valor ";
             // 
             // erroricono
             // 
@@ -207,9 +207,9 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.ButtonX btguardar;
         private DevComponents.DotNetBar.ButtonX buttonX2;
-        private System.Windows.Forms.RadioButton radioD;
-        private System.Windows.Forms.RadioButton radioH;
         private System.Windows.Forms.Label estdoLbl;
         private System.Windows.Forms.ErrorProvider erroricono;
+        public System.Windows.Forms.RadioButton radioH;
+        public System.Windows.Forms.RadioButton radioD;
     }
 }

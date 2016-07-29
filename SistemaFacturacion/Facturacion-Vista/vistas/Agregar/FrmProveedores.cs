@@ -39,7 +39,15 @@ namespace Facturacion_Vista.Vistas
                 txtreprlegal.Text = proveedorSeleccionado.RepresentanteLegal;
                 txtEmail.Text = proveedorSeleccionado.Email;
                 txtDireccion.Text = proveedorSeleccionado.Direccion;
-                txtTelefono.Text = proveedorSeleccionado.Telefono;      
+                txtTelefono.Text = proveedorSeleccionado.Telefono;
+                if (proveedorSeleccionado.Estado == 'A')
+                {
+                    radioH.Select();
+                }
+                else
+                {
+                    radioD.Select();
+                }
 
             }
             else
@@ -89,6 +97,7 @@ namespace Facturacion_Vista.Vistas
                         proveedorSeleccionado.UsuarioEgresa = Login.usuarioPerfilManager.IdUsuario.IdUsuario;
                         proveedorSeleccionado.FechaEgreso = DateTime.Now;
                         proveedorDao.modificar(proveedorSeleccionado);
+
                         Mensaje.mensajeInformacion("Informacion ", "Proveedor Actualizado con exito");
                         this.Hide();
                     }

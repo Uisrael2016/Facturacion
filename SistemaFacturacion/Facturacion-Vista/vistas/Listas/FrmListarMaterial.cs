@@ -26,6 +26,7 @@ namespace Facturacion_Vista.Vistas
         {
             FrmMaterial frm = new FrmMaterial(0);
             frm.ShowDialog();
+            this.listarMaterial();
         }
         private void listarMaterial()
         {

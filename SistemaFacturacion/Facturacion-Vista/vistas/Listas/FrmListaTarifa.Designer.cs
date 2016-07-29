@@ -98,6 +98,7 @@
             this.dtlista.RowHeadersVisible = false;
             this.dtlista.Size = new System.Drawing.Size(254, 180);
             this.dtlista.TabIndex = 4;
+            this.dtlista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
             // 
             // idProveedor
             // 

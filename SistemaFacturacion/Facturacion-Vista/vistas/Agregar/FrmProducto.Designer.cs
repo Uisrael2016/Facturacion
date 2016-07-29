@@ -36,13 +36,13 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.group = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btnImagen = new DevComponents.DotNetBar.ButtonX();
             this.pictureProducto = new System.Windows.Forms.PictureBox();
             this.textDescuento = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textPrecio = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.comboTipoPro = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.textDescPro = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -63,7 +63,7 @@
             this.btnRemove = new DevComponents.DotNetBar.ButtonItem();
             this.btnIngresar = new DevComponents.DotNetBar.ButtonX();
             this.btnCancelar = new DevComponents.DotNetBar.ButtonX();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaDetalle)).BeginInit();
@@ -103,7 +103,7 @@
             // 
             this.group.CanvasColor = System.Drawing.SystemColors.Control;
             this.group.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.group.Controls.Add(this.labelX4);
+            this.group.Controls.Add(this.labelX5);
             this.group.Controls.Add(this.labelX1);
             this.group.Controls.Add(this.btnImagen);
             this.group.Controls.Add(this.pictureProducto);
@@ -148,20 +148,6 @@
             this.group.TabIndex = 3;
             this.group.Text = "Informacion Necesario";
             // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(185, 105);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(64, 23);
-            this.labelX4.TabIndex = 13;
-            this.labelX4.Text = "Descuento";
-            // 
             // labelX1
             // 
             this.labelX1.BackColor = System.Drawing.Color.Transparent;
@@ -204,10 +190,10 @@
             // 
             this.textDescuento.Border.Class = "TextBoxBorder";
             this.textDescuento.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textDescuento.Location = new System.Drawing.Point(239, 107);
+            this.textDescuento.Location = new System.Drawing.Point(255, 107);
             this.textDescuento.Name = "textDescuento";
             this.textDescuento.PreventEnterBeep = true;
-            this.textDescuento.Size = new System.Drawing.Size(100, 20);
+            this.textDescuento.Size = new System.Drawing.Size(84, 20);
             this.textDescuento.TabIndex = 7;
             // 
             // textPrecio
@@ -239,6 +225,10 @@
             this.comboTipoPro.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboTipoPro.TabIndex = 5;
             this.comboTipoPro.WatermarkText = "SELECCIONE";
+            // 
+            // comboItem3
+            // 
+            this.comboItem3.Text = "SELECCIONE";
             // 
             // comboItem1
             // 
@@ -408,6 +398,7 @@
             // 
             // btnRemove
             // 
+            this.btnRemove.Image = global::Facturacion_Vista.Properties.Resources.resta;
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Text = "buttonItem2";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
@@ -436,9 +427,19 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // comboItem3
+            // labelX5
             // 
-            this.comboItem3.Text = "SELECCIONE";
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(174, 104);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.SingleLineColor = System.Drawing.Color.Transparent;
+            this.labelX5.Size = new System.Drawing.Size(75, 23);
+            this.labelX5.TabIndex = 15;
+            this.labelX5.Text = "Descuento";
             // 
             // FrmProducto
             // 
@@ -478,7 +479,6 @@
         private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
         private System.Windows.Forms.ErrorProvider erroricono;
-        private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem btnDetalle;
@@ -494,5 +494,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn color;
         private DevComponents.Editors.ComboItem comboItem3;
+        private DevComponents.DotNetBar.LabelX labelX5;
     }
 }

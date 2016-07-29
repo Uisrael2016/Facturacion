@@ -32,12 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtLista = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.id_tipo_material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonNuevo = new DevComponents.DotNetBar.ButtonItem();
             this.buttonBuscar = new DevComponents.DotNetBar.ButtonItem();
             this.txtBuscar = new DevComponents.DotNetBar.TextBoxItem();
-            this.id_tipo_material = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtLista.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtLista.EnableHeadersVisualStyles = false;
@@ -82,10 +82,25 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtLista.RowHeadersVisible = false;
             this.dtLista.Size = new System.Drawing.Size(445, 217);
             this.dtLista.TabIndex = 0;
             this.dtLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtLista_CellDoubleClick);
             this.dtLista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtLista_KeyPress);
+            // 
+            // id_tipo_material
+            // 
+            this.id_tipo_material.HeaderText = "ID";
+            this.id_tipo_material.Name = "id_tipo_material";
+            this.id_tipo_material.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo de Material";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            this.tipo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // bar1
             // 
@@ -125,20 +140,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.TextBoxWidth = 175;
             this.txtBuscar.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            // 
-            // id_tipo_material
-            // 
-            this.id_tipo_material.HeaderText = "ID";
-            this.id_tipo_material.Name = "id_tipo_material";
-            this.id_tipo_material.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo de Material";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            this.tipo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmListarTipoMaterial
             // 

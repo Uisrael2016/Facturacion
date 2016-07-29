@@ -17,34 +17,36 @@ namespace Facturacion_Vista.Vistas.transacciones
 {
     public partial class FrmNotaPedido : DevComponents.DotNetBar.Office2007Form
     {
-        private Producto nuevo;
+        private Producto nuevoproducto;
         //private List<DetalleProducto> listaDetpro;
         private List<Producto> listaProducto;
+        private int _idproducto;
         double cantidadpro  ;
         double totalprecio ;
         double subtotalproducto ;
         public FrmNotaPedido(int id)
         {            
             InitializeComponent();
+            _idproducto = id;
             listaProducto = new List<Producto>();
-            nuevo = new Producto();
+            
             
         }        
         
         private void btagregar_Click(object sender, EventArgs e)
         {
 
-            if (nuevo != null)
-            {
-                listaProducto.Add(nuevo);
+           // if (nuevoproducto != null)
+            //{
+                listaProducto.Add(nuevoproducto);
                // listaProducto.Add(nuevaSalida);
                 reset();
                 listarProducto();
-            }
-            else
-            {
-                Mensaje.mensajeAlerta("Información", "Escojer un detalle de producto");
-            }
+            //}
+            //else
+            //{
+            //    Mensaje.mensajeAlerta("Información", "Escojer un detalle de producto");
+            //}
         }
         private void listarProducto()
         {
@@ -55,16 +57,9 @@ namespace Facturacion_Vista.Vistas.transacciones
                 dtdocumento.Rows.Clear();
                 int cont = 1;
                 foreach (Producto det in listaProducto)
-                {
-                    
-                    //cantidadpro = Convert.ToDouble(txtcantidad.Text);
-                    totalprecio = cantidadpro * det.Precio;
-                    txtsubtotal.Text = Convert.ToString(subtotalproducto);
-                    subtotalproducto += totalprecio;
-                    dtdocumento.Rows.Add(cont, det.DescProducto, cantidadpro, det.Precio.ToString("0.00## $"),this.totalprecio.ToString("0.00## $"));
-                    cont++;                  
-                    txtsubtotal.Text = Convert.ToString(subtotalproducto.ToString("0.00## $"));
-                    
+                {                           
+                    dtdocumento.Rows.Add(cont,det.DescProducto,this.txtcantidad,det.Precio);
+                    cont++;               
                 }
             }
             reset();
@@ -75,7 +70,7 @@ namespace Facturacion_Vista.Vistas.transacciones
             txtDetalle.Text = string.Empty;
             this.txtcantidad.Text = string.Empty;
             txtPrecio.Text = string.Empty;
-            nuevo = null;
+            nuevoproducto = null;
         }
         private void setGroup(Cliente c)
         {

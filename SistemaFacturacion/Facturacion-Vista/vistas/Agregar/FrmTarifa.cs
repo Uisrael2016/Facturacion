@@ -30,6 +30,15 @@ namespace Facturacion_Vista.Vistas.Agregar
                 _accion = Acciones.update;
                 tarifaseleccionado = tarifaDao.consultarPorId(id);
                 txtvalor.Text = Convert.ToString(tarifaseleccionado.ValTarifa);
+                //tarifaseleccionado.Estado = estado;
+                if (tarifaseleccionado.Estado == 'A')
+                {
+                    radioH.Select();
+                }
+                else
+                {
+                    radioD.Select();
+                }
 
             }
             else
@@ -62,7 +71,9 @@ namespace Facturacion_Vista.Vistas.Agregar
                     }
                     else
                     {
+                        tarifaseleccionado.IdTarifa = idTarifa;
                         tarifaseleccionado.Estado = estado;
+                        tarifaDao.modificar(tarifaseleccionado);
                         Mensaje.mensajeInformacion("Informacion ", "Tarifa Actualizada con exito");
                         this.Hide();
                     }
