@@ -137,15 +137,6 @@ namespace Facturacion_Vista.Vistas.transacciones
         
         private void btBuscar_Click_1(object sender, EventArgs e)
         {
-            FrmListarProducto frml = new FrmListarProducto(Acciones.inject);
-            frml.ShowDialog();
-            if (frml.detaleproducoSeleccionado != null)
-            {
-                nuevo = new DetalleProducto();
-                nuevo = frml.detaleproducoSeleccionado;
-               setGrouppro(nuevo);
-            }
-
         }
 
         private void dtdocumento_RowDefaultCellStyleChanged(object sender, DataGridViewRowEventArgs e)

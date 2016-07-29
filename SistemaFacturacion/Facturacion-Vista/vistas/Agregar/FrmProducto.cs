@@ -131,7 +131,8 @@ namespace Facturacion_Vista.Vistas.Agregar
                 {
                     Mensaje.mensajeAlerta("Informacion", "Seleccione un Tipo");
                 }
-
+                Mensaje.mensajeConfirm("Informacion", "Agregado con Exito");
+                this.Hide();
             }
 
 

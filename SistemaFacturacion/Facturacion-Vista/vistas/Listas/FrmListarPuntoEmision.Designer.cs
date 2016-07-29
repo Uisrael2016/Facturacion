@@ -154,7 +154,7 @@
             this.Name = "FrmListarPuntoEmision";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Listar Punto de Emisión";
-            this.Load += new System.EventHandler(this.FrmListarPuntoEmision_Load);
+           // this.Load += new System.EventHandler(this.FrmListarPuntoEmision_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtLista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.ResumeLayout(false);

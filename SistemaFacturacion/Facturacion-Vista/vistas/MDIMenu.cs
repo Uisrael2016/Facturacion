@@ -77,7 +77,7 @@ namespace Facturacion_Vista.Vistas
 
         private void itemNotaPedido_Click(object sender, EventArgs e)
         {
-            FrmNotaPedido frm = new FrmNotaPedido();
+            FrmNotaPedido frm = new FrmNotaPedido(0);
             frm.ShowDialog();
         }
 
