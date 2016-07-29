@@ -17,70 +17,80 @@ namespace Facturacion_Vista.Vistas.transacciones
 {
     public partial class FrmNotaPedido : DevComponents.DotNetBar.Office2007Form
     {
-        double preciopro ;
-        double cantidadpro ;
-        double total;
-      
-        public FrmNotaPedido()
-        {
+        private DetalleProducto nuevo;
+        private List<DetalleProducto> listaDetpro;
+        double cantidadpro  ;
+        double totalprecio ;
+        double subtotalproducto ;
+        public FrmNotaPedido(int id)
+        {            
             InitializeComponent();
-        }
+            listaDetpro = new List<DetalleProducto>();
+            
+        }        
         
         private void btagregar_Click(object sender, EventArgs e)
         {
-             preciopro = Convert.ToDouble(txtPrecio.Text);
-            cantidadpro = Convert.ToDouble(txtcantidad.Text);
-
             int bandera = 0;
 
-                for (int fila = 0; fila < dtdocumento.Rows.Count; fila++)
+            for (int fila = 0; fila < dtdocumento.Rows.Count; fila++)
+            {
+                if (dtdocumento.Rows[fila].Cells["desc_producto"].Value.ToString() == this.txtDetalle.Text)
                 {
-                    if (dtdocumento.Rows[fila].Cells["desc_producto"].Value.ToString() == this.txtDetalle.Text)
-                    {
-                        bandera = 1;
-                    }
+                    bandera = 1;
                 }
+            }
 
-                if (bandera == 1)
+            if (bandera == 1)
+            {
+                Mensaje.mensajeError("Error", "Error este producto ya fue ingresado");
+            }
+            else
+            {
+                if (nuevo != null)
                 {
-                    Mensaje.mensajeError("Error", "Error este producto ya fue ingresado");
-                }
+                    listaDetpro.Add(nuevo);
+                    listarProducto();
+                    //reset();
 
+                }
                 else
                 {
-                    if (String.IsNullOrWhiteSpace(this.txtDetalle.Text) ||
-                        (String.IsNullOrWhiteSpace(this.txtPrecio.Text)) ||
-                        (String.IsNullOrWhiteSpace(this.txtcantidad.Text)))
-                    {
-                        Mensaje.mensajeError("Error", "No se puede dejar campos vacios");
-                    }
-
-                    else if (cantidadpro == 0)
-                    {
-                        Mensaje.mensajeError("Error", "La Cantidad no puede ser igual a 0");
-                    }
-                                       
-                    else
-                    {
-                        this.dtdocumento.Rows.Add("", this.txtDetalle.Text,
-                        cantidadpro, preciopro.ToString("0.00## $"),
-                        total.ToString("0.00## $"));
-                    this.txtDetalle.Text = String.Empty;
-                    this.txtcantidad.Text = Convert.ToString( 0);
-                    this.txtPrecio.Text = Convert.ToString(0);
-                    this.txttotal.Text = Convert.ToString(0);
-
-
-
-
+                    Mensaje.mensajeAlerta("Información", "Escojer un detalle de producto");
                 }
-                }
-            
-           }
-
-        private void buttonItem1_Click(object sender, EventArgs e)
+            }
+           
+        }
+        private void listarProducto()
         {
+
             
+            if (listaDetpro != null)
+            {
+                dtdocumento.Rows.Clear();
+                int cont = 1;
+                foreach (DetalleProducto det in listaDetpro)
+                {
+                    
+                    cantidadpro = Convert.ToDouble(txtcantidad.Text);
+                    totalprecio = cantidadpro * det.IdProducto.Precio;
+                    txtsubtotal.Text = Convert.ToString(subtotalproducto);
+                    subtotalproducto += totalprecio;
+                    dtdocumento.Rows.Add(cont,det.IdProducto.DescProducto,cantidadpro,det.IdProducto.Precio.ToString("0.00## $"),this.totalprecio.ToString("0.00## $"));
+                    cont++;                  
+                    txtsubtotal.Text = Convert.ToString(subtotalproducto.ToString("0.00## $"));
+                    
+                }
+            }
+            reset();
+            
+        }
+        private void reset()
+        {
+            txtDetalle.Text = string.Empty;
+            this.txtcantidad.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            nuevo = null;
         }
         private void setGroup(Cliente c)
         {
@@ -99,78 +109,47 @@ namespace Facturacion_Vista.Vistas.transacciones
                 setGroup(cliente);
             }
         }
-        private void setGrouppro(Producto p)
+        private void setGrouppro(DetalleProducto det)
         {
-            txtDetalle.Text = p.DescProducto;
-            txtPrecio.Text = Convert.ToString(p.Precio);
+            txtDetalle.Text = det.IdProducto.DescProducto;
+            txtPrecio.Text = Convert.ToString(det.IdProducto.Precio);
            
         }
-        private void btBuscar_Click(object sender, EventArgs e)
-        {
-            FrmListarProducto frml = new FrmListarProducto(Utilidades.Acciones.inject);
-            frml.ShowDialog();
-            if (frml.productoSeleccionado != null)
-            {
-               Producto producto = frml.productoSeleccionado;
-                setGrouppro(producto);
-            }
-        }
-
-        private void btguardar_Click(object sender, EventArgs e)
-        {
-
-        }
-
+             
        
-
-        private void dtdocumento_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
-        {
-            this.dtdocumento.Rows[e.RowIndex].Cells[0].Value=(e.RowIndex+1).ToString();
-        }
-
-        private void txttotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcantidad_TextChanged(object sender, EventArgs e)
-            {
-            preciopro = Convert.ToDouble(txtPrecio.Text);
-           cantidadpro = Convert.ToDouble(txtcantidad.Text);
-            total = preciopro * cantidadpro;
-            txttotal.Text = Convert.ToString(total);
-
-        }
-
-        private void dtdocumento_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+                      
+      
         private void btresta_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(dtdocumento.Rows.Count) > 0)
             {
+                int id = Convert.ToInt32(dtdocumento.CurrentRow.Cells[0].Value);
                 this.dtdocumento.Rows.Remove(this.dtdocumento.Rows[this.dtdocumento.CurrentRow.Index]);
+                listaDetpro.RemoveAt(id - 1);
+
             }
 
             else
             {
-                Mensaje.mensajeError("Error","Debes seleccionar una fila para eliminar");
+                Mensaje.mensajeError("Error", "Debes seleccionar una fila para eliminar");
             }
         }
-        private void subtotalpro()
+        
+        private void btBuscar_Click_1(object sender, EventArgs e)
         {
-            double subtotal = 0 ;
-            foreach (DataGridViewRow row in dtdocumento.Rows)
+            FrmListarProducto frml = new FrmListarProducto(Acciones.inject);
+            frml.ShowDialog();
+            if (frml.detaleproducoSeleccionado != null)
             {
-                subtotal += Convert.ToDouble(row.Cells["total_sin_impuesto"].Value);
+                nuevo = new DetalleProducto();
+                nuevo = frml.detaleproducoSeleccionado;
+               setGrouppro(nuevo);
             }
-            txtsubtotal.Text = Convert.ToString(subtotal);
+
         }
-        private void dtdocumento_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+
+        private void dtdocumento_RowDefaultCellStyleChanged(object sender, DataGridViewRowEventArgs e)
         {
-            this.subtotalpro();
         }
     }
 }

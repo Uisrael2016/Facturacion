@@ -280,3 +280,4 @@ C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Factur
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Properties.Resources.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.MDIMenu.resources
 C:\workspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.csproj.GenerateResource.Cache
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\bin\Debug\Facturacion-Vista.exe.config

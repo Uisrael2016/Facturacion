@@ -23,6 +23,8 @@ namespace Facturacion_Vista.Vistas.Agregar
         public Salida salida { get; set; }
         public Material _material { get; set; }
         private string color;
+        private double stockMaterial;
+
         public FrmDetalleProducto(Acciones accion)
         {
             InitializeComponent();
@@ -91,10 +93,19 @@ namespace Facturacion_Vista.Vistas.Agregar
                 }
                 else
                 {
-                    resul = _material.Stock - valor;
-                    setDetalleProduc();
-                    setSalida();
-                    this.Hide();
+                    stockMaterial = _material.Stock;
+                    stockMaterial -= valor;
+                    if (stockMaterial <= 0){
+                        Mensaje.mensajeAlerta("Información", "Cantidad exede stock de material");
+                        this.Hide();
+                    } else {
+                        resul = _material.Stock - valor;
+                        setDetalleProduc();
+                        setSalida();
+                        this.Hide();
+
+                    }
+                    
                 }
 
 

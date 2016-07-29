@@ -24,14 +24,23 @@ namespace Facturacion_Vista.Vistas.Agregar
         public Producto productoSeleccionado { get; set; }
         private string valor;
         private DetalleProducto nuevoDetalle;
-        private Material material;
         private Salida nuevaSalida;
         private List<DetalleProducto> listaDetalle;
+        private List<Salida> listaSalida;
+        private Material materialSeleccionado { get; set; }
+        private double valorSalida;
+        private double valorStock;
+        private MaterialDao materialDao;
         public FrmProducto(int id)
         {
             InitializeComponent();
             this.idProducto = id;
             listaDetalle = new List<DetalleProducto>();
+            listaSalida = new List<Salida>();
+            productoDao = new ProductoDao();
+            salidaDao = new SalidaDao();
+            detalleDao = new DetalleProductoDao();
+            materialDao = new MaterialDao();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -72,7 +81,10 @@ namespace Facturacion_Vista.Vistas.Agregar
         }
         public void setproducto()
         {
-
+            if (_accion == Acciones.insert)
+            {
+                productoSeleccionado = new Producto();
+            }
             productoSeleccionado.DescProducto = textDescPro.Text.ToUpper();
             if (comboTipoPro.SelectedItem == comboItem1)
             {
@@ -80,18 +92,52 @@ namespace Facturacion_Vista.Vistas.Agregar
             }
             else
             {
-                if (comboTipoPro.SelectedItem == comboItem2)
-                    valor = Convert.ToString('M');
+                valor = Convert.ToString('M');
             }
+
             productoSeleccionado.Tipo = Convert.ToChar(valor);
             productoSeleccionado.Imagen = pathFile;
             productoSeleccionado.Precio = Convert.ToDouble(textPrecio.Text);
             productoSeleccionado.Descuento = Convert.ToDouble(textDescuento.Text);
-        }
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
 
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            if (General.validaFormGroup(this.Controls, erroricono))
+            {
+                if (comboTipoPro.SelectedIndex != 0)
+                {
+                    setproducto();
+                    if (_accion == Acciones.insert)
+                    {
+                       productoDao.insertar(productoSeleccionado);
+                    }
+                    foreach (DetalleProducto det in listaDetalle) {
+                        det.IdProducto = productoSeleccionado;
+                        detalleDao.insertar(det);
+
+                    }
+                    
+                    foreach (Salida sali in listaSalida) {
+                        valorSalida += sali.CantidadEgreso;
+                        Material material = sali.IdMaterial;
+                        material.Stock = material.Stock - valorSalida;
+                        materialDao.modificar(material);
+                        salidaDao.insertar(sali);
+                    }
+                }
+                else
+                {
+                    Mensaje.mensajeAlerta("Informacion", "Seleccione un Tipo");
+                }
+
+            }
+
+
+        }
+
+
 
         private void btnDetalle_Click_1(object sender, EventArgs e)
         {
@@ -101,10 +147,24 @@ namespace Facturacion_Vista.Vistas.Agregar
             {
                 nuevoDetalle = new DetalleProducto();
                 nuevoDetalle = frm.detproductoSeleccionado;
+                
+                nuevaSalida = new Salida();
                 nuevaSalida = frm.salida;
-                material = frm._material;
-                textDescripcion.Text = nuevoDetalle.DescDetalle;
-                textCantidadDetalle.Text = Convert.ToString(nuevoDetalle.Cantidad);
+                materialSeleccionado = frm._material;
+                valorStock += nuevoDetalle.Cantidad;
+                if (valorStock > materialSeleccionado.Stock)
+                {                    
+                    Mensaje.mensajeAlerta("Informacion", "No existe suficiente stock para realizar el pedido");
+                    reset();
+                    return;
+
+                }
+                else {
+                    nuevoDetalle.IdMaterial = materialSeleccionado;
+                    textDescripcion.Text = nuevoDetalle.DescDetalle;
+                    textCantidadDetalle.Text = Convert.ToString(nuevoDetalle.Cantidad);
+                }
+                
             }
         }
 
@@ -114,11 +174,13 @@ namespace Facturacion_Vista.Vistas.Agregar
             if (nuevoDetalle != null)
             {
                 listaDetalle.Add(nuevoDetalle);
+                listaSalida.Add(nuevaSalida);
                 reset();
                 listarDetalle();
             }
-            else {
-                Mensaje.mensajeAlerta("Información","Escojer un detalle de producto");
+            else
+            {
+                Mensaje.mensajeAlerta("Información", "Escojer un detalle de producto");
             }
         }
         private void listarDetalle()
@@ -126,8 +188,8 @@ namespace Facturacion_Vista.Vistas.Agregar
             if (listaDetalle != null)
             {
                 dtListaDetalle.Rows.Clear();
-                
-                double suma=0;
+
+                double suma = 0;
                 int cont = 1;
                 foreach (DetalleProducto det in listaDetalle)
                 {
@@ -152,7 +214,8 @@ namespace Facturacion_Vista.Vistas.Agregar
             {
                 int id = Convert.ToInt32(dtListaDetalle.CurrentRow.Cells[0].Value);
                 this.dtListaDetalle.Rows.Remove(this.dtListaDetalle.Rows[this.dtListaDetalle.CurrentRow.Index]);
-                listaDetalle.RemoveAt(id-1);
+                listaDetalle.RemoveAt(id - 1);
+                listaSalida.RemoveAt(id - 1);
                 listarDetalle();
             }
 

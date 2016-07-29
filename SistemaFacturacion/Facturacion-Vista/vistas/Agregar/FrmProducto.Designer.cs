@@ -52,7 +52,7 @@
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erroricono = new System.Windows.Forms.ErrorProvider(this.components);
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.btnDetalle = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
@@ -63,10 +63,11 @@
             this.btnRemove = new DevComponents.DotNetBar.ButtonItem();
             this.btnIngresar = new DevComponents.DotNetBar.ButtonX();
             this.btnCancelar = new DevComponents.DotNetBar.ButtonX();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaDetalle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erroricono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -229,6 +230,7 @@
             this.comboTipoPro.FormattingEnabled = true;
             this.comboTipoPro.ItemHeight = 14;
             this.comboTipoPro.Items.AddRange(new object[] {
+            this.comboItem3,
             this.comboItem1,
             this.comboItem2});
             this.comboTipoPro.Location = new System.Drawing.Point(133, 61);
@@ -342,9 +344,9 @@
             this.color.Name = "color";
             this.color.ReadOnly = true;
             // 
-            // errorProvider1
+            // erroricono
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.erroricono.ContainerControl = this;
             // 
             // bar1
             // 
@@ -406,7 +408,6 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Image = global::Facturacion_Vista.Properties.Resources.remove;
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Text = "buttonItem2";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
@@ -435,6 +436,10 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // comboItem3
+            // 
+            this.comboItem3.Text = "SELECCIONE";
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,7 +456,7 @@
             this.group.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtListaDetalle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erroricono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.ResumeLayout(false);
 
@@ -472,7 +477,7 @@
         private System.Windows.Forms.PictureBox pictureProducto;
         private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider erroricono;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Bar bar1;
@@ -488,5 +493,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn color;
+        private DevComponents.Editors.ComboItem comboItem3;
     }
 }

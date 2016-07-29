@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNotaPedido));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupDatosCli = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnBuscar = new DevComponents.DotNetBar.ButtonX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -56,8 +56,6 @@
             this.txtPrecio = new DevComponents.DotNetBar.TextBoxItem();
             this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
             this.txtcantidad = new DevComponents.DotNetBar.TextBoxItem();
-            this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
-            this.txttotal = new DevComponents.DotNetBar.TextBoxItem();
             this.labeldesc = new DevComponents.DotNetBar.LabelItem();
             this.txtdescuento = new DevComponents.DotNetBar.TextBoxItem();
             this.btagregar = new DevComponents.DotNetBar.ButtonItem();
@@ -335,8 +333,6 @@
             this.txtPrecio,
             this.labelItem4,
             this.txtcantidad,
-            this.labelItem1,
-            this.txttotal,
             this.labeldesc,
             this.txtdescuento,
             this.btagregar,
@@ -344,7 +340,7 @@
             this.labelstock});
             this.barmenu.Location = new System.Drawing.Point(3, 194);
             this.barmenu.Name = "barmenu";
-            this.barmenu.Size = new System.Drawing.Size(777, 41);
+            this.barmenu.Size = new System.Drawing.Size(704, 41);
             this.barmenu.Stretch = true;
             this.barmenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.barmenu.TabIndex = 5;
@@ -356,7 +352,7 @@
             this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Text = "btbuscarprod";
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click_1);
             // 
             // labelItem2
             // 
@@ -396,19 +392,6 @@
             this.txtcantidad.TextBoxWidth = 30;
             this.txtcantidad.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.txtcantidad.WatermarkText = "0";
-            this.txtcantidad.TextChanged += new System.EventHandler(this.txtcantidad_TextChanged);
-            // 
-            // labelItem1
-            // 
-            this.labelItem1.Name = "labelItem1";
-            this.labelItem1.Text = "Total";
-            // 
-            // txttotal
-            // 
-            this.txttotal.Enabled = false;
-            this.txttotal.Name = "txttotal";
-            this.txttotal.TextBoxWidth = 50;
-            this.txttotal.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
             // labeldesc
             // 
@@ -444,15 +427,14 @@
             // 
             this.dtdocumento.AllowUserToAddRows = false;
             this.dtdocumento.AllowUserToDeleteRows = false;
-            this.dtdocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtdocumento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtdocumento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtdocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtdocumento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddetalle,
@@ -460,47 +442,45 @@
             this.cantidad,
             this.precio,
             this.total_sin_impuesto});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtdocumento.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtdocumento.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtdocumento.EnableHeadersVisualStyles = false;
             this.dtdocumento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dtdocumento.Location = new System.Drawing.Point(3, 241);
             this.dtdocumento.Name = "dtdocumento";
             this.dtdocumento.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtdocumento.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtdocumento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtdocumento.RowHeadersVisible = false;
-            this.dtdocumento.Size = new System.Drawing.Size(777, 203);
+            this.dtdocumento.Size = new System.Drawing.Size(756, 203);
             this.dtdocumento.TabIndex = 6;
-            this.dtdocumento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtdocumento_CellContentClick);
-            this.dtdocumento.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtdocumento_CellValueChanged);
-            this.dtdocumento.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dtdocumento_RowPrePaint);
+            this.dtdocumento.RowDefaultCellStyleChanged += new System.Windows.Forms.DataGridViewRowEventHandler(this.dtdocumento_RowDefaultCellStyleChanged);
             // 
             // iddetalle
             // 
-            this.iddetalle.HeaderText = "Id Detalle";
+            this.iddetalle.HeaderText = "N*";
             this.iddetalle.Name = "iddetalle";
             this.iddetalle.ReadOnly = true;
-            this.iddetalle.Visible = false;
+            this.iddetalle.Width = 50;
             // 
             // desc_producto
             // 
             this.desc_producto.HeaderText = "Descripcion Producto";
             this.desc_producto.Name = "desc_producto";
             this.desc_producto.ReadOnly = true;
-            this.desc_producto.Width = 475;
+            this.desc_producto.Width = 400;
             // 
             // cantidad
             // 
@@ -527,7 +507,7 @@
             // 
             this.txtsubtotal.Border.Class = "TextBoxBorder";
             this.txtsubtotal.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtsubtotal.Location = new System.Drawing.Point(694, 454);
+            this.txtsubtotal.Location = new System.Drawing.Point(674, 457);
             this.txtsubtotal.Name = "txtsubtotal";
             this.txtsubtotal.PreventEnterBeep = true;
             this.txtsubtotal.Size = new System.Drawing.Size(77, 20);
@@ -536,7 +516,7 @@
             // lbsubtotal
             // 
             this.lbsubtotal.AutoSize = true;
-            this.lbsubtotal.Location = new System.Drawing.Point(621, 456);
+            this.lbsubtotal.Location = new System.Drawing.Point(601, 459);
             this.lbsubtotal.Name = "lbsubtotal";
             this.lbsubtotal.Size = new System.Drawing.Size(46, 13);
             this.lbsubtotal.TabIndex = 8;
@@ -545,7 +525,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(621, 486);
+            this.label2.Location = new System.Drawing.Point(601, 489);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 10;
@@ -558,7 +538,7 @@
             // 
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(694, 484);
+            this.textBoxX2.Location = new System.Drawing.Point(674, 487);
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
             this.textBoxX2.Size = new System.Drawing.Size(77, 20);
@@ -567,7 +547,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(621, 517);
+            this.label3.Location = new System.Drawing.Point(601, 520);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(22, 13);
             this.label3.TabIndex = 12;
@@ -580,7 +560,7 @@
             // 
             this.textBoxX3.Border.Class = "TextBoxBorder";
             this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(694, 510);
+            this.textBoxX3.Location = new System.Drawing.Point(674, 513);
             this.textBoxX3.Name = "textBoxX3";
             this.textBoxX3.PreventEnterBeep = true;
             this.textBoxX3.Size = new System.Drawing.Size(77, 20);
@@ -589,7 +569,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(621, 538);
+            this.label4.Location = new System.Drawing.Point(601, 541);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 14;
@@ -602,7 +582,7 @@
             // 
             this.textBoxX4.Border.Class = "TextBoxBorder";
             this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Location = new System.Drawing.Point(694, 536);
+            this.textBoxX4.Location = new System.Drawing.Point(674, 539);
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.PreventEnterBeep = true;
             this.textBoxX4.Size = new System.Drawing.Size(77, 20);
@@ -619,7 +599,6 @@
             this.btguardar.Size = new System.Drawing.Size(85, 34);
             this.btguardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btguardar.TabIndex = 16;
-            this.btguardar.Click += new System.EventHandler(this.btguardar_Click);
             // 
             // buttonX2
             // 
@@ -647,9 +626,9 @@
             // 
             // pictureProducto
             // 
-            this.pictureProducto.Location = new System.Drawing.Point(518, 75);
+            this.pictureProducto.Location = new System.Drawing.Point(518, 77);
             this.pictureProducto.Name = "pictureProducto";
-            this.pictureProducto.Size = new System.Drawing.Size(262, 103);
+            this.pictureProducto.Size = new System.Drawing.Size(233, 103);
             this.pictureProducto.TabIndex = 19;
             this.pictureProducto.TabStop = false;
             // 
@@ -657,7 +636,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 565);
+            this.ClientSize = new System.Drawing.Size(764, 565);
             this.Controls.Add(this.pictureProducto);
             this.Controls.Add(this.labelX8);
             this.Controls.Add(this.btguardar);
@@ -737,7 +716,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn total_sin_impuesto;
-        private DevComponents.DotNetBar.LabelItem labelItem1;
-        private DevComponents.DotNetBar.TextBoxItem txttotal;
     }
 }
