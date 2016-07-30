@@ -375,3 +375,4 @@ C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Factura
 C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Properties.Resources.resources
 C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.MDIMenu.resources
 C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion-Vista.csproj.GenerateResource.Cache
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Vista\obj\Debug\Facturacion_Vista.Vistas.Listas.FrmListarPedido.resources

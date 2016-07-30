@@ -54,3 +54,4 @@ C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Entidades\bin\Debug\Git
 C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache
 C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.dll
 C:\WOKPACE C#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.pdb
+C:\WorkspaceC#\Facturacion\SistemaFacturacion\Facturacion-Entidades\obj\Debug\Facturacion-Entidades.csprojResolveAssemblyReference.cache

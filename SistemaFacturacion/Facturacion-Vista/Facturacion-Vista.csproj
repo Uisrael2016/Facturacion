@@ -149,6 +149,12 @@
     <Compile Include="Vistas\Listas\FrmListarEstablecimiento.designer.cs">
       <DependentUpon>FrmListarEstablecimiento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Listas\FrmListarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Listas\FrmListarPedido.Designer.cs">
+      <DependentUpon>FrmListarPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Listas\FrmListarPerfl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\FrmListarEstablecimiento.resx">
       <DependentUpon>FrmListarEstablecimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Listas\FrmListarPedido.resx">
+      <DependentUpon>FrmListarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Listas\FrmListarPerfl.resx">
       <DependentUpon>FrmListarPerfl.cs</DependentUpon>

@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="conexion\SessionFactory.cs" />
     <Compile Include="dao\AmbienteDao.cs" />
+    <Compile Include="dao\CabeceraDao.cs" />
     <Compile Include="dao\ClienteDao.cs" />
     <Compile Include="dao\CodigoDocumentoDao.cs" />
     <Compile Include="dao\DetalleProductoDao.cs" />

@@ -16,7 +16,7 @@ namespace Facturacion_Vista.Vistas
     public partial class MDIMenu : DevComponents.DotNetBar.Office2007RibbonForm
     {
 
-
+        
         public MDIMenu()
         {
             InitializeComponent();
@@ -80,6 +80,7 @@ namespace Facturacion_Vista.Vistas
         {
             FrmNotaPedido frm = new FrmNotaPedido(0);
             frm.ShowDialog();
+            
         }
 
         private void itemPerfiles_Click(object sender, EventArgs e)
@@ -103,6 +104,12 @@ namespace Facturacion_Vista.Vistas
         private void buttonItem16_Click(object sender, EventArgs e)
         {
             FrmListarPuntoEmision frm = new FrmListarPuntoEmision(0);
+            frm.ShowDialog();
+        }
+
+        private void itemFactura_Click(object sender, EventArgs e)
+        {
+            FrmListarPedido frm = new FrmListarPedido(0);
             frm.ShowDialog();
         }
     }

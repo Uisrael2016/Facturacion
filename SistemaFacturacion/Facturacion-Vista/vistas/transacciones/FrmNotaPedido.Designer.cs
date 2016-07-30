@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNotaPedido));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupDatosCli = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnBuscar = new DevComponents.DotNetBar.ButtonX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -79,6 +79,7 @@
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.pictureProducto = new System.Windows.Forms.PictureBox();
+            this.lbdetalletipoproducto = new DevComponents.DotNetBar.LabelX();
             this.groupDatosCli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barmenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtdocumento)).BeginInit();
@@ -291,7 +292,7 @@
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.Color.Red;
-            this.labelX2.Location = new System.Drawing.Point(536, 25);
+            this.labelX2.Location = new System.Drawing.Point(536, 32);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(29, 23);
             this.labelX2.TabIndex = 3;
@@ -315,7 +316,7 @@
             // 
             // 
             this.lbnumero.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbnumero.Location = new System.Drawing.Point(572, 23);
+            this.lbnumero.Location = new System.Drawing.Point(591, 32);
             this.lbnumero.Name = "lbnumero";
             this.lbnumero.Size = new System.Drawing.Size(160, 23);
             this.lbnumero.TabIndex = 4;
@@ -427,14 +428,14 @@
             // 
             this.dtdocumento.AllowUserToAddRows = false;
             this.dtdocumento.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtdocumento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtdocumento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtdocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtdocumento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddetalle,
@@ -442,27 +443,27 @@
             this.cantidad,
             this.precio,
             this.total_sin_impuesto});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtdocumento.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtdocumento.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtdocumento.EnableHeadersVisualStyles = false;
             this.dtdocumento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dtdocumento.Location = new System.Drawing.Point(3, 241);
             this.dtdocumento.Name = "dtdocumento";
             this.dtdocumento.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtdocumento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtdocumento.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtdocumento.RowHeadersVisible = false;
             this.dtdocumento.Size = new System.Drawing.Size(756, 203);
             this.dtdocumento.TabIndex = 6;
@@ -620,7 +621,7 @@
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Location = new System.Drawing.Point(536, 56);
             this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(145, 23);
+            this.labelX8.Size = new System.Drawing.Size(56, 23);
             this.labelX8.TabIndex = 18;
             this.labelX8.Text = " Producto";
             // 
@@ -632,11 +633,23 @@
             this.pictureProducto.TabIndex = 19;
             this.pictureProducto.TabStop = false;
             // 
+            // lbdetalletipoproducto
+            // 
+            // 
+            // 
+            // 
+            this.lbdetalletipoproducto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbdetalletipoproducto.Location = new System.Drawing.Point(536, 3);
+            this.lbdetalletipoproducto.Name = "lbdetalletipoproducto";
+            this.lbdetalletipoproducto.Size = new System.Drawing.Size(75, 23);
+            this.lbdetalletipoproducto.TabIndex = 20;
+            // 
             // FrmNotaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(764, 565);
+            this.Controls.Add(this.lbdetalletipoproducto);
             this.Controls.Add(this.pictureProducto);
             this.Controls.Add(this.labelX8);
             this.Controls.Add(this.btguardar);
@@ -683,7 +696,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textCliente;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labeltipodedocumento;
-        private DevComponents.DotNetBar.LabelX lbnumero;
         private DevComponents.DotNetBar.Bar barmenu;
         private DevComponents.DotNetBar.ButtonItem btBuscar;
         private DevComponents.DotNetBar.LabelItem labelItem2;
@@ -716,5 +728,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn total_sin_impuesto;
+        public DevComponents.DotNetBar.LabelX lbdetalletipoproducto;
+        public DevComponents.DotNetBar.LabelX lbnumero;
     }
 }
