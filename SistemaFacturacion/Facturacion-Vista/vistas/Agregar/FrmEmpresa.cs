@@ -203,5 +203,10 @@ namespace Facturacion_Vista.Vistas
 
 
         }
+
+        private void textRuc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.General.validaNumero(e, textRuc);
+        }
     }
 }

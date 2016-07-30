@@ -40,9 +40,40 @@ namespace Facturacion_Vista.Utilidades
                 e.Handled = (IsDec) ? true : false;
             else
                 e.Handled = true;
-
+            º
         }
 
+        public static void validaDecimalDev(KeyPressEventArgs e, DevComponents.DotNetBar.TextBoxItem texto)
+        {
+            if (e.KeyChar == 8)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            bool IsDec = false;
+            int nroDec = 0;
+            for (int i = 0; i < texto.Text.Length; i++)
+            {
+                if (texto.Text[i] == '.')
+                    IsDec = true;
+
+                if (IsDec && nroDec++ >= 2)
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+            }
+
+            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+                e.Handled = false;
+            else if (e.KeyChar == 46)
+                e.Handled = (IsDec) ? true : false;
+            else
+                e.Handled = true;
+
+        }
         public static void lengthNumber(KeyPressEventArgs e, TextBox texto,int valor)
         {
             bool IsDec = false;

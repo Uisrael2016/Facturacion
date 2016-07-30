@@ -123,6 +123,7 @@
             this.textRuc.Name = "textRuc";
             this.textRuc.Size = new System.Drawing.Size(180, 20);
             this.textRuc.TabIndex = 4;
+            this.textRuc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRuc_KeyPress);
             // 
             // label3
             // 
@@ -288,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 355);
+            this.ClientSize = new System.Drawing.Size(754, 353);
             this.Controls.Add(this.group);
             this.Controls.Add(this.cancelarBtn);
             this.Controls.Add(this.guardarBtn);

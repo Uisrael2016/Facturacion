@@ -333,5 +333,15 @@ namespace Facturacion_Vista.Vistas.transacciones
                 Mensaje.mensajeAlerta("Información", "Debe seleccionar un cliente");
             }
         }
+
+        private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.General.validaDecimalDev(e, txtcantidad);
+        }
+
+        private void txtdescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.General.validaDecimalDev(e, txtdescuento);
+        }
     }
 }

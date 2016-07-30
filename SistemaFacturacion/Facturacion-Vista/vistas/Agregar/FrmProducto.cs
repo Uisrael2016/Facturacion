@@ -236,5 +236,15 @@ namespace Facturacion_Vista.Vistas.Agregar
                 Mensaje.mensajeError("Error", "Debes seleccionar una fila para eliminar");
             }
         }
+
+        private void textPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.General.validaDecimal(e, textPrecio);
+        }
+
+        private void textDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilidades.General.validaDecimal(e, textDescuento);
+        }
     }
 }
