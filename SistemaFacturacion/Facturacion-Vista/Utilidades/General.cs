@@ -40,7 +40,7 @@ namespace Facturacion_Vista.Utilidades
                 e.Handled = (IsDec) ? true : false;
             else
                 e.Handled = true;
-            º
+            
         }
 
         public static void validaDecimalDev(KeyPressEventArgs e, DevComponents.DotNetBar.TextBoxItem texto)

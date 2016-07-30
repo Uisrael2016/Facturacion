@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Facturacion_Vista.Vistas.Listas;
 using Facturacion_Vista.Vistas.Agregar;
-
+using Facturacion_Vista.Vistas.Transacciones;
 namespace Facturacion_Vista.Vistas
 {
     public partial class MDIMenu : DevComponents.DotNetBar.Office2007RibbonForm
@@ -109,6 +109,12 @@ namespace Facturacion_Vista.Vistas
         private void itemFactura_Click(object sender, EventArgs e)
         {
             FrmListarPedido frm = new FrmListarPedido(0);
+            frm.ShowDialog();
+        }
+
+        private void buttonItem17_Click(object sender, EventArgs e)
+        {
+            FrmReporte frm = new FrmReporte();
             frm.ShowDialog();
         }
     }

@@ -37,37 +37,41 @@
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
-            this.itemFactura = new DevComponents.DotNetBar.ButtonItem();
-            this.itemNotaPedido = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
-            this.itemCliente = new DevComponents.DotNetBar.ButtonItem();
-            this.itemProveedor = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
-            this.itemEmpresa = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.riiboncatalagos = new DevComponents.DotNetBar.RibbonBar();
-            this.itemDocContables = new DevComponents.DotNetBar.ButtonItem();
-            this.itemMaterial = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
-            this.itemTarifa = new DevComponents.DotNetBar.ButtonItem();
-            this.itemProducto = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
-            this.itemUsuarioPerfil = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.itemUsuarios = new DevComponents.DotNetBar.ButtonItem();
-            this.itemPerfiles = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
+            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.menuAdministracion = new DevComponents.DotNetBar.RibbonTabItem();
             this.menuPermisos = new DevComponents.DotNetBar.RibbonTabItem();
             this.menuCatalogos = new DevComponents.DotNetBar.RibbonTabItem();
             this.menuConfiguracion = new DevComponents.DotNetBar.RibbonTabItem();
             this.menuRegistro = new DevComponents.DotNetBar.RibbonTabItem();
             this.menuComprobantes = new DevComponents.DotNetBar.RibbonTabItem();
+            this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.itemFactura = new DevComponents.DotNetBar.ButtonItem();
+            this.itemNotaPedido = new DevComponents.DotNetBar.ButtonItem();
+            this.itemDocContables = new DevComponents.DotNetBar.ButtonItem();
+            this.itemMaterial = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
+            this.itemTarifa = new DevComponents.DotNetBar.ButtonItem();
+            this.itemProducto = new DevComponents.DotNetBar.ButtonItem();
+            this.itemUsuarioPerfil = new DevComponents.DotNetBar.ButtonItem();
+            this.itemUsuarios = new DevComponents.DotNetBar.ButtonItem();
+            this.itemPerfiles = new DevComponents.DotNetBar.ButtonItem();
+            this.itemCliente = new DevComponents.DotNetBar.ButtonItem();
+            this.itemProveedor = new DevComponents.DotNetBar.ButtonItem();
+            this.itemEmpresa = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
             this.applicationButton1 = new DevComponents.DotNetBar.ApplicationButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
@@ -87,24 +91,21 @@
             this.itemContainer4 = new DevComponents.DotNetBar.ItemContainer();
             this.buttonItem12 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem13 = new DevComponents.DotNetBar.ButtonItem();
-            this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.statusStrip.SuspendLayout();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
-            this.ribbonPanel6.SuspendLayout();
-            this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel6.SuspendLayout();
+            this.ribbonPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(5, 376);
+            this.statusStrip.Location = new System.Drawing.Point(5, 373);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(622, 22);
             this.statusStrip.TabIndex = 2;
@@ -209,7 +210,8 @@
             this.ribbonBar3.DragDropSupport = true;
             this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.itemFactura,
-            this.itemNotaPedido});
+            this.itemNotaPedido,
+            this.buttonItem17});
             this.ribbonBar3.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar3.Name = "ribbonBar3";
             this.ribbonBar3.Size = new System.Drawing.Size(619, 92);
@@ -224,180 +226,6 @@
             // 
             // 
             this.ribbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // itemFactura
-            // 
-            this.itemFactura.Image = global::Facturacion_Vista.Properties.Resources.factura;
-            this.itemFactura.Name = "itemFactura";
-            this.itemFactura.SubItemsExpandWidth = 14;
-            this.itemFactura.Text = "Factura";
-            this.itemFactura.Tooltip = "FACTURA";
-            this.itemFactura.Click += new System.EventHandler(this.itemFactura_Click);
-            // 
-            // itemNotaPedido
-            // 
-            this.itemNotaPedido.Image = global::Facturacion_Vista.Properties.Resources.notapedido;
-            this.itemNotaPedido.Name = "itemNotaPedido";
-            this.itemNotaPedido.SubItemsExpandWidth = 14;
-            this.itemNotaPedido.Text = "Notas de Pedido";
-            this.itemNotaPedido.Tooltip = "NOTA DE PEDIDO";
-            this.itemNotaPedido.Click += new System.EventHandler(this.itemNotaPedido_Click);
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel6.Controls.Add(this.ribbonBar5);
-            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel6.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel6.Size = new System.Drawing.Size(622, 95);
-            // 
-            // 
-            // 
-            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel6.TabIndex = 6;
-            this.ribbonPanel6.Visible = false;
-            // 
-            // ribbonBar5
-            // 
-            this.ribbonBar5.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar5.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar5.ContainerControlProcessDialogKey = true;
-            this.ribbonBar5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar5.DragDropSupport = true;
-            this.ribbonBar5.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.itemCliente,
-            this.itemProveedor});
-            this.ribbonBar5.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar5.Name = "ribbonBar5";
-            this.ribbonBar5.Size = new System.Drawing.Size(619, 92);
-            this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar5.TabIndex = 0;
-            this.ribbonBar5.Text = "Registro";
-            // 
-            // 
-            // 
-            this.ribbonBar5.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar5.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // itemCliente
-            // 
-            this.itemCliente.Image = global::Facturacion_Vista.Properties.Resources.cliente;
-            this.itemCliente.Name = "itemCliente";
-            this.itemCliente.SubItemsExpandWidth = 14;
-            this.itemCliente.Text = "Cliente";
-            this.itemCliente.Click += new System.EventHandler(this.buttonItem26_Click);
-            // 
-            // itemProveedor
-            // 
-            this.itemProveedor.Image = global::Facturacion_Vista.Properties.Resources.proveedor;
-            this.itemProveedor.Name = "itemProveedor";
-            this.itemProveedor.SubItemsExpandWidth = 14;
-            this.itemProveedor.Text = "Proveedor";
-            this.itemProveedor.Click += new System.EventHandler(this.itemProveedor_Click);
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel5.Controls.Add(this.ribbonBar2);
-            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel5.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel5.Size = new System.Drawing.Size(622, 95);
-            // 
-            // 
-            // 
-            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel5.TabIndex = 5;
-            this.ribbonPanel5.Visible = false;
-            // 
-            // ribbonBar2
-            // 
-            this.ribbonBar2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar2.ContainerControlProcessDialogKey = true;
-            this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar2.DragDropSupport = true;
-            this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.itemEmpresa,
-            this.buttonItem15,
-            this.buttonItem16});
-            this.ribbonBar2.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(619, 92);
-            this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar2.TabIndex = 0;
-            this.ribbonBar2.Text = "Configuracion";
-            // 
-            // 
-            // 
-            this.ribbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // itemEmpresa
-            // 
-            this.itemEmpresa.Image = global::Facturacion_Vista.Properties.Resources.company;
-            this.itemEmpresa.Name = "itemEmpresa";
-            this.itemEmpresa.SubItemsExpandWidth = 14;
-            this.itemEmpresa.Text = "Empresa";
-            this.itemEmpresa.Tooltip = "EMPRESA";
-            this.itemEmpresa.Click += new System.EventHandler(this.itemEmpresa_Click);
-            // 
-            // buttonItem15
-            // 
-            this.buttonItem15.Image = global::Facturacion_Vista.Properties.Resources.office_building_icon;
-            this.buttonItem15.ImageFixedSize = new System.Drawing.Size(80, 60);
-            this.buttonItem15.Name = "buttonItem15";
-            this.buttonItem15.SubItemsExpandWidth = 14;
-            this.buttonItem15.Tooltip = "Establecimiento";
-            this.buttonItem15.Click += new System.EventHandler(this.buttonItem15_Click);
-            // 
-            // buttonItem16
-            // 
-            this.buttonItem16.Image = global::Facturacion_Vista.Properties.Resources.icon_clickPuntoVenta;
-            this.buttonItem16.ImageFixedSize = new System.Drawing.Size(80, 60);
-            this.buttonItem16.Name = "buttonItem16";
-            this.buttonItem16.SubItemsExpandWidth = 14;
-            this.buttonItem16.Tooltip = "Punto de Emisión";
-            this.buttonItem16.Click += new System.EventHandler(this.buttonItem16_Click);
             // 
             // ribbonPanel2
             // 
@@ -459,50 +287,6 @@
             // 
             this.riiboncatalagos.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // itemDocContables
-            // 
-            this.itemDocContables.Image = global::Facturacion_Vista.Properties.Resources.doccontable;
-            this.itemDocContables.Name = "itemDocContables";
-            this.itemDocContables.SubItemsExpandWidth = 14;
-            this.itemDocContables.Text = "Documentos Contables";
-            this.itemDocContables.Tooltip = "DOCUMENTOS CONTABLES";
-            this.itemDocContables.Click += new System.EventHandler(this.itemDocContables_Click);
-            // 
-            // itemMaterial
-            // 
-            this.itemMaterial.Image = global::Facturacion_Vista.Properties.Resources.mate;
-            this.itemMaterial.Name = "itemMaterial";
-            this.itemMaterial.SubItemsExpandWidth = 14;
-            this.itemMaterial.Text = "Materiales";
-            this.itemMaterial.Tooltip = "MATERIAL";
-            this.itemMaterial.Click += new System.EventHandler(this.itemMaterial_Click);
-            // 
-            // buttonItem14
-            // 
-            this.buttonItem14.Image = global::Facturacion_Vista.Properties.Resources.material;
-            this.buttonItem14.Name = "buttonItem14";
-            this.buttonItem14.SubItemsExpandWidth = 14;
-            this.buttonItem14.Tooltip = "Tipo Material";
-            this.buttonItem14.Click += new System.EventHandler(this.buttonItem14_Click);
-            // 
-            // itemTarifa
-            // 
-            this.itemTarifa.Image = global::Facturacion_Vista.Properties.Resources.tarifa;
-            this.itemTarifa.Name = "itemTarifa";
-            this.itemTarifa.SubItemsExpandWidth = 14;
-            this.itemTarifa.Text = "Tarifa";
-            this.itemTarifa.Tooltip = "IMPUESTO";
-            this.itemTarifa.Click += new System.EventHandler(this.itemTarifa_Click);
-            // 
-            // itemProducto
-            // 
-            this.itemProducto.Image = global::Facturacion_Vista.Properties.Resources.product;
-            this.itemProducto.Name = "itemProducto";
-            this.itemProducto.SubItemsExpandWidth = 14;
-            this.itemProducto.Text = "buttonItem14";
-            this.itemProducto.Tooltip = "PRODUCTO";
-            this.itemProducto.Click += new System.EventHandler(this.itemProducto_Click);
-            // 
             // ribbonPanel4
             // 
             this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -557,15 +341,6 @@
             // 
             // 
             this.ribbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // itemUsuarioPerfil
-            // 
-            this.itemUsuarioPerfil.Image = global::Facturacion_Vista.Properties.Resources.usuarioperfil;
-            this.itemUsuarioPerfil.Name = "itemUsuarioPerfil";
-            this.itemUsuarioPerfil.SubItemsExpandWidth = 14;
-            this.itemUsuarioPerfil.Text = "Usuario Perfil";
-            this.itemUsuarioPerfil.Tooltip = "USUARIO PERFIL";
-            this.itemUsuarioPerfil.Click += new System.EventHandler(this.itemUsuarioPerfil_Click);
             // 
             // ribbonPanel1
             // 
@@ -623,23 +398,118 @@
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // itemUsuarios
+            // ribbonPanel6
             // 
-            this.itemUsuarios.Image = global::Facturacion_Vista.Properties.Resources.usuario21;
-            this.itemUsuarios.Name = "itemUsuarios";
-            this.itemUsuarios.SubItemsExpandWidth = 14;
-            this.itemUsuarios.Text = "Usuarios";
-            this.itemUsuarios.Tooltip = "USUARIOS";
-            this.itemUsuarios.Click += new System.EventHandler(this.itemUsuarios_Click);
+            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel6.Controls.Add(this.ribbonBar5);
+            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel6.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel6.Size = new System.Drawing.Size(622, 95);
             // 
-            // itemPerfiles
             // 
-            this.itemPerfiles.Image = global::Facturacion_Vista.Properties.Resources.administrador1;
-            this.itemPerfiles.Name = "itemPerfiles";
-            this.itemPerfiles.SubItemsExpandWidth = 14;
-            this.itemPerfiles.Text = "Perfiles";
-            this.itemPerfiles.Tooltip = "PERFIL";
-            this.itemPerfiles.Click += new System.EventHandler(this.itemPerfiles_Click);
+            // 
+            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.TabIndex = 6;
+            this.ribbonPanel6.Visible = false;
+            // 
+            // ribbonBar5
+            // 
+            this.ribbonBar5.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar5.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar5.ContainerControlProcessDialogKey = true;
+            this.ribbonBar5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar5.DragDropSupport = true;
+            this.ribbonBar5.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemCliente,
+            this.itemProveedor});
+            this.ribbonBar5.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar5.Name = "ribbonBar5";
+            this.ribbonBar5.Size = new System.Drawing.Size(619, 92);
+            this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar5.TabIndex = 0;
+            this.ribbonBar5.Text = "Registro";
+            // 
+            // 
+            // 
+            this.ribbonBar5.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar5.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel5.Controls.Add(this.ribbonBar2);
+            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel5.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanel5.Name = "ribbonPanel5";
+            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel5.Size = new System.Drawing.Size(622, 95);
+            // 
+            // 
+            // 
+            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel5.TabIndex = 5;
+            this.ribbonPanel5.Visible = false;
+            // 
+            // ribbonBar2
+            // 
+            this.ribbonBar2.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar2.ContainerControlProcessDialogKey = true;
+            this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar2.DragDropSupport = true;
+            this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.itemEmpresa,
+            this.buttonItem15,
+            this.buttonItem16});
+            this.ribbonBar2.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar2.Name = "ribbonBar2";
+            this.ribbonBar2.Size = new System.Drawing.Size(619, 92);
+            this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar2.TabIndex = 0;
+            this.ribbonBar2.Text = "Configuracion";
+            // 
+            // 
+            // 
+            this.ribbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // menuAdministracion
             // 
@@ -677,6 +547,164 @@
             this.menuComprobantes.Name = "menuComprobantes";
             this.menuComprobantes.Panel = this.ribbonPanel3;
             this.menuComprobantes.Text = "Comprobantes";
+            // 
+            // qatCustomizeItem1
+            // 
+            this.qatCustomizeItem1.Name = "qatCustomizeItem1";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "buttonItem1";
+            // 
+            // buttonItem17
+            // 
+            this.buttonItem17.Name = "buttonItem17";
+            this.buttonItem17.SubItemsExpandWidth = 14;
+            this.buttonItem17.Text = "Reportes";
+            this.buttonItem17.Click += new System.EventHandler(this.buttonItem17_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Image = global::Facturacion_Vista.Properties.Resources.fondoSistema1;
+            this.label1.Location = new System.Drawing.Point(5, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(622, 218);
+            this.label1.TabIndex = 6;
+            // 
+            // itemFactura
+            // 
+            this.itemFactura.Image = global::Facturacion_Vista.Properties.Resources.factura;
+            this.itemFactura.Name = "itemFactura";
+            this.itemFactura.SubItemsExpandWidth = 14;
+            this.itemFactura.Text = "Factura";
+            this.itemFactura.Tooltip = "FACTURA";
+            this.itemFactura.Click += new System.EventHandler(this.itemFactura_Click);
+            // 
+            // itemNotaPedido
+            // 
+            this.itemNotaPedido.Image = global::Facturacion_Vista.Properties.Resources.notapedido;
+            this.itemNotaPedido.Name = "itemNotaPedido";
+            this.itemNotaPedido.SubItemsExpandWidth = 14;
+            this.itemNotaPedido.Text = "Notas de Pedido";
+            this.itemNotaPedido.Tooltip = "NOTA DE PEDIDO";
+            this.itemNotaPedido.Click += new System.EventHandler(this.itemNotaPedido_Click);
+            // 
+            // itemDocContables
+            // 
+            this.itemDocContables.Image = global::Facturacion_Vista.Properties.Resources.doccontable;
+            this.itemDocContables.Name = "itemDocContables";
+            this.itemDocContables.SubItemsExpandWidth = 14;
+            this.itemDocContables.Text = "Documentos Contables";
+            this.itemDocContables.Tooltip = "DOCUMENTOS CONTABLES";
+            this.itemDocContables.Click += new System.EventHandler(this.itemDocContables_Click);
+            // 
+            // itemMaterial
+            // 
+            this.itemMaterial.Image = global::Facturacion_Vista.Properties.Resources.mate;
+            this.itemMaterial.Name = "itemMaterial";
+            this.itemMaterial.SubItemsExpandWidth = 14;
+            this.itemMaterial.Text = "Materiales";
+            this.itemMaterial.Tooltip = "MATERIAL";
+            this.itemMaterial.Click += new System.EventHandler(this.itemMaterial_Click);
+            // 
+            // buttonItem14
+            // 
+            this.buttonItem14.Image = global::Facturacion_Vista.Properties.Resources.material;
+            this.buttonItem14.Name = "buttonItem14";
+            this.buttonItem14.SubItemsExpandWidth = 14;
+            this.buttonItem14.Tooltip = "Tipo Material";
+            this.buttonItem14.Click += new System.EventHandler(this.buttonItem14_Click);
+            // 
+            // itemTarifa
+            // 
+            this.itemTarifa.Image = global::Facturacion_Vista.Properties.Resources.tarifa;
+            this.itemTarifa.Name = "itemTarifa";
+            this.itemTarifa.SubItemsExpandWidth = 14;
+            this.itemTarifa.Text = "Tarifa";
+            this.itemTarifa.Tooltip = "IMPUESTO";
+            this.itemTarifa.Click += new System.EventHandler(this.itemTarifa_Click);
+            // 
+            // itemProducto
+            // 
+            this.itemProducto.Image = global::Facturacion_Vista.Properties.Resources.product;
+            this.itemProducto.Name = "itemProducto";
+            this.itemProducto.SubItemsExpandWidth = 14;
+            this.itemProducto.Text = "buttonItem14";
+            this.itemProducto.Tooltip = "PRODUCTO";
+            this.itemProducto.Click += new System.EventHandler(this.itemProducto_Click);
+            // 
+            // itemUsuarioPerfil
+            // 
+            this.itemUsuarioPerfil.Image = global::Facturacion_Vista.Properties.Resources.usuarioperfil;
+            this.itemUsuarioPerfil.Name = "itemUsuarioPerfil";
+            this.itemUsuarioPerfil.SubItemsExpandWidth = 14;
+            this.itemUsuarioPerfil.Text = "Usuario Perfil";
+            this.itemUsuarioPerfil.Tooltip = "USUARIO PERFIL";
+            this.itemUsuarioPerfil.Click += new System.EventHandler(this.itemUsuarioPerfil_Click);
+            // 
+            // itemUsuarios
+            // 
+            this.itemUsuarios.Image = global::Facturacion_Vista.Properties.Resources.usuario21;
+            this.itemUsuarios.Name = "itemUsuarios";
+            this.itemUsuarios.SubItemsExpandWidth = 14;
+            this.itemUsuarios.Text = "Usuarios";
+            this.itemUsuarios.Tooltip = "USUARIOS";
+            this.itemUsuarios.Click += new System.EventHandler(this.itemUsuarios_Click);
+            // 
+            // itemPerfiles
+            // 
+            this.itemPerfiles.Image = global::Facturacion_Vista.Properties.Resources.administrador1;
+            this.itemPerfiles.Name = "itemPerfiles";
+            this.itemPerfiles.SubItemsExpandWidth = 14;
+            this.itemPerfiles.Text = "Perfiles";
+            this.itemPerfiles.Tooltip = "PERFIL";
+            this.itemPerfiles.Click += new System.EventHandler(this.itemPerfiles_Click);
+            // 
+            // itemCliente
+            // 
+            this.itemCliente.Image = global::Facturacion_Vista.Properties.Resources.cliente;
+            this.itemCliente.Name = "itemCliente";
+            this.itemCliente.SubItemsExpandWidth = 14;
+            this.itemCliente.Text = "Cliente";
+            this.itemCliente.Click += new System.EventHandler(this.buttonItem26_Click);
+            // 
+            // itemProveedor
+            // 
+            this.itemProveedor.Image = global::Facturacion_Vista.Properties.Resources.proveedor;
+            this.itemProveedor.Name = "itemProveedor";
+            this.itemProveedor.SubItemsExpandWidth = 14;
+            this.itemProveedor.Text = "Proveedor";
+            this.itemProveedor.Click += new System.EventHandler(this.itemProveedor_Click);
+            // 
+            // itemEmpresa
+            // 
+            this.itemEmpresa.Image = global::Facturacion_Vista.Properties.Resources.company;
+            this.itemEmpresa.Name = "itemEmpresa";
+            this.itemEmpresa.SubItemsExpandWidth = 14;
+            this.itemEmpresa.Text = "Empresa";
+            this.itemEmpresa.Tooltip = "EMPRESA";
+            this.itemEmpresa.Click += new System.EventHandler(this.itemEmpresa_Click);
+            // 
+            // buttonItem15
+            // 
+            this.buttonItem15.Image = global::Facturacion_Vista.Properties.Resources.office_building_icon;
+            this.buttonItem15.ImageFixedSize = new System.Drawing.Size(80, 60);
+            this.buttonItem15.Name = "buttonItem15";
+            this.buttonItem15.SubItemsExpandWidth = 14;
+            this.buttonItem15.Tooltip = "Establecimiento";
+            this.buttonItem15.Click += new System.EventHandler(this.buttonItem15_Click);
+            // 
+            // buttonItem16
+            // 
+            this.buttonItem16.Image = global::Facturacion_Vista.Properties.Resources.icon_clickPuntoVenta;
+            this.buttonItem16.ImageFixedSize = new System.Drawing.Size(80, 60);
+            this.buttonItem16.Name = "buttonItem16";
+            this.buttonItem16.SubItemsExpandWidth = 14;
+            this.buttonItem16.Tooltip = "Punto de Emisión";
+            this.buttonItem16.Click += new System.EventHandler(this.buttonItem16_Click);
             // 
             // applicationButton1
             // 
@@ -889,30 +917,11 @@
             this.buttonItem13.SubItemsExpandWidth = 24;
             this.buttonItem13.Text = "E&xit";
             // 
-            // qatCustomizeItem1
-            // 
-            this.qatCustomizeItem1.Name = "qatCustomizeItem1";
-            // 
-            // buttonItem1
-            // 
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "buttonItem1";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Image = global::Facturacion_Vista.Properties.Resources.fondoSistema1;
-            this.label1.Location = new System.Drawing.Point(5, 155);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(622, 221);
-            this.label1.TabIndex = 6;
-            // 
             // MDIMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 400);
+            this.ClientSize = new System.Drawing.Size(632, 397);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.statusStrip);
@@ -925,11 +934,11 @@
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
             this.ribbonPanel3.ResumeLayout(false);
-            this.ribbonPanel6.ResumeLayout(false);
-            this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel6.ResumeLayout(false);
+            this.ribbonPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -995,6 +1004,7 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem14;
         private DevComponents.DotNetBar.ButtonItem buttonItem15;
         private DevComponents.DotNetBar.ButtonItem buttonItem16;
+        private DevComponents.DotNetBar.ButtonItem buttonItem17;
     }
 }
 
