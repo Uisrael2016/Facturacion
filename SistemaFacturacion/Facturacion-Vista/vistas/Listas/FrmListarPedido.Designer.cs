@@ -126,6 +126,7 @@
             this.dtlista.RowHeadersVisible = false;
             this.dtlista.Size = new System.Drawing.Size(766, 476);
             this.dtlista.TabIndex = 2;
+            this.dtlista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtlista_CellDoubleClick);
             // 
             // id_cabecera
             // 

@@ -14,9 +14,9 @@ namespace Facturacion_Entidades
 
         public virtual string ClaveAcceso { get; set; }
 
-        public virtual char Estado { get; set; }
+        public virtual string Estado { get; set; }
         //public virtual DateTime FechaAutorizacion { get}
-        public virtual char CodigoError { get; set; }
+        public virtual string CodigoError { get; set; }
 
         public virtual string MensajeError { get; set; }
 

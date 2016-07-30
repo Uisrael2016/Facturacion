@@ -64,7 +64,7 @@
             this.group.DisabledBackColor = System.Drawing.Color.Empty;
             this.group.Location = new System.Drawing.Point(30, 12);
             this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(355, 332);
+            this.group.Size = new System.Drawing.Size(372, 295);
             // 
             // 
             // 
@@ -104,7 +104,7 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(35, 144);
+            this.labelX4.Location = new System.Drawing.Point(35, 119);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(75, 23);
             this.labelX4.TabIndex = 11;
@@ -118,7 +118,7 @@
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX1.Enabled = false;
-            this.textBoxX1.Location = new System.Drawing.Point(142, 147);
+            this.textBoxX1.Location = new System.Drawing.Point(142, 122);
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
             this.textBoxX1.Size = new System.Drawing.Size(178, 20);
@@ -132,7 +132,7 @@
             this.txtUsuario.Border.Class = "TextBoxBorder";
             this.txtUsuario.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtUsuario.Enabled = false;
-            this.txtUsuario.Location = new System.Drawing.Point(142, 185);
+            this.txtUsuario.Location = new System.Drawing.Point(142, 160);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PreventEnterBeep = true;
             this.txtUsuario.Size = new System.Drawing.Size(178, 20);
@@ -143,9 +143,9 @@
             this.btBuscarUsuario.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btBuscarUsuario.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btBuscarUsuario.Image = global::Facturacion_Vista.Properties.Resources.add;
-            this.btBuscarUsuario.Location = new System.Drawing.Point(288, 127);
+            this.btBuscarUsuario.Location = new System.Drawing.Point(326, 115);
             this.btBuscarUsuario.Name = "btBuscarUsuario";
-            this.btBuscarUsuario.Size = new System.Drawing.Size(32, 23);
+            this.btBuscarUsuario.Size = new System.Drawing.Size(32, 33);
             this.btBuscarUsuario.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btBuscarUsuario.TabIndex = 8;
             this.btBuscarUsuario.Tooltip = "Agregar usuario";
@@ -182,7 +182,7 @@
             this.btCancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btCancelar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btCancelar.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.btCancelar.Location = new System.Drawing.Point(216, 236);
+            this.btCancelar.Location = new System.Drawing.Point(216, 211);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(104, 38);
             this.btCancelar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -194,7 +194,7 @@
             this.btGuardar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btGuardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btGuardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.btGuardar.Location = new System.Drawing.Point(35, 236);
+            this.btGuardar.Location = new System.Drawing.Point(35, 211);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(104, 38);
             this.btGuardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -221,7 +221,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(35, 182);
+            this.labelX2.Location = new System.Drawing.Point(35, 157);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 1;
@@ -248,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 372);
+            this.ClientSize = new System.Drawing.Size(424, 341);
             this.Controls.Add(this.group);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;

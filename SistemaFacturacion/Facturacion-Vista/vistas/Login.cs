@@ -21,11 +21,27 @@ namespace Facturacion_Vista
         {
 
             InitializeComponent();
+            textUser.Focus();
+            usuarioPerfilManager = new UsuarioPerfil();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            ingresar();
 
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = Utilidades.Mensaje.mensajeConfirm("Información", "Esta seguro de cerrar la aplicación");
+            if (dialog == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+        private void ingresar()
+        {
             errorProvider1.Clear();
             if (General.validaForm(this.Controls, errorProvider1))
             {
@@ -48,21 +64,15 @@ namespace Facturacion_Vista
                     Utilidades.Mensaje.mensajeAlerta("Informacion", "Usuario o Clave invalidos");
                 }
             }
-
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void textPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            DialogResult dialog = Utilidades.Mensaje.mensajeConfirm("Información", "Esta seguro de cerrar la aplicación");
-            if (dialog == DialogResult.Yes)
+            if ((int)e.KeyChar == (int)Keys.Enter)
             {
-                this.Close();
+                ingresar();
+
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

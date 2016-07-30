@@ -131,12 +131,13 @@
             this.textPassword.Size = new System.Drawing.Size(151, 20);
             this.textPassword.TabIndex = 6;
             this.textPassword.WatermarkText = "Contraseña";
+            this.textPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textPassword_KeyPress);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(472, 265);
+            this.ClientSize = new System.Drawing.Size(472, 263);
             this.Controls.Add(this.textPassword);
             this.Controls.Add(this.textUser);
             this.Controls.Add(this.label2);
@@ -151,7 +152,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario Ingreso";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,6 +19,7 @@ namespace Facturacion_Vista.Vistas.Listas
         private List<Cabecera> listacabecera;
         private CabeceraDao cabecerDao;
         Acciones _accion;
+        public Cabecera cabecera { get; set; }
         public FrmListarPedido(Acciones a)
         {
             InitializeComponent();
@@ -29,13 +30,13 @@ namespace Facturacion_Vista.Vistas.Listas
 
           private void btGuardar_Click(object sender, EventArgs e)
         {
-            FrmNotaPedido frm = new FrmNotaPedido(0);
+            FrmNotaPedido frm = new FrmNotaPedido("NP",0);
             frm.ShowDialog();
             this.listarCabecera();
         }
         private void listarCabecera ()
         {
-            listacabecera = (List<Cabecera>)cabecerDao.consultar();
+            listacabecera = (List<Cabecera>)cabecerDao.listaCabecera();
             if(listacabecera !=null)
             {
                 dtlista.Rows.Clear();
@@ -48,6 +49,14 @@ namespace Facturacion_Vista.Vistas.Listas
                
             }
         }
-        
+
+        private void dtlista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = Convert.ToInt32(dtlista.CurrentRow.Cells[0].Value);
+            FrmNotaPedido frm = new FrmNotaPedido("FC",id);
+            frm.ShowDialog();
+            this.listarCabecera();
+
+        }
     }
 }

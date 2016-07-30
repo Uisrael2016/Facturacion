@@ -104,36 +104,46 @@ namespace Facturacion_Vista.Vistas.Agregar
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (General.validaFormGroup(this.Controls, erroricono))
+            try
             {
-                if (comboTipoPro.SelectedIndex != 0)
+                if (General.validaFormGroup(this.Controls, erroricono))
                 {
-                    setproducto();
-                    if (_accion == Acciones.insert)
+                    if (comboTipoPro.SelectedIndex != 0)
                     {
-                       productoDao.insertar(productoSeleccionado);
-                    }
-                    foreach (DetalleProducto det in listaDetalle) {
-                        det.IdProducto = productoSeleccionado;
-                        detalleDao.insertar(det);
+                        setproducto();
+                        if (_accion == Acciones.insert)
+                        {
+                            productoDao.insertar(productoSeleccionado);
+                        }
+                        foreach (DetalleProducto det in listaDetalle)
+                        {
+                            det.IdProducto = productoSeleccionado;
+                            detalleDao.insertar(det);
 
+                        }
+
+                        foreach (Salida sali in listaSalida)
+                        {
+                            valorSalida += sali.CantidadEgreso;
+                            Material material = sali.IdMaterial;
+                            material.Stock = material.Stock - valorSalida;
+                            materialDao.modificar(material);
+                            salidaDao.insertar(sali);
+                        }
                     }
-                    
-                    foreach (Salida sali in listaSalida) {
-                        valorSalida += sali.CantidadEgreso;
-                        Material material = sali.IdMaterial;
-                        material.Stock = material.Stock - valorSalida;
-                        materialDao.modificar(material);
-                        salidaDao.insertar(sali);
+                    else
+                    {
+                        Mensaje.mensajeAlerta("Informacion", "Seleccione un Tipo");
                     }
+                    Mensaje.mensajeInformacion("Informacion", "Agregado con Exito");
+                    this.Hide();
                 }
-                else
-                {
-                    Mensaje.mensajeAlerta("Informacion", "Seleccione un Tipo");
-                }
-               Mensaje.mensajeInformacion("Informacion", "Agregado con Exito");
-                this.Hide();
             }
+            catch (Exception ex)
+            {
+                Mensaje.mensajeError("Error", "Error al ingresar la información");
+            }
+
 
 
         }
@@ -148,24 +158,25 @@ namespace Facturacion_Vista.Vistas.Agregar
             {
                 nuevoDetalle = new DetalleProducto();
                 nuevoDetalle = frm.detproductoSeleccionado;
-                
+
                 nuevaSalida = new Salida();
                 nuevaSalida = frm.salida;
                 materialSeleccionado = frm._material;
                 valorStock += nuevoDetalle.Cantidad;
                 if (valorStock > materialSeleccionado.Stock)
-                {                    
+                {
                     Mensaje.mensajeAlerta("Informacion", "No existe suficiente stock para realizar el pedido");
                     reset();
                     return;
 
                 }
-                else {
+                else
+                {
                     nuevoDetalle.IdMaterial = materialSeleccionado;
                     textDescripcion.Text = nuevoDetalle.DescDetalle;
                     textCantidadDetalle.Text = Convert.ToString(nuevoDetalle.Cantidad);
                 }
-                
+
             }
         }
 

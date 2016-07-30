@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNotaPedido));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupDatosCli = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnBuscar = new DevComponents.DotNetBar.ButtonX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -39,14 +39,12 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.textTlf = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textFechaEmision = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textDireccion = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.textRuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textCliente = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labeltipodedocumento = new DevComponents.DotNetBar.LabelX();
-            this.lbnumero = new DevComponents.DotNetBar.LabelX();
+            this.lbCodigo = new DevComponents.DotNetBar.LabelX();
             this.barmenu = new DevComponents.DotNetBar.Bar();
             this.btBuscar = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
@@ -67,19 +65,17 @@
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total_sin_impuesto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtsubtotal = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textSubtotal = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lbsubtotal = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lblDescuento = new System.Windows.Forms.Label();
+            this.textDescuentoFat = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lblIva = new System.Windows.Forms.Label();
+            this.textIva = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textTotal = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btguardar = new DevComponents.DotNetBar.ButtonX();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.pictureProducto = new System.Windows.Forms.PictureBox();
-            this.lbdetalletipoproducto = new DevComponents.DotNetBar.LabelX();
             this.groupDatosCli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barmenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtdocumento)).BeginInit();
@@ -96,15 +92,13 @@
             this.groupDatosCli.Controls.Add(this.labelX5);
             this.groupDatosCli.Controls.Add(this.labelX4);
             this.groupDatosCli.Controls.Add(this.textTlf);
-            this.groupDatosCli.Controls.Add(this.textFechaEmision);
             this.groupDatosCli.Controls.Add(this.textDireccion);
-            this.groupDatosCli.Controls.Add(this.labelX3);
             this.groupDatosCli.Controls.Add(this.textRuc);
             this.groupDatosCli.Controls.Add(this.textCliente);
             this.groupDatosCli.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupDatosCli.Location = new System.Drawing.Point(30, 3);
             this.groupDatosCli.Name = "groupDatosCli";
-            this.groupDatosCli.Size = new System.Drawing.Size(482, 175);
+            this.groupDatosCli.Size = new System.Drawing.Size(482, 199);
             // 
             // 
             // 
@@ -141,7 +135,7 @@
             this.btnBuscar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnBuscar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(312, 35);
+            this.btnBuscar.Location = new System.Drawing.Point(312, 22);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(49, 31);
             this.btnBuscar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -155,7 +149,7 @@
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(315, 80);
+            this.labelX7.Location = new System.Drawing.Point(315, 101);
             this.labelX7.Name = "labelX7";
             this.labelX7.Size = new System.Drawing.Size(43, 23);
             this.labelX7.TabIndex = 23;
@@ -168,7 +162,7 @@
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(13, 117);
+            this.labelX6.Location = new System.Drawing.Point(13, 100);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(75, 23);
             this.labelX6.TabIndex = 22;
@@ -181,7 +175,7 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(13, 76);
+            this.labelX5.Location = new System.Drawing.Point(13, 59);
             this.labelX5.Name = "labelX5";
             this.labelX5.Size = new System.Drawing.Size(75, 23);
             this.labelX5.TabIndex = 21;
@@ -194,7 +188,7 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(13, 43);
+            this.labelX4.Location = new System.Drawing.Point(13, 26);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(75, 23);
             this.labelX4.TabIndex = 20;
@@ -208,25 +202,11 @@
             this.textTlf.Border.Class = "TextBoxBorder";
             this.textTlf.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textTlf.Enabled = false;
-            this.textTlf.Location = new System.Drawing.Point(363, 80);
+            this.textTlf.Location = new System.Drawing.Point(363, 101);
             this.textTlf.Name = "textTlf";
             this.textTlf.PreventEnterBeep = true;
             this.textTlf.Size = new System.Drawing.Size(100, 20);
             this.textTlf.TabIndex = 19;
-            // 
-            // textFechaEmision
-            // 
-            // 
-            // 
-            // 
-            this.textFechaEmision.Border.Class = "TextBoxBorder";
-            this.textFechaEmision.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textFechaEmision.Enabled = false;
-            this.textFechaEmision.Location = new System.Drawing.Point(110, 6);
-            this.textFechaEmision.Name = "textFechaEmision";
-            this.textFechaEmision.PreventEnterBeep = true;
-            this.textFechaEmision.Size = new System.Drawing.Size(180, 20);
-            this.textFechaEmision.TabIndex = 15;
             // 
             // textDireccion
             // 
@@ -236,25 +216,11 @@
             this.textDireccion.Border.Class = "TextBoxBorder";
             this.textDireccion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textDireccion.Enabled = false;
-            this.textDireccion.Location = new System.Drawing.Point(110, 121);
+            this.textDireccion.Location = new System.Drawing.Point(110, 104);
             this.textDireccion.Name = "textDireccion";
             this.textDireccion.PreventEnterBeep = true;
             this.textDireccion.Size = new System.Drawing.Size(180, 20);
             this.textDireccion.TabIndex = 18;
-            // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(12, 3);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.SingleLineColor = System.Drawing.Color.Transparent;
-            this.labelX3.Size = new System.Drawing.Size(75, 23);
-            this.labelX3.TabIndex = 14;
-            this.labelX3.Text = "Fecha Emisión";
             // 
             // textRuc
             // 
@@ -264,7 +230,7 @@
             this.textRuc.Border.Class = "TextBoxBorder";
             this.textRuc.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textRuc.Enabled = false;
-            this.textRuc.Location = new System.Drawing.Point(110, 80);
+            this.textRuc.Location = new System.Drawing.Point(110, 63);
             this.textRuc.Name = "textRuc";
             this.textRuc.PreventEnterBeep = true;
             this.textRuc.Size = new System.Drawing.Size(180, 20);
@@ -278,7 +244,7 @@
             this.textCliente.Border.Class = "TextBoxBorder";
             this.textCliente.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textCliente.Enabled = false;
-            this.textCliente.Location = new System.Drawing.Point(110, 43);
+            this.textCliente.Location = new System.Drawing.Point(110, 26);
             this.textCliente.Name = "textCliente";
             this.textCliente.PreventEnterBeep = true;
             this.textCliente.Size = new System.Drawing.Size(180, 20);
@@ -292,7 +258,7 @@
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.Color.Red;
-            this.labelX2.Location = new System.Drawing.Point(536, 32);
+            this.labelX2.Location = new System.Drawing.Point(523, 25);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(29, 23);
             this.labelX2.TabIndex = 3;
@@ -310,16 +276,18 @@
             this.labeltipodedocumento.Size = new System.Drawing.Size(194, 23);
             this.labeltipodedocumento.TabIndex = 2;
             // 
-            // lbnumero
+            // lbCodigo
             // 
             // 
             // 
             // 
-            this.lbnumero.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbnumero.Location = new System.Drawing.Point(591, 32);
-            this.lbnumero.Name = "lbnumero";
-            this.lbnumero.Size = new System.Drawing.Size(160, 23);
-            this.lbnumero.TabIndex = 4;
+            this.lbCodigo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodigo.ForeColor = System.Drawing.Color.Red;
+            this.lbCodigo.Location = new System.Drawing.Point(558, 23);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(213, 23);
+            this.lbCodigo.TabIndex = 4;
             // 
             // barmenu
             // 
@@ -339,9 +307,9 @@
             this.btagregar,
             this.btresta,
             this.labelstock});
-            this.barmenu.Location = new System.Drawing.Point(3, 194);
+            this.barmenu.Location = new System.Drawing.Point(4, 223);
             this.barmenu.Name = "barmenu";
-            this.barmenu.Size = new System.Drawing.Size(704, 41);
+            this.barmenu.Size = new System.Drawing.Size(767, 41);
             this.barmenu.Stretch = true;
             this.barmenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.barmenu.TabIndex = 5;
@@ -377,6 +345,7 @@
             // 
             // txtPrecio
             // 
+            this.txtPrecio.Enabled = false;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.TextBoxWidth = 50;
             this.txtPrecio.WatermarkColor = System.Drawing.SystemColors.GrayText;
@@ -390,7 +359,7 @@
             // txtcantidad
             // 
             this.txtcantidad.Name = "txtcantidad";
-            this.txtcantidad.TextBoxWidth = 30;
+            this.txtcantidad.TextBoxWidth = 40;
             this.txtcantidad.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.txtcantidad.WatermarkText = "0";
             // 
@@ -402,7 +371,7 @@
             // txtdescuento
             // 
             this.txtdescuento.Name = "txtdescuento";
-            this.txtdescuento.TextBoxWidth = 25;
+            this.txtdescuento.TextBoxWidth = 40;
             this.txtdescuento.WatermarkColor = System.Drawing.SystemColors.GrayText;
             this.txtdescuento.WatermarkText = "0 %";
             // 
@@ -428,14 +397,16 @@
             // 
             this.dtdocumento.AllowUserToAddRows = false;
             this.dtdocumento.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtdocumento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtdocumento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtdocumento.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtdocumento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtdocumento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtdocumento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iddetalle,
@@ -443,30 +414,31 @@
             this.cantidad,
             this.precio,
             this.total_sin_impuesto});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtdocumento.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtdocumento.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtdocumento.EnableHeadersVisualStyles = false;
             this.dtdocumento.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dtdocumento.Location = new System.Drawing.Point(3, 241);
+            this.dtdocumento.Location = new System.Drawing.Point(4, 270);
             this.dtdocumento.Name = "dtdocumento";
             this.dtdocumento.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtdocumento.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtdocumento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtdocumento.RowHeadersVisible = false;
-            this.dtdocumento.Size = new System.Drawing.Size(756, 203);
+            this.dtdocumento.Size = new System.Drawing.Size(767, 203);
             this.dtdocumento.TabIndex = 6;
+            this.dtdocumento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtdocumento_CellDoubleClick);
             this.dtdocumento.RowDefaultCellStyleChanged += new System.Windows.Forms.DataGridViewRowEventHandler(this.dtdocumento_RowDefaultCellStyleChanged);
             // 
             // iddetalle
@@ -474,14 +446,12 @@
             this.iddetalle.HeaderText = "N*";
             this.iddetalle.Name = "iddetalle";
             this.iddetalle.ReadOnly = true;
-            this.iddetalle.Width = 50;
             // 
             // desc_producto
             // 
             this.desc_producto.HeaderText = "Descripcion Producto";
             this.desc_producto.Name = "desc_producto";
             this.desc_producto.ReadOnly = true;
-            this.desc_producto.Width = 400;
             // 
             // cantidad
             // 
@@ -501,93 +471,97 @@
             this.total_sin_impuesto.Name = "total_sin_impuesto";
             this.total_sin_impuesto.ReadOnly = true;
             // 
-            // txtsubtotal
+            // textSubtotal
             // 
             // 
             // 
             // 
-            this.txtsubtotal.Border.Class = "TextBoxBorder";
-            this.txtsubtotal.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtsubtotal.Location = new System.Drawing.Point(674, 457);
-            this.txtsubtotal.Name = "txtsubtotal";
-            this.txtsubtotal.PreventEnterBeep = true;
-            this.txtsubtotal.Size = new System.Drawing.Size(77, 20);
-            this.txtsubtotal.TabIndex = 7;
+            this.textSubtotal.Border.Class = "TextBoxBorder";
+            this.textSubtotal.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textSubtotal.Enabled = false;
+            this.textSubtotal.Location = new System.Drawing.Point(675, 486);
+            this.textSubtotal.Name = "textSubtotal";
+            this.textSubtotal.PreventEnterBeep = true;
+            this.textSubtotal.Size = new System.Drawing.Size(77, 20);
+            this.textSubtotal.TabIndex = 7;
             // 
             // lbsubtotal
             // 
             this.lbsubtotal.AutoSize = true;
-            this.lbsubtotal.Location = new System.Drawing.Point(601, 459);
+            this.lbsubtotal.Location = new System.Drawing.Point(592, 488);
             this.lbsubtotal.Name = "lbsubtotal";
             this.lbsubtotal.Size = new System.Drawing.Size(46, 13);
             this.lbsubtotal.TabIndex = 8;
             this.lbsubtotal.Text = "Subtotal";
             // 
-            // label2
+            // lblDescuento
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(601, 489);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Descuento";
+            this.lblDescuento.AutoSize = true;
+            this.lblDescuento.Location = new System.Drawing.Point(592, 518);
+            this.lblDescuento.Name = "lblDescuento";
+            this.lblDescuento.Size = new System.Drawing.Size(59, 13);
+            this.lblDescuento.TabIndex = 10;
+            this.lblDescuento.Text = "Descuento";
             // 
-            // textBoxX2
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(674, 487);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(77, 20);
-            this.textBoxX2.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(601, 520);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Iva";
-            // 
-            // textBoxX3
+            // textDescuentoFat
             // 
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(674, 513);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(77, 20);
-            this.textBoxX3.TabIndex = 11;
+            this.textDescuentoFat.Border.Class = "TextBoxBorder";
+            this.textDescuentoFat.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textDescuentoFat.Enabled = false;
+            this.textDescuentoFat.Location = new System.Drawing.Point(675, 516);
+            this.textDescuentoFat.Name = "textDescuentoFat";
+            this.textDescuentoFat.PreventEnterBeep = true;
+            this.textDescuentoFat.Size = new System.Drawing.Size(77, 20);
+            this.textDescuentoFat.TabIndex = 9;
+            // 
+            // lblIva
+            // 
+            this.lblIva.AutoSize = true;
+            this.lblIva.Location = new System.Drawing.Point(594, 546);
+            this.lblIva.Name = "lblIva";
+            this.lblIva.Size = new System.Drawing.Size(22, 13);
+            this.lblIva.TabIndex = 12;
+            this.lblIva.Text = "Iva";
+            // 
+            // textIva
+            // 
+            // 
+            // 
+            // 
+            this.textIva.Border.Class = "TextBoxBorder";
+            this.textIva.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textIva.Enabled = false;
+            this.textIva.Location = new System.Drawing.Point(675, 542);
+            this.textIva.Name = "textIva";
+            this.textIva.PreventEnterBeep = true;
+            this.textIva.Size = new System.Drawing.Size(77, 20);
+            this.textIva.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(601, 541);
+            this.label4.Location = new System.Drawing.Point(592, 570);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Total";
             // 
-            // textBoxX4
+            // textTotal
             // 
             // 
             // 
             // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Location = new System.Drawing.Point(674, 539);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.Size = new System.Drawing.Size(77, 20);
-            this.textBoxX4.TabIndex = 13;
+            this.textTotal.Border.Class = "TextBoxBorder";
+            this.textTotal.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textTotal.Enabled = false;
+            this.textTotal.Location = new System.Drawing.Point(675, 568);
+            this.textTotal.Name = "textTotal";
+            this.textTotal.PreventEnterBeep = true;
+            this.textTotal.Size = new System.Drawing.Size(77, 20);
+            this.textTotal.TabIndex = 13;
             // 
             // btguardar
             // 
@@ -595,11 +569,12 @@
             this.btguardar.BackColor = System.Drawing.Color.Transparent;
             this.btguardar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btguardar.Image = global::Facturacion_Vista.Properties.Resources.save_ico;
-            this.btguardar.Location = new System.Drawing.Point(143, 525);
+            this.btguardar.Location = new System.Drawing.Point(196, 517);
             this.btguardar.Name = "btguardar";
             this.btguardar.Size = new System.Drawing.Size(85, 34);
             this.btguardar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btguardar.TabIndex = 16;
+            this.btguardar.Click += new System.EventHandler(this.btguardar_Click);
             // 
             // buttonX2
             // 
@@ -607,64 +582,40 @@
             this.buttonX2.BackColor = System.Drawing.Color.Transparent;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Image = global::Facturacion_Vista.Properties.Resources.cancel_ico;
-            this.buttonX2.Location = new System.Drawing.Point(385, 525);
+            this.buttonX2.Location = new System.Drawing.Point(376, 521);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(84, 34);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 15;
             // 
-            // labelX8
-            // 
-            // 
-            // 
-            // 
-            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(536, 56);
-            this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(56, 23);
-            this.labelX8.TabIndex = 18;
-            this.labelX8.Text = " Producto";
-            // 
             // pictureProducto
             // 
-            this.pictureProducto.Location = new System.Drawing.Point(518, 77);
+            this.pictureProducto.BackColor = System.Drawing.Color.Silver;
+            this.pictureProducto.Location = new System.Drawing.Point(518, 56);
             this.pictureProducto.Name = "pictureProducto";
-            this.pictureProducto.Size = new System.Drawing.Size(233, 103);
+            this.pictureProducto.Size = new System.Drawing.Size(253, 146);
             this.pictureProducto.TabIndex = 19;
             this.pictureProducto.TabStop = false;
-            // 
-            // lbdetalletipoproducto
-            // 
-            // 
-            // 
-            // 
-            this.lbdetalletipoproducto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lbdetalletipoproducto.Location = new System.Drawing.Point(536, 3);
-            this.lbdetalletipoproducto.Name = "lbdetalletipoproducto";
-            this.lbdetalletipoproducto.Size = new System.Drawing.Size(75, 23);
-            this.lbdetalletipoproducto.TabIndex = 20;
             // 
             // FrmNotaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(764, 565);
-            this.Controls.Add(this.lbdetalletipoproducto);
+            this.ClientSize = new System.Drawing.Size(783, 597);
             this.Controls.Add(this.pictureProducto);
-            this.Controls.Add(this.labelX8);
             this.Controls.Add(this.btguardar);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxX4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxX3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxX2);
+            this.Controls.Add(this.textTotal);
+            this.Controls.Add(this.lblIva);
+            this.Controls.Add(this.textIva);
+            this.Controls.Add(this.lblDescuento);
+            this.Controls.Add(this.textDescuentoFat);
             this.Controls.Add(this.lbsubtotal);
-            this.Controls.Add(this.txtsubtotal);
+            this.Controls.Add(this.textSubtotal);
             this.Controls.Add(this.dtdocumento);
             this.Controls.Add(this.barmenu);
-            this.Controls.Add(this.lbnumero);
+            this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labeltipodedocumento);
             this.Controls.Add(this.groupDatosCli);
@@ -689,32 +640,30 @@
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX textTlf;
-        private DevComponents.DotNetBar.Controls.TextBoxX textFechaEmision;
         private DevComponents.DotNetBar.Controls.TextBoxX textDireccion;
-        private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.TextBoxX textRuc;
         private DevComponents.DotNetBar.Controls.TextBoxX textCliente;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labeltipodedocumento;
+        private DevComponents.DotNetBar.LabelX lbCodigo;
         private DevComponents.DotNetBar.Bar barmenu;
         private DevComponents.DotNetBar.ButtonItem btBuscar;
         private DevComponents.DotNetBar.LabelItem labelItem2;
         private DevComponents.DotNetBar.TextBoxItem txtDetalle;
         private DevComponents.DotNetBar.ButtonItem btagregar;
         private DevComponents.DotNetBar.Controls.DataGridViewX dtdocumento;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtsubtotal;
+        private DevComponents.DotNetBar.Controls.TextBoxX textSubtotal;
         private System.Windows.Forms.Label lbsubtotal;
-        private System.Windows.Forms.Label label2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private System.Windows.Forms.Label label3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private System.Windows.Forms.Label lblDescuento;
+        private DevComponents.DotNetBar.Controls.TextBoxX textDescuentoFat;
+        private System.Windows.Forms.Label lblIva;
+        private DevComponents.DotNetBar.Controls.TextBoxX textIva;
         private System.Windows.Forms.Label label4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
+        private DevComponents.DotNetBar.Controls.TextBoxX textTotal;
         private DevComponents.DotNetBar.ButtonItem btresta;
         private DevComponents.DotNetBar.ButtonX btguardar;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.LabelItem lbstock;
-        private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelItem labelItem3;
         private DevComponents.DotNetBar.TextBoxItem txtPrecio;
         private DevComponents.DotNetBar.LabelItem labelItem4;
@@ -728,7 +677,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn total_sin_impuesto;
-        public DevComponents.DotNetBar.LabelX lbdetalletipoproducto;
-        public DevComponents.DotNetBar.LabelX lbnumero;
     }
 }

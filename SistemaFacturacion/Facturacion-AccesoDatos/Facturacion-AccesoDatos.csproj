@@ -62,9 +62,12 @@
     <Compile Include="dao\CabeceraDao.cs" />
     <Compile Include="dao\ClienteDao.cs" />
     <Compile Include="dao\CodigoDocumentoDao.cs" />
+    <Compile Include="dao\DetalleDao.cs" />
     <Compile Include="dao\DetalleProductoDao.cs" />
     <Compile Include="dao\EmpresaDao.cs" />
     <Compile Include="dao\EstablecimientoDAO.cs" />
+    <Compile Include="dao\FormaPagoDao.cs" />
+    <Compile Include="dao\ImpuestoDao.cs" />
     <Compile Include="dao\IngresoDao.cs" />
     <Compile Include="dao\MaterialDao.cs" />
     <Compile Include="dao\PerfilDao.cs" />
@@ -72,6 +75,7 @@
     <Compile Include="dao\ProveedorDao.cs" />
     <Compile Include="dao\PuntoEmisionDAO.cs" />
     <Compile Include="dao\SalidaDao.cs" />
+    <Compile Include="dao\SriDao.cs" />
     <Compile Include="dao\TarifaDao.cs" />
     <Compile Include="dao\TipoDocumentoDao.cs" />
     <Compile Include="dao\TipoMaterialDao.cs" />

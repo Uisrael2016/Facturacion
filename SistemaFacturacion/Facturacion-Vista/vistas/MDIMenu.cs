@@ -61,7 +61,6 @@ namespace Facturacion_Vista.Vistas
         {
             FrmListarCodigo_Documento frm = new FrmListarCodigo_Documento(0);
             frm.ShowDialog();
-
         }
 
         private void itemTarifa_Click(object sender, EventArgs e)
@@ -78,7 +77,7 @@ namespace Facturacion_Vista.Vistas
 
         private void itemNotaPedido_Click(object sender, EventArgs e)
         {
-            FrmNotaPedido frm = new FrmNotaPedido(0);
+            FrmNotaPedido frm = new FrmNotaPedido("NP",0);
             frm.ShowDialog();
             
         }

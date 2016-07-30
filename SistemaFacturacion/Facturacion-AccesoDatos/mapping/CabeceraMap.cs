@@ -30,7 +30,7 @@ namespace Facturacion_AccesoDatos.mapping
             References(c => c.IdUsuarioPerfil).Class<UsuarioPerfil>().Column("id_usuario_perfil").Not.LazyLoad();
             HasMany<Impuesto>(c => c.ImpuestoList).KeyColumn("id_impuesto").Inverse().Not.LazyLoad();
             HasMany<Sri>(c => c.SriList).KeyColumn("id_sri").Inverse().Not.LazyLoad();
-
+            HasMany<Detalle>(c => c.DetalleList).KeyColumn("id_detalle").Inverse().Not.LazyLoad();
 
 
 

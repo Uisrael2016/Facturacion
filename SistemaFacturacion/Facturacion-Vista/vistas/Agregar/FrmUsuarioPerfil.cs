@@ -71,6 +71,7 @@ namespace Facturacion_Vista.Vistas.Agregar
             PuntoEmision puntoEmi = (PuntoEmision)cbPuntoemision.SelectedItem;
             _puntoEmision.IdPuntoEmision = puntoEmi.IdPuntoEmision;
             _puntoEmision.Codigo = puntoEmi.Codigo;
+            _puntoEmision.IdEstablecimiento = puntoEmi.IdEstablecimiento;
         }
 
         private void cbTipoPerfil_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,11 +94,10 @@ namespace Facturacion_Vista.Vistas.Agregar
             {
                 usuarioPerfilselccionado = new UsuarioPerfil();
             }
-            usuarioPerfilselccionado.IdPerfil = (Perfil)cbPerfil.SelectedItem;
-            usuarioPerfilselccionado.IdPuntoEmision = (PuntoEmision)cbPuntoemision.SelectedItem;
-         //ESTA PARTE DATE VIENDO
-         // usuarioPerfilselccionado.IdUsuario = (Usuario)IDUsuario;
-         //
+            usuarioPerfilselccionado.IdUsuario=_usuario;
+            usuarioPerfilselccionado.IdPerfil = _perfil;
+            usuarioPerfilselccionado.IdPuntoEmision = _puntoEmision;
+           // usuarioPerfilselccionado.IdUsuario
         }
         private void btGuardar_Click(object sender, EventArgs e)
         {
@@ -126,8 +126,8 @@ namespace Facturacion_Vista.Vistas.Agregar
         private void setGroup (Usuario u)
         {
             txtUsuario.Text = u.Nombre;
-            IDUsuario = u.IdUsuario;
             textBoxX1.Text = Convert.ToString(u.IdUsuario);
+
         }
         private void btBuscarUsuario_Click(object sender, EventArgs e)
         {
@@ -135,8 +135,8 @@ namespace Facturacion_Vista.Vistas.Agregar
             frmU.ShowDialog();
             if(frmU.usuarioSeleccionado!=null)
             {
-                Usuario usuario = frmU.usuarioSeleccionado;
-                setGroup(usuario);
+                _usuario = frmU.usuarioSeleccionado;
+                setGroup(_usuario);
             }
         }
     }
